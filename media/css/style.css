@@ -1,25 +1,25 @@
 /* @import url(http://fonts.googleapis.com/css?family=Galdeano|Electrolize|Cuprum); */
 @font-face {
   font-family: 'Galdeano';
-  src: url('/assets/font/Galdeano-Regular.ttf') format('truetype');
+  src: url('/media/font/Galdeano-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Adobe Caslon Regular';
-  src: url('/assets/font/Adobe-Caslon-Regular.ttf') format('truetype');
+  src: url('/media/font/Adobe-Caslon-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Electrolize';
-  src: url('/assets/font/Electrolize-Regular.ttf') format('truetype');
+  src: url('/media/font/Electrolize-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Cuprum';
-  src: url('/assets/font/Cuprum-Regular.ttf') format('truetype');
+  src: url('/media/font/Cuprum-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
