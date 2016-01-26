@@ -1,17 +1,10 @@
 markdown: Kramdown
 kramdown:
   input: GFM
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-  enable_coderay: true
-  syntax_highlighter: rouge
-  coderay:
-    coderay_line_numbers:  nil
+
 permalink: /:title/
 url: http://charlesx.top
-name: Charles'Homepage
+name: Charles' Homepage
 author: CharlesXiao
 qq: 123018
 email: charlesxiao2030@outlook.com
@@ -25,4 +18,4 @@ safe: true
 gems: [jekyll-paginate]
 paginate: 5
 paginate: 20
-about: "这里是 Yonsm 的个人博客，创建于 2004 年。开始使用了 ExBlog 博客程序；之后长期（2004 ~ 2011）使用 Bo-Blog；2012 年更换为 WordProess；2013年7月迁移到 Jekyll @ GitHub。<br /><br />这里包含了部分个人的“折腾”过程、结论和成果，切换到分类模可以更快地找到感兴趣的内容，欢迎观赏、建议、拍砖……"
+about: "<br /><br />这里包含了部分个人的“折腾”过程、结论和成果，切换到分类模可以更快地找到感兴趣的内容，欢迎观赏、建议、拍砖……"
