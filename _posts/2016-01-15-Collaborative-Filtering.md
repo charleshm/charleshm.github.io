@@ -96,8 +96,6 @@ cutoff point左侧是流行的商品，右侧是不流行的，也称作长尾�
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg
   
   [^1]: [深入推荐引擎相关算法：协同过滤](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/index.html)
-  
   [^2]: [协同过滤推荐及相似性度量](http://www.codeweblog.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E6%8E%A8%E8%8D%90%E5%8F%8A%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%BA%A6%E9%87%8F/)
-  
   [^3]: [推荐系统学习：协同过滤实现](http://wuchong.me/blog/2014/04/19/recsys-cf-study/)
   
