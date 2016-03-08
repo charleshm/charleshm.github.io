@@ -1,10 +1,12 @@
 ---
-date: 2016-01-26
+published: true
+author: Charles
 layout: post
-title: EM算法：由浅入深
-categories: 机器学习
-tags: 机器学习 EM算法
+title:  "实际问题中如何使用机器学习模型"
+date:   2015-07-29 23:22
+categories: 实际问题 机器学习 特征工程 美团
 ---
+
 1.1 简介
 ----
 
@@ -21,7 +23,7 @@ tags: 机器学习 EM算法
 
 考虑一个投掷硬币的实验：现在我们有两枚硬币 $ A $ 和 $ B $ ，这两枚硬币和普通的硬币不一样，他们投掷出正面的概率和投掷出反面的概率不一定相同。我们将  $ A $  和  $ B $  投掷出正面的概率分别记为  $ \theta_A $  和 $ \theta_B $ 。现在独立地做5次试验：随机的从这两枚硬币中抽取1 枚，投掷10次，统计出现正面的次数。将结果整理为如下的表格：
 
-![image](/assets/EM/bexp.png)
+![image](/assets/EM/bexp.png){: width="600px"}
 
 我们记录下两组随机变量 $ X = (X_1,X_2,X_3,X_4,X_5) $ 和 $ Z =(Z_1,Z_2,Z_3,Z_4,Z_5) $ ，其中 $ X_i\in \\{0,1,2,3,4,5,6,7,8,9,10\\} $ 代表试验 $ i $  中出现 正面的次数， $Z_i \in \\{A,B\\}$ 代表这次试验投掷的是硬币 $ A $  还是硬币 $ B $ 。
 
@@ -207,3 +209,4 @@ algorithm?](https://www.quora.com/What-is-an-intuitive-explanation-for-the-expec
 
 [^3]: 具体推导请参见:[The Expectation Maximization Algorithm A short
     tutorial](https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf)
+

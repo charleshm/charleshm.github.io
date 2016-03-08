@@ -1,21 +1,20 @@
-markdown: kramdown
-kramdown:
-  input: GFM
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-permalink: /:title/
-url: http://charlesx.top
-name: Charles' Homepage
-author: CharlesXiao
-qq: 123018
+# Site settings
+title: Charles's Homepage
 email: charlesxiao2030@outlook.com
-duoshuo: charlesxiao2030
-beian: 浙ICP备12026616号
-cnzz: 119959
-weibo: 5601918910
-github: charleshm
-highlighter: pygments
-safe: true
-gems: [jekyll-paginate]
-paginate: 5
-paginate: 20
-about: "<br /><br />这里包含了部分个人的“折腾”过程、结论和成果，切换到分类模可以更快地找到感兴趣的内容，欢迎观赏、建议、拍砖……"
+description: > # this means to ignore newlines until "baseurl:"
+  日拱一卒
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: charles
+github_username:  charleshm
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
