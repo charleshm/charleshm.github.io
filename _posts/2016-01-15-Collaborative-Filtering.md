@@ -108,6 +108,7 @@ Cutoff point左侧是流行的商品，右侧是不流行的，也称作长尾�
   2. [Mining Massive Datasets(MMDs) -Jure Leskovec ](http://blog.csdn.net/pipisorry/article/details/49205589)
   3. [推荐引擎初探](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy1/index.html)
 
+----------
 
   [^1]: [深入推荐引擎相关算法：协同过滤](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/index.html)
   [^2]: [协同过滤推荐及相似性度量](http://www.codeweblog.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E6%8E%A8%E8%8D%90%E5%8F%8A%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%BA%A6%E9%87%8F/)
