@@ -114,7 +114,7 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
  - **覆盖率**: 覆盖率表示推荐的物品占了物品全集空间的多大比例。
  - **新颖度**: 新颖度是为了推荐长尾区间的物品。用推荐列表中物品的平均流行度度量推荐结果的新颖度。如果推荐出的物品都很热门，说明推荐的新颖度较低，否则说明推荐结果比较新颖。
 
-![此处输入图片的描述][15]{: width=80%}
+![此处输入图片的描述][15]
 
 ----------
 
@@ -152,5 +152,5 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
   [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_192911.png
   [13]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_194150.png
   [14]: http://7xjbdi.com1.z0.glb.clouddn.com/psm_2002.png
-  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg
+  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg =500x
   [16]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_122652.png
