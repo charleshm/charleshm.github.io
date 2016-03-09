@@ -23,10 +23,12 @@ categories: 推荐系统 机器学习
  1. CONTENT ANALYZER：首先我们需要对非结构化的信息（网页，文档等）进行处理，也就是提取特征，将其转化为方便处理的形式。比如对网页做关键词提取(TF-IDF)，生成  keyword vectors 来表征该网页。
  
 ![此处输入图片的描述][3]
+
 2. PROFILE LEARNER：该模块收集、泛化代表用户偏好的数据，生成用户概要信息（user profile）。通常，是采用机器学习方法从用户之前喜欢和不喜欢的商品信息中推出一个表示用户喜好的模型。
+
 3. FILTERING COMPONENT：计算各项 Item Profile 与该 User Profile 的相似度   ，给出推荐列表。
 
-通俗版：
+**通俗版：**
 
 1. 为每个物品（Item）构建一个物品的属性资料（Item Profile）
 2. 为每个用户（User）构建一个用户的喜好资料（User Profile）
