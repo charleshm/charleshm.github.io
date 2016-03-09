@@ -76,9 +76,9 @@ Cutoff point左侧是流行的商品，右侧是不流行的，也称作长尾�
 
 > 实现：将所有用户对某一个物品的喜好作为一个向量来计算物品之间的相似度，得到物品的相似物品后，根据用户历史的喜好预测目标用户还没有涉及的物品，计算得到一个排序的物品列表作为推荐。
 
-对比一下，上述两种模型的优缺点：
+对比一下，上述两种模型的优缺点[^4]：
 
-![此处输入图片的描述][11]
+![此处输入图片的描述][11]{: width=100%}
 
 #### 基于模型的协同过滤推荐
 原理：这是一个典型的机器学习的问题，可以将已有的用户喜好信息作为训练样本，训练出一个预测用户喜好的模型，这样以后用户在进入系统，可以基于此模型计算推荐。
@@ -135,7 +135,7 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
   [^1]: [深入推荐引擎相关算法：协同过滤](http://www.ibm.com/developerworks/cn/web/1103_zhaoct_recommstudy2/index.html)
   [^2]: [协同过滤推荐及相似性度量](http://www.codeweblog.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E6%8E%A8%E8%8D%90%E5%8F%8A%E7%9B%B8%E4%BC%BC%E6%80%A7%E5%BA%A6%E9%87%8F/)
   [^3]: [推荐系统学习：协同过滤实现](http://wuchong.me/blog/2014/04/19/recsys-cf-study/)
-  
+  [^4]: 推荐系统实战
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/search-click-1.jpg
