@@ -101,6 +101,8 @@ $$sim(u,v) = \frac{\mathbf{r}_u\cdot \mathbf{r}_v}{\lVert \mathbf{r}_u \rVert_2 
 
 $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n _{i=1}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum ^n _{i=1}(x_i - \bar{x})^2} \sqrt{\sum ^n _{i=1}(y_i - \bar{y})^2}}$$
 
+![此处输入图片的描述][13]
+
 #### 推荐系统的评测指标[^3]
 
  - 准确率: 准确率就是最终的推荐列表中有多少是推荐对了的。
@@ -108,8 +110,7 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
  - 覆盖率: 覆盖率表示推荐的物品占了物品全集空间的多大比例。
  - 新颖度: 新颖度是为了推荐长尾区间的物品。用推荐列表中物品的平均流行度度量推荐结果的新颖度。如果推荐出的物品都很热门，说明推荐的新颖度较低，否则说明推荐结果比较新颖。
 
-![此处输入图片的描述][13]
-
+![此处输入图片的描述][14]
 
 ----------
 
@@ -117,7 +118,7 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 ### 推荐系统中的难点
 数据的稀疏性问题是协同过滤算法所面临的最大挑战。
 
-![此处输入图片的描述][14]
+![此处输入图片的描述][15]
 
 待整理：
 
@@ -145,5 +146,6 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/itemcf.png
   [11]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_192911.png
   [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_194150.png
-  [13]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg
-  [14]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_122652.png
+  [13]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_195901.png
+  [14]: http://7xjbdi.com1.z0.glb.clouddn.com/psm_2002.png
+  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_122652.png
