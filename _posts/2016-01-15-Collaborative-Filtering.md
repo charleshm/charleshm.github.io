@@ -85,6 +85,9 @@ Cutoff point左侧是流行的商品，右侧是不流行的，也称作长尾�
 
 #### 相似度计算
 
+**Jaccard Similarity**
+$$sim(A,B) = \frac{|r_A \bigcap r_B|}{|r_A \bigcup r_B|}$$
+
 #### 推荐系统的评测指标[^3]
 
  - 准确率: 准确率就是最终的推荐列表中有多少是推荐对了的。
