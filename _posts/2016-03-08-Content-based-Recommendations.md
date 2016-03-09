@@ -16,7 +16,7 @@ categories: 推荐系统 机器学习
 
 ![此处输入图片的描述][1]
 
-#### 框架结构
+#### 框架结构[^1]
 
 ![此处输入图片的描述][2]
 
@@ -28,7 +28,7 @@ categories: 推荐系统 机器学习
 
 3. **FILTERING COMPONENT**：计算各项 Item Profile 与该 User Profile 的相似度   ，给出推荐列表。
 
-**通俗版：**
+**通俗版：**[^2]
 
 1. 为每个物品（Item）构建一个物品的属性资料（Item Profile）
 2. 为每个用户（User）构建一个用户的喜好资料（User Profile）
@@ -37,3 +37,6 @@ categories: 推荐系统 机器学习
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Content-based%20Recommendations.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_140031.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_142149.png
+  
+  [^1]: [Content-based Recommender Systems: State of the Art and Trends](http://download.springer.com/static/pdf/632/chp%253A10.1007%252F978-0-387-85820-3_3.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-0-387-85820-3_3&token2=exp=1457503523~acl=%2Fstatic%2Fpdf%2F632%2Fchp%25253A10.1007%25252F978-0-387-85820-3_3.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fchapter%252F10.1007%252F978-0-387-85820-3_3*~hmac=6724ad95407a4435a5ccb34b75f12e02b130ffe683266f67b547224c032d2c31)
+  [^2]: [一个简单的基于内容的推荐算法](http://dataunion.org/7542.html)
