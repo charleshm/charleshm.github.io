@@ -28,7 +28,7 @@ categories: 推荐系统 机器学习
 
 3. **FILTERING COMPONENT**：计算各项 Item Profile 与该 User Profile 的相似度   ，给出推荐列表。
 
-**通俗版：**[^2]
+**通俗版[^2]：**
 
 1. 为每个物品（Item）构建一个物品的属性资料（Item Profile）
 2. 为每个用户（User）构建一个用户的喜好资料（User Profile）
