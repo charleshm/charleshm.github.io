@@ -97,6 +97,10 @@ $$sim(u,v) = \frac{\mathbf{r}_u\cdot \mathbf{r}_v}{\lVert \mathbf{r}_u \rVert_2 
 
 ![此处输入图片的描述][12]
 
+**Pearson Correla1on**
+
+$$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n _{i=1}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum ^n _{i=1}(x_i - \bar{x})^2} \sqrt{\sum ^n _{i=1}(y_i - \bar{y})^2}}$$
+
 #### 推荐系统的评测指标[^3]
 
  - 准确率: 准确率就是最终的推荐列表中有多少是推荐对了的。
