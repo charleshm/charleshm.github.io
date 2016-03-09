@@ -38,5 +38,8 @@ categories: 推荐系统 机器学习
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_140031.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_142149.png
   
+
+----------
+
   [^1]: [Content-based Recommender Systems: State of the Art and Trends](http://download.springer.com/static/pdf/632/chp%253A10.1007%252F978-0-387-85820-3_3.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Fchapter%2F10.1007%2F978-0-387-85820-3_3&token2=exp=1457503523~acl=%2Fstatic%2Fpdf%2F632%2Fchp%25253A10.1007%25252F978-0-387-85820-3_3.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Fchapter%252F10.1007%252F978-0-387-85820-3_3*~hmac=6724ad95407a4435a5ccb34b75f12e02b130ffe683266f67b547224c032d2c31)
   [^2]: [一个简单的基于内容的推荐算法](http://dataunion.org/7542.html)
