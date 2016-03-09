@@ -152,5 +152,5 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
   [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_192911.png
   [13]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_194150.png
   [14]: http://7xjbdi.com1.z0.glb.clouddn.com/psm_2002.png
-  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg =500x
+  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg
   [16]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_122652.png
