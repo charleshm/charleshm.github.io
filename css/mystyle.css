@@ -1,9 +1,10 @@
 body {
-    font-family: "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    font-family: "Cuprum","Hiragino Sans GB","Microsoft Yahei", Helvetica, Arial, sans-serif;
     color: #333;
     line-height: 22px;
     letter-spacing: 1px; /*字间距*/
 }
+
 
 p {
     margin: 0px 0px 20px;
