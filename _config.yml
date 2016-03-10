@@ -15,6 +15,7 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: charles
 github_username:  charleshm
 permalink: /:year/:month/:title/
+timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown
