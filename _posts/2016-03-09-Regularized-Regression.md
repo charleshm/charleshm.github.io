@@ -91,7 +91,9 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
 
 看我们得到的参数，在零附近是不是很密集，老实说 ridge regression 并不具有产生稀疏解的能力，也就是说参数并不会真出现很多零。假设我们的预测结果与两个特征相关，$L_2$正则倾向于综合两者的影响，给影响大的特征赋予高的权重；而$L_1$正则倾向于选择影响较大的参数，而舍弃掉影响较小的那个。实际应用中 $L_2$ 正则表现往往会优于 $L_1$正则，但 $L_1$ 正则会大大降低我们的计算量。
 
-> Typically ridge or ℓ2 penalties are much better for minimizing prediction error rather than ℓ1 penalties. The reason for this is that when two predictors are highly correlated, ℓ1 regularizer will simply pick one of the two predictors. In contrast, the ℓ2 regularizer will keep both of them and jointly shrink the corresponding coefficients a little bit. Thus, while the ℓ1 penalty can certainly reduce overfitting, you may also experience a loss in predictive power. 
+> Typically ridge or ℓ2 penalties are **much better** for minimizing prediction error rather than ℓ1 penalties. The reason for this is that when two predictors are highly correlated, ℓ1 regularizer will simply pick one of the two predictors. In contrast, the ℓ2 regularizer will keep both of them and jointly shrink the corresponding coefficients a little bit. Thus, while the ℓ1 penalty can certainly reduce overfitting, you may also experience a loss in predictive power. 
+
+**那现在我们知道了，对参数引入高斯先验等价于 $L_2$ 正则化。**
 
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
