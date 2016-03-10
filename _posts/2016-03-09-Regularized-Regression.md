@@ -28,7 +28,7 @@ categories: 机器学习
 > 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入**先验约束**。
 
 #### Linear Regression
-我们先看下最原始的Linear Regression:
+我们先看下最原始的Linear Regression[^5]:
 
 ![此处输入图片的描述][4]
 
@@ -40,7 +40,7 @@ $$\begin{align*}
 由最大似然估计(MLE):
 
 $$\begin{align*}
-L(w) & = p(\vec(y)|X;w)\\
+L(w) & = p(\vec{y}|X;w)\\
 & = \prod_{i=1}^{m} p(y^{(i)}|x^{(i)};\theta)\\
 & = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})^2}{2\delta^2}  \right)
 \end{align*}$$
@@ -67,6 +67,7 @@ http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regu
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
   [^3]: [What is the difference between L1 and L2 regularization?](https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization)
   [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
+  [^5]: [Bayesian statistics and regularization](http://cs229.stanford.edu/notes/cs229-notes5.pdf)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView2/2/w/400
