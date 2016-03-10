@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "Bias(偏差)和Variance(方差)"
-date:   2016-03-10 12:20
+date:   2016-03-9 12:20
 categories: 机器学习
 ---
 
