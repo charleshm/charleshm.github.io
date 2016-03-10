@@ -97,7 +97,7 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
 
 > Typically ridge or ℓ2 penalties are **much better** for minimizing prediction error rather than ℓ1 penalties. The reason for this is that when two predictors are highly correlated, ℓ1 regularizer will simply pick one of the two predictors. In contrast, the ℓ2 regularizer will keep both of them and jointly shrink the corresponding coefficients a little bit. Thus, while the ℓ1 penalty can certainly reduce overfitting, you may also experience a loss in predictive power. [^3]
 
-**那现在我们知道了，对参数引入高斯先验等价于 $L_2$ 正则化。**
+**那现在我们知道了，对参数引入 高斯先验 等价于 $L_2$ 正则化。**
 
 #### LASSO
 上面我们对 $w$ 引入了高斯分布，那么拉普拉斯分布(Laplace distribution)呢？
@@ -120,7 +120,7 @@ $$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \fr
 
 该问题通常被称为 LASSO (least absolute shrinkage and selection operator) 。LASSO 仍然是一个 convex optimization 问题，不具有解析解。它的优良性质是能产生稀疏性，导致 $w$ 中许多项变成零。
 
-> 再次总结下，对参数引入**拉普拉斯先验**等价于 $L_1$ 正则化。
+> 再次总结下，对参数引入 **拉普拉斯先验** 等价于 $L_1$ 正则化。
 
 #### Elastic Net
 可能有同学会想，既然 $L_1$ 和 $L_2$正则各自都有自己的优势，那我们能不能将他们 combine 起来？
@@ -144,7 +144,7 @@ $$\hat{\beta} = \arg \underset{\beta}{\min} \lVert y - X\beta \rVert_2 + \lambda
 ----------
 
 #### 总结
-> 正则化参数等价于对参数引入先验分布，使得**模型复杂度**变小（缩小解空间），对于噪声以及outliers的鲁棒性增强。整个最优化问题从贝叶斯观点来看是一种贝叶斯最大后验估计，其中**正则化项**对应后验估计中的**先验信息**，损失函数对应后验估计中的似然函数，两者的乘积即对应贝叶斯最大后验估计的形式。
+> 正则化参数等价于对参数引入 **先验分布**，使得 **模型复杂度** 变小（缩小解空间），对于噪声以及outliers的鲁棒性增强。整个最优化问题从贝叶斯观点来看是一种贝叶斯最大后验估计，其中 **正则化项** 对应后验估计中的 **先验信息** ，损失函数对应后验估计中的似然函数，两者的乘积即对应贝叶斯最大后验估计的形式。
 
 ps: 本文写作过程中参考了知乎和网上的很多文章,同时也加入了自己的一些理解，热烈欢迎广大机器学习爱好者一起讨论问题，互通有无！
 
