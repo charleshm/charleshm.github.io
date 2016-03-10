@@ -199,3 +199,9 @@ blockquote ol,
 blockquote ul {
     margin-left: 0px;
 }
+
+/*Reference格式*/
+.footnotes ol li p{
+    margin: 5px;
+
+}
