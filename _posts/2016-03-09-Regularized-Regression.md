@@ -56,9 +56,7 @@ l(w) & = \log L(w)\\
 
 即：
 
-$$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag{1}$$
-
-
+$$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2$$
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
 http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
@@ -67,8 +65,9 @@ http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regu
   [^1]: [Bias 和 Variance](http://charlesx.top/2016/03/Bias-Variance/)
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
   [^3]: [What is the difference between L1 and L2 regularization?](https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization)
+  [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView/2/w/400
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png?imageView/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
