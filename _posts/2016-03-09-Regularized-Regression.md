@@ -28,24 +28,45 @@ categories: 机器学习
 > 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入**先验约束**。
 
 #### Linear Regression
-我们先看下Linear Regression:
+我们先看下最原始的Linear Regression:
 
 ![此处输入图片的描述][4]
 
-![此处输入图片的描述][5]
+$$\begin{align*}
+ & p(\epsilon^{(i)})  = \frac{1}{\sqrt{2\pi}\delta}exp\left(  -\frac{(\epsilon^{(i)})^2}{2\delta^2} \right)\\
+ \Rightarrow & p(y^{(i)}|x^{(i)};\theta) = \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})^2}{2\delta^2}  \right)
+\end{align*}$$
 
+由最大似然估计(MLE):
 
+$$\begin{align*}
+L(w) & = p(\vec(y)|X;w)\\
+& = \prod_{i=1}^{m} p(y^{(i)}|x^{(i)};\theta)\\
+& = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})^2}{2\delta^2}  \right)
+\end{align*}$$
+
+取对数：
+
+$$\begin{align*}
+l(w) & = \log L(w)\\
+& =\log \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})}{2\delta^2}  \right)\\
+& = \sum_{i=1}^{m} \log \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})^2}{2\delta^2}  \right)\\
+& = m \log \frac{1}{\sqrt{2\pi}\delta} - \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2
+\end{align*}$$
+
+即：
+
+$$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2$$
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
 http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
 
 
-  [^1]: http://charlesx.top/2016/03/Bias-Variance/
+  [^1]: [Bias 和 Variance](http://charlesx.top/2016/03/Bias-Variance/)
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
   [^3]: [What is the difference between L1 and L2 regularization?](https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180451.png
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
