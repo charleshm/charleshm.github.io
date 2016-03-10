@@ -46,3 +46,12 @@ Err(x) &= E\left[(Y-\hat{f}(x))^2\right]  \\
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_130216.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/biasvariance.png
+
+
+
+----------
+
+  
+  [^1]: [从集成学习到模型的偏差和方差的理解，集成模型偏差理解](http://www.bkjia.com/yjs/1044343.html)
+  [^2]: [Understanding the Bias-Variance Tradeoff](http://scott.fortmann-roe.com/docs/BiasVariance.html)
+  [^3]: [机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？](https://www.zhihu.com/question/27068705)
