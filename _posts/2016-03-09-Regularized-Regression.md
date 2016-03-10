@@ -78,7 +78,7 @@ L(w) & = p(\vec{y}|X;w)p(w)\\
 $$\begin{align*}
 l(w) & = \log L(w)\\
 & = m \log \frac{1}{\sqrt{2\pi}\delta}+ n \log \frac{1}{\sqrt{2\pi\alpha}} - \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 - \frac{1}{\alpha}\cdot \frac{1}{2} w^Tw\\
- \Rightarrow & w_{MAP_{Guassian}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 + \frac{1}{\alpha}\cdot \frac{1}{2} w^Tw \right)
+ \Rightarrow & w_{MAP_{Guassian}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 + \frac{1}{\alpha}\cdot \frac{1}{2} w^Tw \right) \tag{2}
 \end{align*}$$
 
 等价于：
@@ -108,19 +108,26 @@ $$f(x\mid\mu,b) = \frac{1}{2b} \exp \left( -\frac{|x-\mu|}{b} \right) \,\!$$
 
 ![此处输入图片的描述][8]
 
-关于拉普拉斯和正态分布的渊源，大家可以参见 "[正态分布的前世今生][9]".
+关于拉普拉斯和正态分布的渊源，大家可以参见 "[**正态分布的前世今生**][9]".
 
 重复之前的推导过程我们很容易得到：
 
-$$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 + \frac{1}{b^2}\cdot \frac{1}{2} \lVert w \rVert_1 \right)$$
+$$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 + \frac{1}{b^2}\cdot \frac{1}{2} \lVert w \rVert_1 \right) \tag{3}$$
 
 该问题通常被称为 LASSO (least absolute shrinkage and selection operator) 。LASSO 仍然是一个 convex optimization 问题，不具有解析解。它的优良性质是能产生稀疏性，导致 $w$ 中许多项变成零。
 
-http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
-Bayesian linear Regression
-http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
+> 再次总结下，对参数引入**拉普拉斯先验**等价于 $L_1$ 正则化。
 
 #### Elastic Net
+
+
+----------
+
+
+资料传送门：
+
+ - [Regularized Regression](http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf)
+ - [Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
 
   [^1]: [Bias 和 Variance](http://charlesx.top/2016/03/Bias-Variance/)
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
@@ -128,6 +135,9 @@ http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regu
   [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
   [^5]: [Bayesian statistics and regularization](http://cs229.stanford.edu/notes/cs229-notes5.pdf)
   [^6]: [最大似然估计和最小二乘法怎么理解？](https://www.zhihu.com/question/20447622)
+
+
+----------
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
