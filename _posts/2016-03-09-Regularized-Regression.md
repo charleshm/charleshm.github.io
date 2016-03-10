@@ -72,6 +72,7 @@ $$w_{MLE} = \arg \underset{w}{\min} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag
 ![此处输入图片的描述][6]
 
 由于引入了先验分布，我们用最大后验估计(MAP)[^6]：
+
 $$\begin{align*}
 L(w) & = p(\vec{y}|X;w)p(w)\\
 & = \prod_{i=1}^{m} p(y^{(i)}|x^{(i)};\theta)p(w)\\
