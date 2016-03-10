@@ -60,12 +60,16 @@ $$w_{MLE} = \arg \underset{w}{\min} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag
 
 这就导出了我们原始的least-squares损失函数，但这是在我们对参数 $w$ 没有加入任何先验约束的情况下。在数据维度很高的情况下，我们的模型参数很多，模型复杂度高，容易发生过拟合。
 
+比如我们常说的 “small n, large p problem”。（我们一般用 $n$ 表示数据点的个数，用 $p$ 表示变量的个数 ，即数据维度。当 $p\gg n$ 的时候，不做任何其他假设或者限制的话，学习问题基本上是没法进行的。因为如果用上所有变量的话， $p$ 越大，通常会导致模型越复杂，但是反过来 $n$ 又很小，于是就会出现很严重的 overfitting 问题[^7]。
+
+![此处输入图片的描述][5]
+
 这个时候，我们可以对参数 $w$ 引入先验分布，让参数稀疏化。
 
 ####  Ridge Regression
 我们对参数 $w$ 引入协方差为 $\alpha$ 的零均值高斯分布先验。
 
-![此处输入图片的描述][5]
+![此处输入图片的描述][6]
 
 由于引入了先验分布，我们用最大后验估计(MAP)[^6]：
 $$\begin{align*}
@@ -87,7 +91,7 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
 
 这不就是 **Ridge Regression** 吗？
 
-![此处输入图片的描述][6]
+![此处输入图片的描述][7]
 
 看我们得到的参数，在零附近是不是很密集，老实说 ridge regression 并不具有产生稀疏解的能力，也就是说参数并不会真出现很多零。假设我们的预测结果与两个特征相关，$L_2$正则倾向于综合两者的影响，给影响大的特征赋予高的权重；而$L_1$正则倾向于选择影响较大的参数，而舍弃掉影响较小的那个。实际应用中 $L_2$ 正则表现往往会优于 $L_1$正则，但 $L_1$ 正则会大大降低我们的计算量。
 
@@ -100,15 +104,15 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
 
 注：LASSO - least absolute shrinkage and selection operator.
 
-![此处输入图片的描述][7]
+![此处输入图片的描述][8]
 
 我们看下拉普拉斯分布长啥样：
 
 $$f(x\mid\mu,b) = \frac{1}{2b} \exp \left( -\frac{|x-\mu|}{b} \right) \,\!$$
 
-![此处输入图片的描述][8]
+![此处输入图片的描述][9]
 
-关于拉普拉斯和正态分布的渊源，大家可以参见 "[**正态分布的前世今生**][9]".
+关于拉普拉斯和正态分布的渊源，大家可以参见 "[**正态分布的前世今生**][10]".
 
 重复之前的推导过程我们很容易得到：
 
@@ -119,7 +123,23 @@ $$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \fr
 > 再次总结下，对参数引入**拉普拉斯先验**等价于 $L_1$ 正则化。
 
 #### Elastic Net
+可能有同学会想，既然 $L_1$ 和 $L_2$正则各自都有自己的优势，那我们能不能将他们 combine 起来？
 
+可以，事实上，大牛早就这么玩过了，参见大牛 [**PPT**][11]。
+
+![此处输入图片的描述][12]
+
+因为lasso在解决之前提到的“small n, large p problem”存在一定缺陷。
+
+![此处输入图片的描述][13]
+
+这个我们就直接给结果了，不推导了哈。（好麻烦的样子。。。逃）
+
+$$\hat{\beta} = \arg \underset{\beta}{\min} \lVert y - X\beta \rVert_2 + \lambda_2 \lVert \beta \rVert_2 + \lambda_1 \lVert \beta \rVert_1 \tag{4}$$
+
+![此处输入图片的描述][14]
+
+![此处输入图片的描述][15]
 
 ----------
 
@@ -135,7 +155,7 @@ $$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \fr
   [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
   [^5]: [Bayesian statistics and regularization](http://cs229.stanford.edu/notes/cs229-notes5.pdf)
   [^6]: [最大似然估计和最小二乘法怎么理解？](https://www.zhihu.com/question/20447622)
-
+  [^7]: [Sparsity and Some Basics of L1 Regularization](http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/)
 
 ----------
 
@@ -144,8 +164,14 @@ $$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \fr
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView2/2/w/350
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png?imageView2/2/w/350
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ridge_re.png
-  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_195835.png?imageView2/2/w/300
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_201452.png
-  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Laplace_pdf_mod.png?imageView2/2/w/350
-  [9]: http://www.med.mcgill.ca/epidemiology/hanley/bios601/Mean-Quantile/intro-normal-distribution-2.pdf
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_204329.png
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/ridge_re.png
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_195835.png?imageView2/2/w/300
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_201452.png
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/Laplace_pdf_mod.png?imageView2/2/w/350
+  [10]: http://www.med.mcgill.ca/epidemiology/hanley/bios601/Mean-Quantile/intro-normal-distribution-2.pdf
+  [11]: http://web.stanford.edu/~hastie/TALKS/enet_talk.pdf
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_203846.png
+  [13]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_205117.png
+  [14]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_205924.png
+  [15]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_205943.png?imageView2/2/w/350
