@@ -90,7 +90,7 @@ l(w) & = \log L(w)\\
 
 等价于：
 
-$$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
+$$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert_2 + \lambda \lVert w \rVert_2$$
 
 这不就是 **Ridge Regression** 吗？
 
