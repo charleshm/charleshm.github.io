@@ -24,6 +24,7 @@
 }
 
 
+/*页面格式*/
 body {
     font-family: "Cuprum","Hiragino Sans GB","Microsoft Yahei", Helvetica, Arial, sans-serif;
     color: #333;
@@ -44,6 +45,10 @@ h1 {
 h2 {
     margin: 35px 0px 20px;
     font-size: 24px;
+}
+
+.post-list h2{
+    margin: 15px 0px 15px;
 }
 
 h3 {
