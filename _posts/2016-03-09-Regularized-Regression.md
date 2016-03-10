@@ -67,7 +67,7 @@ $$w_{MLE} = \arg \underset{w}{\min} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag
 
 ![此处输入图片的描述][5]
 
-由于引入了先验分布，我们用最大后验估计(MAP)：
+由于引入了先验分布，我们用最大后验估计(MAP)[^6]：
 $$\begin{align*}
 L(w) & = p(\vec{y}|X;w)p(w)\\
 & = \prod_{i=1}^{m} p(y^{(i)}|x^{(i)};\theta)p(w)\\
@@ -91,25 +91,51 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert^2 + \lambda \lVert w \rVert^2$$
 
 看我们得到的参数，在零附近是不是很密集，老实说 ridge regression 并不具有产生稀疏解的能力，也就是说参数并不会真出现很多零。假设我们的预测结果与两个特征相关，$L_2$正则倾向于综合两者的影响，给影响大的特征赋予高的权重；而$L_1$正则倾向于选择影响较大的参数，而舍弃掉影响较小的那个。实际应用中 $L_2$ 正则表现往往会优于 $L_1$正则，但 $L_1$ 正则会大大降低我们的计算量。
 
-> Typically ridge or ℓ2 penalties are **much better** for minimizing prediction error rather than ℓ1 penalties. The reason for this is that when two predictors are highly correlated, ℓ1 regularizer will simply pick one of the two predictors. In contrast, the ℓ2 regularizer will keep both of them and jointly shrink the corresponding coefficients a little bit. Thus, while the ℓ1 penalty can certainly reduce overfitting, you may also experience a loss in predictive power. 
+> Typically ridge or ℓ2 penalties are **much better** for minimizing prediction error rather than ℓ1 penalties. The reason for this is that when two predictors are highly correlated, ℓ1 regularizer will simply pick one of the two predictors. In contrast, the ℓ2 regularizer will keep both of them and jointly shrink the corresponding coefficients a little bit. Thus, while the ℓ1 penalty can certainly reduce overfitting, you may also experience a loss in predictive power. [^3]
 
 **那现在我们知道了，对参数引入高斯先验等价于 $L_2$ 正则化。**
+
+#### LASSO
+上面我们对 $w$ 引入了高斯分布，那么拉普拉斯分布(Laplace distribution)呢？
+
+注：LASSO - least absolute shrinkage and selection operator.
+
+![此处输入图片的描述][7]
+
+我们看下拉普拉斯分布长啥样：
+
+$$f(x\mid\mu,b) = \frac{1}{2b} \exp \left( -\frac{|x-\mu|}{b} \right) \,\!$$
+
+![此处输入图片的描述][8]
+
+关于拉普拉斯和正态分布的渊源，大家可以参见 "[正态分布的前世今生][9]".
+
+重复之前的推导过程我们很容易得到：
+
+$$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 + \frac{1}{b^2}\cdot \frac{1}{2} \lVert w \rVert_1 \right)$$
+
+该问题通常被称为 LASSO (least absolute shrinkage and selection operator) 。LASSO 仍然是一个 convex optimization 问题，不具有解析解。它的优良性质是能产生稀疏性，导致 $w$ 中许多项变成零。
 
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
 http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
 
+#### Elastic Net
 
   [^1]: [Bias 和 Variance](http://charlesx.top/2016/03/Bias-Variance/)
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
   [^3]: [What is the difference between L1 and L2 regularization?](https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization)
   [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
   [^5]: [Bayesian statistics and regularization](http://cs229.stanford.edu/notes/cs229-notes5.pdf)
+  [^6]: [最大似然估计和最小二乘法怎么理解？](https://www.zhihu.com/question/20447622)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView2/2/w/400
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png?imageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView2/2/w/350
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png?imageView2/2/w/350
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ridge_re.png
-  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_195835.png?imageView2/2/w/400
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_195835.png?imageView2/2/w/300
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_201452.png
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Laplace_pdf_mod.png?imageView2/2/w/350
+  [9]: http://www.med.mcgill.ca/epidemiology/hanley/bios601/Mean-Quantile/intro-normal-distribution-2.pdf
