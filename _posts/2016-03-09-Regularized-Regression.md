@@ -26,6 +26,7 @@ categories: 机器学习
 ![此处输入图片的描述][3]
 
 > 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入**先验约束**。
+
 #### Linear Regression
 我们先看下Linear Regression:
 
