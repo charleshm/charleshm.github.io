@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "Bias 和 Variance"
-date:   2016-03-10 15:21
+date:   2016-03-09 15:21
 categories: 机器学习
 ---
 
