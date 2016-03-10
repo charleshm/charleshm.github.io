@@ -56,7 +56,7 @@ l(w) & = \log L(w)\\
 
 即：
 
-$$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2$$
+$$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag{1}$$
 
 
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
