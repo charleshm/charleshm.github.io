@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Bias 和 Variance"
+title:  "Regularized Regression: A Bayesian point of view"
 date:   2016-03-09 15:21
 categories: 机器学习
 ---
