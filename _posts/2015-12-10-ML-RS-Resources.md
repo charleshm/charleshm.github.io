@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "机器学习，推荐系统资源汇总"
-date:   2016-03-10 19:35
+date:   2015-12-10 19:35
 categories: 机器学习 推荐系统
 ---
 
