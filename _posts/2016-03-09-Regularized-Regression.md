@@ -25,7 +25,7 @@ categories: 机器学习
 
 ![此处输入图片的描述][3]
 
-> 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入**先验约束**。（不添加正则化约束，相当于参数的高斯先验分布有着无穷大的协方差，可以想象一下）
+> 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入**先验分布**。（不添加正则化约束，相当于参数的高斯先验分布有着无穷大的协方差，可以想象一下）
 
 #### Linear Regression
 我们先看下最原始的Linear Regression[^5]:
@@ -58,7 +58,7 @@ l(w) & = \log L(w)\\
 
 $$w_{MLE} = \arg \underset{w}{\min} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag{1}$$
 
-这就导出了我们原始的least-squares损失函数，但这是在我们对参数 $w$ 没有加入任何先验约束的情况下。在数据维度很高的情况下，我们的模型参数很多，模型复杂度高，容易发生过拟合。
+这就导出了我们原始的least-squares损失函数，但这是在我们对参数 $w$ 没有加入任何先验分布的情况下。在数据维度很高的情况下，我们的模型参数很多，模型复杂度高，容易发生过拟合。
 
 比如我们常说的 “small n, large p problem”。（我们一般用 $n$ 表示数据点的个数，用 $p$ 表示变量的个数 ，即数据维度。当 $p\gg n$ 的时候，不做任何其他假设或者限制的话，学习问题基本上是没法进行的。因为如果用上所有变量的话， $p$ 越大，通常会导致模型越复杂，但是反过来 $n$ 又很小，于是就会出现很严重的 overfitting 问题[^7]。
 
@@ -143,11 +143,19 @@ $$\hat{\beta} = \arg \underset{\beta}{\min} \lVert y - X\beta \rVert_2 + \lambda
 
 ----------
 
+#### 总结
+> 正则化参数等价于对参数引入先验分布，使得**模型复杂度**变小（缩小解空间），对于噪声以及outliers的鲁棒性增强。整个最优化问题从贝叶斯观点来看是一种贝叶斯最大后验估计，其中**正则化项**对应后验估计中的**先验信息**，损失函数对应后验估计中的似然函数，两者的乘积即对应贝叶斯最大后验估计的形式。
+
+ps: 本文写作过程中参考了知乎和网上的很多文章,同时也加入了自己的一些理解，热烈欢迎广大机器学习爱好者一起讨论问题，互通有无！
+
+----------
+
 
 资料传送门：
 
  - [Regularized Regression](http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf)
  - [Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
+ - [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
 
   [^1]: [Bias 和 Variance](http://charlesx.top/2016/03/Bias-Variance/)
   [^2]: [《A Few useful things to Know About machine Learning》读后感](http://blog.csdn.net/danameng/article/details/21563093)
