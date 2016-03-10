@@ -80,6 +80,8 @@ L(w) & = p(\vec{y}|X;w)p(w)\\
 & = \prod_{i=1}^{m} \frac{1}{\sqrt{2\pi}\delta}exp\left( -\frac{(y^{(i)} - w^Tx^{(i)})^2}{2\delta^2}  \right)\frac{1}{\sqrt{2\pi\alpha}}exp\left( -\frac{w^Tw}{2\alpha}  \right)
 \end{align*}$$
 
+取对数：
+
 $$\begin{align*}
 l(w) & = \log L(w)\\
 & = m \log \frac{1}{\sqrt{2\pi}\delta}+ n \log \frac{1}{\sqrt{2\pi\alpha}} - \frac{1}{\delta^2}\cdot \frac{1}{2} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 - \frac{1}{\alpha}\cdot \frac{1}{2} w^Tw\\
