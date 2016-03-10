@@ -44,7 +44,7 @@ Err(x) &= E\left[(Y-\hat{f}(x))^2\right]  \\
 ![此处输入图片的描述][2]
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_130216.png
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_130216.png?imageView2/2/w/600
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/biasvariance.png
 
 
