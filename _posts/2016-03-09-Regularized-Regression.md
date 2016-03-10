@@ -57,6 +57,7 @@ l(w) & = \log L(w)\\
 即：
 
 $$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2$$
+
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
 http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
