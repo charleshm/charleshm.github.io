@@ -58,6 +58,15 @@ l(w) & = \log L(w)\\
 
 $$w_{MLE} = \arg \underset{w}{\max} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag{1}$$
 
+这就导出了我们原始的least-squares损失函数，但这是在我们对参数 $w$ 没有加入任何先验约束的情况下。当我们在数据维度很高的情况下，我们的模型参数很多，复杂度太高，容易发生过拟合。
+
+那么一种直观的想法是，我们可以对参数 $w$ 引入先验分布，让参数稀疏化。
+
+####  Ridge Regression
+我们对参数 $w$ 引入协方差为 $\alpha$ 的零均值高斯分布先验。
+
+![此处输入图片的描述][5]
+
 http://www.unicog.org/pmwiki/uploads/Main/PresentationMM_02_10.pdf
 Bayesian linear Regression
 http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regularization/
@@ -69,7 +78,9 @@ http://freemind.pluskid.org/machine-learning/sparsity-and-some-basics-of-l1-regu
   [^4]: [ Bayesian Linear Regression](http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture5.pdf)
   [^5]: [Bayesian statistics and regularization](http://cs229.stanford.edu/notes/cs229-notes5.pdf)
 
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_170512.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_171146.png?imageView2/2/w/400
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/117ec65eb609d8ea9f05c227130724a6_b.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_180932.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ridge_re.png
