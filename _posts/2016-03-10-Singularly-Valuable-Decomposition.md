@@ -60,8 +60,8 @@ u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
 注：
 
 $$\begin{align*}
-(Av_i,Av_i) & = \lambda_iv_i^Tv_i = \lambda_i\\
-\Rightarrow \lvert Av_i \rvert & = \sqrt{\lambda_i}
+\lvert Av_i \rvert^2 = (Av_i,Av_i) & = \lambda_iv_i^Tv_i = \lambda_i\\
+\Rightarrow \lvert Av_i \rvert & = \sqrt{\lambda_i} = \delta_i
 \end{align*}$$
 
 
