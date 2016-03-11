@@ -21,7 +21,6 @@ $$A\mathbf{x} = \lambda \mathbf{x} \tag{1.1}$$
 学线性代数的时候，我们都学过这样一个定理：
 
 > 若 $A$ 为 $n$ 阶实对称阵（方阵），则存在由特征值组成的对角阵 $\Lambda$ 和特征向量组成的正交阵 $Q$，使得：    
-
 $$A = Q\Lambda Q^T \tag{1.2}$$
 
 这就是我们所说的特征值分解（Eigenvalue decomposition: EVD），而奇异值分解可以看做特征值分解在任意矩阵($m \times n$)上的推广形式。
