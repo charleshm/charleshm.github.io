@@ -40,7 +40,7 @@ $$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
 
 $$A^TA = VDV^T$$
 
-这个时候我们得到一组正交基，$\{v_1,v_2,\cdots,v_n\}$，：
+这个时候我们得到一组正交基，$\\{v_1,v_2,\cdots,v_n\\}$，：
 
 $$\begin{align*}
 (Av_i,Av_j) & = (Av_i)^T(Av_j)\\
@@ -50,7 +50,7 @@ $$\begin{align*}
 & = 0
 \end{align*}$$
 
-由 $r(A^TA)=r(A)=r$，这个时候我们得到了另一组正交基，$\{Av_1,Av_2,\cdots,Av_r\}$。先将其标准化，令：
+由 $r(A^TA)=r(A)=r$，这个时候我们得到了另一组正交基，$\\{Av_1,Av_2,\cdots,Av_r\\}$。先将其标准化，令：
 
 $$\begin{align*}
 u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
@@ -67,7 +67,7 @@ $$\begin{align*}
 \end{align*}$$
 
 
-将向量组 $\{u_1,u_2,\cdots,u_r\}$ 扩充为 $R^m$中的标准正交基 $\{u_1,u_2,\cdots,u_r,\cdots,u_m\}$。
+将向量组 $\\{u_1,u_2,\cdots,u_r\\}$ 扩充为 $R^m$中的标准正交基 $\\{u_1,u_2,\cdots,u_r,\cdots,u_m\\}$。
 
 则：
 
@@ -88,7 +88,3 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
-  
-  [^1]: [奇异值分解(SVD)原理详解及推导](http://blog.csdn.net/zhongkejingwang/article/details/43053513)
-  [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
-  [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
