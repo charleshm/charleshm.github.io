@@ -54,8 +54,10 @@ $$\begin{align*}
 
 $$\begin{align*}
 u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
-\Rightarrow Av_i & =  \sqrt{\lambda_i}u_i \tag{2.1}
+\Rightarrow Av_i & =  \sqrt{\lambda_i}u_i = \delta_i u_i \tag{2.1}
 \end{align*}$$
+
+![此处输入图片的描述][2]
 
 注：
 
@@ -76,3 +78,4 @@ http://chenbiaolong.com/2015/07/01/svd/
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
