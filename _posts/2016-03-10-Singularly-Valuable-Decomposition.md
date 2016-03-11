@@ -25,7 +25,7 @@ $$A = Q\Lambda Q^T \tag{1.2}$$
 
 这就是我们所说的 **特征值分解**（Eigenvalue decomposition: EVD）($R^n \rightarrow R^n$)，而奇异值分解其实可以看做是特征值分解在任意矩阵($m \times n$)上的推广形式 ($R^n \rightarrow R^m$)。（只有对方阵才有特征值的概念，所以对于任意的矩阵，我们引入了奇异值）
 
-我们来从数学的角度分析下矩阵与向量相乘到底发生了啥？
+我们来从数学的角度分析下矩阵与向量相乘到底发生了啥？[^1]
 
 $$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
 
@@ -78,15 +78,13 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 \Rightarrow A &= U\Sigma V^T \tag{2.2}
 \end{align*}$$
 
-http://blog.csdn.net/zhongkejingwang/article/details/43053513
-http://blog.csdn.net/zhongkejingwang/article/details/43083603
-http://www.ams.org/samplings/feature-column/fcarc-svd
-http://blog.sciencenet.cn/blog-696950-699432.html
+这就表明任意的矩阵 A 是可以分解成三个矩阵。V 表示了原始域的标准正交基，U 表示经过 A 变换后的co-domain的标准正交基，Σ 表示了 V 中的向量与 U 中相对应向量之间的关系[^2]。
 
-http://www.niubua.com/?p=1080
-https://www.zhihu.com/question/22237507
-http://chenbiaolong.com/2015/07/01/svd/
+> This shows how to decompose the matrix A into the product of three matrices: V describes an orthonormal basis in the domain, and U describes an orthonormal basis in the co-domain, and Σ describes how much the vectors in V are stretched to give the vectors in U. 
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
+  
+  [^1]: [奇异值分解(SVD)原理详解及推导](http://blog.csdn.net/zhongkejingwang/article/details/43053513)
+  [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
