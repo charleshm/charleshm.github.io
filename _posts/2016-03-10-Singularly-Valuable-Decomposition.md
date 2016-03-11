@@ -32,11 +32,34 @@ $$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
 待整理。。。
 
 #### 奇异值分解
-上面的特征值分解的**A**矩阵是对称阵，根据**EVD**可以找到一个（超）矩形使得变换后还是（超）矩形，也即A可以将一组正交基映射到另一组正交基！那么现在来分析：对任意$m \times n$的矩阵，能否找到一组正交基使得经过它变换后还是正交基？答案是肯定的，它就是**SVD**分解的精髓所在。
+上面的特征值分解的A矩阵是对称阵，根据EVD可以找到一个（超）矩形使得变换后还是（超）矩形，也即A可以将一组正交基映射到另一组正交基！那么现在来分析：对任意$m \times n$的矩阵，**能否找到一组正交基使得经过它变换后还是正交基**？答案是肯定的，它就是SVD分解的精髓所在。
 
 我们从特征值分解出发，导出奇异值分解。
 
 首先我们注意到 $A^TA$ 为 $n$ 阶对阵矩阵，我们可以对它做特征值分解。
+
+$$A^TA = VDV^T$$
+
+这个时候我们得到一组正交基，$\{v_1,v_2,\cdots,v_n\}$，又：
+$$\begin{align*}
+(Av_i,Av_j) & = (Av_i)^T(Av_j)\\
+& = v_i^TA^TAv_j\\
+& = v_i^T(\lambda_jv_j)\\
+& = \lambda_jv_i^Tv_j\\
+& = 0
+\end{align*}$$
+
+哈哈，这个时候我们得到了另一组正交基，$\{Av_1,Av_2,\cdots,Av_n\}$。先将其标准化，令：
+
+$$\begin{align*}
+u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
+\Rightarrow Av_i & =  \sqrt{\lambda_i}u_i \tag{2.1}
+\end{align*}$$
+注：
+$$\begin{align*}
+(Av_i,Av_i) & = \lambda_iv_i^Tv_i = \lambda_i\\
+\Rightarrow \lvert Av_i \rvert & = \sqrt{\lambda_i}
+\end{align*}$$
 
 
 http://blog.csdn.net/zhongkejingwang/article/details/43053513
