@@ -25,5 +25,28 @@ $$A = Q\Lambda Q^T \tag{1.2}$$
 
 这就是我们所说的 **特征值分解**（Eigenvalue decomposition: EVD）($R^n \rightarrow R^n$)，而奇异值分解其实可以看做是特征值分解在任意矩阵($m \times n$)上的推广形式 ($R^n \rightarrow R^m$)。（只有对方阵才有特征值的概念，所以对于任意的矩阵，我们引入了奇异值）
 
+我们来从数学的角度分析下矩阵与向量相乘到底发生了啥？
+
+$$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
+
+待整理。。。
+
+#### 奇异值分解
+上面的特征值分解的$A$矩阵是对称阵，根据$EVD$可以找到一个（超）矩形使得变换后还是（超）矩形，也即$A$可以将一组正交基映射到另一组正交基！那么现在来分析：对任意$m \times n$的矩阵，能否找到一组正交基使得经过它变换后还是正交基？答案是肯定的，它就是SVD分解的精髓所在。
+
+我们从特征值分解出发，导出奇异值分解。
+
+首先我们注意到 $A^TA$为 $n$ 阶对阵矩阵，我们可以对它做特征值分解。
+
+
+http://blog.csdn.net/zhongkejingwang/article/details/43053513
+http://blog.csdn.net/zhongkejingwang/article/details/43083603
+http://www.ams.org/samplings/feature-column/fcarc-svd
+http://blog.sciencenet.cn/blog-696950-699432.html
+
+http://www.niubua.com/?p=1080
+https://www.zhihu.com/question/22237507
+http://chenbiaolong.com/2015/07/01/svd/
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
