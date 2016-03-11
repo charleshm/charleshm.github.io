@@ -40,7 +40,7 @@ $$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
 
 $$A^TA = VDV^T$$
 
-这个时候我们得到一组正交基，$\{v_1,v_2,\cdots,v_n\}$，又：
+这个时候我们得到一组正交基，$\{v_1,v_2,\cdots,v_n\}$，：
 
 $$\begin{align*}
 (Av_i,Av_j) & = (Av_i)^T(Av_j)\\
@@ -50,7 +50,7 @@ $$\begin{align*}
 & = 0
 \end{align*}$$
 
-哈哈，这个时候我们得到了另一组正交基，$\{Av_1,Av_2,\cdots,Av_n\}$。先将其标准化，令：
+由 $r(A^TA)=r(A)=r$，这个时候我们得到了另一组正交基，$\{Av_1,Av_2,\cdots,Av_r\}$。先将其标准化，令：
 
 $$\begin{align*}
 u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
@@ -66,6 +66,17 @@ $$\begin{align*}
 \Rightarrow \lvert Av_i \rvert & = \sqrt{\lambda_i} = \delta_i \ \ \text{(奇异值)}
 \end{align*}$$
 
+
+将向量组 $\{u_1,u_2,\cdots,u_r\}$ 扩充为 $R^m$中的标准正交基 $\{u_1,u_2,\cdots,u_r,\cdots,u_m\}$。
+
+则：
+
+$$\begin{align*}
+AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
+& = (\delta_1 u_1\ \delta_2 u_2\ \cdots \delta_r u_r\ 0 \cdots\ 0)\\
+& =  U\Sigma\\
+\Rightarrow A &= U\Sigma V^T \tag{2.2}
+\end{align*}$$
 
 http://blog.csdn.net/zhongkejingwang/article/details/43053513
 http://blog.csdn.net/zhongkejingwang/article/details/43083603
