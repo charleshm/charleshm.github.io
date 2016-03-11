@@ -55,7 +55,9 @@ $$\begin{align*}
 u_i & = \frac{Av_i}{\lvert Av_i \rvert} = \frac{1}{\sqrt{\lambda_i}}Av_i\\
 \Rightarrow Av_i & =  \sqrt{\lambda_i}u_i \tag{2.1}
 \end{align*}$$
+
 注：
+
 $$\begin{align*}
 (Av_i,Av_i) & = \lambda_iv_i^Tv_i = \lambda_i\\
 \Rightarrow \lvert Av_i \rvert & = \sqrt{\lambda_i}
