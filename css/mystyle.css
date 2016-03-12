@@ -206,3 +206,11 @@ blockquote ul {
 
 }
 
+
+#Mtable{
+    border: none;
+}
+
+#Mtable tr{
+    border: none;
+}
