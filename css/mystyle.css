@@ -205,3 +205,14 @@ blockquote ul {
     margin: 5px;
 
 }
+
+#Mtable {
+    font-family: "Microsoft YaHei UI";
+    font-size: 11px;
+    color: #333333;
+    border-width: 0px;
+    border-color: #666666;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px auto;
+}
