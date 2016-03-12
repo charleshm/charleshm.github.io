@@ -209,8 +209,10 @@ blockquote ul {
 
 #Mtable{
     border: none;
+    border-width: 0px;
 }
 
 #Mtable tr{
     border: none;
+    border-width: 0px;
 }
