@@ -101,11 +101,11 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 
 $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
 
-<table id="Mtable">
+<table border="0">
     <tbody>
         <tr>
             <td>
-                <table border="1">
+                <table>
                     <tbody>
                         <tr>
                             <td>Phil</td>
@@ -162,7 +162,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
             </td>
             <td valign="middle">=</td>
             <td border="0">
-                <table border="1">
+                <table>
                     <tbody>
                         <tr>
                             <td>HoleDifficulty</td>
@@ -199,7 +199,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
             </td>
             <td valign="middle">*</td>
             <td valign="middle">
-                <table border="1">
+                <table>
                     <tbody>
                         <tr>
                             <td colspan="3">PlayerAbility</td>
