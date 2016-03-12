@@ -229,7 +229,7 @@ blockquote ul {
 
 #Mtable th {
     vertical-align: middle;
-    border-width: 1px;
+    border-width: 0px;
     padding: 8px;
     border-style: solid;
     border-color: #666666;
@@ -237,7 +237,7 @@ blockquote ul {
 }
 
 #Mtable td {
-    border-width: 1px;
+    border-width: 0px;
     /*padding: 8px;*/
     border-style: solid;
     border-color: #666666;
