@@ -84,9 +84,9 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 
 
 #### 举个栗子
-我们现在有一批高尔夫球手对九个不同hole的得分数据，我们希望基于这些数据建立模型，来预测选手对于某个给定hole的得分。（这个例子来自于： **[Singular Value Decomposition (SVD) Tutorial][3]**，强烈建议大家都去看看）
+我们现在有一批高尔夫球手对九个不同hole的所需挥杆次数数据，我们希望基于这些数据建立模型，来预测选手对于某个给定hole的挥杆次数。（这个例子来自于： **[Singular Value Decomposition (SVD) Tutorial][3]**，强烈建议大家都去看看）
 
-| Hole | Par | Phil | Tiger | Vijay |
+| Hole | **Par** | Phil | Tiger | Vijay |
 |:----:|:---:|:----:|:-----:|:-----:|
 |   1  |  4  |   4  |   4   |   4   |
 |   2  |  5  |   5  |   5   |   5   |
@@ -97,6 +97,8 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 |   7  |  4  |   4  |   4   |   4   |
 |   8  |  3  |   3  |   3   |   3   |
 |   9  |  5  |   5  |   5   |   5   |
+
+> 注: **[par(标准杆)][4]**，是一个高尔夫球运动术语，用以定義某一球洞從開球到完成進洞所需要的揮桿次數，以作為比賽成績的參考依據。
 
 最简单的一个思路，我们对每个hole设立一个难度评价指标 **HoleDifficulty** ，对每位选手的能力也设立一个评价指标 **PlayerAbility**，实际的得分取决于这两者的乘积：
 
@@ -364,14 +366,354 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
 
 这里面蕴含了一个非常有趣的思想，也是 SVD 这么有用的核心：
 
-> 最开始高尔夫球员和 holes 之间是没有直接联系的，我们通过 feature 把他们联系在一起：不同的 hole 进洞难度是不一样的，每个球手对进度难度的把控也是不一样的，那么我们就可以通过 **进洞难度** 这个 feature 将它们联系在一起。将它们乘起来就得到了我们想要的得分。
+> 最开始高尔夫球员和 holes 之间是没有直接联系的，我们通过 feature 把他们联系在一起：不同的 hole 进洞难度是不一样的，每个球手对进度难度的把控也是不一样的，那么我们就可以通过 **进洞难度** 这个 feature 将它们联系在一起。将它们乘起来就得到了我们想要的挥杆次数。
 
-我们更进一步，
+这个思想很重要，对于我们理解 LSI 和 SVD在推荐系统中的应用相当重要。
 
-> 再推荐系统中，我们假设用户和物品之间没有直接关系。**但是我们可以通过 feature 把它们联系在一起**。 feature 是用来刻画特征的，比如描述某个电影是喜剧还是悲剧，是动作片还是爱情片。用户和 feature 之间是有关系的，比如某个用户喜欢看爱情片，另外一个用户喜欢看动作片；物品和 feature 之间也是有关系的，比如某个电影是喜剧，某个电影是悲剧，那么通过和 feature 之间的联系，我们就找到了用户和物品之间的关联。
+----------
+
+#### 继续挖这个栗子
+SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系。
+
+大家可能注意到，上面那个矩阵秩为1，所以我们很容易就能将其分解，但是在实际问题中我们就得依靠SVD分解了，这个时候的隐藏特征往往也不止一个了。
+
+我们将上面的数据稍作修改，
+
+<table>
+    <tbody>
+        <tr>
+            <td class="noboarder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Phil</th>
+                            <th>Tiger</th>
+                            <th>Vijay</th>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noboarder">$=$</td>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">HoleDifficulty 1-3</th>
+                        </tr>
+                        <tr>
+                            <td>4.34</td>
+                            <td>-0.18</td>
+                            <td>-0.90</td>
+                        </tr>
+                        <tr>
+                            <td>4.69</td>
+                            <td>-0.38</td>
+                            <td>-0.15</td>
+                        </tr>
+                        <tr>
+                            <td>2.66</td>
+                            <td>0.80</td>
+                            <td>0.40</td>
+                        </tr>
+                        <tr>
+                            <td>4.36</td>
+                            <td>0.15</td>
+                            <td>0.47</td>
+                        </tr>
+                        <tr>
+                            <td>4.00</td>
+                            <td>0.35</td>
+                            <td>-0.29</td>
+                        </tr>
+                        <tr>
+                            <td>4.05</td>
+                            <td>-0.67</td>
+                            <td>0.68</td>
+                        </tr>
+                        <tr>
+                            <td>3.66</td>
+                            <td>0.89</td>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>3.39</td>
+                            <td>-1.29</td>
+                            <td>0.14</td>
+                        </tr>
+                        <tr>
+                            <td>5.00</td>
+                            <td>0.44</td>
+                            <td>-0.36</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noboarder">$\times$</td>
+            <td valign="middle" class="noboarder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">PlayerAbility 1-3</th>
+                        </tr>
+                        <tr>
+                            <td>Phil</td>
+                            <td>Tiger</td>
+                            <td>Vijay</td>
+                        </tr>
+                        <tr>
+                            <td>0.91</td>
+                            <td>1.07</td>
+                            <td>1.00</td>
+                        </tr>
+                        <tr>
+                            <td>0.82</td>
+                            <td>-0.20</td>
+                            <td>-0.53</td>
+                        </tr>
+                        <tr>
+                            <td>-0.21</td>
+                            <td>0.76</td>
+                            <td>-0.62</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+进行奇异值分解，可以得到：
+
+<table>
+    <tbody>
+        <tr>
+            <td class="noboarder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Phil</th>
+                            <th>Tiger</th>
+                            <th>Vijay</th>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noboarder">$=$</td>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">HoleDifficulty 1-3</th>
+                        </tr>
+                        <tr>
+                            <td>0.35</td>
+                            <td>0.09</td>
+                            <td>-0.64</td>
+                        </tr>
+                        <tr>
+                            <td>0.38</td>
+                            <td>0.19</td>
+                            <td>-0.10</td>
+                        </tr>
+                        <tr>
+                            <td>0.22</td>
+                            <td>-0.40</td>
+                            <td>0.28</td>
+                        </tr>
+                        <tr>
+                            <td>0.36</td>
+                            <td>-0.08</td>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                            <td>-0.18</td>
+                            <td>-0.20</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                            <td>0.33</td>
+                            <td>0.48</td>
+                        </tr>
+                        <tr>
+                            <td>0.30</td>
+                            <td>-0.44</td>
+                            <td>0.23</td>
+                        </tr>
+                        <tr>
+                            <td>0.28</td>
+                            <td>0.64</td>
+                            <td>0.10</td>
+                        </tr>
+                        <tr>
+                            <td>0.41</td>
+                            <td>-0.22</td>
+                            <td>-0.25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noboarder">$\times$</td>
+            <td valign="middle" class="noboarder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">ScaleFactor 1-3</td>
+                        </tr>
+                        <tr>
+                            <td>21.07</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>2.01</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1.42</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle">*</td>
+            <td valign="middle">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">PlayerAbility 1-3</td>
+                        </tr>
+                        <tr>
+                            <td>Phil</td>
+                            <td>Tiger</td>
+                            <td>Vijay</td>
+                        </tr>
+                        <tr>
+                            <td>0.53</td>
+                            <td>0.62</td>
+                            <td>0.58</td>
+                        </tr>
+                        <tr>
+                            <td>-0.82</td>
+                            <td>0.20</td>
+                            <td>0.53</td>
+                        </tr>
+                        <tr>
+                            <td>-0.21</td>
+                            <td>0.76</td>
+                            <td>-0.62</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+特征的重要性是与其对应的奇异值大小成正比的，也就是说奇异值越大，其所对应的特征也越重要。
+
+我们这个思想推广一下，
+
+> 在推荐系统中，我们假设用户和物品之间没有直接关系。**但是我们可以通过 feature 把它们联系在一起**。 feature 是用来刻画特征的，比如描述某个电影是喜剧还是悲剧，是动作片还是爱情片。用户和 feature 之间是有关系的，比如某个用户喜欢看爱情片，另外一个用户喜欢看动作片；物品和 feature 之间也是有关系的，比如某个电影是喜剧，某个电影是悲剧，那么通过和 feature 之间的联系，我们就找到了用户和物品之间的关联。
+
+有了这样了解，再去看看奇异值的应用会事半功倍。
+
+----------
 
 #### 后记
-Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][4]~** 
+Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][5]~** 
 
 ----------
 
@@ -383,4 +725,5 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
   [3]: http://www.puffinwarellc.com/index.php/news-and-articles/articles/30-singular-value-decomposition-tutorial.html
-  [4]: http://www.tablesgenerator.com/markdown_tables
+  [4]: https://zh.wikipedia.org/zh/%E6%A0%87%E5%87%86%E6%9D%86
+  [5]: http://www.tablesgenerator.com/markdown_tables
