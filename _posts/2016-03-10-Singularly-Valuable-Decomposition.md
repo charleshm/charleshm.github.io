@@ -83,6 +83,7 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 > This shows how to decompose the matrix A into the product of three matrices: V describes an orthonormal basis in the domain, and U describes an orthonormal basis in the co-domain, and Σ describes how much the vectors in V are stretched to give the vectors in U. 
 
 #### 举个栗子
+我们现在有一批高尔夫球手对九个不同hole的得分数据，我们希望基于这些数据建立模型，来预测选手对于某个给定hole的得分。
 
 | Hole | Par | Phil | Tiger | Vijay |
 |:----:|:---:|:----:|:-----:|:-----:|
@@ -96,17 +97,20 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 |   8  |  3  |   3  |   3   |   3   |
 |   9  |  5  |   5  |   5   |   5   |
 
+最简单的一个思路，我们对每个hole设立一个难度评价指标 HoleDifficulty ，对每位选手的能力也设立一个评价指标 PlayerAbility，实际的得分取决于这两者的乘积：
+
+$$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
 
 #### 后记
 Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][3]~** 
 
 ----------
 
+  [^1]: [奇异值分解(SVD)原理详解及推导](http://blog.csdn.net/zhongkejingwang/article/details/43053513)
+  [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
+  [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
   [3]: http://www.tablesgenerator.com/markdown_tables
-  
-  [^1]: [奇异值分解(SVD)原理详解及推导](http://blog.csdn.net/zhongkejingwang/article/details/43053513)
-  [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
-  [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
