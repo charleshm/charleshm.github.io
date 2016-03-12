@@ -136,7 +136,7 @@ table td {
     /*padding: 8px;*/
     border-style: solid;
     border-color: #666666;
-    background-color: #ffffff;
+    background-color: #fdfdfd;
 }
 
 p img {
@@ -218,5 +218,5 @@ blockquote ul {
 
 .noborder {
     border-width: 0px;
-    background-color: color: #333;
+    background-color: #fdfdfd;
 }
