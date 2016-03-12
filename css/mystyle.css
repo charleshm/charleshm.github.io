@@ -216,11 +216,6 @@ blockquote ul {
     margin: 5px;
 }
 
-#Mtable {
-    border-width: 0px;
-}
-
-
-#Mtable td {
+.noborder {
     border-width: 0px;
 }
