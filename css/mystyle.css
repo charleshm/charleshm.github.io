@@ -227,19 +227,4 @@ blockquote ul {
     margin: 10px auto;
 }
 
-#Mtable th {
-    vertical-align: middle;
-    border-width: 0px;
-    padding: 8px;
-    border-style: solid;
-    border-color: #666666;
-    background-color: #dedede;
-}
 
-#Mtable td {
-    border-width: 0px;
-    /*padding: 8px;*/
-    border-style: solid;
-    border-color: #666666;
-    background-color: #ffffff;
-}
