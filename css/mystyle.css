@@ -218,4 +218,5 @@ blockquote ul {
 
 .noborder {
     border-width: 0px;
+    background-color: color: #333;
 }
