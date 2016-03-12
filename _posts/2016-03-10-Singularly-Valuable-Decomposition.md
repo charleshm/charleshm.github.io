@@ -98,7 +98,7 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 |   8  |  3  |   3  |   3   |   3   |
 |   9  |  5  |   5  |   5   |   5   |
 
-> 注: **[par(标准杆)][4]**，是一个高尔夫球运动术语，用以定義某一球洞從開球到完成進洞所需要的揮桿次數，以作為比賽成績的參考依據。
+> 注: **[par（标准杆）][4]**，是一个高尔夫球运动术语，用以定義某一球洞從開球到完成進洞所需要的揮桿次數，以作為比賽成績的參考依據。
 
 最简单的一个思路，我们对每个hole设立一个难度评价指标 **HoleDifficulty** ，对每位选手的能力也设立一个评价指标 **PlayerAbility**，实际的得分取决于这两者的乘积：
 
@@ -382,7 +382,7 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
 <table>
     <tbody>
         <tr>
-            <td class="noboarder">
+            <td class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -438,7 +438,7 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$=$</td>
+            <td valign="middle" class="noborder">$=$</td>
             <td>
                 <table>
                     <tbody>
@@ -493,8 +493,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$\times$</td>
-            <td valign="middle" class="noboarder">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -532,7 +532,7 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
 <table>
     <tbody>
         <tr>
-            <td class="noboarder">
+            <td class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -588,7 +588,7 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$=$</td>
+            <td valign="middle" class="noborder">$=$</td>
             <td>
                 <table>
                     <tbody>
@@ -643,12 +643,12 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$\times$</td>
-            <td valign="middle" class="noboarder">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3">ScaleFactor 1-3</td>
+                            <th colspan="3">ScaleFactor 1-3</th>
                         </tr>
                         <tr>
                             <td>21.07</td>
@@ -673,7 +673,7 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                 <table>
                     <tbody>
                         <tr>
-                            <td colspan="3">PlayerAbility 1-3</td>
+                            <th colspan="3">PlayerAbility 1-3</th>
                         </tr>
                         <tr>
                             <td>Phil</td>
