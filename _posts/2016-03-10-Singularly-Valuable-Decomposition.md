@@ -105,6 +105,7 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
+  [3]: http://www.tablesgenerator.com/markdown_tables
   
   [^1]: [奇异值分解(SVD)原理详解及推导](http://blog.csdn.net/zhongkejingwang/article/details/43053513)
   [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
