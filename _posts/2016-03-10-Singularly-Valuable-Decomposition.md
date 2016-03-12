@@ -105,7 +105,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
     <tbody>
         <tr>
             <td>
-                <table border="0">
+                <table>
                     <tbody>
                         <tr>
                             <td>Phil</td>
@@ -161,7 +161,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
                 </table>
             </td>
             <td valign="middle">=</td>
-            <td border="0">
+            <td>
                 <table>
                     <tbody>
                         <tr>
