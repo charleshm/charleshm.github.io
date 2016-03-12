@@ -221,6 +221,142 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
     </tbody>
 </table>
 
+接着我们将  HoleDifficulty 和  PlayerAbility 这两个向量标准化，可以得到如下的关系：
+
+<table>
+    <tbody>
+        <tr>
+            <td class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Phil</th>
+                            <th>Tiger</th>
+                            <th>Vijay</th>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noborder" >$=$</td>
+            <td class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>HoleDifficulty</th>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.41</td>
+                        </tr>
+                        <tr>
+                            <td>0.25</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.33</td>
+                        </tr>
+                        <tr>
+                            <td>0.25</td>
+                        </tr>
+                        <tr>
+                            <td>0.41</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>ScaleFactor</th>
+                        </tr>
+                        <tr>
+                            <td>21.07</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">PlayerAbility</th>
+                        </tr>
+                        <tr>
+                            <td>Phil</td>
+                            <td>Tiger</td>
+                            <td>Vijay</td>
+                        </tr>
+                        <tr>
+                            <td>0.58</td>
+                            <td>0.58</td>
+                            <td>0.58</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
 #### 后记
 Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][3]~** 
 
