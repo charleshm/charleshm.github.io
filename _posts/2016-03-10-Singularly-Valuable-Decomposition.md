@@ -197,7 +197,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
                     </tbody>
                 </table>
             </td>
-            <td valign="middle">*</td>
+            <td valign="middle">$\times$</td>
             <td valign="middle">
                 <table>
                     <tbody>
