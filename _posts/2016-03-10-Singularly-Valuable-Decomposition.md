@@ -102,12 +102,8 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
 
 <table border="0">
-    <caption>
-        <br>
-    </caption>
     <tbody>
         <tr>
-            <td></td>
             <td border="0">
                 <table border="1">
                     <tbody>
