@@ -85,21 +85,145 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 #### 举个栗子
 我们现在有一批高尔夫球手对九个不同hole的得分数据，我们希望基于这些数据建立模型，来预测选手对于某个给定hole的得分。
 
-| Hole | Par | Phil | Tiger | Vijay |     | Hole | Par | Phil | Tiger | Vijay |
-|:----:|:---:|:----:|:-----:|:-----:|     |:----:|:---:|:----:|:-----:|:-----:|
-|   1  |  4  |   4  |   4   |   4   |     |   1  |  4  |   4  |   4   |   4   |
-|   2  |  5  |   5  |   5   |   5   |     |   2  |  5  |   5  |   5   |   5   |
-|   3  |  3  |   3  |   3   |   3   |     |   3  |  3  |   3  |   3   |   3   |
-|   4  |  4  |   4  |   4   |   4   |   =  |   4  |  4  |   4  |   4   |   4   |
-|   5  |  4  |   4  |   4   |   4   |     |   5  |  4  |   4  |   4   |   4   |
-|   6  |  4  |   4  |   4   |   4   |     |   6  |  4  |   4  |   4   |   4   |
-|   7  |  4  |   4  |   4   |   4   |     |   7  |  4  |   4  |   4   |   4   |
-|   8  |  3  |   3  |   3   |   3   |     |   8  |  3  |   3  |   3   |   3   |
-|   9  |  5  |   5  |   5   |   5   |     |   9  |  5  |   5  |   5   |   5   |
+| Hole | Par | Phil | Tiger | Vijay |
+|:----:|:---:|:----:|:-----:|:-----:|
+|   1  |  4  |   4  |   4   |   4   |
+|   2  |  5  |   5  |   5   |   5   |
+|   3  |  3  |   3  |   3   |   3   |
+|   4  |  4  |   4  |   4   |   4   |
+|   5  |  4  |   4  |   4   |   4   |
+|   6  |  4  |   4  |   4   |   4   |
+|   7  |  4  |   4  |   4   |   4   |
+|   8  |  3  |   3  |   3   |   3   |
+|   9  |  5  |   5  |   5   |   5   |
 
 最简单的一个思路，我们对每个hole设立一个难度评价指标 HoleDifficulty ，对每位选手的能力也设立一个评价指标 PlayerAbility，实际的得分取决于这两者的乘积：
 
 $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
+
+<table border="0">
+    <caption>
+        <br>
+    </caption>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>Phil</td>
+                            <td>Tiger</td>
+                            <td>Vijay</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle">=</td>
+            <td>
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>HoleDifficulty</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle">*</td>
+            <td valign="middle">
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td colspan="3">PlayerAbility</td>
+                        </tr>
+                        <tr>
+                            <td>Phil</td>
+                            <td>Tiger</td>
+                            <td>Vijay</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 #### 后记
 Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][3]~** 
