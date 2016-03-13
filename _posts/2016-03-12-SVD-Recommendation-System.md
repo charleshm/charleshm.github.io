@@ -15,6 +15,8 @@ categories: 机器学习 推荐系统
 
 ![此处输入图片的描述][2]
 
+> Latent factor models, such as Singular Value Decomposition (SVD),comprise an alternative approach by transforming both items and users to the same **latent factor space**, thus making them directly **comparable**. The latent space tries to explain ratings by characterizing both products and users on **factors** automatically inferred from user feedback. For example, when the products are movies, factors might measure obvious dimensions such as comedy vs. drama,amount of action, or orientation to children; less well defined dimensions such as depth of character development or “quirkiness”;or completely uninterpretable dimensions[^2].
+
 假设我们现在有评分矩阵 $V \in \mathbb{R}^{n \times m}$,SVD实际上就是去找到两个矩阵： $U \in \mathbb{R}^{f \times n}$，$M \in \mathbb{R}^{f \times m}$，其中矩阵 $U$ 表示 User 和 feature 之间的联系，矩阵 $V$ 表示 Item 和 feature 之间的联系。
 
 $$V = U^TM \tag{1}$$ 
@@ -63,9 +65,27 @@ $$\hat{r}_{ui} = \mu + b_i + b_u + \mathbf{q}_i^T\mathbf{p}_u \tag{5}$$
 
 $$E = \sum_{(u,i)\in \mathcal{k}}(r_{ui}-\mu - b_i - b_u - \mathbf{q}_i^T\mathbf{p}_u) + \lambda (\lVert p_u \rVert_2) + \lVert q_i \rVert_2 + b_u^2 + b_i^2) \tag{6}$$
 
+
+
+http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
+http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
+http://www.51itong.net/svd-c-6589.html
+http://www.cnblogs.com/FengYan/archive/2012/05/06/2480664.html
+http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf
+http://www.cc.gatech.edu/~zha/CSE8801/CF/kdd-fp074-koren.pdf
+
+
+http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
+
+
+----------
+
+
   [1]: http://charlesx.top/2016/03/Singularly-Valuable-Decomposition/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png?imageView2/2/w/500
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_125348.png?imageView2/2/w/600
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_132245.png
   
   [^1]: [A Guide to Singular Value Decomposition for Collaborative Filtering](http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf)
+  [^2]: [Factorization Meets the Neighborhood: a Multifaceted
+Collaborative Filtering Model](https://github.com/gpfvic/IRR/blob/master/Factorization%20meets%20the%20neighborhood-%20a%20multifaceted%20collaborative%20filtering%20model.pdf)
