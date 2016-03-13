@@ -11,11 +11,13 @@ categories: 机器学习 推荐系统
 
 我们重复强调一下SVD的思想（很重要），
 
-> 在推荐系统中，我们假设用户和物品之间没有直接关系。但是我们可以通过 feature 把它们联系在一起。 feature 是用来刻画特征的，比如描述某个电影是喜剧还是悲剧，是动作片还是爱情片。用户和 feature 之间是有关系的，比如某个用户喜欢看爱情片，另外一个用户喜欢看动作片；物品和 feature 之间也是有关系的，比如某个电影是喜剧，某个电影是悲剧，那么通过和 feature 之间的联系，我们就找到了用户和物品之间的关联。
+> 在推荐系统中，用户和物品之间没有直接关系。但是我们可以通过 feature 把它们联系在一起。对于电影来说，这样的特征可以是：喜剧还是悲剧，是动作片还是爱情片。用户和这样的 feature 之间是有关系的，比如某个用户喜欢看爱情片，另外一个用户喜欢看动作片；物品和 feature 之间也是有关系的，比如某个电影是喜剧，某个电影是悲剧。那么通过和 feature 之间的联系，我们就找到了用户和物品之间的关联。
 
 ![此处输入图片的描述][2]
 
-> Latent factor models, such as Singular Value Decomposition (SVD),comprise an alternative approach by transforming both items and users to the same **latent factor space**, thus making them directly **comparable**. The latent space tries to explain ratings by characterizing both products and users on **factors** automatically inferred from user feedback. For example, when the products are movies, factors might measure obvious dimensions such as comedy vs. drama,amount of action, or orientation to children; less well defined dimensions such as depth of character development or “quirkiness”;or completely uninterpretable dimensions[^2].
+我们引用 Koren 论文里面的一段简述，
+
+> Latent factor models, such as Singular Value Decomposition (SVD), comprise an alternative approach by transforming both items and users to the same **latent factor space**, thus making them directly **comparable**. The latent space tries to explain ratings by characterizing both products and users on **factors** automatically inferred from user feedback. For example, when the products are movies, factors might measure obvious dimensions such as comedy vs. drama,amount of action, or orientation to children; less well defined dimensions such as depth of character development or “quirkiness”; or completely uninterpretable dimensions[^2].
 
 假设我们现在有评分矩阵 $V \in \mathbb{R}^{n \times m}$,SVD实际上就是去找到两个矩阵： $U \in \mathbb{R}^{f \times n}$，$M \in \mathbb{R}^{f \times m}$，其中矩阵 $U$ 表示 User 和 feature 之间的联系，矩阵 $V$ 表示 Item 和 feature 之间的联系。
 
