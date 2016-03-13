@@ -438,8 +438,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$=$</td>
-            <td>
+            <td valign="middle" class="noborder">$=$</td>
+            <td class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -493,8 +493,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$\times$</td>
-            <td valign="middle" class="noboarder">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -588,8 +588,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$=$</td>
-            <td>
+            <td valign="middle" class="noborder">$=$</td>
+            <td class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -643,8 +643,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noboarder">$\times$</td>
-            <td valign="middle" class="noboarder">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr>
@@ -668,8 +668,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle">*</td>
-            <td valign="middle">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr>
