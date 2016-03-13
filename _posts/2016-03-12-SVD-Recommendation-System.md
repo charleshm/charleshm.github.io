@@ -128,6 +128,7 @@ $$\sum_{j \in R(u)} w_{ij} = \sum_{j \in R(u)} x_i^Ty_j$$
 也是尝试着将改进的 Item CF 和 SVD 模型混合。
 
 $$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{9}$$
+
 #### 后记
 Koren的想法太灵活了，各种玩，乐在其中呀~
 
