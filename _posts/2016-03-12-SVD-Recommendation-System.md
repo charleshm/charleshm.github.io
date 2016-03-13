@@ -96,6 +96,10 @@ $$\hat{r}_{ui} = b_{ui} + \sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) + \sum_{j \i
 
 $$\hat{r}_{ui} = b_{ui} + \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} c_{ij} \tag{7}$$
 
+改进到这样，我们已经可以通过**学习**的方式获取这些参数，这时的损失函数变为：
+
+$$E = \sum_{(u,i)\in \mathcal{K}} \left( r_{ui} - \mu - b_u - b_i  - \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) - \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} c_{ij} \right) + \lambda_4\left( (b_u)^2 + (b_i)^2 + \sum_{j \in R(u)} w_{ij}^2 + \sum_{j \in N(u)} c_{ij}^2 \right)$$
+
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
 http://www.51itong.net/svd-c-6589.html
