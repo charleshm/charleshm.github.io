@@ -110,5 +110,4 @@ http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_132245.png
   
   [^1]: [A Guide to Singular Value Decomposition for Collaborative Filtering](http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf)
-  [^2]: [Factorization Meets the Neighborhood: a Multifaceted
-Collaborative Filtering Model](https://github.com/gpfvic/IRR/blob/master/Factorization%20meets%20the%20neighborhood-%20a%20multifaceted%20collaborative%20filtering%20model.pdf)
+  [^2]: [Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model](https://github.com/gpfvic/IRR/blob/master/Factorization%20meets%20the%20neighborhood-%20a%20multifaceted%20collaborative%20filtering%20model.pdf)
