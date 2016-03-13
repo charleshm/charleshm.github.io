@@ -46,6 +46,8 @@ $$
 -\frac{\partial E}{\partial M_j} & = \sum_{i=1}^{n}I_{ij}((V_{ij}-p(U_i,M_j))U_i) - k_mM_j \tag{4}
 \end{align*}$$
 
+#### Incremental learning
+
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
 http://www.51itong.net/svd-c-6589.html
