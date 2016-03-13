@@ -100,23 +100,34 @@ $$\hat{r}_{ui} = b_{ui} + \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} w_{ij
 
 $$E = \sum_{(u,i)\in \mathcal{K}} \left( r_{ui} - \mu - b_u - b_i  - \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) - \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} c_{ij} \right) + \lambda_4\left( (b_u)^2 + (b_i)^2 + \sum_{j \in R(u)} w_{ij}^2 + \sum_{j \in N(u)} c_{ij}^2 \right)$$
 
+----------
+
+
 #### Asymmetric-SVD
 将传统Item CF模型改进为可学习的模型后，这个时候我们就可以尝试着将它和SVD模型混合。
 
 $$\hat{r}_{ui} = b_{ui} + p_u^Tq_i$$
 
-> Koren的想法很有意思，利用用户评过分的商品和用户浏览过尚未评分的商品属性来表示用户属性。**用 Item 来建模 User**.
+> Koren的想法很有意思，利用用户评过分的商品和用户浏览过尚未评分的商品属性来表示用户属性。
+
+**用 Item 来建模 User**.
 
 这有一定的合理性，因为用户的行为记录本身就能反应用户的喜好。而且，这个模型可以带来一个很大的好处，一个商场或者网站的用户数成千上万甚至过亿，存储用户属性会占用巨大的存储空间，而商品数相比来说会小很多。
 
 $$\hat{r}_{ui} = b_{ui} + q_i^T\left( \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} x_{j}(r_{uj} - b_{uj}) + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{8}$$
+
+这里有个细节问题，就是之前的 $w_{ij}$ 是一个比较稠密的矩阵，存储它需要比较大的空间。此外，如果有n个物品，那么该模型的参数个数就是 $n^2$ 个，这个参数个数比较大，容易造成结果的过拟合。因此，Koren提出应该对 w 矩阵也进行分解，将参数个数降低到 $2nF$ 个，模型如下：
+
+$$\sum_{j \in R(u)} w_{ij} = \sum_{j \in R(u)} x_i^Ty_j$$
+
+
+----------
 
 
 #### SVD++
 也是尝试着将改进的 Item CF 和 SVD 模型混合。
 
 $$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{9}$$
-
 #### 后记
 Koren的想法太灵活了，各种玩，乐在其中呀~
 
