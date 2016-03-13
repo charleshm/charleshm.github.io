@@ -67,7 +67,24 @@ $$\hat{r}_{ui} = \mu + b_i + b_u + \mathbf{q}_i^T\mathbf{p}_u \tag{5}$$
 
 $$E = \sum_{(u,i)\in \mathcal{k}}(r_{ui}-\mu - b_i - b_u - \mathbf{q}_i^T\mathbf{p}_u) + \lambda (\lVert p_u \rVert_2) + \lVert q_i \rVert_2 + b_u^2 + b_i^2) \tag{6}$$
 
+#### Combined
+但上面的模型并没有显式地考虑用户的历史行为对用户评分预测造成的影响，也就是没有利用到用户的 Implicit feedback。在传统的 Item CF 里面，我们的预测模型通常是：
 
+$$\hat{r}_{ui} = b_{ui} + \sum_{j \in S^k(i;u)} \theta_{ij}^u(r_{uj} - b_{uj})$$
+
+> 注： $S^k(i;u)$ 表示用户u评过分的商品集合中与 $i$ 最相近的 $k$ 项.
+
+这个时候 $\theta_{ij}^u$ 是与 User 相关的，我们可以尝试用全局权重去简化：
+
+$$\hat{r}_{ui} = b_{ui} + \sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj})$$
+
+> 注：R(u)表示用户u评过分的商品集合，N(u)表示用户u浏览过但没有评过分的商品集合.
+
+另外，我们知道一个用户的品味并不仅仅由他评分过的物品决定，也一定程度上取决于他所浏览过的物品（未评分）。那么，我们可以试着加入 Implicit feedback 的影响：
+
+$$\hat{r}_{ui} = b_{ui} + \sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) + \sum_{j \in N(u)} c_{ij}$$
+
+关于这个权重项，我们可以这样去理解：假设我们在电影评分数据集中发现，给"指环王3"打高分的用户，通常也会给“指环王1-2”高分，我们现在要预测A用户对“指环王3”的评分，但它并没有对“指环王1-2”评分，那么这个时候我们没有利用上这样的信息。加上 $c_{ij}$ 这项后我们就可以更加充分的利用这些信息。s
 
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
