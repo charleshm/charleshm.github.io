@@ -63,19 +63,6 @@ $$\hat{r}_{ui} = \mu + b_i + b_u + \mathbf{q}_i^T\mathbf{p}_u \tag{5}$$
 
 $$E = \sum_{(u,i)\in \mathcal{k}}(r_{ui}-\mu - b_i - b_u - \mathbf{q}_i^T\mathbf{p}_u) + \lambda (\lVert p_u \rVert_2) + \lVert q_i \rVert_2 + b_u^2 + b_i^2) \tag{6}$$
 
-
-
-http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
-http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
-http://www.51itong.net/svd-c-6589.html
-http://www.cnblogs.com/FengYan/archive/2012/05/06/2480664.html
-http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf
-http://www.cc.gatech.edu/~zha/CSE8801/CF/kdd-fp074-koren.pdf
-
-
-http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
-
-
   [1]: http://charlesx.top/2016/03/Singularly-Valuable-Decomposition/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png?imageView2/2/w/500
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_125348.png?imageView2/2/w/600
