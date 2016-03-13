@@ -98,7 +98,7 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 |   8  |  3  |   3  |   3   |   3   |
 |   9  |  5  |   5  |   5   |   5   |
 
-> 注: **[par（标准杆）][4]**，是一个高尔夫球运动术语，用以定義某一球洞從開球到完成進洞所需要的揮桿次數，以作為比賽成績的參考依據。
+> 注: **[par(标准杆)][4]**，是一个高尔夫球运动术语，用以定義某一球洞從開球到完成進洞所需要的揮桿次數，以作為比賽成績的參考依據。
 
 最简单的一个思路，我们对每个hole设立一个难度评价指标 **HoleDifficulty** ，对每位选手的能力也设立一个评价指标 **PlayerAbility**，实际的得分取决于这两者的乘积：
 
@@ -438,8 +438,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noborder">$=$</td>
-            <td class="noborder">
+            <td valign="middle" class="noboarder">$=$</td>
+            <td>
                 <table>
                     <tbody>
                         <tr>
@@ -493,8 +493,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noborder">$\times$</td>
-            <td valign="middle" class="noborder">
+            <td valign="middle" class="noboarder">$\times$</td>
+            <td valign="middle" class="noboarder">
                 <table>
                     <tbody>
                         <tr>
@@ -588,8 +588,8 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noborder">$=$</td>
-            <td class="noborder">
+            <td valign="middle" class="noboarder">$=$</td>
+            <td>
                 <table>
                     <tbody>
                         <tr>
@@ -643,12 +643,12 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noborder">$\times$</td>
-            <td valign="middle" class="noborder">
+            <td valign="middle" class="noboarder">$\times$</td>
+            <td valign="middle" class="noboarder">
                 <table>
                     <tbody>
                         <tr>
-                            <th colspan="3">ScaleFactor 1-3</th>
+                            <td colspan="3">ScaleFactor 1-3</td>
                         </tr>
                         <tr>
                             <td>21.07</td>
@@ -668,12 +668,12 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle" class="noborder">$\times$</td>
-            <td valign="middle" class="noborder">
+            <td valign="middle">*</td>
+            <td valign="middle">
                 <table>
                     <tbody>
                         <tr>
-                            <th colspan="3">PlayerAbility 1-3</th>
+                            <td colspan="3">PlayerAbility 1-3</td>
                         </tr>
                         <tr>
                             <td>Phil</td>
@@ -708,12 +708,14 @@ SVD分解就是利用隐藏的 feature 建立起矩阵行和列之间的联系�
 
 > 在推荐系统中，我们假设用户和物品之间没有直接关系。**但是我们可以通过 feature 把它们联系在一起**。 feature 是用来刻画特征的，比如描述某个电影是喜剧还是悲剧，是动作片还是爱情片。用户和 feature 之间是有关系的，比如某个用户喜欢看爱情片，另外一个用户喜欢看动作片；物品和 feature 之间也是有关系的，比如某个电影是喜剧，某个电影是悲剧，那么通过和 feature 之间的联系，我们就找到了用户和物品之间的关联。
 
+![此处输入图片的描述][5]
+
 有了这样了解，再去看看奇异值分解的应用会事半功倍。
 
 ----------
 
 #### 后记
-Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][5]~** 
+Markdown排版表格是件麻烦事，google了一下，发现个在线网站，可以很方便生成 $\LaTeX$ 和 Markdown 表格，安利下这个 **[神器][6]~** 
 
 ----------
 
@@ -722,8 +724,10 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
   [^4]: [Singular Value Decomposition (SVD) Tutorial](http://www.puffinwarellc.com/index.php/news-and-articles/articles/30-singular-value-decomposition-tutorial.html?showall=1)
 
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
   [3]: http://www.puffinwarellc.com/index.php/news-and-articles/articles/30-singular-value-decomposition-tutorial.html
   [4]: https://zh.wikipedia.org/zh/%E6%A0%87%E5%87%86%E6%9D%86
-  [5]: http://www.tablesgenerator.com/markdown_tables
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png
+  [6]: http://www.tablesgenerator.com/markdown_tables
