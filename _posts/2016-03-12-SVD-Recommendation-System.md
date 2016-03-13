@@ -84,7 +84,11 @@ $$\hat{r}_{ui} = b_{ui} + \sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj})$$
 
 $$\hat{r}_{ui} = b_{ui} + \sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) + \sum_{j \in N(u)} c_{ij}$$
 
-关于这个权重项，我们可以这样去理解：假设我们在电影评分数据集中发现，给"指环王3"打高分的用户，通常也会给“指环王1-2”高分，我们现在要预测A用户对“指环王3”的评分，但它并没有对“指环王1-2”评分，那么这个时候我们没有利用上这样的信息。加上 $c_{ij}$ 这项后我们就可以更加充分的利用这些信息。s
+关于这个权重项，我们可以这样去理解：假设我们在电影评分数据集中发现，给"指环王3"打高分的用户，通常也会给“指环王1-2”高分，我们现在要预测A用户对“指环王3”的评分，但它并没有对“指环王1-2”评分，那么这个时候我们没有利用上这样的信息。加上 $c_{ij}$ 这项后我们就可以更加充分的利用这些信息。
+
+再加点小 trick,
+
+$$\hat{r}_{ui} = b_{ui} + \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} w_{ij}(r_{uj} - b_{uj}) + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} c_{ij} \tag{7}$$
 
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
