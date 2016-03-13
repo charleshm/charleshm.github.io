@@ -112,6 +112,14 @@ $$\hat{r}_{ui} = b_{ui} + p_u^Tq_i$$
 $$\hat{r}_{ui} = b_{ui} + q_i^T\left( \vert R(u) \vert^{-\frac{1}{2}}\sum_{j \in R(u)} x_{j}(r_{uj} - b_{uj}) + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{8}$$
 
 
+#### SVD++
+也是尝试着将改进的 Item CF 和 SVD 模型混合。
+
+$$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{9}$$
+
+#### 后记
+Koren的想法太灵活了，各种玩，乐在其中呀~
+
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
 http://www.51itong.net/svd-c-6589.html
