@@ -67,7 +67,7 @@ $$\hat{r}_{ui} = \mu + b_i + b_u + \mathbf{q}_i^T\mathbf{p}_u \tag{5}$$
 
 $$E = \sum_{(u,i)\in \mathcal{k}}(r_{ui}-\mu - b_i - b_u - \mathbf{q}_i^T\mathbf{p}_u) + \lambda (\lVert p_u \rVert_2) + \lVert q_i \rVert_2 + b_u^2 + b_i^2) \tag{6}$$
 
-#### Combined
+#### Asymmetric-SVD
 但上面的模型并没有显式地考虑用户的历史行为对用户评分预测造成的影响，也就是没有利用到用户的 Implicit feedback。在传统的 Item CF 里面，我们的预测模型通常是：
 
 $$\hat{r}_{ui} = b_{ui} + \sum_{j \in S^k(i;u)} \theta_{ij}^u(r_{uj} - b_{uj})$$
