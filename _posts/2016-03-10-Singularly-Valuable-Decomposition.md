@@ -710,7 +710,7 @@ $$PredictedScore = HoleDifficulty \cdot PlayerAbility$$
 
 ![此处输入图片的描述][5]
 
-有了这样了解，再去看看奇异值分解的应用会事半功倍。
+有了这样了解，再去看看奇异值分解的应用会事半功倍[^5]。
 
 ----------
 
@@ -723,7 +723,7 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [^2]: [奇异值分解(SVD) - 几何意义](http://blog.sciencenet.cn/blog-696950-699432.html)
   [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
   [^4]: [Singular Value Decomposition (SVD) Tutorial](http://www.puffinwarellc.com/index.php/news-and-articles/articles/30-singular-value-decomposition-tutorial.html?showall=1)
-
+  [^5]: [强大的矩阵奇异值分解(SVD)及其应用](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
