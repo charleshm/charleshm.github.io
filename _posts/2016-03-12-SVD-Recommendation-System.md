@@ -7,7 +7,7 @@ date:   2016-03-12 15:20
 categories: 机器学习 推荐系统
 ---
 
-之前在 **[漫谈奇异值分解][1]** 里面我们已经对SVD的理论做了阐述。其实，在工程领域，其应用相当广泛，很多东西都可以和奇异值扯上关系，比如主成分分析（PCA），LSI（Latent Semantic Indexing），推荐系统等等。
+之前在 “**[漫谈奇异值分解][1]**” 里面我们已经对SVD的理论做了阐述。其实，在工程领域，其应用相当广泛，很多东西都可以和奇异值扯上关系，比如主成分分析（PCA），LSI（Latent Semantic Indexing），推荐系统等等。
 
 我们重复强调一下SVD的思想（很重要），
 
@@ -27,7 +27,24 @@ $$E = \frac{1}{2}\sum_{i=1}^{n}\sum_{j=1}^{m}I_{ij}(V_{ij} - p(U_i,M_j))^2+\frac
 
 > 注： 实际上就是最小化平方误差，同时加入正则项防止过拟合。
 
+其中 $p(U_i,M_j)$ 表示我们对用户 i 对 物品 j 的评分预测：
 
+$$p(U_i,M_j) = U_i^TM_j$$
+
+这样就变成了机器学习中常见的优化问题了，剩下的问题就是优化算法的选择了。
+
+#### Batch learning
+最简单的，我们可以采用随机梯度下降法，算法流程如下：
+
+![此处输入图片的描述][4]
+
+其中，
+
+$$
+\begin{align*}
+-\frac{\partial E}{\partial U_i} & = \sum_{j=1}^{M}I_{ij}((V_{ij}-p(U_i,M_j))M_j) - k_uU_i \tag{3} \\
+-\frac{\partial E}{\partial M_j} & = \sum_{i=1}^{n}I_{ij}((V_{ij}-p(U_i,M_j))U_i) - k_mM_j \tag{4}
+\end{align*}$$
 
 http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
 http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
@@ -42,4 +59,5 @@ http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
 
   [1]: http://charlesx.top/2016/03/Singularly-Valuable-Decomposition/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png?imageView2/2/w/500
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_125348.png?imageView2/2/w/500
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_125348.png?imageView2/2/w/600
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_132245.png
