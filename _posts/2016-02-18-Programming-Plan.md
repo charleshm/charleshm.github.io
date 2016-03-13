@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Bias 和 Variance"
+title:  "编程战五渣"
 date:   2016-02-18 15:25
 categories: 算法
 ---
