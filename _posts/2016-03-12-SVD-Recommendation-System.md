@@ -51,8 +51,34 @@ $$
 #### Adding Biases
 实际上，我们给一部电影评分时，除了考虑电影是否合自己口味外，还和自己的评分习惯有关。例如：一个严格评分者给的分大多数情况下都比一个宽松评分者的低。另外，你看到这部电影的评分大部分较高时，可能也倾向于给较高的分。在SVD中，口味问题已经有因子来表示了，但是剩下因素并没有考虑在内。
 
-$$r_{ui} = \mu + b_i + b_u + \mathbf{q}_i^*\mathbf{p}_u$$
+$$\hat{r}_{ui} = \mu + b_i + b_u + \mathbf{q}_i^T\mathbf{p}_u \tag{5}$$
 
- - $\mu$： 训练集中所有记录的评分的全局平均数。在不同网站中，因为网站定位和销售的物品不同，网站的整体评分分布也会显示出一些差异。比如有些网站中的用户就是喜欢打高分，而另一些网站的用户就是喜欢打低分。而全局平均数可以表示网站本身对用户评分的影响。
- - $b_u$： 用户偏置（user bias）项。这一项表示了用户的评分习惯中和物品没有关系的那种因素。比如有些用户就是比较苛刻，对什么东西要求都很高，那么他的评分就会偏低，而有些用户比较宽容，对什么东西都觉得不错，那么他的评分就会偏高。
- - $b_i$： 物品偏置（item bias）项。这一项表示了物品接受的评分中和用户没有什么关系的因素。比如有些物品本身质量就很高，因此获得的评分相对都比较高，而有些物品本身质量很差，因此获得的评分相对都会比较低。（摘录自"**推荐系统实战**"）
+ - $\mu$： 训练集中所有记录的评分的**全局平均数**。在不同网站中，因为网站定位和销售的物品不同，网站的整体评分分布也会显示出一些差异。比如有些网站中的用户就是喜欢打高分，而另一些网站的用户就是喜欢打低分。而全局平均数可以表示网站本身对用户评分的影响。
+ 
+ - $b_u$： **用户偏置**（user bias）项。这一项表示了用户的评分习惯中和物品没有关系的那种因素。比如有些用户就是比较苛刻，对什么东西要求都很高，那么他的评分就会偏低，而有些用户比较宽容，对什么东西都觉得不错，那么他的评分就会偏高。
+ 
+ - $b_i$： **物品偏置**（item bias）项。这一项表示了物品接受的评分中和用户没有什么关系的因素。比如有些物品本身质量就很高，因此获得的评分相对都比较高，而有些物品本身质量很差，因此获得的评分相对都会比较低。（摘录自"**推荐系统实战**"）
+
+这个时候我们的损失函数变为：
+
+$$E = \sum_{(u,i)\in \mathcal{k}}(r_{ui}-\mu - b_i - b_u - \mathbf{q}_i^T\mathbf{p}_u) + \lambda (\lVert p_u \rVert_2) + \lVert q_i \rVert_2 + b_u^2 + b_i^2) \tag{6}$$
+
+
+
+http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
+http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
+http://www.51itong.net/svd-c-6589.html
+http://www.cnblogs.com/FengYan/archive/2012/05/06/2480664.html
+http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf
+http://www.cc.gatech.edu/~zha/CSE8801/CF/kdd-fp074-koren.pdf
+
+
+http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
+
+
+  [1]: http://charlesx.top/2016/03/Singularly-Valuable-Decomposition/
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png?imageView2/2/w/500
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_125348.png?imageView2/2/w/600
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_132245.png
+  
+  [^1]: [A Guide to Singular Value Decomposition for Collaborative Filtering](http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf)
