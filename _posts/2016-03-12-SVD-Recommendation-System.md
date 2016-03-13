@@ -120,16 +120,6 @@ $$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_
 #### 后记
 Koren的想法太灵活了，各种玩，乐在其中呀~
 
-http://www.cnblogs.com/leftnoteasy/archive/2011/01/19/svd-and-applications.html
-http://hpi.de/fileadmin/user_upload/fachgebiete/naumann/lehre/SS2011/Collaborative_Filtering/pres1-matrixfactorization.pdf
-http://www.51itong.net/svd-c-6589.html
-http://www.cnblogs.com/FengYan/archive/2012/05/06/2480664.html
-http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf
-http://www.cc.gatech.edu/~zha/CSE8801/CF/kdd-fp074-koren.pdf
-
-
-http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
-
 
 ----------
 
