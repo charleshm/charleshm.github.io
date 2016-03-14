@@ -8,7 +8,7 @@ categories: 机器学习 推荐系统
 ---
 
 #### 基本模型
-**Factorization Machines**, 简单点理解可以看做是在线性回归的基础上，考虑特征之间的相互联系 (interaction)。
+**Factorization Machines**, 简单点理解可以看做是在线性回归的基础上，考虑上特征之间的相互联系 (interaction)[^1]。
 
 $$\hat{y}(x) = w_0 + \sum_{i=1}^{n} w_ix_i + \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}w_{ij}x_ix_j  \tag{1}$$
 
@@ -27,7 +27,7 @@ $$\hat{y}(x) = w_0 + \sum_{i=1}^{n} w_ix_i + \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}(v_
 
 $$w_o\in \mathbb{R}, w\in \mathbb{R}^n, V \in \mathbb{R}^{n \times k}$$
 
-此时整体的复杂度为 $\mathcal{O}(kn^2)$，作者证明实际上只需要线性的复杂度$\mathcal{O}(kn)$，
+此时整体的复杂度为 $\mathcal{O}(kn^2)$，作者证明实际上只需要线性的复杂度$\mathcal{O}(kn)$[^2]，
 
 $$\begin{align*}
 &\sum_{i=1}^n\sum_{j=i+1}^n (v_i^Tv_j)x_ix_j\\
@@ -39,3 +39,6 @@ $$\begin{align*}
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-14_135341.png
+  
+  [^1]: [Factorization Machines](http://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf)
+  [^2]: [Factorization Machines 学习笔记](http://blog.csdn.net/itplus/article/details/40534885)
