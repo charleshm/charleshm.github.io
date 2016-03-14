@@ -27,10 +27,10 @@ $$w_o\in \mathbb{R}, w\in \mathbb{R}^n, V \in \mathbb{R}^{n \times k}$$
 
 此时整体的复杂度为 $\mathcal{O}(kn^2)$，作者证明实际上只需要线性的复杂度，
 
-\begin{align*}
+$$\begin{align*}
 &\sum_{i=1}^n\sum_{j=i+1}^n (v_i^Tv_j)x_ix_j\\
 = & \frac {1}{2}\left( \sum_{i=1}^n\sum_{j=1}^n (v_i^Tv_j)x_ix_j - \sum_{i=1}^n (v_i^Tv_i)x_ix_i\right)\\
 = & \frac {1}{2}\left( \sum_{i=1}^n\sum_{j=1}^n\sum_{l=1}^{k}v_{il}v_{jl}x_ix_j - \sum_{i=1}^{n}\sum_{l=1}^{k}v_{il}^2x_i^2 \right)\\
 = & \frac {1}{2} \sum_{l=1}^{k}\left( \sum_{i=1}^n(v_{il}x_i)\sum_{j=1}^n(v_{jl}x_j) - \sum_{i=1}^n v_{il}^2x_i^2  \right)\\
 = & \frac {1}{2} \sum_{l=1}^{k} \left[ \left(  \sum_{i=1}^{n}(v_{il}x_i) \right)^2 - \sum_{i=1}^{n}v_{il}^2x_{i}^2 \right]
-\end{align*}
+\end{align*}$$
