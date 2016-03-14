@@ -23,8 +23,6 @@ LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semant
 > LSA 的核心思想是将词和文档映射到**潜在语义空间**，再比较其相似性。
 
 
-
-
   [^1]: Latent semantic analysis note By  Zhou Li 
   [^2]: 数学之美
 
