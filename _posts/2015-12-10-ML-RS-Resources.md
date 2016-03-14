@@ -7,7 +7,9 @@ date:   2015-12-10 19:35
 categories: 机器学习 推荐系统
 ---
 
-本篇记录学习过程中遇到的优秀资源，不定期更新！
+本篇记录学习过程中遇到的优秀资源和博客，不定期更新！
+
+ #### 资源
 
  - [大数据/数据挖掘/推荐系统/机器学习相关资源](https://github.com/Flowerowl/Big-Data-Resources)
  - [推荐系统实战思维导图](http://www.pythoner.com/165.html)
