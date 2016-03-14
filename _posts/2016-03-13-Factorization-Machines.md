@@ -38,6 +38,10 @@ $$\begin{align*}
 \end{align*}$$
 
 
+----------
+
+
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-14_135341.png
   
   [^1]: [Factorization Machines](http://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf)
