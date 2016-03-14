@@ -22,6 +22,22 @@ LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semant
 
 > LSA 的核心思想是将词和文档映射到**潜在语义空间**，再比较其相似性。
 
+| Index Words | Titles |    |    |    |    |    |    |    |   |
+|-------------|--------|----|----|----|----|----|----|----|---|
+| T1          | T2     | T3 | T4 | T5 | T6 | T7 | T8 | T9 |   |
+| book        |        |    | 1  | 1  |    |    |    |    |   |
+| dads        |        |    |    |    |    | 1  |    |    | 1 |
+| dummies     |        | 1  |    |    |    |    |    | 1  |   |
+| estate      |        |    |    |    |    |    | 1  |    | 1 |
+| guide       | 1      |    |    |    |    | 1  |    |    |   |
+| investing   | 1      | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1 |
+| market      | 1      |    | 1  |    |    |    |    |    |   |
+| real        |        |    |    |    |    |    | 1  |    | 1 |
+| rich        |        |    |    |    |    | 2  |    |    | 1 |
+| stock       | 1      |    | 1  |    |    |    |    | 1  |   |
+| value       |        |    |    | 1  | 1  |    |    |    |   |
+
+----------
 
   [^1]: Latent semantic analysis note By  Zhou Li 
   [^2]: 数学之美
