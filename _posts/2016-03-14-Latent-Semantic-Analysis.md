@@ -37,6 +37,165 @@ LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semant
 | stock       | 1      |    | 1  |    |    |    |    | 1  |   |
 | value       |        |    |    | 1  | 1  |    |    |    |   |
 
+
+Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了，一列表示一个title中出现了哪些词（停词已去除）。比如说T1这个title中就有guide、investing、market、stock四个词，各出现了一次。
+
+对 Term-Document 矩阵做SVD分解：
+
+
+<table>
+    <tbody>
+        <tr>
+            <td class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td bgcolor="#ffccff">book</td>
+                            <td>0.15</td>
+                            <td>-0.27</td>
+                            <td>0.04</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">dads</td>
+                            <td>0.24</td>
+                            <td>0.38</td>
+                            <td>-0.09</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">dummies</td>
+                            <td>0.13</td>
+                            <td>-0.17</td>
+                            <td>0.07</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">estate</td>
+                            <td>0.18</td>
+                            <td>0.19</td>
+                            <td>0.45</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">guide</td>
+                            <td>0.22</td>
+                            <td>0.09</td>
+                            <td>-0.46</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">investing</td>
+                            <td>0.74</td>
+                            <td>-0.21</td>
+                            <td>0.21</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">market</td>
+                            <td>0.18</td>
+                            <td>-0.30</td>
+                            <td>-0.28</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">real</td>
+                            <td>0.18</td>
+                            <td>0.19</td>
+                            <td>0.45</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">rich</td>
+                            <td>0.36</td>
+                            <td>0.59</td>
+                            <td>-0.34</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">stock</td>
+                            <td>0.25</td>
+                            <td>-0.42</td>
+                            <td>-0.28</td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#ffccff">value</td>
+                            <td>0.12</td>
+                            <td>-0.14</td>
+                            <td>0.23</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>3.91</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>2.61</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>2.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td valign="middle">\times</td>
+            <td valign="middle">
+                <table>
+                    <tbody>
+                        <tr bgcolor="#00ccff">
+                            <td>T1</td>
+                            <td>T2</td>
+                            <td>T3</td>
+                            <td>T4</td>
+                            <td>T5</td>
+                            <td>T6</td>
+                            <td>T7</td>
+                            <td>T8</td>
+                            <td>T9</td>
+                        </tr>
+                        <tr>
+                            <td>0.35</td>
+                            <td>0.22</td>
+                            <td>0.34</td>
+                            <td>0.26</td>
+                            <td>0.22</td>
+                            <td>0.49</td>
+                            <td>0.28</td>
+                            <td>0.29</td>
+                            <td>0.44</td>
+                        </tr>
+                        <tr>
+                            <td>-0.32</td>
+                            <td>-0.15</td>
+                            <td>-0.46</td>
+                            <td>-0.24</td>
+                            <td>-0.14</td>
+                            <td>0.55</td>
+                            <td>0.07</td>
+                            <td>-0.31</td>
+                            <td>0.44</td>
+                        </tr>
+                        <tr>
+                            <td>-0.41</td>
+                            <td>0.14</td>
+                            <td>-0.16</td>
+                            <td>0.25</td>
+                            <td>0.22</td>
+                            <td>-0.51</td>
+                            <td>0.55</td>
+                            <td>0.00</td>
+                            <td>0.34</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
 ----------
 
   [^1]: Latent semantic analysis note By  Zhou Li 
