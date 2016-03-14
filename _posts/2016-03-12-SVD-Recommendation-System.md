@@ -154,3 +154,4 @@ Koren的想法太灵活了，各种玩，乐在其中呀~
   
   [^1]: [A Guide to Singular Value Decomposition for Collaborative Filtering](http://www.csie.ntu.edu.tw/~r95007/thesis/svdnetflix/report/report.pdf)
   [^2]: [Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model](https://github.com/gpfvic/IRR/blob/master/Factorization%20meets%20the%20neighborhood-%20a%20multifaceted%20collaborative%20filtering%20model.pdf)
+  [^3]: [推荐系统开发的十个关键点](http://www.wtoutiao.com/p/h1fp8s.html)
