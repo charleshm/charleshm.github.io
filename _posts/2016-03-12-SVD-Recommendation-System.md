@@ -145,6 +145,9 @@ $$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_
 #### 后记
 Koren的想法太灵活了，各种玩，乐在其中呀~
 
+最近的学习计划：
+
+$$LSA \rightarrow pLSA \rightarrow LDA$$
 
 ----------
 
