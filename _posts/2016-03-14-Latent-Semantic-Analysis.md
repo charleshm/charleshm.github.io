@@ -140,8 +140,8 @@ Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了�
                     </tbody>
                 </table>
             </td>
-            <td valign="middle">\times</td>
-            <td valign="middle">
+            <td valign="middle" class="noborder">$\times$</td>
+            <td valign="middle" class="noborder">
                 <table>
                     <tbody>
                         <tr bgcolor="#00ccff">
@@ -194,6 +194,7 @@ Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了�
         </tr>
     </tbody>
 </table>
+
 
 
 ----------
