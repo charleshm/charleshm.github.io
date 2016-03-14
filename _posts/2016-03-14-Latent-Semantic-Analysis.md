@@ -22,6 +22,8 @@ LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semant
 
 > LSA 的核心思想是将词和文档映射到**潜在语义空间**，再比较其相似性。
 
+我们通过一个简单的例子来看一下整个流程[^3].
+
 | Index Words | Titles |    |    |    |    |    |    |    |   |
 |-------------|--------|----|----|----|----|----|----|----|---|
 | T1          | T2     | T3 | T4 | T5 | T6 | T7 | T8 | T9 |   |
@@ -37,11 +39,9 @@ LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semant
 | stock       | 1      |    | 1  |    |    |    |    | 1  |   |
 | value       |        |    |    | 1  | 1  |    |    |    |   |
 
-
 Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了，一列表示一个title中出现了哪些词（停词已去除）。比如说T1这个title中就有guide、investing、market、stock四个词，各出现了一次。
 
 对 Term-Document 矩阵做SVD分解：
-
 
 <table>
     <tbody>
@@ -195,13 +195,20 @@ Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了�
     </tbody>
 </table>
 
+我们可以将左奇异向量和右奇异向量都取后2维（之前是3维的矩阵），投影到一个平面上，可以得到：
 
+![此处输入图片的描述][3]
+
+在图上，每一个红色的点，都表示一个词，每一个蓝色的点，都表示一篇文档，这样我们可以对这些词和文档进行聚类，比如说stock 和 market可以放在一类，因为他们老是出现在一起，real和estate可以放在一类，dads，guide这种词就看起来有点孤立了，我们就不对他们进行合并了。按这样聚类出现的效果，可以提取文档集合中的近义词，这样当用户检索文档的时候，是用语义级别（近义词集合）去检索了，而不是之前的词的级别。这样一减少我们的检索、存储量，因为这样压缩的文档集合和PCA是异曲同工的，二可以提高我们的用户体验，用户输入一个词，我们可以在这个词的近义词的集合中去找，这是传统的索引无法做到的[^4]。
 
 ----------
 
+
   [^1]: Latent semantic analysis note By  Zhou Li 
   [^2]: 数学之美
-
+  [^3]: [Latent Semantic Analysis (LSA) Tutorial - A Small Example](http://www.puffinwarellc.com/index.php/news-and-articles/articles/33-latent-semantic-analysis-tutorial.html?start=1)
+  [^4]: [强大的矩阵奇异值分解(SVD)及其应用](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/SDfTM.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/diagram2.png
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/xygraph2.png
