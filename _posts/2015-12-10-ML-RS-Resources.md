@@ -15,3 +15,7 @@ categories: 机器学习 推荐系统
  - [机器学习入门资源不完全汇总（推荐）](http://ml.memect.com/article/machine-learning-guide.html)
  - [机器学习基石：听课笔记](https://www.douban.com/note/325451389/)
  - [Machine Learning Video Library](http://work.caltech.edu/library/)
+
+
+ #### 优秀博客
+  - [靳志辉 (rickjin)](http://www.flickering.cn/)
