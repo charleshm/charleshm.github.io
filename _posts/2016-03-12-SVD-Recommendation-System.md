@@ -138,7 +138,7 @@ $$\sum_{j \in R(u)} w_{ij} = \sum_{j \in R(u)} x_i^Ty_j$$
 
 
 #### SVD++
-SVD++里面则使用 $p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}$ 来对用户进行建模，其思路来源于Asymmetric-SVD是类似的。
+SVD++里面则使用 $p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}$ 来对用户进行建模，其思路来源和Asymmetric-SVD是类似的。
 
 $$\hat{r}_{ui} = b_{ui} + q_i^T\left( p_u + \vert N(u) \vert^{-\frac{1}{2}}\sum_{j \in N(u)} y_{j}\right) \tag{9}$$
 
