@@ -66,6 +66,8 @@ $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
 
 我们看下 AR(1) 时间序列，
 
+$$Y_t=e_t+\phi Y_{t-1}$$
+
 ![此处输入图片的描述][4]
 
 现实建模时一般很少使用高于AR(2)的模型，因为过高的阶会导致复杂的模型和提高过拟合风险。因此在实际使用中了解AR(1)和AR(2)的特性一般就足够了。
@@ -76,6 +78,8 @@ $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
 $$Y_t=e_t+\underbrace{\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p}}_{AR}\underbrace{-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q}}_{MA} \tag{3}$$
 
 ARMA(1,1)时间序列：
+
+$$Y_t=e_t+\phi Y_{t-1}-\theta e_{t-1}$$
 
 ![此处输入图片的描述][5]
 
