@@ -28,8 +28,6 @@ ARIMA(0,0,1) & \rightarrow & \text{Moving Average Model(order 1)}\\
 ARIMA(1,0,1) & \rightarrow & \text{Simple Mixed Model}\\
 \end{array}$$
 
-![此处输入图片的描述][2]
-
 
 ----------
 
@@ -106,7 +104,7 @@ $$Y_t=e_t+\phi Y_{t-1}-\theta e_{t-1}$$
 
 > 如果一个时间序列 $\{ Y_t \}$ 的 d 次差分 $W_t = \nabla^d Y_t$ 是一个平稳的 ARMA 过程，则称 $\{ Y_t \}$ 为差分自回归移动平均模型 .
 
-
+![此处输入图片的描述][2]
 
 ----------
 
