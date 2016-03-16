@@ -40,7 +40,7 @@ $$Y_t=e_t-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q} \tag{1}$$
 自相关系数：
 
 $$\rho_k=\left\{
-\begin{array}
+\begin{array}{l l}
 1                          & (k=0) \\
 \frac{-\theta_k+\theta_1\theta_{k+1}+\cdots+\theta_{q-k}\theta_{q}}{1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2} & (k=1,2,\cdots,q) \\
 0                          & (k>q)
@@ -56,6 +56,10 @@ $$Y_t=e_t-\theta e_{t-1}$$
 ![此处输入图片的描述][3]
 
 #### AR模型
+自回归模型就是用自身做回归变量，具体来说，p 阶自回归过程满足方程：
+
+$$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
+
 
 
 ----------
