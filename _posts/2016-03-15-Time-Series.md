@@ -73,7 +73,7 @@ $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
 #### ARMA模型
 如果假定序列中部分是自回归 (AR)，部分是滑动平均 (MA)，我们就可以的到一个相当普遍的时间序列模型：**自回归滑动平均混合过程**，
 
-$$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p}-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q} \tag{3}$$
+$$Y_t=e_t+\underbrace{\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p}}_{AR}\underbrace{-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q}}_{MA} \tag{3}$$
 
 ARMA(1,1)时间序列：
 
