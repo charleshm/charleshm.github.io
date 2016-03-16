@@ -149,7 +149,7 @@ Koren的想法太灵活了，各种玩，乐在其中呀~
 
 $$LSA \rightarrow pLSA \rightarrow LDA$$
 
-![topic models][4]
+![topic models][5]
 
 ----------
 
