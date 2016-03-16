@@ -30,7 +30,7 @@ ARIMA(1,0,1) & \rightarrow & \text{Simple Mixed Model}\\
 
 ![此处输入图片的描述][2]
 
-#### MA模型
+#### MA模型[^2]
 一般的滑动平均模型被定义为：
 
 $$Y_t=e_t-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q} \tag{1}$$
@@ -70,7 +70,7 @@ $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
 
 现实建模时一般很少使用高于AR(2)的模型，因为过高的阶会导致复杂的模型和提高过拟合风险。因此在实际使用中了解AR(1)和AR(2)的特性一般就足够了。
 
-#### ARMA模型
+#### ARMA模型[^3]
 如果假定序列中部分是自回归 (AR)，部分是滑动平均 (MA)，我们就可以的到一个相当普遍的时间序列模型：**自回归滑动平均混合过程**，
 
 $$Y_t=e_t+\underbrace{\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p}}_{AR}\underbrace{-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q}}_{MA} \tag{3}$$
@@ -83,7 +83,8 @@ ARMA(1,1)时间序列：
 
 
 [^1]: [ARIMA模型](http://baike.baidu.com/link?url=TVGuqY12wgvY8EroyQaIwFwk73Qj4jANkDAJAMFrQKmwjfW3rJWiyYBhYXhod9m9Kx3_sQF_bCxwzTQhIRTr3a)
-
+[^2]: [时间序列分析基础](http://blog.codinglabs.org/articles/time-series-analysis-foundation.html)
+[^3]: 时间序列分析及应用：R语言
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_100741.png?imageView2/2/w/500
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/arima-models.png?imageView2/2/w/400
