@@ -4,7 +4,7 @@ author: Charles
 layout: post
 title:  "Latent Semantic Analysis"
 date:   2016-03-14 9:45
-categories: 机器学习 自然语言处理 推荐系统
+categories: 自然语言处理 推荐系统
 ---
 
 LSA(latent semantic analysis)潜在语义分析，也被称为 LSI(latent semantic index)，是 Scott Deerwester, Susan T. Dumais 等人在 1990 年提出来的一种新的**索引和检索**方法。该方法和传统向量空间模型(vector space model)一样使用向量来表示词(terms)和文档(documents)，并通过向量间的关系(如夹角)来判断词及文档间的关系；不同的是，LSA 将词和文档映射到**潜在语义空间**，从而去除了原始向量空间中的一些“噪音”，提高了信息检索的精确度[^1]。
