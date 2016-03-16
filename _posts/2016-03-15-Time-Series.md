@@ -40,7 +40,7 @@ $$Y_t=e_t-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q} \tag{1}$$
 自相关系数：
 
 $$\rho_k=\left\{
-\begin{array}{l l}
+\begin{array}
 1                          & (k=0) \\
 \frac{-\theta_k+\theta_1\theta_{k+1}+\cdots+\theta_{q-k}\theta_{q}}{1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2} & (k=1,2,\cdots,q) \\
 0                          & (k>q)
