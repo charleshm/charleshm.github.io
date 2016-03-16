@@ -60,7 +60,15 @@ $$Y_t=e_t-\theta e_{t-1}$$
 
 $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
 
+> 序列 $Y_t$ 的当前值是自身最近 p 阶滞后项和 $e_t$ 的线性组合， 其中 $e_t$ 包括了序列在 $t$ 时刻无法用过去值来解释的所有新信息。
 
+从公式上看，AR应该比MA具有更强的自相关性，因为MA仅与滞后的白噪声因素相关，而AR是时间序列前后直接相关。
+
+我们看下 AR(1) 时间序列，
+
+![此处输入图片的描述][4]
+
+现实建模时一般很少使用高于AR(2)的模型，因为过高的阶会导致复杂的模型和提高过拟合风险。因此在实际使用中了解AR(1)和AR(2)的特性一般就足够了。
 
 ----------
 
@@ -71,3 +79,4 @@ $$Y_t=e_t+\phi_{1}Y_{t-1}+\phi_{2}Y_{t-2}+\cdots+\phi_{p}Y_{t-p} \tag{2}$$
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_100741.png?imageView2/2/w/500
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/arima-models.png?imageView2/2/w/400
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/ma1.png?imageView2/2/w/400
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/ar1.png?imageView2/2/w/400
