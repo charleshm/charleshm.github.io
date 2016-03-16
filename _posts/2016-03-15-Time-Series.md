@@ -35,13 +35,28 @@ ARIMA(1,0,1) & \rightarrow & \text{Simple Mixed Model}\\
 
 $$Y_t=e_t-\theta_{1}e_{t-1}-\theta_{2}e_{t-2}-\cdots-\theta_{q}e_{t-q} \tag{1}$$
 
-> MA(q)在 t 时刻的值就是白噪声序列 t 到 t-q 共 q+1 个点的线性组合。
+> MA(q) 在 t 时刻的值就是白噪声序列在 t 时刻到 t-q 时刻的线性组合。
+
+自相关系数：
+
+$$\rho_k=\left\{
+\begin{array}{l l}
+1                          & (k=0) \\
+\frac{-\theta_k+\theta_1\theta_{k+1}+\theta_2\theta_{k+2}+\cdots+\theta_{q-k}\theta_{q}}{1+\theta_1^2+\theta_2^2+\cdots+\theta_q^2} & (k=1,2,\cdots,q) \\
+0                          & (k>q)
+\end{array}
+\right.$$
+
+> 这里我就可以得到一个基本的结论，MA(q) 在时滞大于q后没有相关性，也就说 MA(q) 模型每一个序列值只与其前 q 个值有相关性。
 
 我们可以直观的看下 MA(1) 这样一个最简单的模型，
 
 $$Y_t=e_t-\theta e_{t-1}$$
 
 ![此处输入图片的描述][3]
+
+#### AR模型
+
 
 ----------
 
@@ -50,5 +65,5 @@ $$Y_t=e_t-\theta e_{t-1}$$
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_100741.png?imageView2/2/w/500
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/arima-models.png?imageView2/2/w/350
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/arima-models.png?imageView2/2/w/400
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/ma1.png?imageView2/2/w/400
