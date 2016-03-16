@@ -83,7 +83,7 @@ ARMA(1,1)时间序列：
 
 
 [^1]: [ARIMA模型](http://baike.baidu.com/link?url=TVGuqY12wgvY8EroyQaIwFwk73Qj4jANkDAJAMFrQKmwjfW3rJWiyYBhYXhod9m9Kx3_sQF_bCxwzTQhIRTr3a)
-[^2]: [时间序列分析基础](http://blog.codinglabs.org/articles/time-series-analysis-foundation.html)
+[^2]: [时间序列分析基础](http://blog.codinglabs.org/articles/time-series-analysis-foundation.html)（重点 "Copy"）
 [^3]: 时间序列分析及应用：R语言
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_100741.png?imageView2/2/w/500
