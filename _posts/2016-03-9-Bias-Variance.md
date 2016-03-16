@@ -64,6 +64,6 @@ Err(x) &= E\left[(Y-\hat{f}(x))^2\right]  \\
   [^3]: [机器学习中的Bias(偏差)，Error(误差)，和Variance(方差)有什么区别和联系？](https://www.zhihu.com/question/27068705)
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_130216.png?imageView2/2/w/500
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-10_130216.png?imageView2/2/w/450
   [2]: http://www.valleytalk.org/wp-content/uploads/2012/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%82%A3%E4%BA%9B%E4%BA%8B.pdf
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/biasvariance.png
