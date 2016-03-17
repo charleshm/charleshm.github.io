@@ -210,6 +210,12 @@ Term-Document 矩阵：这里的一行表示一个词在哪些title中出现了�
 #### 总结
 LSA可以处理向量空间模型无法解决的一义多词(synonymy)问题，但不能解决**一词多义**(polysemy)问题。因为LSA将每一个词映射为潜在语义空间中的一个点，也就是说一个词的多个意思在空间中对于的是同一个点，并没有被区分。
 
+另外[^5]，
+
+ - SVD的优化目标基于L-2 norm 或者是 **Frobenius Norm** 的，这相当于隐含了对数据的高斯噪声假设。而 term 出现的次数是非负的，这明显不符合 Gaussian 假设，而更接近 Multi-nomial 分布；
+ - 特征向量的方向没有对应的物理解释；
+ - SVD的计算复杂度很高，而且当有新的文档来到时，若要更新模型需重新训练；
+
 ----------
 
 
@@ -217,6 +223,7 @@ LSA可以处理向量空间模型无法解决的一义多词(synonymy)问题，�
   [^2]: 数学之美
   [^3]: [Latent Semantic Analysis (LSA) Tutorial - A Small Example](http://www.puffinwarellc.com/index.php/news-and-articles/articles/33-latent-semantic-analysis-tutorial.html?start=1)
   [^4]: [强大的矩阵奇异值分解(SVD)及其应用](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html)
+  [^5]: [LSA vs PLSA及EM求解 ](http://blog.sina.com.cn/s/blog_6a1b8c6b0101hgxg.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/SDfTM.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/diagram2.png
