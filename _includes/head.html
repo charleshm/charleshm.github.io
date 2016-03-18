@@ -15,15 +15,12 @@
     <!-- 代码高亮 -->
     <!-- Include required JS files -->
     <script type="text/javascript" src="{{ " /media/js/shCore.js " | prepend: site.baseurl }}"></script>
-
-    <!--
-    At least one brush, here we choose JS. You need to include a brush for every 
-    language you want to highlight
--->
     <script type="text/javascript" src="{{ " /media/js/shBrushPython.js " | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="{{ " /media/js/shBrushCpp.js " | prepend: site.baseurl }}"></script>
     <!-- Include *at least* the core style and default theme -->
     <link href="{{ " /media/css/shCore.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
     <link href="{{ " /media/css/shThemeDefault.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
 </head>
-
