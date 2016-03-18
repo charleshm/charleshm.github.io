@@ -4,19 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ " /css/mystyle.css " | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ " /meida/css/main.css " | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ " /media/css/mystyle.css " | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
-<!--     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
-    </script> -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ], displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], processEscapes: true }, "HTML-CSS": { linebreaks: { automatic: true }, availableFonts: ["TeX"], scale: 100 , 
-  }});
-</script>
-
-
-
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ], displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], processEscapes: true }, "HTML-CSS": { linebreaks: { automatic: true }, availableFonts: ["TeX"], scale: 100 , 
+      }});
+    </script>
+    <!-- 代码高亮 -->
+    <script type="text/javascript" src="{{ " /media/js/syntaxhighlighter.js" | prepend: site.baseurl }}"></script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>

@@ -36,6 +36,12 @@ Series 对象和它的 index 都含有一个 name 属性：
     y            7
     Name: a_series, dtype: int64
 
+<pre class="brush: js">
+function foo()
+{
+}
+</pre>
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/31102.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/31103.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/31104.png
