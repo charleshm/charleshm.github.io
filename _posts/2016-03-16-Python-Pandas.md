@@ -37,9 +37,15 @@ Series 对象和它的 index 都含有一个 name 属性：
     Name: a_series, dtype: int64
 
 <pre class="brush: js">
-function foo()
-{
-}
+    /**
+     * SyntaxHighlighter
+     */
+    function foo()
+    {
+        if (counter <= 10)
+            return;
+        // it works!
+    }
 </pre>
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/31102.png
