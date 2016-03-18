@@ -36,7 +36,7 @@ Series 对象和它的 index 都含有一个 name 属性：
     y            7
     Name: a_series, dtype: int64
 
-<pre class="brush: js">
+<pre class="brush: python">
     /**
      * SyntaxHighlighter
      */
