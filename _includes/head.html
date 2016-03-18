@@ -9,13 +9,21 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ], displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], processEscapes: true }, "HTML-CSS": { linebreaks: { automatic: true }, availableFonts: ["TeX"], scale: 100 , 
-      }});
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ], displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], processEscapes: true }, "HTML-CSS": { linebreaks: { automatic: true }, availableFonts: ["TeX"], scale: 100 , }});
     </script>
-    <!-- 代码高亮 -->
-    <script type="text/javascript">
-     SyntaxHighlighter.all()
-</script>
-    <script type="text/javascript" src="{{ " /media/js/syntaxhighlighter.js" | prepend: site.baseurl }}"></script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- 代码高亮 -->
+    <!-- Include required JS files -->
+    <script type="text/javascript" src="js/shCore.js"></script>
+
+    <!--
+    At least one brush, here we choose JS. You need to include a brush for every 
+    language you want to highlight
+-->
+    <script type="text/javascript" src="{{ " /media/js/shBrushPython.js " | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ " /media/js/shBrushCpp.js " | prepend: site.baseurl }}"></script>
+    <!-- Include *at least* the core style and default theme -->
+    <link href="{{ " /media/css/shCore.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
+    <link href="{{ " /media/css/shThemeDefault.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css" />
 </head>
+
