@@ -221,3 +221,12 @@ blockquote ul {
     border-width: 0px;
     background-color: #fdfdfd;
 }
+
+/*个性签名*/
+.sign {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    line-height: 1.6em;
+    background: transparent url("http://www.dut.pub/static/img/sigline.gif") no-repeat scroll 0px 0px;
+}
