@@ -73,6 +73,7 @@
 }
 .syntaxhighlighter table {
   width: 100% !important;
+  margin: 1px 0 !important;
 }
 .syntaxhighlighter table caption {
   text-align: left !important;
