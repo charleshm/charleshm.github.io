@@ -26,28 +26,18 @@ Series 是一种类似于一维数组的对象，它由一组数据以及与这�
 
 Series 对象和它的 index 都含有一个 name 属性：
 
-<pre class="brush: python">
-    >>> s.name = 'a_series'
-    >>> s.index.name = 'the_index'
-    >>> s
-    the_index
-    a            1
-    b            3
-    x            5
-    y            7
-    Name: a_series, dtype: int64
-</pre>
-
-<pre class="brush: python">
-/**
-* SyntaxHighlighter
-*/
-function foo()
-{
-    if (counter <= 10)
-        return;
-    // it works!
-}
+<pre class="prettyprint linenums">
+>>> s = Series(data=[1,3,5,7],index = ['a','b','x','y'])
+>>> s
+a    1
+b    3
+x    5
+y    7
+dtype: int64
+>>> s.index
+Index(['a', 'b', 'x', 'y'], dtype='object')
+>>> s.values
+array([1, 3, 5, 7], dtype=int64)
 </pre>
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/31102.png
