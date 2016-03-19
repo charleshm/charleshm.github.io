@@ -9,6 +9,7 @@ categories: 数据处理 Python
 
 要掌握 pandas，首先得了解它的两大主要数据结构： Series 和 DataFrame .
 
+边学边整理~
 #### Series
 Series 是一种类似于一维数组的对象，它由一组数据以及与这组数据相对应的索引组成。
 
