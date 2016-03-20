@@ -4,18 +4,31 @@ author: Charles
 layout: post
 title:  "LDA Topic Model"
 date:   2016-03-18 15:30
-categories: æœºå™¨å­¦ä¹  è‡ªç„¶è¯­è¨€å¤„ç†
+categories: »úÆ÷Ñ§Ï° ×ÔÈ»ÓïÑÔ´¦Àí
 ---
 
-å‰é¢æˆ‘ä»¬å·²ç»å­¦è¿‡äº† [pLSA][1]ï¼Œå†æ¥çœ‹ LDA çš„æ—¶å€™ä¼šè§‰å¾—å¾ˆç®€å•ï¼ˆä¸è¦è¢«å„ç§åˆ†å¸ƒå“åˆ°äº†ï¼‰ï¼Œæ€»çš„æ¥è¯´ï¼Œ **LDA å¯ä»¥çœ‹åšæ˜¯ pLSA çš„è´å¶æ–¯ç‰ˆæœ¬**ã€‚
+Ç°ÃæÎÒÃÇÒÑ¾­Ñ§¹ýÁË [pLSA][1]£¬ÔÙÀ´¿´ LDA µÄÊ±ºò»á¾õµÃºÜ¼òµ¥£¨²»Òª±»¸÷ÖÖ·Ö²¼ÏÅµ½ÁË£©£¬×ÜµÄÀ´Ëµ£¬ **LDA ¿ÉÒÔ¿´×öÊÇ pLSA µÄ±´Ò¶Ë¹°æ±¾**¡£
 
-pLSAå‡è®¾æ¯ç¯‡æ–‡æ¡£çš„ç”Ÿæˆè¿‡ç¨‹æ˜¯è¿™æ ·çš„ï¼š
+pLSA¼ÙÉèÃ¿ÆªÎÄµµµÄÉú³É¹ý³ÌÊÇÕâÑùµÄ£º
 
-- ä»¥ $P(d)$ çš„å…ˆéªŒæ¦‚çŽ‡é€‰æ‹©ä¸€ç¯‡æ–‡æ¡£ $d$      
-- é€‰å®š d åŽï¼Œä»¥ $P(z\|d)$ çš„æ¦‚çŽ‡é€‰ä¸­ä¸»é¢˜ z       
-- é€‰ä¸­ä¸»é¢˜ z åŽï¼Œä»¥ $P(w\|z)$ çš„æ¦‚çŽ‡é€‰ä¸­å•è¯ w  
+- ÒÔ $P(d)$ µÄÏÈÑé¸ÅÂÊÑ¡ÔñÒ»ÆªÎÄµµ $d$      
+- Ñ¡¶¨ d ºó£¬ÒÔ $P(z\|d)$ µÄ¸ÅÂÊÑ¡ÖÐÖ÷Ìâ z       
+- Ñ¡ÖÐÖ÷Ìâ z ºó£¬ÒÔ $P(w\|z)$ µÄ¸ÅÂÊÑ¡ÖÐµ¥´Ê w  
 
-![æ­¤å¤„è¾“å…¥å›¾ç‰‡çš„æè¿°][2]
+> ²¢ÇÒÃ¿¸öÖ÷ÌâÔÚËùÓÐ´ÊÏîÉÏ·þ´Ó Multinomial ·Ö²¼£¬Ã¿¸öÎÄµµÔÚËùÓÐÖ÷ÌâÉÏ·þ´Ó Multinomial ·Ö²¼¡£
+
+![´Ë´¦ÊäÈëÍ¼Æ¬µÄÃèÊö][2]
+
+ÔÚÆµÂÊÑ§ÅÉµÄ¹ÛÄîÀï£¬ ²ÎÊý $\theta = (P(z|d), P(w|z))$ ÊÇÈ·¶¨µÄ¡£·ÅÔÚÕâÀï£¬Ò²¾ÍÊÇËµ£¬¶ÔÓÚÒ»Æª¸ø¶¨µÄÎÄµµ£¬Æä¶ÔÓ¦µÄÖ÷Ìâ·Ö²¼ÊÇÈ·¶¨µÄ£»¶ÔÓÚÒ»¸ö¸ø¶¨µÄÖ÷Ìâ£¬Æä´Ê·Ö²¼Ò²ÊÇÈ·¶¨µÄ¡£
+
+¶ø±´Ò¶Ë¹Ñ§ÅÉÈÏÎª£¬²ÎÊý $\theta = (P(z|d), P(w|z))$ ÊÇËæ»úµÄ£¬·þ´ÓÒ»¶¨µÄ·Ö²¼¡£Ò²¾ÍÊÇËµ£¬Ö÷Ìâ·Ö²¼ºÍ´Ê·Ö²¼²»Ó¦¸ÃÊÇÈ·¶¨²»±äµÄ£¬¶øÊÇ·þ´ÓÄ³ÖÖ·Ö²¼¡£
+
+ÔÚLDAÄ£ÐÍÖÐ£¬Ò»ÆªÎÄµµÉú³ÉµÄ·½Ê½ÈçÏÂ£º
+
+- ´ÓµÒÀû¿ËÀ×·Ö²¼ $\alpha$ ÖÐÈ¡ÑùÉú³ÉÎÄµµ $i$ µÄÖ÷Ìâ·Ö²¼ $\theta_i$
+- ´ÓÖ÷ÌâµÄ¶àÏîÊ½·Ö²¼ $\theta_i$ ÖÐÈ¡ÑùÉú³ÉÎÄµµ $i$ µÚ $j$ ¸ö´ÊµÄÖ÷Ìâ $z_{i,j}$
+- ´ÓµÒÀû¿ËÀ×·Ö²¼ $\beta$ ÖÐÈ¡ÑùÉú³ÉÖ÷Ìâ $z_{i,j}$ ¶ÔÓ¦µÄ´ÊÓï·Ö²¼ $\phi_{z_{i,j}}$
+- ´Ó´ÊÓïµÄ¶àÏîÊ½·Ö²¼ $\phi_{z_{i,j}}$ ÖÐ²ÉÑùÉú³É×îÖÕµÄ´ÊÓï $w_{i,j}$
 
   [1]: http://charlesx.top/2016/03/Plsa/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_152408.png?imageView2/2/w/300
