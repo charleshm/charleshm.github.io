@@ -231,7 +231,7 @@ blockquote ul {
     background: transparent url("http://www.dut.pub/static/img/sigline.gif") no-repeat scroll 0px 0px;
 }
 
-ol li{
-    margin:0 10px;
+ul li{
+    margin:10px 0px 10px 5px;
 
 }
