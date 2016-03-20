@@ -49,6 +49,10 @@ LDA模型中，一篇文档生成的方式如下：
 
 ----------
 
+#### 数学表述
+待完善~
+
+----------
 
   [1]: http://charlesx.top/2016/03/Plsa/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_152408.png?imageView2/2/w/300
