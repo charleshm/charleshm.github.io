@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "LDA Topic Model"
-date:   2016-03-18 15:30
+date:   2016-03-19 15:30
 categories: 机器学习 自然语言处理
 ---
 
