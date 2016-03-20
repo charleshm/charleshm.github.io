@@ -230,3 +230,8 @@ blockquote ul {
     line-height: 1.6em;
     background: transparent url("http://www.dut.pub/static/img/sigline.gif") no-repeat scroll 0px 0px;
 }
+
+ol li{
+    margin:0 10px;
+
+}
