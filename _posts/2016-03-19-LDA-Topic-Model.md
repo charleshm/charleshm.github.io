@@ -36,14 +36,11 @@ LDA模型中，一篇文档生成的方式如下：
 
 在 "LDA数学八卦" 里面有两个非常形象的图，可以很直观看出 pLSA 和 LDA 之间的区别，
 
-**pLSA模型**，
-
 ![此处输入图片的描述][4]
-
-**LDA模型**，
+<p align="center">pLSA模型</p>
 
 ![此处输入图片的描述][5]
-
+<p align="center">LDA模型</p>
 
   [1]: http://charlesx.top/2016/03/Plsa/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-16_152408.png?imageView2/2/w/300
