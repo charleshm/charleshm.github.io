@@ -23,5 +23,10 @@ categories: 成长
 
 值得不断回味~
 
+#### 找工作
+
+- [我的2015年校招总结][3]
+
   [1]: http://yanyiwu.com/life/2014/10/11/choices-change-my-life.html
   [2]: http://blog.jobbole.com/78246/
+  [3]: http://lixinzhang.github.io/wo-de-2015nian-xiao-zhao-zong-jie.html
