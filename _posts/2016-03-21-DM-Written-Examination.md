@@ -21,8 +21,12 @@ d & = \underset{i}{\max}(|a_i-b_i|)  \rightarrow  \text{切比雪夫距离(Cheby
 d & = \sqrt[q]{\sum_{k=1}^{n} |a_k-b_k|^p}  \rightarrow  \text{闵可夫斯基距离(Minkowski Distance)}
 \end{align*}$$
 
+----------
+
 #### 编码距离
 - 汉明距离：两个等长字符串s1与s2，将其中一个变为另外一个所需要的最小替换次数。
 - 编辑距离：两个字符串s1与s2，将其中一个变为另外一个所需要的最小最小编辑次数（插入、删除和替换）次数。
+
+----------
 
 #### 相关距离
