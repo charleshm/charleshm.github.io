@@ -17,4 +17,4 @@ $$\{ \text{尿布} \} \rightarrow \{ \text{啤酒} \} $$
 
 那我们如何提取出这样的关联规则呢？
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png?imageView2/2/w/400
