@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "数据挖掘笔试准备"
+title:  "关联分析"
 date:   2016-03-17 9:30
 categories: 数据挖掘
 ---
