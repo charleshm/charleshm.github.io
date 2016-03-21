@@ -56,6 +56,8 @@ $$\begin{align*}
 \text{词频}(IDF) & = \log(\frac{\text{语料库的文档总数}} {\text{包含该词的文档数}+1})
 \end{align*}$$
 
+----------
+
 #### 决策树
 **ID3**
 
