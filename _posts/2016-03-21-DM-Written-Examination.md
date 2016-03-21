@@ -19,5 +19,5 @@ $$d = \sqrt{\sum_{k=1}^{n}(a_k-b_k)} = \sqrt{(a-b)(a-b)^T}$$
 $$d = \sum_{k=1}^{n} |a_k-b_k|$$
 
 $$\begin{align*}
-d = \sqrt{\sum_{k=1}^{n}(a_k-b_k)} = \sqrt{(a-b)(a-b)^T} \text{欧氏距离(Euclidean Distance)}
+d & = \sqrt{\sum_{k=1}^{n}(a_k-b_k)} = \sqrt{(a-b)(a-b)^T} \rightarrow \text{欧氏距离(Euclidean Distance)}
 \end{align*}$$
