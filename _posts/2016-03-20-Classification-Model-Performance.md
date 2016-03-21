@@ -35,4 +35,4 @@ $$R = \frac{TP}{TP+FN}$$
 
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
-[2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png
+[2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/w/2/400
