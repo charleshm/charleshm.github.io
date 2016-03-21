@@ -42,6 +42,8 @@ $$\cos \theta = \frac {\sum_{k=1}^{n} x_{k}y_{k}}{\sqrt{\sum_{k=1}^{n} x_k^{2}}\
 
 $$\rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n(x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n(y_i - \bar{y})^2}}$$
 
+----------
+
 #### TF-IDF
 在进行关键词提取时，我们不仅应该考虑到到此出现的**次数**(词频:Term Frequency)，同时也要考虑单词的**重要性**(逆文档频率:Inverse Document Frequency)。
 
