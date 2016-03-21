@@ -30,3 +30,10 @@ d & = \sqrt[q]{\sum_{k=1}^{n} |a_k-b_k|^p}  \rightarrow  \text{闵可夫斯基�
 ----------
 
 #### 相关距离
+- Jaccard相似系数：衡量两个集合的相似度.
+
+$$J=\dfrac {|A \cap B|}{|A \cup B|}$$
+
+- 皮尔森相关系数：
+
+$$\rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n _{i=1}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum ^n _{i=1}(x_i - \bar{x})^2} \sqrt{\sum ^n _{i=1}(y_i - \bar{y})^2}}$$
