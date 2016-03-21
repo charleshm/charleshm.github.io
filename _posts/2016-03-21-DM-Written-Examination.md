@@ -89,5 +89,6 @@ $$\underset{j,s}{\min} \left[\underset{c_1}{\min} \sum_{x_i\in R_1(j,s)} (y_i-c_
 
 $$\begin{align*}
 g(D,A) & = H(D) - H(D|A)\\
-g_R(D,A) & = \frac{g(D,A)}{H(D)}
+g_R(D,A) & = \frac{g(D,A)}{H(D)}\\
+\text{Gini}(D) & = 1-\sum_{k=1}^{K}\left( \frac{|C_k|}{|D|} \right)^2
 \end{align*}$$
