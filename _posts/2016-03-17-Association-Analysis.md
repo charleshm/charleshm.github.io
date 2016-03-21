@@ -75,6 +75,15 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
 ----------
 
 #### Apriori算法
+Apriori算法命名源于算法使用了频繁项集性质的先验（Prior）知识。 
+
+> 性质1：频繁项集的子集必为频繁项集。 
+性质2：非频繁项集的超集一定是非频繁的。 
+
+Apriori算法运用性质1，通过已知的频繁项集构成长度更大的项集，并将其称为潜在频繁项集。潜在频繁 k 项集的集合 $C_k$ 是指由有可能成为频繁 k 项集的项集组成的集合。以后只需计算潜在频繁项集的支持度，而不必计算**所有**不同项集的支持度，因此在一定程度上减少了计算量。 
+
+![此处输入图片的描述][8]
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_212028.png
@@ -83,3 +92,4 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220257.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220925.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png?imageView2/2/w/400
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_222200.png
