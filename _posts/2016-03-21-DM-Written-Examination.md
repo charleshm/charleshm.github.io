@@ -36,11 +36,11 @@ $$J=\dfrac {|A \cap B|}{|A \cup B|}$$
 
 - 余弦相似性
 
-$$\cos \theta = \frac {\sum^{n}_{k=1}x_{k}y_{k}}{\sqrt{\sum_{k=1}^{n} x_k^{2}}\sqrt{\sum_{k=1}^{n} y_k^2}}$$
+$$\cos \theta = \frac {\sum_{k=1}^{n} x_{k}y_{k}}{\sqrt{\sum_{k=1}^{n} x_k^{2}}\sqrt{\sum_{k=1}^{n} y_k^2}}$$
 
 - 皮尔森相关系数：
 
-$$\rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum ^n _{i=1}(x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n(y_i - \bar{y})^2}}$$
+$$\rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum_{i=1}^n(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^n(x_i - \bar{x})^2} \sqrt{\sum_{i=1}^n(y_i - \bar{y})^2}}$$
 
 #### TF-IDF
 在进行关键词提取时，我们不仅应该考虑到到此出现的**次数**(词频:Term Frequency)，同时也要考虑单词的**重要性**(逆文档频率:Inverse Document Frequency)。
@@ -53,3 +53,4 @@ $$\begin{align*}
 \text{词频}(TF) & = \frac{\text{某个词在文章中出现的次数}}{\text{文章的总词数}}\\
 \text{词频}(IDF) & = \log(\frac{\text{语料库的文档总数}} {\text{包含该词的文档数}+1})
 \end{align*}$$
+
