@@ -8,10 +8,10 @@ categories: 机器学习
 ---
 
 #### 混淆矩阵
-- True Positive （真正, TP）将正类预测为正类数 $rightarrow$ **正确率**.
-- True Negative（真负 , TN）将正类预测为负类数 $rightarrow$ **正确率**.
-- False Positive （假正, FP）将负类预测为正类数 $rightarrow$ **误报率** (Type I error).
-- False Negative（假负 , FN）将负类预测为负类数 $rightarrow$ **漏报率** (Type II error).
+- True Positive （真正, TP）将正类预测为正类数 $\rightarrow$ **正确率**.
+- True Negative（真负 , TN）将正类预测为负类数 $\rightarrow$ **正确率**.
+- False Positive （假正, FP）将负类预测为正类数 $\rightarrow$ **误报率** (Type I error).
+- False Negative（假负 , FN）将负类预测为负类数 $\rightarrow$ **漏报率** (Type II error).
 
 
 ![此处输入图片的描述][1]
