@@ -17,3 +17,6 @@ False Positive （假正, FP）被模型预测为正的负样本；可以称作*
 False Negative（假负 , FN）被模型预测为负的正样本；可以称作**漏报率**(Type II error)
 
 
+![此处输入图片的描述][1]
+
+[1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
