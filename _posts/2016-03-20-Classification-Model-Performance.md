@@ -33,7 +33,6 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 ----------
 
-
 #### 通俗版本
 刚开始接触这两个概念的时候总搞混，时间一长就记不清了。
 
@@ -46,5 +45,7 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
+
+----------
 
 [^1]: 统计学习方法
