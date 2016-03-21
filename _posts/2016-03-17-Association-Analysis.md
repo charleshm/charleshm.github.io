@@ -60,16 +60,17 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
 - **频繁项集产生**：其目标是发现满足最小支持度阈值的所有项集(frequent itemset).
 - **规则提取**：从上一步发现的频繁项集中提取所有高置信度的规则，这些规则称为强规则(strong rule).
 
-一般来说，一个包含 $k$ 个项的数据集可能产生 $2^k-1$个频繁项集（不包括空集），我们的项集搜索空间是非常巨大的。
+> 一般来说，一个包含 $k$ 个项的数据集可能产生 $2^k-1$个频繁项集（不包括空集），提取的可能规则总数为 $R = 3^k-2^{k+1}+1$，太庞大了。
 
 ![此处输入图片的描述][5]
 
-最直接的思路，
+**最直接的思路**，
 
 ![此处输入图片的描述][6]
 
 ![此处输入图片的描述][7]
 
+#### Apriori算法
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_212028.png
@@ -77,4 +78,4 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_213839.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220257.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220925.png
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png?imageView2/2/w/400
