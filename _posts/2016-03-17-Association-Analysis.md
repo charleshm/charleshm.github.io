@@ -41,7 +41,7 @@ $$\{ \text{尿布} \} \rightarrow \{ \text{啤酒} \} $$
 
 举个简单例子，熟悉下公式。
 
-考虑关联规则： $\{Milk,Diaper\} \Rightarrow Beer$，
+考虑关联规则： $\\{Milk,Diaper\\} \Rightarrow Beer$，
 
 $$\begin{align*}
 s & = \frac{\sigma(Milk,Diaper,Beer)}{|T|} = \frac{2}{5} = 0.4\\
