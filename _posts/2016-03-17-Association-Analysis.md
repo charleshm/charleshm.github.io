@@ -77,4 +77,4 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_213839.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220257.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220925.png
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png?imageView2/2/w/400
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png
