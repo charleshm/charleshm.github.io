@@ -16,4 +16,15 @@ categories: 机器学习
 
 ![此处输入图片的描述][1]
 
+精确率定义为（你预测为正例的里面有多少是对的）：
+
+$$P = \frac{TP}{TP+FP}$$
+
+召回率定义为（原样本中正例你的预测覆盖了多少）：
+
+$$R = \frac{TP}{TP+FN}$$
+
+![此处输入图片的描述][2]
+
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
+[2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precisionrecall.svg.png
