@@ -84,6 +84,10 @@ Apriori算法运用性质1，通过已知的频繁项集构成长度更大的项
 
 ![此处输入图片的描述][8]
 
+**算法流程**，
+
+![此处输入图片的描述][9]
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_212028.png
@@ -93,3 +97,4 @@ Apriori算法运用性质1，通过已知的频繁项集构成长度更大的项
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220925.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_220800.png?imageView2/2/w/400
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_222200.png
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_222836.png
