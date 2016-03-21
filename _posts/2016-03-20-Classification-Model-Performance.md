@@ -18,17 +18,17 @@ categories: 机器学习
 
 精确率定义为：
 
-$$P = \frac{TP}{TP+FP}$$
+$$P = \frac{TP}{TP+FP} \tag{1}$$
 
 召回率定义为：
 
-$$R = \frac{TP}{TP+FN}$$
+$$R = \frac{TP}{TP+FN} \tag{2}$$
 
 此外，还有 $F_1$ 值，是精确率和召回率的调和均值，
 
 $$\begin{align*}
 \frac{2}{F_1} & = \frac{1}{P} + \frac{1}{R}\\
-F_1 & = \frac{2TP}{2TP + FP + FN}
+F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 \end{align*}$$
 
 ----------
