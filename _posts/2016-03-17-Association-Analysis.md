@@ -53,6 +53,8 @@ c & = \frac{\sigma(Milk,Diaper,Beer)}{\sigma(Milk,Diaper)} = \frac{2}{3} = 0.67
 #### 关联规则挖掘
 大多数关联规则挖掘算法都可以分为两个主要步骤：
 
+- **频繁项集产生**：其目标是发现满足最小支持度阈值的所有项集(frequent itemset).
+- **规则提取**：从上一步发现的频繁项集中提取所有高置信度的规则，这些规则称为强规则(strong rule).
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-21_195111.png?imageView2/2/w/400
