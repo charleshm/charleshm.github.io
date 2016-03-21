@@ -24,6 +24,9 @@ $$P = \frac{TP}{TP+FP}$$
 
 $$R = \frac{TP}{TP+FN}$$
 
+----------
+
+
 #### 通俗版本
 刚开始接触这两个概念的时候总搞混，时间一长就记不清了。
 
@@ -35,4 +38,4 @@ $$R = \frac{TP}{TP+FN}$$
 
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
-[2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/w/2/400
+[2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
