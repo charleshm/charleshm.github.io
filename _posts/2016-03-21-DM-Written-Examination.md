@@ -36,7 +36,7 @@ $$J=\dfrac {|A \cap B|}{|A \cup B|}$$
 
 - 余弦相似性
 
-$$\cos \theta = \frac {\sum^{n}_{k=1}x_{k}y_{k}}{\sqrt{\sum^{n}_{k=1}x_k^{2}}\sqrt{\sum^{n}_{k=1}y_k^2}}$$
+$$\cos \theta = \frac {\sum^{n}_{k=1}x_{k}y_{k}}{\sqrt{\sum_{k=1}^{n} x_k^{2}}\sqrt{\sum_{k=1}^{n} y_k^2}}$$
 
 - 皮尔森相关系数：
 
