@@ -35,7 +35,7 @@
 
 body {
     font-family: "Cuprum", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, sans-serif;
-    background: #e6e6e6 url('/assets/blog/furley-bg.png');
+    background-color: #fdfdfd;
     color: #333;
     line-height: 22px;
     letter-spacing: 1px;
@@ -43,7 +43,7 @@ body {
 }
 
 .subtlepattern_white_wall {
-    background-image: url("/assets/blog/concrete_wall.png.png")
+    background-image: url("/assets/blog/concrete_wall.png")
 }
 
 p {
@@ -239,4 +239,11 @@ blockquote ul {
 ul li{
     margin:10px 0px 10px 5px;
 
+}
+
+/*index 页面*/
+
+.archive-list .archive-date {
+    width: 4em;
+    display: inline-block
 }
