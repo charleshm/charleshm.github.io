@@ -13,8 +13,9 @@ categories: Linux
 
 dpkg是debian package的缩写，为”Debian“ 操作系统 专门开发的套件管理系统，用于软件的安装，更新和移除。
 
-|    dpkg -i package.deb   |         安装包         |
+|           命令           |          功能          |
 |:------------------------:|:----------------------:|
+|    dpkg -i package.deb   |         安装包         |
 |      dpkg -r package     |         删除包         |
 |      dpkg -P package     | 删除包（包括配置文件） |
 |      dpkg -L package     |  列出与该包关联的文件  |
@@ -26,5 +27,6 @@ dpkg是debian package的缩写，为”Debian“ 操作系统 专门开发的套
 |  dpkg –configure package |         配置包         |
 
 
-  [1]: https://www.sublimetext.com/3
 
+
+  [1]: https://www.sublimetext.com/3
