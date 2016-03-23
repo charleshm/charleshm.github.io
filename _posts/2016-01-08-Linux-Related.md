@@ -6,8 +6,7 @@ title:  "Linux札记"
 date:   2016-01-08 9:30
 categories: Linux
 ---
-
-#### Sublime安装
+随用随学，慢慢积累~
 
 #### Sublime 安装
 官网下载 [deb][1] 包，使用命令 dpkg 相关命令安装。
