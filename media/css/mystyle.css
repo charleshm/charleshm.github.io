@@ -42,6 +42,10 @@ body {
     /*字间距*/
 }
 
+.subtlepattern_white_wall {
+    background-image: url("/assets/blog/white_wall.png")
+}
+
 p {
     margin: 0px 0px 20px;
 }
