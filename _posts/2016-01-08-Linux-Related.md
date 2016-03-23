@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Logistic Regression and SVM"
+title:  "Linux札记"
 date:   2016-01-08 9:30
 categories: Linux
 ---
