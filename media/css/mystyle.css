@@ -35,7 +35,7 @@
 
 body {
     font-family: "Cuprum", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, sans-serif;
-    background: #e6e6e6 url('/assets/blog/furley-bg.png');
+    background: #e6e6e6;
     color: #333;
     line-height: 22px;
     letter-spacing: 1px;
