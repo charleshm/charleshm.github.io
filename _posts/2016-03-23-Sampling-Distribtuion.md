@@ -23,6 +23,10 @@ categories: 机器学习 统计学
  
 > 下面我们介绍下，三大抽样分布： $\chi^2$ 分布，t 分布，F 分布
 
+
+----------
+
+
 #### 卡方($\chi^2$)分布
  
 ![此处输入图片的描述][2]
@@ -51,6 +55,10 @@ $$f_k(x)=
 
 ![此处输入图片的描述][4]
 
+
+----------
+
+
 假设 $X$ 是呈正态分布的独立的随机变量（随机变量的期望值是 $\mu$，方差是 $\sigma^{2}$）。
 
 $$\begin{align*}
@@ -70,6 +78,11 @@ $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-
 
 ![此处输入图片的描述][5]
 
+ - t 分布只有一个参数 $\nu$，曲线形状与样本含量有关。
+ - 当自由度逼近 $\infty$，t 分布则逼近 u 分布，故标准正态分布是 t 分布的特例。
+
+> 使用 t 分布可以在总体标准差未知的情况下分析近似正态总体的均值。例如，t 分布的一个用途就是检验总体均值与假设均值是否不同。回归系数的显著性检验也使用 t 分布。
+
 ----------
 
 #### F 分布
@@ -84,6 +97,8 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 ![此处输入图片的描述][6]
 
+观察到两组不同正态分布生成的数据，怎么判断是这两组正态分布的方差是否一致呢？这就要用到F检验了。F检验又叫方差齐性检验，用于检验两组服从正态分布的样本是否具有相同的总体方差，即方差齐性。
+
 ----------
 
 
@@ -92,6 +107,8 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 本例已知总体均数0=3.30kg，但总体标准差未知,n=35为小样本,，S=0.40kg，故选用单样本t检验。
 
+#### 总结
+各种分布，基本的统计知识在各大公司的数据挖掘面试中经常会被问，所以对各种分布都应该有一定了解，推荐： [Minitab][7].
 
 ----------
 
@@ -105,3 +122,4 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/t_distribution.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/F_pdf.svg.png
+  [7]: http://support.minitab.com/zh-cn/minitab/17/topic-library/basic-statistics-and-graphs/probability-distributions-and-random-data/distributions/t-distribution/
