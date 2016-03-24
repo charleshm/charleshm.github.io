@@ -28,8 +28,7 @@ categories: 机器学习 统计学
 
 
 #### 卡方($\chi^2$)分布
- 
-![此处输入图片的描述][2]
+设 $X_1,X-2,\cdots,X_n$ 相互独立，同时服从 $N(0,1)$ 分布，则称统计量 $\chi_n^2=X_1^2+X_2^2+\cdots+X_n^2$ 服从自由度为 $n$ 的 $\chi^2$ 分布，记为 $\chi_n^2 \sim \chi^2(n)$.
 
 $\chi^2$ 分布对应的概率密度函数，
 
@@ -101,14 +100,10 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 ----------
 
-
-#### 举个栗子
-> 以往通过大规模调查已知某地新生儿出生体重为3.30kg.从该地难产儿中随机抽取35名新生儿作为研究样本,平均出生体重为3.42kg,标准差为0.40kg,问该地难产儿出生体重是否与一般新生儿体重不同?
-
-本例已知总体均数0=3.30kg，但总体标准差未知,n=35为小样本,，S=0.40kg，故选用单样本t检验。
-
 #### 总结
 各种分布，基本的统计知识在各大公司的数据挖掘面试中经常会被问，所以对各种分布都应该有一定了解，推荐： [Minitab][7].
+
+下一篇博客，我们将通过实例分析假设检验的基本步骤。
 
 ----------
 
@@ -117,7 +112,6 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110445.png?imageView2/2/w/400
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110212.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/325px-Chi-square_distributionPDF.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/t_distribution.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
