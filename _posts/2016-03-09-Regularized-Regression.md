@@ -18,6 +18,8 @@ categories: 机器学习
 
 ![此处输入图片的描述][2]
 
+----------
+
 ### 贝叶斯角度谈正则化
 解决 overfitting 最常用的办法就是 regularization，我们常用的有：$L_1$正则，$L_2$正则等。
 
@@ -26,6 +28,8 @@ categories: 机器学习
 ![此处输入图片的描述][3]
 
 > 我们先抛给大家一个结论：从贝叶斯的角度来看，正则化等价于对模型参数引入 **先验分布** 。
+
+----------
 
 #### Linear Regression
 我们先看下最原始的Linear Regression[^5]:
@@ -66,6 +70,8 @@ $$w_{MLE} = \arg \underset{w}{\min} \sum_{i=1}^{m} (y^{(i)} - w^Tx^{(i)})^2 \tag
 
 这个时候，我们可以对参数 $w$ 引入先验分布，让参数稀疏化。
 
+----------
+
 ####  Ridge Regression
 我们对参数 $w$ 引入协方差为 $\alpha$ 的零均值高斯分布先验。
 
@@ -102,6 +108,8 @@ $$J_R(w) = \frac{1}{n}\lVert y- w^TX \rVert_2 + \lambda \lVert w \rVert_2$$
 
 **那现在我们知道了，对参数引入 高斯先验 等价于 $L_2$ 正则化。**
 
+----------
+
 #### LASSO
 上面我们对 $w$ 引入了高斯分布，那么拉普拉斯分布(Laplace distribution)呢？
 
@@ -124,6 +132,8 @@ $$w_{MAP_{Laplace}} = \arg \underset{w}{\min} \left( \frac{1}{\delta^2}\cdot \fr
 该问题通常被称为 LASSO (least absolute shrinkage and selection operator) 。LASSO 仍然是一个 convex optimization 问题，不具有解析解。它的优良性质是能产生稀疏性，导致 $w$ 中许多项变成零。
 
 > 再次总结下，对参数引入 **拉普拉斯先验** 等价于 $L_1$ 正则化。
+
+----------
 
 #### Elastic Net
 可能有同学会想，既然 $L_1$ 和 $L_2$正则各自都有自己的优势，那我们能不能将他们 combine 起来？
