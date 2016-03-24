@@ -73,6 +73,16 @@ $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-
 ----------
 
 #### F 分布
+> 设 $X \sim  \chi^2(d_1),Y \sim \chi^2(d_2)$，且 $X$ 与 $Y$ 相互独立，则称随机变量 $F=\frac{X/d_1}{Y/d_2}$ 的分布为服从第一自由度 $d_1$（分子 $X$ 的自由度）和第二自由度 $d_1$（分母 $Y$ 的自由度）的 F 分布，记做: $F \sim F(d_1,d_2)$.
+
+F 分布的概率密度函数，
+
+$$\begin{align*}
+f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d_1+d_2}}}} {x\,\mathrm{B}\!\left(\frac{d_1}{2},\frac{d_2}{2}\right)} \\
+&=\frac{1}{\mathrm{B}\!\left(\frac{d_1}{2},\frac{d_2}{2}\right)} \left(\frac{d_1}{d_2}\right)^{\frac{d_1}{2}} x^{\frac{d_1}{2} - 1} \left(1+\frac{d_1}{d_2}\,x\right)^{-\frac{d_1+d_2}{2}}
+\end{align*}$$
+
+![此处输入图片的描述][6]
 
 ----------
 
@@ -85,6 +95,7 @@ $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-
 
 ----------
 
+
   [^1]: [卡方检验](http://download.bioon.com.cn/upload/201311/02171856_1166.pdf)
 
 
@@ -93,3 +104,4 @@ $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/325px-Chi-square_distributionPDF.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/t_distribution.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/F_pdf.svg.png
