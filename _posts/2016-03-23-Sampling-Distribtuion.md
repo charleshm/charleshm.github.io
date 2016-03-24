@@ -45,9 +45,11 @@ $$f_k(x)=
 
 我们知道正态分布有两个参数：$\mu$ 和 $\sigma$，决定了正态分布的位置和形态。为了应用方便，常将一般的正态变量 X 通过 u 变换转化成标准正态变量u，使得原来各种形态的正态分布都转换为 $\mu=0，\sigma=1$ 的标准正态分布（standard normal distribution）,亦称 $u$ 分布。
 
-根据中心极限定理，在正态分布总体中以固定数量 $n$ ，抽取若干个样本时，样本均数的分布仍服从正态分布，即 $N（\mu,\frac{\sigma^2}{n}）$ 。所以，对**样本均数的分布**进行 $u$ 变换，也可变换为标准正态分布 $N (0,1)$.
+根据中心极限定理，若从正态总体 $N(\mu,\sigma^2)$ 中，反复多次随机抽取样本含量固定为n  的样本，样本均数 $\overline{X}$ 仍服从正态分布，即 $N（\mu,\frac{\sigma^2}{n}）$ 。所以，对**样本均数的分布**进行 $u$ 变换，也可变换为标准正态分布 $N (0,1)$.
 
 > 在实际工作中，往往 $\sigma$ 是未知的，常将样本的方差 $S_n$ 作为 $\sigma$的估计值，为了与 $u$ 变换区别，称为 $t$ 变换，统计量 $t$ 值的分布称为 $t$ 分布。
+
+![此处输入图片的描述][4]
 
 假设 $X$ 是呈正态分布的独立的随机变量（随机变量的期望值是 $\mu$，方差是 $\sigma^{2}$）。
 
@@ -64,7 +66,9 @@ T 的概率密度函数,
 
 $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-(\nu+1)/2}$$
 
-![此处输入图片的描述][4]
+ $\nu$  等于 $n − 1$，称为自由度。
+
+![此处输入图片的描述][5]
 
 ----------
 
@@ -75,4 +79,5 @@ $$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110445.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110212.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/325px-Chi-square_distributionPDF.png?imageView2/2/w/400
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/t_distribution.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
