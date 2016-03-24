@@ -21,13 +21,13 @@ categories: 机器学习 统计学
 
 ![此处输入图片的描述][1]
  
-下面我们介绍下，三大抽样分布： $\chi^2$ 分布，t 分布，F 分布
+> 下面我们介绍下，三大抽样分布： $\chi^2$ 分布，t 分布，F 分布
 
 #### 卡方($\chi^2$)分布
  
 ![此处输入图片的描述][2]
 
-$\chi^2$ 分布对应的概率密度函数。
+$\chi^2$ 分布对应的概率密度函数，
 
 $$f_k(x)=
 \frac{(1/2)^{k/2}}{\Gamma(k/2)} x^{k/2 - 1} e^{-x/2}$$
@@ -36,14 +36,43 @@ $$f_k(x)=
 
 > 卡方检验一般用于检验样本是否符合预期的一个分布。具体点就是统计样本的实际观测值与理论推断值之间的偏离程度，卡方值越大，偏差越大；若两个值完全相等时，卡方值就为0，表明与理论值完全符合[^1]。
 
+
+----------
+
+
 #### t 分布
+先介绍下 t 分布的来由。
 
-正态分布有两个参数，$\mu$ 和 $\sigma$，决定了正态分布的位置和形态。为了应用方便，常将一般的正态变量 X 通过 u 变换[ ]转化成标准正态变量u，以使原来各种形态的正态分 布都转换为 $\mu=0，\sigma=1$ 的标准正态分布（standard normal distribution）,亦称 $u$ 分布。
+我们知道正态分布有两个参数：$\mu$ 和 $\sigma$，决定了正态分布的位置和形态。为了应用方便，常将一般的正态变量 X 通过 u 变换转化成标准正态变量u，使得原来各种形态的正态分布都转换为 $\mu=0，\sigma=1$ 的标准正态分布（standard normal distribution）,亦称 $u$ 分布。
 
-根据中心极限定理，通过上述的抽样模拟试验表明，在正态分布总体中以固定 $n$ ，抽取若干个样本时，样本均数的分布仍服从正态分布，即 $N（\mu,\frac{\sigma^2}{n}）$ 。所以，对**样本均数的分布**进行 $u$ 变换，也可变换为标准正态分布 $N (0,1)$
+根据中心极限定理，在正态分布总体中以固定数量 $n$ ，抽取若干个样本时，样本均数的分布仍服从正态分布，即 $N（\mu,\frac{\sigma^2}{n}）$ 。所以，对**样本均数的分布**进行 $u$ 变换，也可变换为标准正态分布 $N (0,1)$.
+
+> 在实际工作中，往往 $\sigma$ 是未知的，常将样本的方差 $S_n$ 作为 $\sigma$的估计值，为了与 $u$ 变换区别，称为 $t$ 变换，统计量 $t$ 值的分布称为 $t$ 分布。
+
+假设 $X$ 是呈正态分布的独立的随机变量（随机变量的期望值是 $\mu$，方差是 $\sigma^{2}$）。
+
+$$\begin{align*}
+\overline{X}_n & =(X_1+\cdots+X_n)/n & \text{样本均值}\\
+{S_n}^2 & =\frac{1}{n-1}\sum_{i=1}^n\left(X_i-\overline{X}_n\right)^2 & \text{样本方差}\\
+Z & =\frac{\overline{X}_n-\mu}{\sigma/\sqrt{n}} & \text{u 变换}\\
+T & =\frac{\overline{X}_n-\mu}{S_n/\sqrt{n}} & \text{t 变换}\tag{2}
+\end{align*}$$
+
+> 上面 T 的分布称为 **t-分布**.
+
+T 的概率密度函数,
+
+$$f(t) = \frac{\Gamma((\nu+1)/2)}{\sqrt{\nu\pi\,}\,\Gamma(\nu/2)} (1+t^2/\nu)^{-(\nu+1)/2}$$
+
+![此处输入图片的描述][4]
+
+----------
+
+
+  [^1]: [卡方检验](http://download.bioon.com.cn/upload/201311/02171856_1166.pdf)
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110445.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110212.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/325px-Chi-square_distributionPDF.png?imageView2/2/w/400
-  
-  [^1]: [卡方检验](http://download.bioon.com.cn/upload/201311/02171856_1166.pdf)
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
