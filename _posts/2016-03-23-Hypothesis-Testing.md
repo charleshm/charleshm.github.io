@@ -41,6 +41,7 @@ categories: 机器学习 统计学
 > 是不是想起了我们分类器评估准则里面的 [混淆矩阵][1] .
 
 ### 实例分析
+
 #### t检验
 
 http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C
