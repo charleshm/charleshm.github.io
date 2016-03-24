@@ -44,7 +44,7 @@ $$f_k(x)=
 
 
 #### t 分布
-先介绍下 t 分布的来由。
+先介绍下 t 分布的来由[^2]。
 
 我们知道正态分布有两个参数：$\mu$ 和 $\sigma$，决定了正态分布的位置和形态。为了应用方便，常将一般的正态变量 X 通过 u 变换转化成标准正态变量u，使得原来各种形态的正态分布都转换为 $\mu=0，\sigma=1$ 的标准正态分布（standard normal distribution）,亦称 $u$ 分布。
 
@@ -109,6 +109,7 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 
   [^1]: [卡方检验](http://download.bioon.com.cn/upload/201311/02171856_1166.pdf)
+  [^2]: [t检验](http://jingpin.qmu.edu.cn/yufang/html/kejian.htm)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-24_110445.png?imageView2/2/w/400
