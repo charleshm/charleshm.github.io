@@ -85,7 +85,6 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
 > t 检验有多种类型，可以分为只有一组样本的单体检验和有两组样本的双体检验。单体检验用于检验样本的分布期望是否等于某个值。双体检验用于检验两组样本的分布期望是否相等，又分为配对双体检验和非配对双体检验。等需要用的时候再回头补充。
  
-http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C
 
 
   [1]: http://charlesx.top/2016/03/Classification-Model-Performance/
