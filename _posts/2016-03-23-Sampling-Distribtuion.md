@@ -105,6 +105,8 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
 
 下一篇博客，我们将通过实例分析假设检验的基本步骤。
 
+ps: 关于三大抽样分布概率密度函数的推导，请参考：[资料传送门](8).
+
 ----------
 
 
@@ -118,3 +120,4 @@ f(x; d_1,d_2) &= \frac{\sqrt{\frac{(d_1\,x)^{d_1}\,\,d_2^{d_2}} {(d_1\,x+d_2)^{d
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/TStudent.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/F_pdf.svg.png
   [7]: http://support.minitab.com/zh-cn/minitab/17/topic-library/basic-statistics-and-graphs/probability-distributions-and-random-data/distributions/t-distribution/
+  [8]: http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C
