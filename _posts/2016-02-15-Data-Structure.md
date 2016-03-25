@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "假设检验"
+title:  "大话数据结构学习笔记（1）"
 date:   2016-02-15 15:30
 categories: 数据结构
 ---
