@@ -31,10 +31,12 @@ $$A\mathbf{x} = Q\Lambda Q^T\mathbf{x} = Q\Lambda (Q^T\mathbf{x})$$
 
 待整理。。。
 
-#### 奇异值分解
-上面的特征值分解的A矩阵是对称阵，根据EVD可以找到一个（超）矩形使得变换后还是（超）矩形，也即A可以将一组正交基映射到另一组正交基！那么现在来分析：对任意$m \times n$的矩阵，**能否找到一组正交基使得经过它变换后还是正交基**？答案是肯定的，它就是SVD分解的精髓所在。
+----------
 
-我们从特征值分解出发，导出奇异值分解。
+#### 奇异值分解
+上面的特征值分解的A矩阵是对称阵，可以将一组正交基映射到另一组正交基！那么现在来分析：对任意$m \times n$的矩阵，**能否找到一组正交基使得经过它变换后还是正交基**？答案是肯定的，它就是SVD分解的精髓所在。
+
+下面我们从特征值分解出发，导出奇异值分解。
 
 首先我们注意到 $A^TA$ 为 $n$ 阶对阵矩阵，我们可以对它做特征值分解。
 
@@ -82,6 +84,9 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 
 > This shows how to decompose the matrix A into the product of three matrices: V describes an orthonormal basis in the domain, and U describes an orthonormal basis in the co-domain, and Σ describes how much the vectors in V are stretched to give the vectors in U. 
 
+上面说了一大段，描述的都是几何意义，那么在实际中SVD分解意味呢什么呢？我们将通过一个例子进行说明 .
+
+----------
 
 #### 举个栗子[^4]
 我们现在有一批高尔夫球手对九个不同hole的所需挥杆次数数据，我们希望基于这些数据建立模型，来预测选手对于某个给定hole的挥杆次数。（这个例子来自于： **[Singular Value Decomposition (SVD) Tutorial][3]**，强烈建议大家都去看看）
