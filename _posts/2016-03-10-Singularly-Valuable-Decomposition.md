@@ -84,7 +84,7 @@ AV & = A(v_1 v_2 \cdots v_n) = (Av_1\ Av_2\ \cdots\ Av_r\ 0 \cdots\ 0)\\
 
 > This shows how to decompose the matrix A into the product of three matrices: V describes an orthonormal basis in the domain, and U describes an orthonormal basis in the co-domain, and Σ describes how much the vectors in V are stretched to give the vectors in U. 
 
-上面说了一大段，描述的都是几何意义，那么在实际中SVD分解意味呢什么呢？我们将通过一个例子进行说明 .
+上面说了一大段，描述的都是**几何意义**，那么在实际中SVD分解意味呢什么呢？我们将通过一个例子进行说明 .
 
 ----------
 
