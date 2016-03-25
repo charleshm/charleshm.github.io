@@ -11,6 +11,8 @@ categories: 机器学习 统计学
 
 其实质是判断观察到的“差别”是**抽样误差**引起还是总体上的不同，目的是评价两个不同的参数或两种不同处理引起效应不同的证据有多强，这种证据的强度用概率 P 度量和表示。
 
+![此处输入图片的描述][3]
+
 ----------
 
 
@@ -89,3 +91,4 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
   [1]: http://charlesx.top/2016/03/Classification-Model-Performance/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
