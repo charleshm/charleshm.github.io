@@ -45,6 +45,7 @@ $$A^TA = VDV^T$$
 这个时候我们得到一组正交基，$\\{v_1,v_2,\cdots,v_n\\}$，：
 
 $$\begin{align*}
+(A^TA)v_i & = \lambda_iv_i\\
 (Av_i,Av_j) & = (Av_i)^T(Av_j)\\
 & = v_i^TA^TAv_j\\
 & = v_i^T(\lambda_jv_j)\\
