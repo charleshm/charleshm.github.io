@@ -98,7 +98,7 @@ $$\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x}|\Theta_m)=j)= \frac{1}{M}\sum_{k}N_kI(
 $$\begin{align*}
 \frac{N_k}{M} &  = \frac{1}{M} \sum_{m=1}^{M} I(\phi(\Theta_m)=k)\\
 & = E_{\Theta}[I(\phi(\Theta_m)=k)] \\
-& = P_{\Theta}(\phi(\Theta_m)=k)
+& \rightarrow P_{\Theta}(\phi(\Theta_m)=k)
 \end{align*}$$
 
 ----------
