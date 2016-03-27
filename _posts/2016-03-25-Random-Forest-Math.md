@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "随机森林中的数学理论"
+title:  "随机森林中的数学理论(1)"
 date:   2016-03-25 15:30
 categories: 机器学习
 ---
