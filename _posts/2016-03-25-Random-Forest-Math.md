@@ -47,7 +47,7 @@ PE^* & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
 > **定理**：随着 $K \rightarrow \infty$（决策树数目）， 
 $$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)<0] \tag{3}$$
 
-其中， $h_k(\mathbf{x})\equiv h(\mathbf{x}\|\Theta_k)$.
+其中， $h_k(\mathbf{x})\equiv h(\mathbf{x},\Theta_k)$.
 
 又有，
 
@@ -67,6 +67,7 @@ g(\mathbf{x},y) & = P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}
 
 而实际上，
 $$\begin{align*}
+P_{\mathbf{x},y}(g_K(\mathbf{x},y)<0) & = E_{\mathbf{x},y}[I(g_K(\mathbf{x},y)<0)] \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}(g(\mathbf{x},y)<0) \\
 \text{原问题} & \overset{等价于证明}{\Longrightarrow} g_K(\mathbf{x},y) \underset{K \rightarrow \infty}{\rightarrow} g(\mathbf{x},y) \\
 g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longrightarrow} \hat{P}_k(h_k(\mathbf{x})=j)=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j) \underset{K \rightarrow \infty}{\rightarrow} P_{\Theta}(h(\mathbf{x},\Theta)=j)
 \end{align*}$$
