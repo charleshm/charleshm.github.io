@@ -87,6 +87,17 @@ $$\begin{align*}
 N_k & = \text{# times} \quad \phi(\Theta_m) = S_k
 \end{align*}$$
 
+可知，
+$$\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x}|\Theta_m)=j)= \frac{1}{M}\sum_{k}N_kI(\mathbf{x}\in S_k)$$
+
+根据 $N_k$ 的定义可知，
+
+$$\begin{align*}
+\frac{N_k}{M} &  = \frac{1}{M} \sum_{m=1}^{M} I(\phi(\Theta_m)=k)\\
+& = E_{\Theta}[I(\phi(\Theta_m)=k)] \\
+& = P_{\Theta}(\phi(\Theta_m)=k)
+\end{align*}$$
+
 ----------
 
 
