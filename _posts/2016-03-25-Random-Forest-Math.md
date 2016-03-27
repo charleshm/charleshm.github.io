@@ -78,20 +78,20 @@ g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longri
 
 ----------
 
-我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个**超立方体**(hyper-rectangle)的并集。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $k$ 个这样的超立方体， $\\{S_k\\}_{k=1}^K$.
+我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个**超立方体**(hyper-rectangle)的并集[^3]。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $K$ 个这样的超立方体: $\\{S_k\\}_{k=1}^K$.($K$为弱分类器)
 
 ![此处输入图片的描述][3]
 
 定义，
 
 $$\begin{align*}
-\phi(\Theta) & = k\quad \text{if}\quad \{\mathbf{x}: h(\mathbf{x},|theta)=j\}=S_k\\
+\phi(\Theta) & = k\quad \text{if}\quad \{\mathbf{x}: h(\mathbf{x},\Theta)=j\}=S_k\\
 N_k & = \text{# times} \quad \phi(\Theta_m) = S_k
 \end{align*}$$
 
 可知，
 
-$$\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x}|\Theta_m)=j)= \frac{1}{M}\sum_{k}N_kI(\mathbf{x}\in S_k)$$
+$$\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x},\Theta_m)=j)= \frac{1}{M}\sum_{k}N_kI(\mathbf{x}\in S_k)$$
 
 根据 $N_k$ 的定义可知，
 
@@ -110,7 +110,9 @@ $$\begin{align*}
 
 得证。
 
+
 ----------
+
 
 #### 总结
 好吧，我还没发完全领悟这个证明过程。
@@ -120,6 +122,7 @@ $$\begin{align*}
 
   [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
   [^2]: [Mathematics of Random Forests](http://math.bu.edu/people/mkon/MA751/L19RandomForestMath.pdf)
+  [^3]: [随机森林理论浅析](http://www.cnki.com.cn/Article/CJFDTotal-JCJI201301001.htm)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_164830.png
