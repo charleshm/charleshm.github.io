@@ -20,6 +20,20 @@ categories: 机器学习
 #### 为什么不会过拟合
 Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋于一个**有限的上限**。
 
+下面我们来分析下具体证明过程。
+
+定义余量函数(margin function)：
+
+$$mg(X,Y) = av_kI(h_k(X)=Y)-\underset{j\not =Y}{\max} av_kI(h_k(X)=j) \tag{1}$$
+
+其中，$I(\cdot)$为指示函数(indicator function)，$av_k(\cdot)$表示取平均。余量函数衡量了组合分类器将样本分类正确的平均票数与错分为其他类的平均票数之差。也就是说余量越大，分类正确可能性越大。
+
+ - $mg(X,Y)>0$ : 分类正确.
+ - $mg(X,Y)>0$ : 分类错误.
+
+定义泛化误差( generalization error)：
+
+
   [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
 
 
