@@ -11,9 +11,17 @@ categories: 机器学习
 
 ![此处输入图片的描述][1]
 
+
+----------
+
+#### 随机森林
+![此处输入图片的描述][2]
+
 #### 为什么不会过拟合
+Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋于一个**有限的上限**。
+
+  [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_164830.png
-  
-  [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_165533.png
