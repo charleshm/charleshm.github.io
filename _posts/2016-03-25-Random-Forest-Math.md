@@ -57,6 +57,20 @@ $$\hat{P}_k(h_k(\mathbf{x})=j)=E_k[I(h_k(\mathbf{x})=j)]=\frac{1}{K}\sum_{k=1}^K
 
 $$\frac{1}{K}\sum_{k=1}^K I(h(\mathbf{x},\Theta)=j) \rightarrow P_{\Theta}(h(\mathbf{x},\Theta)=j) \tag{4}$$
 
+
+原因也很明了，令：
+
+$$\begin{align*}
+g_K(\mathbf{x},y) & = \hat{P}_k(h_k(\mathbf{x})=y) - \underset{j\not =y}{\max} \hat{P}_k(h_k(\mathbf{x})=j)\\
+g(\mathbf{x},y) & = P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j) 
+\end{align*}$$
+
+而实际上，
+$$\begin{align*}
+\text{原问题} & \overset{等价于证明}{\Longrightarrow} g_K(\mathbf{x},y) \underset{K \rightarrow \infty}{\rightarrow} g(\mathbf{x},y) \\
+g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longrightarrow} \hat{P}_k(h_k(\mathbf{x})=j)=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j) \underset{K \rightarrow \infty}{\rightarrow} P_{\Theta}(h(\mathbf{x},\Theta)=j)
+\end{align*}$$
+
 ----------
 
 
