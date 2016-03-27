@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "随机森林中的数学理论"
-date:   2016-02-15 15:30
+date:   2016-03-25 15:30
 categories: 机器学习
 ---
 
