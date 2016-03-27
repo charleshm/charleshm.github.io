@@ -21,10 +21,10 @@ categories: 机器学习
 ----------
 
 
-#### 为什么不会过拟合
+#### Why not overfit
 Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋于一个**有限的上限**。
 
-下面我们来分析下具体证明过程。
+下面我们来分析下具体**证明过程**[^2]。
 
 定义**余量函数**(margin function)：
 
@@ -49,14 +49,16 @@ $$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(
 
 其中， $h_k(\mathbf{x})\equiv h(\mathbf{x},\Theta_k)$.
 
+
+----------
+
 又有，
 
 $$\hat{P}_k(h_k(\mathbf{x})=j)=E_k[I(h_k(\mathbf{x})=j)]=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j)$$
 
-实际上我们需要证明的是，
+**实际上我们需要证明的是**，
 
 $$\frac{1}{K}\sum_{k=1}^K I(h(\mathbf{x},\Theta)=j) \rightarrow P_{\Theta}(h(\mathbf{x},\Theta)=j) \tag{4}$$
-
 
 原因也很明了，令：
 
@@ -66,18 +68,31 @@ g(\mathbf{x},y) & = P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}
 \end{align*}$$
 
 而实际上，
-
 $$\begin{align*}
-P_{\mathbf{x},y}(g_K(\mathbf{x},y)<0) & = E_{\mathbf{x},y}[I(g_K(\mathbf{x},y)<0)] \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}(g(\mathbf{x},y)<0) \\
 \text{原问题} & \overset{等价于证明}{\Longrightarrow} g_K(\mathbf{x},y) \underset{K \rightarrow \infty}{\rightarrow} g(\mathbf{x},y) \\
 g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longrightarrow} \hat{P}_k(h_k(\mathbf{x})=j)=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j) \underset{K \rightarrow \infty}{\rightarrow} P_{\Theta}(h(\mathbf{x},\Theta)=j)
+\end{align*}$$
+
+
+----------
+
+我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个超立方体(hyper-rectangle)的并集。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $k$ 个这样的超立方体， $\{S_k\}_{k=1}^K$.
+
+![此处输入图片的描述][3]
+
+定义，
+$$\begin{align*}
+\phi(\Theta) & = k\quad \text{if}\quad \{\mathbf{x}: h(\mathbf{x},|theta)=j\}=S_k\\
+N_k & = \text{# times} \quad \phi(\Theta_m) = S_k
 \end{align*}$$
 
 ----------
 
 
   [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
+  [^2]: [Mathematics of Random Forests](http://math.bu.edu/people/mkon/MA751/L19RandomForestMath.pdf)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_164830.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_165533.png
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_184949.png?imageView2/2/w/400

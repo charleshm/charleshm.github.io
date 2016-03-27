@@ -86,6 +86,7 @@ h4 {
 h5,
 h6 {
     font-size: 16px;
+    background: rgba(102, 128, 153, 0.05);
 }
 
 h1,
