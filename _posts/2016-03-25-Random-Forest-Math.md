@@ -38,11 +38,15 @@ mg(X,Y) & = av_kI(h_k(X)=Y)-\underset{j\not =Y}{\max} av_kI(h_k(X)=j) \tag{1}\\
  - $mg(X,Y)>0$ : 分类正确.
  - $mg(X,Y)>0$ : 分类错误.
 
-定义泛化误差( generalization error)：
+定义**泛化误差**( generalization error)：
 
 $$\begin{align*}
-PE^* & = P_{X,Y}(mg(X,Y)<0) \tag{2}
+PE^* & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
 \end{align*}$$
+
+> **定理**：随着 $K \rightarrow \infty$（决策树数目）， 
+$$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)<0] \tag{3}$$
+
 
 ----------
 
