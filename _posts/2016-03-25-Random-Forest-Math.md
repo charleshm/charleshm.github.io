@@ -47,7 +47,7 @@ PE^* & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
 > **定理**：随着 $K \rightarrow \infty$（决策树数目）， 
 $$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)<0] \tag{3}$$
 
-其中， $h_k(\mathbf{x})\equiv h(\mathbf{x}|\Theta_k)$.
+其中， $h_k(\mathbf{x})\equiv h(\mathbf{x}\|\Theta_k)$.
 
 又有，
 
