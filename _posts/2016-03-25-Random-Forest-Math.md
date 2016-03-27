@@ -78,7 +78,7 @@ g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longri
 
 ----------
 
-我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个**超立方体**(hyper-rectangle)的并集[^3]。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $K$ 个这样的超立方体: $\\{S_k\\}_{k=1}^K$.($K$为弱分类器)
+我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个**超立方体**(hyper-rectangle)的并集[^3]。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $K$ 个这样的超立方体: $\\{S_k\\}_{k=1}^K$.($K$为弱分类器数)
 
 ![此处输入图片的描述][3]
 
