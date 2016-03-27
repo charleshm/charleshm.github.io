@@ -29,14 +29,14 @@ Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋�
 定义**余量函数**(margin function)：
 
 $$\begin{align*}
-mg(X,Y) & = av_kI(h_k(X)=Y)-\underset{j\not =Y}{\max} av_kI(h_k(X)=j) \tag{1}\\
-& = \hat{P}_k(h_k(X)=y) - \underset{j\not =Y}{\max} \hat{P}_k(h_k(X)=j)
+mg(\mathbf{x},y) & = av_kI(h_k(\mathbf{x})=y)-\underset{j\not =Y}{\max} av_kI(h_k(\mathbf{x})=j) \tag{1}\\
+& = \hat{P}_k(h_k(\mathbf{x})=y) - \underset{j\not =y}{\max} \hat{P}_k(h_k(\mathbf{x})=j)
 \end{align*}$$
 
 其中，$I(\cdot)$为指示函数(indicator function)，$av_k(\cdot)$表示取平均。余量函数衡量了组合分类器将样本分类正确的平均票数与错分为其他类的平均票数之差。也就是说**余量越大，分类正确可能性越大**。
 
- - $mg(X,Y)>0$ : 分类正确.
- - $mg(X,Y)>0$ : 分类错误.
+ - $mg(\mathbf{x},y)>0$ : 分类正确.
+ - $mg(\mathbf{x},y)>0$ : 分类错误.
 
 定义**泛化误差**( generalization error)：
 
@@ -46,7 +46,6 @@ PE^* & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
 
 > **定理**：随着 $K \rightarrow \infty$（决策树数目）， 
 $$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)<0] \tag{3}$$
-
 
 ----------
 
