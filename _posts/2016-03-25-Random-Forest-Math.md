@@ -26,6 +26,8 @@ Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋�
 
 下面我们来分析下具体**证明过程**[^2]。
 
+**Weak Classifiers**:  $h = \\{h_1(\mathbf{x}),h_2(\mathbf{x}),\cdots,h_K(\mathbf{x})\\}$.
+
 定义**余量函数**(margin function)：
 
 $$\begin{align*}
