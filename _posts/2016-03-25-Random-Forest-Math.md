@@ -66,6 +66,7 @@ g(\mathbf{x},y) & = P_{\Theta}(h(\mathbf{x},\Theta)=y)-\underset{j\not= y}{\max}
 \end{align*}$$
 
 而实际上，
+
 $$\begin{align*}
 P_{\mathbf{x},y}(g_K(\mathbf{x},y)<0) & = E_{\mathbf{x},y}[I(g_K(\mathbf{x},y)<0)] \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}(g(\mathbf{x},y)<0) \\
 \text{原问题} & \overset{等价于证明}{\Longrightarrow} g_K(\mathbf{x},y) \underset{K \rightarrow \infty}{\rightarrow} g(\mathbf{x},y) \\
