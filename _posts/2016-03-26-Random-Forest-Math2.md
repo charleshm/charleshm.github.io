@@ -9,6 +9,7 @@ categories: 机器学习
 
 Breiman[^1]证明了泛化误差的上界是可以得到的，它主要由两方面因素决定：单棵决策树的**分类强度**，决策树之间的**相关性**。
 
+#### 泛化误差上界
 定义单棵决策树的**余量函数**：
 
 $$mr(\mathbf{x},y) = P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= Y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)$$
@@ -28,7 +29,7 @@ P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) & = P_{\mathbf{x},y}(mr(\mathbf{x},y) - E_{
 
 ----------
 
-
+#### 准备工作
 要求出这个上界，我们需要先分析下 $var(mr)$。为了解决这个问题，我们引入几个新的量，
 
 $$\begin{align*}
