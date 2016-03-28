@@ -11,17 +11,17 @@ Breiman[^1]证明了泛化误差的上界是可以得到的，它主要由两方
 
 定义单棵决策树的余量函数：
 
-$$mr(\mathbf{X},Y) = P_{\Theta}(h(\mathbf{X},\Theta)) - \underset{j\not= Y}{\max}P_{\Theta}(h(\mathbf{X},\Theta)=j)$$
+$$mr(\mathbf{x},y) = P_{\Theta}(h(\mathbf{x},\Theta)) - \underset{j\not= Y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)$$
 
 分类强度（余量函数在整个 data space 的期望）：
 
-$s = E_{\mathbf{X},Y}[mr(\mathbf{X},Y)]$
+$$s = E_{\mathbf{x},y}[mr(\mathbf{x},y)]$$
 
-假定 $s>0$（随机森林对各个样本的分类结果是可信的），根据切比雪夫不等式：
+假定 $s>0$（即随机森林对各个样本的分类结果是可信的），根据切比雪夫不等式：
 
 $$\begin{align*}
-P_{X,Y}(mr(\mathbf{x},y)<0) & = P_{X,Y}(mr(\mathbf{x},y) - E_{\mathbf{X},Y}[mr(\mathbf{X},Y)]<-E_{\mathbf{X},Y}[mr(\mathbf{X},Y)])\\
-& < P_{X,Y}(|mr(\mathbf{x},y)-E_{\mathbf{X},Y}[mr(\mathbf{X},Y)]|>E_{\mathbf{X},Y}[mr(\mathbf{X},Y)])\\
+P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) & = P_{\mathbf{x},y}(mr(\mathbf{x},y) - E_{\mathbf{x},y}[mr(\mathbf{x},y)]<-E_{\mathbf{x},y}[mr(\mathbf{x},y)])\\
+& \leq P_{\mathbf{x},y}(|mr(\mathbf{x},y)-E_{\mathbf{x},y}[mr(\mathbf{x},y)]|>E_{\mathbf{x},y}[mr(\mathbf{x},y)])\\
 & \leq \frac{var(mr)}{s^2} \tag{1}
 \end{align*}$$
 
