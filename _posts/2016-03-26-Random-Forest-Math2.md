@@ -83,7 +83,7 @@ var(mr) & = E_{\Theta,\Theta^{'}}(\rho(\Theta,\Theta^{'})sd(\Theta)sd(\Theta^{'}
 
 故，
 
-$$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1-s^2)}{s^2}$$
+$$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1-s^2)}{s^2} \tag{5}$$
 
 
 ----------
