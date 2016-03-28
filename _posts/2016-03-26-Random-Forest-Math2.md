@@ -20,8 +20,8 @@ $$s = E_{\mathbf{x},y}[mr(\mathbf{x},y)]$$
 假定 $s>0$（即随机森林对各个样本的分类结果是可信的），根据切比雪夫不等式：
 
 $$\begin{align*}
-P_{\mathbf{x},y}\left(mr(\mathbf{x},y)<0) & = P_{\mathbf{x},y}(mr(\mathbf{x},y) - E_{\mathbf{x},y}[mr(\mathbf{x},y)]<-E_{\mathbf{x},y}[mr(\mathbf{x},y)]\right)\\
-& \leq P_{\mathbf{x},y}\left(|mr(\mathbf{x},y)-E_{\mathbf{x},y}[mr(\mathbf{x},y)]|>E_{\mathbf{x},y}[mr(\mathbf{x},y)]\right)\\
+P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) & = P_{\mathbf{x},y}(mr(\mathbf{x},y) - E_{\mathbf{x},y}[mr(\mathbf{x},y)]<-E_{\mathbf{x},y}[mr(\mathbf{x},y)])\\
+& \leq P_{\mathbf{x},y}(|mr(\mathbf{x},y)-E_{\mathbf{x},y}[mr(\mathbf{x},y)]|>E_{\mathbf{x},y}[mr(\mathbf{x},y)])\\
 & \leq \frac{var(mr)}{s^2} \tag{1}
 \end{align*}$$
 
