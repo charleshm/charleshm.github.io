@@ -40,7 +40,7 @@ mg(\mathbf{x},y) & = av_kI(h_k(\mathbf{x})=y)-\underset{j\not =Y}{\max} av_kI(h_
 & = \hat{P}_k(h_k(\mathbf{x})=y) - \underset{j\not =y}{\max} \hat{P}_k(h_k(\mathbf{x})=j)
 \end{align*}$$
 
-其中，$I(\cdot)$为指示函数(indicator function)，$av_k(\cdot)$表示取平均。余量函数衡量了组合分类器将样本分类正确的平均票数与错分为其他类的平均票数之差。也就是说**余量越大，分类正确可能性越大**。
+其中，$I(\cdot)$为示性函数(indicator function)，$av_k(\cdot)$表示取平均。余量函数衡量了组合分类器将样本分类正确的平均票数与错分为其他类的平均票数之差。也就是说**余量越大，分类正确可能性越大**。
 
  - $mg(\mathbf{x},y)>0$ : 分类正确.
  - $mg(\mathbf{x},y)>0$ : 分类错误.
