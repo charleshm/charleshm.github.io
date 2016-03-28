@@ -17,14 +17,17 @@ categories: 机器学习
 #### 随机森林
 ![此处输入图片的描述][2]
 
+前几天面试的时候，面试官问了下随机森林与 Bagging 的区别，
+
+![此处输入图片的描述][3]
 
 ----------
-
 
 #### Why not overfit
 Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋于一个**有限的上限**。
 
-> 但是我们需要指出的是，任何机器学习算法都可能会过拟合，作者证明的是随机森林不会随着决策树的增加而产生过拟合问题（但会产生一定限度内的泛化误差），**随机森林也是会过拟合的**[^4]。
+> 但是我们需要指出的是，任何机器学习算法都可能会过拟合，作者证明的是随机森林不会随着决策树的增加而产生过拟合问题（但会产生一定限度内的泛化误差），**随机森林也是会过拟合的**[^4]。    
+This result explains why random forests do not overfit as more trees are added, but produce a limiting value of the generalization error.
 
 下面我们来分析下具体**证明过程**[^2]。
 
@@ -82,7 +85,7 @@ g_K(\mathbf{x},y) \rightarrow g(\mathbf{x},y) &\overset{等价于证明}{\Longri
 
 我们知道，对于一个给定的训练集 $\mathbf{x}$ 和 $\Theta$，使得 $h(x,\Theta)=j$ 成立的所有 $x$构成一个**超立方体**(hyper-rectangle)的并集[^3]。我们假设对于所有的 $h(x,\Theta_k)$ 最后组成 $K$ 个这样的超立方体: $\\{S_k\\}_{k=1}^K$.
 
-![此处输入图片的描述][3]
+![此处输入图片的描述][4]
 
 定义，
 
@@ -130,4 +133,5 @@ $$\begin{align*}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_164830.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_165533.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_184949.png?imageView2/2/w/400
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-28_094540.png?imageView2/2/w/350
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_184949.png?imageView2/2/w/400
