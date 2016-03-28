@@ -57,8 +57,34 @@ var(mr) & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[mr(\mathbf{
 & = E_{\mathbf{x},y}[E_{\Theta}rmg(\Theta,\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[E_{\Theta}rmg(\Theta,\mathbf{x},y)])^2\\
 & = E_{\mathbf{x},y}E_{\Theta,\Theta^{'}}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y)) - E_{\Theta,\Theta^{'}}(E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)E_{\mathbf{x},y}rmg(\Theta^{'},\mathbf{x},y))\\
 & = E_{\Theta,\Theta^{'}}(\underbrace{E_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y)) - E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)E_{\mathbf{x},y}rmg(\Theta^{'},\mathbf{x},y)}_{Cov(X,Y) = E[XY]-E[X]E[Y]})\\
-& = E_{\Theta,\Theta^{'}}(Cov_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y)))
+& = E_{\Theta,\Theta^{'}}(Cov_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y)))\\
+& = E_{\Theta,\Theta^{'}}(\rho(\Theta,\Theta^{'})sd(\Theta)sd(\Theta^{'})) \tag{3}
 \end{align*}$$
+
+
+----------
+
+#### 正式开推
+定义决策树之间的平均相关系数 $\overline{\rho}$，
+
+$$\overline{\rho} = \frac{E_{\Theta,\Theta^{'}}(\rho(\Theta,\Theta^{'})sd(\Theta)sd(\Theta^{'})}{E_{\Theta,\Theta^{'}}(sd(\Theta)sd(\Theta^{'}))} \tag{4}$$
+
+则，
+
+$$\begin{align*}
+var(mr) & = E_{\Theta,\Theta^{'}}(\rho(\Theta,\Theta^{'})sd(\Theta)sd(\Theta^{'})\\
+& = \overline{\rho}(E_{\Theta}sd(\Theta))^2\\
+& \leq \overline{\rho}E_{\Theta} var(\Theta)\\
+& = \overline{\rho}E_{\Theta} var_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y)\\
+& = \overline{\rho}E_{\Theta}(E_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y))^2 - (E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)^2)\\
+& \leq \overline{\rho}(E_{\Theta}E_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y))^2 - (E_{\Theta}E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y))^2)\\
+& \leq \overline{\rho}(1-s^2)
+\end{align*}$$
+
+故，
+
+$$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1-s^2)}{s^2}$$
+
 
 ----------
 
