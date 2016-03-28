@@ -24,7 +24,7 @@ categories: 机器学习
 #### Why not overfit
 Breiman证明了，随着随机森林中决策树增加，其泛化误差会趋于一个**有限的上限**。
 
-> 但是我们需要指出的是，任何机器学习算法都可能会过拟合，作者证明的是随机森林不会随着决策树的增加而产生过拟合问题（会产生一定限度内的泛化误差），随机森林也是会过拟合的。
+> 但是我们需要指出的是，任何机器学习算法都可能会过拟合，作者证明的是随机森林不会随着决策树的增加而产生过拟合问题（会产生一定限度内的泛化误差），随机森林也是会过拟合的[^4]。
 
 下面我们来分析下具体**证明过程**[^2]。
 
@@ -125,6 +125,7 @@ $$\begin{align*}
   [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
   [^2]: [Mathematics of Random Forests](http://math.bu.edu/people/mkon/MA751/L19RandomForestMath.pdf)
   [^3]: [随机森林理论浅析](http://www.cnki.com.cn/Article/CJFDTotal-JCJI201301001.htm)
+  [^4]: [Do Random Forest overfit?](http://datascience.stackexchange.com/questions/1028/do-random-forest-overfit)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-27_164830.png
