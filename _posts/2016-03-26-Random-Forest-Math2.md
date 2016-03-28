@@ -26,6 +26,13 @@ P_{\mathbf{x},y}\left(mr(\mathbf{x},y)<0) & = P_{\mathbf{x},y}(mr(\mathbf{x},y) 
 \end{align*}$$
 
 
+$$\begin{align*}
+var(mr) & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[mr(\mathbf{x},y)])^2 \\
+& = E_{\mathbf{x},y}[E_{\Theta}rmg(\Theta,\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[E_{\Theta}rmg(\Theta,\mathbf{x},y)])^2\\
+& = E_{\mathbf{x},y}E_{\Theta,\Theta^{'}}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y)) - E_{\Theta,\Theta^{'}}(E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)E_{\mathbf{x},y}rmg(\Theta^{'},\mathbf{x},y))\\
+& = E_{\Theta,\Theta^{'}}(\underbrace{E_{\mathbf{x},y}(rmg(\Theta,\mathbf{x},y)rmg(\Theta^{'},\mathbf{x},y))}_{1} - \underbrace{E_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)E_{\mathbf{x},y}rmg(\Theta^{'},\mathbf{x},y)}_{2})
+\end{align*}$$
+
 ----------
 
 
