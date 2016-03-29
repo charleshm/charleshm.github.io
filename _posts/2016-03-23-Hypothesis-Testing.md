@@ -93,9 +93,9 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
 3 $\sigma$ 原则:
 
-- 数值分布在 $(\mu—\sigma,\mu+\sigma)$ 中的概率为0.6526.
-- 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.9544.
-- 数值分布在 $(\mu—3\sigma,\mu+3\sigma)$ 中的概率为0.9974. 
+- 数值分布在 $(\mu—\sigma,\mu+\sigma)$ 中的概率为0.68.
+- 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.95.
+- 数值分布在 $(\mu—3\sigma,\mu+3\sigma)$ 中的概率为0.997. 
 
 ![此处输入图片的描述][4]
 
