@@ -89,7 +89,7 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
  
 #### 常识
 
-3 $\sigma$:
+3 $\sigma$ 原则:
 
 - 数值分布在 $(\mu—\sigma,\mu+\sigma)$ 中的概率为0.6526.
 - 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.9544.
