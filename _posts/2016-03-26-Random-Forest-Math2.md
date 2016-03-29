@@ -95,6 +95,11 @@ $$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1
 
 减小特征选择个数m，树的相关性和分类强度也会相应的降低；增大m，两者会随之增大。所以关键的问题是如何选择最优的 m（或者是范围），通过计算**袋外错误率** oob error，我们可以很快锁定 m.
 
+----------
+
+资料传送门：
+
+- [Awesome Random Forest](https://github.com/kjw0612/awesome-random-forest)
 
 ----------
 
