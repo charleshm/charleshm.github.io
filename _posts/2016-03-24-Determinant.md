@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "漫谈行列式"
-date:   2016-03-27 9:30
+date:   2016-03-24 9:30
 categories: 线性代数
 ---
 
