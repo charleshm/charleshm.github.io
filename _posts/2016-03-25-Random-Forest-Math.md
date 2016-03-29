@@ -122,6 +122,10 @@ $$\begin{align*}
 #### 总结
 好吧，我还没法完全领悟这个证明的内涵，知其形而不知其意。
 
+资料传送门：
+
+- [Awesome Random Forest](https://github.com/kjw0612/awesome-random-forest)
+
 ----------
 
 
