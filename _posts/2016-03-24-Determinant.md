@@ -6,7 +6,6 @@ title:  "漫谈行列式"
 date:   2016-03-24 9:30
 categories: 线性代数
 ---
-
 因为不少公司的机器学习（数据挖掘）的笔试题中都涉及到行列式的求解，一时兴起，深挖了下。
 
 #### 几何意义
@@ -75,14 +74,14 @@ $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=(\det D)(\det (A-BD^{-1}C))$$
 
 ----------
 
-公式三：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 A, B, C, D 其中之一是零矩阵，则
+**公式三**：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 A, B, C, D 其中之一是零矩阵，则
 
 $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (AD-BC)$$
 
 
 ----------
 
-公式四：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 AC=CA，则
+**公式四**：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 AC=CA，则
 
 $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (AD-CB)$$
 
