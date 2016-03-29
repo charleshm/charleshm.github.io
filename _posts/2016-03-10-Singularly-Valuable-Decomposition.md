@@ -12,7 +12,16 @@ categories: 机器学习 推荐系统 数学基础
 #### 特征值分解
 首先简单介绍下特征值。
 
-我们知道，方阵和向量相乘，从几何意义上来讲，就是对向量作 **旋转、伸缩** 变换。如果方阵对某个向量只产生伸缩，而不产生旋转效果，那么这个向量就称为矩阵的**特征向量**，伸缩的比例就是对应的**特征值**。
+我们知道，方阵和向量相乘，从几何意义上来讲，就是对向量作 **旋转、伸缩** 变换。比如下图中单位圆上不同颜色的点，在与矩阵$ 
+\left[\begin{array}{cccc}   
+1 & 3 \\   
+-3 & 2 
+\end{array}\right]
+$相乘后，进行了旋转和拉伸变换。
+
+![此处输入图片的描述][7]
+
+如果方阵对某个向量只产生伸缩，而不产生旋转效果，那么这个向量就称为矩阵的**特征向量**，伸缩的比例就是对应的**特征值**。
 
 $$A\mathbf{x} = \lambda \mathbf{x} \tag{1.1}$$
 
@@ -737,3 +746,4 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [4]: https://zh.wikipedia.org/zh/%E6%A0%87%E5%87%86%E6%9D%86
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png
   [6]: http://www.tablesgenerator.com/markdown_tables
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/MatrixAction.gif
