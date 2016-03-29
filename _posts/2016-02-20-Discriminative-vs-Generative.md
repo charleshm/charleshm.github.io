@@ -7,7 +7,7 @@ date:   2016-02-20 14:28
 categories: 机器学习
 ---
 
-#### 直观认识
+#### 直观认识[^2]
 假设现在你想知道你对面的老外讲的是哪国语言，可以很直观的想到下面两种策略：
 
  - 对各种语言进行建模，然后判断最有可能属于哪种语言（生成模型）
@@ -37,10 +37,14 @@ categories: 机器学习
 
 常见的生成模包括有隐马尔科夫模型(HMM)、朴素贝叶斯模型、高斯混合模型、LDA、Restricted Boltzmann Machine等。
 
+![此处输入图片的描述][2]
+
 ----------
 
 
 [^1]: [生成模型与判别模型](http://blog.csdn.net/zouxy09/article/details/8195017)
+[^2]: [Machine Learning: Generative and Discriminative Models](http://www.cedar.buffalo.edu/~srihari/CSE574/Discriminative-Generative.pdf)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/discriminative_vs_generative.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-29_211257.png
