@@ -21,6 +21,16 @@ $相乘后，进行了相应旋转和拉伸变换[^6]。
 
 ![此处输入图片的描述][7]
 
+再来瞅瞅三维矩阵 $ 
+\left[\begin{array}{cccc}   
+2 & -0.48 & -0.56 \\\\   
+-0.072 & 0.74 & -2 \\\\
+1.1  &  0.45  &  -1.5 
+\end{array}\right]
+$
+
+![此处输入图片的描述][8]
+
 如果方阵对某个向量只产生伸缩，而不产生旋转效果，那么这个向量就称为矩阵的**特征向量**，伸缩的比例就是对应的**特征值**。
 
 $$A\mathbf{x} = \lambda \mathbf{x} \tag{1.1}$$
@@ -748,3 +758,4 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-13_123323.png
   [6]: http://www.tablesgenerator.com/markdown_tables
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/MatrixAction.gif
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/surface.gif
