@@ -59,6 +59,9 @@ $ 是否存在类似的计算式呢？
 
 $$\begin{vmatrix}  A&B\\  0&D  \end{vmatrix}=(\det A)(\det D)$$
 
+推论： 
+
+$$\begin{vmatrix}  0&B_s\\  A_r&0  \end{vmatrix}=(-1)^{rs}(\det A)(\det B)$$
 
 ----------
 
@@ -98,6 +101,41 @@ $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (DA-BC)$$
 $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (DA-CB)$$
 
 注意，即使前提满足，$\det(AD-CB)$ 未必等于 $\det (AD-BC)$，同样的，$\det(AD-BC)$ 也未必等于 $\det (DA-BC)$。
+
+
+----------
+
+#### 举个栗子
+腾讯2015年基础研究笔试题：求行列式，
+
+$$\begin{vmatrix}  
+0&a&b&0\\
+a&0&0&b\\
+0&c&d&0\\
+c&0&0&d
+\end{vmatrix}$$
+
+首先我们将第一列与第二列交换，这样分块矩阵中的每个矩阵都是对角矩阵 :
+
+$$\begin{vmatrix}  
+0&a&b&0\\
+a&0&0&b\\
+0&c&d&0\\
+c&0&0&d
+\end{vmatrix} \overset{列变换}{\longrightarrow} - \begin{vmatrix}  
+a&0&b&0\\
+0&a&0&b\\
+c&0&d&0\\
+0&c&0&d
+\end{vmatrix}=-\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}$$
+
+再利用**公式四**：
+
+$$\begin{align*}
+-\begin{vmatrix}  A&B\\  C&D  \end{vmatrix} & = -\det (AD-BC)\\
+& = -\begin{vmatrix}  ad-bc&0\\  0&ad-bc  \end{vmatrix}\\
+& = -(ad-bc)^2
+\end{align*}$$
 
 ----------
 
