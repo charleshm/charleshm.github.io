@@ -87,8 +87,18 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
 > t 检验有多种类型，可以分为只有一组样本的单体检验和有两组样本的双体检验。单体检验用于检验样本的分布期望是否等于某个值。双体检验用于检验两组样本的分布期望是否相等，又分为配对双体检验和非配对双体检验。等需要用的时候再回头补充。
  
+#### 常识
+
+3 $\sigma$:
+
+- 数值分布在 $(\mu—\sigma,\mu+\sigma)$ 中的概率为0.6526.
+- 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.9544.
+- 数值分布在 $(\mu—3\sigma,\mu+3\sigma)$ 中的概率为0.9974. 
+
+![此处输入图片的描述][4]
 
 
   [1]: http://charlesx.top/2016/03/Classification-Model-Performance/
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
