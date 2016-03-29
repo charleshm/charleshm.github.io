@@ -44,7 +44,7 @@ $$
 
 那么对于分块矩阵$ 
 \left|\begin{array}{cccc}   
-A & B \\   
+A & B \\\\   
 C & D 
 \end{array}\right|
 $ 是否存在类似的计算式呢？
