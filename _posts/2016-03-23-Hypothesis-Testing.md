@@ -35,7 +35,7 @@ categories: 机器学习 统计学
 
 假设检验有**两类错误**，第一类型错误和第二类型错误。第一类型错误，是零假设成立的情况下拒绝零假设。第二类型错误，是备选假设成立的情况下接受零假设。
 
-|     Type    | Decision:Accept $H_0$ | Decision:Reject $H_1$ |
+|     Type    | Decision:Accept $H_0$ | Decision:Reject $H_0$ |
 |:-----------:|:---------------------:|:---------------------:|
 | Truth:$H_0$ |    Correct Decision   |      Type I Error     |
 | Truth:$H_1$ |     Type II Error     |    Correct Decison    |
