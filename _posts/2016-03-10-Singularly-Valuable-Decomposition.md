@@ -17,7 +17,7 @@ categories: 机器学习 推荐系统 数学基础
 1 & 3 \\\\   
 -3 & 2 
 \end{array}\right]
-$相乘后，进行了旋转和拉伸变换。
+$相乘后，进行了相应旋转和拉伸变换[^6]。
 
 ![此处输入图片的描述][7]
 
@@ -739,6 +739,7 @@ Markdown排版表格是件麻烦事，google了一下，发现个在线网站，
   [^3]: [A Singularly Valuable Decomposition: The SVD of a Matrix](http://www.math.umn.edu/~lerman/math5467/svd.pdf)
   [^4]: [Singular Value Decomposition (SVD) Tutorial](http://www.puffinwarellc.com/index.php/news-and-articles/articles/30-singular-value-decomposition-tutorial.html?showall=1)
   [^5]: [强大的矩阵奇异值分解(SVD)及其应用](http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html)
+  [^6]: [Introduction to the Singular Value Decomposition](http://websites.uwlax.edu/twill/svd/index.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/500px-Eigenvalue_equation.svg.png?imageView2/2/w/350
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/svd_vc.png?imageView2/2/w/500
