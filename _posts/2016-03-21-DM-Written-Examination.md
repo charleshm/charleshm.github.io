@@ -6,6 +6,8 @@ title:  "数据挖掘笔试准备"
 date:   2016-03-21 9:30
 categories: 数据挖掘  工作
 ---
+### 基础知识
+
 向量 $a = (a_1,a_2,\cdots,a_n),b = (b_1,b_2,\cdots,b_n)$ .
 
 #### 空间距离
@@ -92,3 +94,21 @@ g(D,A) & = H(D) - H(D|A)\\
 g_R(D,A) & = \frac{g(D,A)}{H(D)}\\
 \text{Gini}(D) & = 1-\sum_{k=1}^{K}\left( \frac{|C_k|}{|D|} \right)^2
 \end{align*}$$
+
+----------
+
+### 题库
+
+#### BAT
+
+ - [2015年腾讯暑期实习笔试题——基础研究B2卷][3]
+ - [腾讯2015年9月基础研究笔试题][4]
+ - [网易2013][1]
+ - [2013百度校园招聘数据挖掘工程师][2]
+
+----------
+
+[1]: http://wenku.baidu.com/link?url=yrQtDWOA4kL9-paiEjBY8xm_32yulYtQAQT9ql7gFlwh5ABtH6FkM_qDfxq2m7EsnPixBgv4DznpNTRcxhsuPM3lqD5YBvlt0oY1uY8c3ai
+[2]: http://www.cnblogs.com/elaron/p/3325937.html
+[3]: http://hongyang.space/post/category/thoughts/tencentinterntest
+[4]: http://www.lai18.com/content/1389297.html
