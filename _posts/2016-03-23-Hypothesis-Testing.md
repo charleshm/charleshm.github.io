@@ -18,6 +18,8 @@ categories: 机器学习 统计学
 #### P值
 P值就是当原假设为真时出现现状或更差的情况的概率。如果P值很小，说明这种情况的发生的概率很小，而如果出现了，根据小概率原理，我们就有理由拒绝原假设，P值越小，我们拒绝原假设的理由越充分。
 
+![此处输入图片的描述][5]
+
 ----------
 
 #### 基本步骤
@@ -108,3 +110,4 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
