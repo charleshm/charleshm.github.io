@@ -9,6 +9,8 @@ categories: 机器学习
 
 Breiman[^1]证明了泛化误差的上界是可以得到的，它主要由两方面因素决定：单棵决策树的**分类强度**，决策树之间的**相关性**。
 
+![此处输入图片的描述][1]
+
 #### 泛化误差上界
 定义单棵决策树的**余量函数**：
 
@@ -106,3 +108,5 @@ $$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1
 
 [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
 [^2]: [Random Forests(Leo Breiman and Adele Cutler)](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter)
+
+[1]: http://7xjbdi.com1.z0.glb.clouddn.com/tree_RF.png
