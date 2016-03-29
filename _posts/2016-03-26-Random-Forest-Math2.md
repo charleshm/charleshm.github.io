@@ -88,7 +88,7 @@ $$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1
 ----------
 
 #### 总结
-随机森林错误率与两个因素有关：
+随机森林错误率与两个因素有关[^2]：
 
  - 森林中任意两棵树的相关性(correlation)：相关性越大，错误率越大；
  - 森林中每棵树的分类强度(strength)：每棵树的分类能力越强，整个森林的错误率越低。
@@ -100,3 +100,4 @@ $$\Rightarrow  P_{\mathbf{x},y}(mr(\mathbf{x},y)<0) \leq \frac{\overline{\rho}(1
 
 
 [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
+[^2]: [Random Forests(Leo Breiman and Adele Cutler)](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter)
