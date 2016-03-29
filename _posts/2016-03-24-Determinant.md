@@ -106,7 +106,11 @@ $$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (DA-CB)$$
 ----------
 
 #### 举个栗子
-腾讯2015年基础研究笔试题：求行列式，
+腾讯2015年基础研究笔试题：
+
+![此处输入图片的描述][2]
+
+求行列式，
 
 $$\begin{vmatrix}  
 0&a&b&0\\
@@ -140,7 +144,9 @@ $$\begin{align*}
 ----------
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/3_det.png
-  
   [^1]: [行列式的几何意义](http://www.cnblogs.com/AndyJee/p/3491487.html)
   [^2]: [分块矩阵的行列式](https://ccjou.wordpress.com/2013/06/07/%E5%88%86%E5%A1%8A%E7%9F%A9%E9%99%A3%E7%9A%84%E8%A1%8C%E5%88%97%E5%BC%8F/)
+
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/3_det.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/tecent_test.png?imageView2/2/w/400
