@@ -15,6 +15,7 @@ categories: 机器学习
 
 我们平时听到日语，俄语，德语啥的，很快就能分辨出来，但实际上我们并没有去系统学习每一种语言，主要是通过它们之间的差异进行辨别，这就是一种判别模型方法。
 
+![此处输入图片的描述][1]
 
 ----------
 
@@ -40,3 +41,6 @@ categories: 机器学习
 
 
 [^1]: [生成模型与判别模型](http://blog.csdn.net/zouxy09/article/details/8195017)
+
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/discriminative_vs_generative.png
