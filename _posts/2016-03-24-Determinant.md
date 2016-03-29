@@ -28,12 +28,80 @@ categories: 线性代数
 
  - 互换行列式的两行或两列，行列式变号。
  
+
+
 ----------
 
 
-#### 分块矩阵
+#### 分块矩阵[^2]
+我们知道二阶矩阵的行列式计算式:
+
+$$ 
+\left|\begin{array}{cccc}   
+a & b \\   
+c & d 
+\end{array}\right| = ad -bc,  
+$$
+
+那么对于分块矩阵
+$$ 
+\left|\begin{array}{cccc}   
+A & B \\   
+C & D 
+\end{array}\right|
+$$
+
+是否存在类似的计算式呢？
+
+> 一般情况下，相应的分块矩阵的行列式公式并不存在，但如果 $A,B,C,D$ 满足某些特定的条件，则会存在简明的计算公式。
 
 
+----------
+
+
+**公式一**：若 A 和 D 是方阵 (但大小可以相异)，则
+
+$$\begin{vmatrix}  A&B\\  0&D  \end{vmatrix}=(\det A)(\det D)$$
+
+
+----------
+
+
+**公式二**：设 A 和 D 是方阵。若 A 可逆，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=(\det A)(\det (D-CA^{-1}B))$$
+
+若 D 可逆，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=(\det D)(\det (A-BD^{-1}C))$$
+
+
+----------
+
+公式三：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 A, B, C, D 其中之一是零矩阵，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (AD-BC)$$
+
+
+----------
+
+公式四：设 A, B, C, D 是 $n\times n$ 阶矩阵。若 AC=CA，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (AD-CB)$$
+
+若 CD=DC，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (AD-BC)$$
+
+若 BD=DB，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (DA-BC)$$
+
+若 AB=BA，则
+
+$$\begin{vmatrix}  A&B\\  C&D  \end{vmatrix}=\det (DA-CB)$$
+
+注意，即使前提满足，$\det(AD-CB)$ 未必等于 $\det (AD-BC)$，同样的，$\det(AD-BC)$ 也未必等于 $\det (DA-BC)$。
 
 ----------
 
@@ -41,3 +109,4 @@ categories: 线性代数
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/3_det.png
   
   [^1]: [行列式的几何意义](http://www.cnblogs.com/AndyJee/p/3491487.html)
+  [^2]: [分块矩阵的行列式](https://ccjou.wordpress.com/2013/06/07/%E5%88%86%E5%A1%8A%E7%9F%A9%E9%99%A3%E7%9A%84%E8%A1%8C%E5%88%97%E5%BC%8F/)
