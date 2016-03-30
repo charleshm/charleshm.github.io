@@ -34,6 +34,8 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 
 > 所有的假设检验都按照这三个步骤进行，各种检验方法的差别在于第二步计算的**检验统计量**不同。
 
+![此处输入图片的描述][7]
+
 比如，我们观察到一组独立地从同一个分布采样出来的样本。如果想了解这个分布的性质，可以针对这个分布的参数做出两个不同的假设。一个叫**零假设** $H_0$，另一个叫**备选假设** $H_1$ 。比如针对分布的期望值 $\mu$，零假设可以是 $\pmb{H}_0:u = u_0$，备选假设可以是 $\pmb{H}_1: u\neq u_0$。假设检验过程根据观察到的样本决定接受其中一个假设。
 
 ----------
@@ -126,3 +128,4 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
