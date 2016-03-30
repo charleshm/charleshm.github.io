@@ -96,6 +96,8 @@ S_{\bar{X}_1-\bar{X}_2} & = \sqrt{S_c^2(\frac{1}{n_1}+\frac{1}{n_2})}\\
 S_c &= \sqrt{ \frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}  } \qquad  \text{合并方差}\nonumber 
 \end{align*}$$
 
+![此处输入图片的描述][9]
+
  - 两总体方差不等,即方差不齐，可采用 $t^{\prime}$ 检验，或进行变量变换，或用 **秩和检验** 方法处理。
 
 #### 总结
@@ -123,3 +125,4 @@ S_c &= \sqrt{ \frac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1+n_2-2}  } \qquad  \text{合�
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/t_ht2.png?imageView2/2/w/400
