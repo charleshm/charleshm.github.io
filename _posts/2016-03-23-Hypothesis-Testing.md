@@ -11,14 +11,14 @@ categories: 机器学习 统计学
 
 其实质是判断观察到的“差别”是**抽样误差**引起还是总体上的不同，目的是评价两个不同的参数或两种不同处理引起效应不同的证据有多强，这种证据的强度用概率 P 度量和表示。
 
-![此处输入图片的描述][3]
+![此处输入图片的描述][1]
 
 ----------
 
 #### P值
 P值就是当原假设为真时出现现状或更差的情况的概率。如果P值很小，说明这种情况的发生的概率很小，而如果出现了，根据小概率原理，我们就有理由拒绝原假设，P值越小，我们拒绝原假设的理由越充分。
 
-![此处输入图片的描述][5]
+![此处输入图片的描述][2]
 
 "P" 值的使用也引起了统计学家的争议: [Scientific method: Statistical errors : Nature News & Comment](http://www.guokr.com/article/438043/).
 
@@ -34,7 +34,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 
 > 所有的假设检验都按照这三个步骤进行，各种检验方法的差别在于第二步计算的**检验统计量**不同。
 
-![此处输入图片的描述][7]
+![此处输入图片的描述][3]
 
 比如，我们观察到一组独立地从同一个分布采样出来的样本。如果想了解这个分布的性质，可以针对这个分布的参数做出两个不同的假设。一个叫**零假设** $H_0$，另一个叫**备选假设** $H_1$ 。比如针对分布的期望值 $\mu$，零假设可以是 $\pmb{H}_0:u = u_0$，备选假设可以是 $\pmb{H}_1: u\neq u_0$。假设检验过程根据观察到的样本决定接受其中一个假设。
 
@@ -50,12 +50,14 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 | Truth:$H_0$ |    Correct Decision   |      Type I Error     |
 | Truth:$H_1$ |     Type II Error     |    Correct Decison    |
 
-> 是不是想起了我们分类器评估准则里面的 [混淆矩阵][1] .
+> 是不是想起了我们分类器评估准则里面的 [混淆矩阵][4] .
 
 
 ----------
 
 ### $t$ 检验
+
+![此处输入图片的描述][5]
 
 #### 单个样本的 $t$ 检验
 单样本均数 t 检验(one sample t test)，适用于样本均数与已知总体均数 $\mu_0$ 的比较,其比较目的是检验样本均数所代表的总体均数 $\mu$ 是否与已知总体均数 $\mu_0$ 有差别。
@@ -78,7 +80,7 @@ $$\begin{eqnarray}
 
 我们想知道检验样本均数所代表的总体均数 $\mu$ 是否与已知总体均数 $\mu_0$ 有差别，利用 t 检验:
 
-![此处输入图片的描述][2]
+![此处输入图片的描述][6]
 
 
 ----------
@@ -102,7 +104,7 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
 本例自由度 $\nu = n-1=5$ （6份数据），显著性水平为 $\alpha = 0.05$ ，查表 $t_{0.05/2,5} = 2.571$. 因为 $t<t_{0.05/2,5}$，故 $P>0.05$，按照 $\alpha=0.05$ 不拒绝零假设 $H_0$ ($\mu_0=1.1$  成立).
 
-![此处输入图片的描述][6]
+![此处输入图片的描述][7]
 
 
 ----------
@@ -119,13 +121,14 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 - 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.95.
 - 数值分布在 $(\mu—3\sigma,\mu+3\sigma)$ 中的概率为0.997. 
 
-![此处输入图片的描述][4]
+![此处输入图片的描述][8]
 
 
-  [1]: http://charlesx.top/2016/03/Classification-Model-Performance/
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
-  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
+  [4]: http://charlesx.top/2016/03/Classification-Model-Performance/
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/t_ca.png
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
