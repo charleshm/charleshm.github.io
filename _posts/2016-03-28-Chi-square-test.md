@@ -9,8 +9,8 @@ categories: 机器学习 统计学
 
 卡方检验(Pearson’s Chi-square test)主要用来做两件事：
 
-- **适和性检验**（Test for Goodness of fit），检查样本是否符合某种随机分布；
-- **独立性检验**（Test for Independence），检查变量之间是否独立。
+- **适合性检验**（Test for Goodness of fit）：检查样本是否符合某种随机分布；
+- **独立性检验**（Test for Independence）：检查变量之间是否独立。
 
 #### $\chi^2$ 统计量
 
@@ -28,4 +28,4 @@ $$\chi^2 = \sum \frac{(A – E)^2}{E} \tag{1}$$
  - $\chi^2=0$ 表示两者完全吻合
  - $\chi^2$ 越大，表示两者相差越大
 
-#### 适和性检验
+#### 适合性检验
