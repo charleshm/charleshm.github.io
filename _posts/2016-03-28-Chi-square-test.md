@@ -25,4 +25,13 @@ $$\chi^2 = \sum \frac{(A – E)^2}{E} \tag{1}$$
  - $\chi^2=0$ 表示两者完全吻合
  - $\chi^2$ 越大，表示两者相差越大
 
+
+----------
+
+
 #### 适合性检验
+
+ 
+
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Chi_square_test.png
