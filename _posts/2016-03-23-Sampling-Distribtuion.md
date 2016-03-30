@@ -10,6 +10,8 @@ categories: 机器学习 统计学
 > 由于统计量依赖于样本,而样本又是随机变量,故统计量也是随机变量,因而就有一定的分布，我们称之为“抽样分布”。也就是说，**抽样分布实际上就是统计量的分布**.
  
  $$\text{抽样分布} \Rightarrow \text{统计推断}(\text{假设检验})$$
+
+![此处输入图片的描述][9]
  
 #### 统计量
 
@@ -121,3 +123,4 @@ ps: 关于三大抽样分布概率密度函数的推导，请参考：[资料传
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/F_pdf.svg.png
   [7]: http://support.minitab.com/zh-cn/minitab/17/topic-library/basic-statistics-and-graphs/probability-distributions-and-random-data/distributions/t-distribution/
   [8]: http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111201.png
