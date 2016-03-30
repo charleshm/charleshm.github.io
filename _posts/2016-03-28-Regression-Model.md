@@ -28,6 +28,8 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 - **正态性假定**
 
+http://www.sssidea.org/ecn/chapter3.pdf
+
 ----------
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_223648.png?imageView2/2/w/400
