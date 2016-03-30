@@ -72,7 +72,6 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
   [4]: http://charlesx.top/2016/03/Classification-Model-Performance/
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
 
   [^1]: [假设检验原理一:t检验](http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C)
