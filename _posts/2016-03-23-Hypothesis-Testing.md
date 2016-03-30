@@ -58,7 +58,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 #### 单个样本的 $t$ 检验
 单样本均数 t 检验(one sample t test)，适用于样本均数与已知总体均数 $\mu_0$ 的比较,其比较目的是检验样本均数所代表的总体均数 $\mu$ 是否与已知总体均数 $\mu_0$ 有差别。
 
-> 应用条件：总体标准 $\sigma$ 未知的小样本( 如 $n<50$ ),且服从正态分布。
+> 应用条件：总体标准 $\sigma$ 未知的小样本( 如 $n<50$ )，且服从正态分布。
 
 
 ----------
@@ -100,6 +100,8 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 
 本例自由度 $\nu = n-1=5$ （6份数据），显著性水平为 $\alpha = 0.05$ ，查表 $t_{0.05/2,5} = 2.571$. 因为 $t<t_{0.05/2,5}$，故 $P>0.05$，按照 $\alpha=0.05$ 不拒绝零假设 $H_0$ ($\mu_0=1.1$  成立).
 
+![此处输入图片的描述][6]
+
 
 ----------
 
@@ -123,3 +125,4 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
