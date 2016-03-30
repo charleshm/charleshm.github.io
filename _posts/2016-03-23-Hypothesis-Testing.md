@@ -128,7 +128,7 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
   [4]: http://charlesx.top/2016/03/Classification-Model-Performance/
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/t_ca.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/t_ca.png?imageView2/2/w/400
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/hy_set.png?imageView2/2/w/200
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_110626.png?imageView2/2/w/400
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
