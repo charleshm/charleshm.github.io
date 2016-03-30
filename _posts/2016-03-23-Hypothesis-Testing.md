@@ -124,6 +124,8 @@ $$t = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = 0.2887 \tag{2}$$
 ![此处输入图片的描述][8]
 
 
+----------
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/ajyqbCYCd2xbzjci_1ms8i9Tb_BotSwAKpsDRNHLoqd4BQAAGAMAAEpQ.jpg
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
