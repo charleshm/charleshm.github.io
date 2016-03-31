@@ -47,6 +47,22 @@ http://www.sssidea.org/ecn/chapter3.pdf
 
 ----------
 
+#### 假设不满足
+
+- **多重共线性**
+
+> 存在多重共线性时，OLS估计式变得不确定或不精确.    
+OLS估计式方差变得很大，标准误差增大.          
+当多重共线性严重时，甚至可能使估计的回归系数 符号相反，得出完全错误的结论.        
+区间估计和假设检验会出现错误.      
+
+
+
+
+
+
+----------
+
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_223648.png?imageView2/2/w/400
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_092444.png
 [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_092931.png
