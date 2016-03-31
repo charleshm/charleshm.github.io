@@ -61,16 +61,22 @@ $$\begin{align*}
 ----------
 
 #### 熵
-- 信息熵：$H(x) = -\sum\limits_{x\in X} P(x)\log P(x)$
-- 条件熵：$H(Y\|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x\|y)$
-- 联合熵：
+- **信息熵**：
+
+$$H(x) = -\sum\limits_{x\in X} P(x)\log P(x)$$
+
+- **条件熵**：
+
+$$H(Y\|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x|y)$$
+
+- **联合熵**：
 
 $$\begin{align*}
 H(X,Y) & = -\sum\limits_{x\in X,y\in Y} P(x,y)\log P(x,y)\\
 H(X,Y) & = H(X)+H(Y|X)
 \end{align*}$$
 
-- 互信息：
+- **互信息**：
 
 $$\begin{align*}
 I(X;Y) & = -\sum\limits_{x\in X,y\in Y} P(x,y)\log \frac{P(x,y)}{P(x)P(y)}\\
