@@ -28,9 +28,12 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 - **正态性假定**
 
+----------
+
 #### OLS 估计
 
 ![此处输入图片的描述][2]
+![此处输入图片的描述][4]
 
 **无偏估计**：估计量的数学期望等于被估计参数。
 
@@ -43,3 +46,4 @@ http://www.sssidea.org/ecn/chapter3.pdf
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_223648.png?imageView2/2/w/400
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_092444.png
 [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_092931.png
+[4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_093425.png
