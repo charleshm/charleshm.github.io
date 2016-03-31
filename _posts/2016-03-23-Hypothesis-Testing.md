@@ -90,7 +90,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 
 #### 常识
 
-3 $\sigma$ 原则:
+**3 $\sigma$ 原则**:
 
 - 数值分布在 $(\mu—\sigma,\mu+\sigma)$ 中的概率为0.68.
 - 数值分布在 $(\mu—2\sigma,\mu+2\sigma)$ 中的概率为0.95.
@@ -98,6 +98,9 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 
 ![此处输入图片的描述][8]
 
+**双盲试验**：
+
+![此处输入图片的描述][9]
 
 ----------
 
@@ -106,6 +109,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_111057.png
   [4]: http://charlesx.top/2016/03/Classification-Model-Performance/
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_130927jpg_Page1.jpg
 
   [^1]: [假设检验原理一:t检验](http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C)
   [^2]: [参数检验与非参数检验](http://blog.sciencenet.cn/blog-508298-855369.html)
