@@ -5,9 +5,6 @@
     src: url('/media/font/Cuprum-Regular.ttf') format('truetype');
 }
 
-@import url(http://fonts.useso.com/css?family=Galdeano);
-@import url(http://fonts.useso.com/css?family=Electrolize);
-
 /*页面格式*/
 
 body {
