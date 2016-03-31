@@ -74,7 +74,7 @@ H(X,Y) & = H(X)+H(Y|X)
 
 $$\begin{align*}
 I(X;Y) & = -\sum\limits_{x\in X,y\in Y} P(x,y)\log \frac{P(x,y)}{P(x)P(y)}\\
-I(X;Y) = H(X) + H(Y) -H(X,Y)
+I(X;Y) & = H(X) + H(Y) -H(X,Y)
 \end{align*}$$
 
 ![此处输入图片的描述][5]
