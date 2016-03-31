@@ -105,7 +105,7 @@ table {
 table th {
     vertical-align: middle;
     border-width: 1px;
-    padding: 10px;
+    padding: 8px;
     border-style: solid;
     border-color: #666666;
     background-color: #dedede;
@@ -113,7 +113,7 @@ table th {
 
 table td {
     border-width: 1px;
-    /*padding: 8px;*/
+    padding: 4px;
     border-style: solid;
     border-color: #666666;
     background-color: #ffffff;
