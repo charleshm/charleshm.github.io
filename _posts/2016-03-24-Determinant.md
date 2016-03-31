@@ -26,7 +26,8 @@ categories: 线性代数
 #### 常用性质
 
  - 互换行列式的两行或两列，行列式变号。
- 
+ - $A$ 可逆 $\Rightarrow \det (A)\not= 0$
+ - $Ax=0$ 只有零解 $\Rightarrow \det (A)\not= 0(\text{A 可逆})$
 
 
 ----------
