@@ -16,6 +16,8 @@ categories: 数据挖掘  工作
 - 切比雪夫距离：n 维空间两点维度上的最大差值.
 - 闵可夫斯基距离（统一）：一种距离的定义方式.
 
+----------
+
 $$\begin{align*}
 d & = \sqrt{\sum_{k=1}^{n}(a_k-b_k)} = \sqrt{(a-b)(a-b)^T} \rightarrow \text{欧氏距离(Euclidean Distance)}\\
 d & = \sum_{k=1}^{n} |a_k-b_k| \rightarrow \text{曼哈顿距离(Manhattan Distance)}\\
