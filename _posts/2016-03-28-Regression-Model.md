@@ -72,7 +72,15 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 ----------
 
-#### 多重共线性
+#### 异方差性 
+
+![此处输入图片的描述][6]
+
+存在**异方差**时，OLS估计仍然是**无偏**估计，但是,
+
+- OLS估计式不再具有最小方差特性 .
+- 解释变量的显著性检验失效 .
+- 预测精度降低,区间预测面临困难 .
 
 
 ----------
@@ -82,3 +90,4 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_092931.png
 [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_093425.png
 [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_095044.png
+[6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_100124.png?imageView2/2/w/400
