@@ -62,7 +62,22 @@ $$\begin{align*}
 
 #### 熵
 - 信息熵：$H(x) = -\sum\limits_{x\in X} P(x)\log P(x)$
-- 条件熵：$H(Y|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x|y)$
+- 条件熵：$H(Y\|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x\|y)$
+- 联合熵：
+
+$$\beign{align*}
+H(X,Y) & = -\sum\limits_{x\in X,y\in Y} P(x,y)\log P(x,y)\\
+H(X,Y) & = H(X)+H(Y|X)
+\end{align*}$$
+
+- 互信息：
+
+$$\beign{align*}
+I(X;Y) & = -\sum\limits_{x\in X,y\in Y} P(x,y)\log \frac{P(x,y)}{P(x)P(y)}\\
+I(X;Y) = H(X) + H(Y) -H(X,Y)
+\end{align*}$$
+
+![此处输入图片的描述][5]
 
 ----------
 
@@ -118,3 +133,4 @@ g_R(D,A) & = \frac{g(D,A)}{H(D)}\\
 [2]: http://www.cnblogs.com/elaron/p/3325937.html
 [3]: http://hongyang.space/post/category/thoughts/tencentinterntest
 [4]: http://www.lai18.com/content/1389297.html
+[5]: http://7xjbdi.com1.z0.glb.clouddn.com/744px-Entropy-mutual-information-relative-entropy-relation-diagram.svg.png?imageView2/2/w/400
