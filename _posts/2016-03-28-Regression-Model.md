@@ -7,7 +7,7 @@ date:   2016-03-28 14:30
 categories: 机器学习 统计学
 ---
 
-#### 基本假定
+#### 基本假定[^1]
 
 回归分析中对随机扰动项的假定，
 
@@ -56,7 +56,7 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 需要专门讨论无**多重共线性、同方差、 无自相关**。
 
-#### 多重共线性
+#### 多重共线性[^2]
 
 ![此处输入图片的描述][5]
 
@@ -78,7 +78,7 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 ----------
  
-#### 异方差性 
+#### 异方差性[^3] 
 
 ![此处输入图片的描述][6]
 
@@ -90,7 +90,7 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 ----------
 
-#### 自相关
+#### 自相关[^4]
 
 $$Cov(u_i,u_j)=E(u_iU_j)\not= 0$$
 
@@ -109,3 +109,9 @@ $$Cov(u_i,u_j)=E(u_iU_j)\not= 0$$
 [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_093425.png
 [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_095044.png
 [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_100124.png?imageView2/2/w/400
+
+
+[^1]: [多元线性回归模型](http://www.sssidea.org/ecn/chapter3.pdf)
+[^2]: [多重共线性](http://www.sssidea.org/ecn/chapter4.pdf)
+[^3]: [异方差性](http://www.sssidea.org/ecn/chapter5.pdf)
+[^4]: [自相关性](http://www.sssidea.org/ecn/chapter6.pdf)
