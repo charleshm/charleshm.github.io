@@ -61,8 +61,8 @@ $$\begin{align*}
 ----------
 
 #### 熵
-- 信息熵：$H(x) = \sum\limits_{x\in X}\log P(x)$
-- 条件熵：$$
+- 信息熵：$H(x) = -\sum\limits_{x\in X} P(x)\log P(x)$
+- 条件熵：$H(Y|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x|y)$
 
 ----------
 
