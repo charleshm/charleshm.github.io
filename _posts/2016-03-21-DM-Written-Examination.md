@@ -69,7 +69,7 @@ $$H(x) = -\sum\limits_{x\in X} P(x)\log P(x)$$
 
 - **条件熵**：
 
-$$H(Y|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(x|y)$$
+$$H(Y|X) = - \sum\limits_{x\in X,y\in Y} P(x)\log P(y|x)$$
 
 - **联合熵**：
 
