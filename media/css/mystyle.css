@@ -1,11 +1,12 @@
-/* cyrillic */
-
 @font-face {
     font-family: 'Cuprum';
     font-style: normal;
     font-weight: 400;
     src: url('/media/font/Cuprum-Regular.ttf') format('truetype');
 }
+
+@import url(http://fonts.useso.com/css?family=Galdeano);
+@import url(http://fonts.useso.com/css?family=Electrolize);
 
 /*页面格式*/
 

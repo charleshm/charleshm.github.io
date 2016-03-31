@@ -92,6 +92,9 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 #### 自相关
 
+$$Cov(u_i,u_j)=E(u_iU_j)\not= 0$$
+
+
 ----------
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-30_223648.png?imageView2/2/w/400
