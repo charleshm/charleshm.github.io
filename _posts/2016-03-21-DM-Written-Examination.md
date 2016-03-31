@@ -61,7 +61,8 @@ $$\begin{align*}
 ----------
 
 #### 熵
-- 信息熵： $H(x) = \sum\nolimits_{x\in X}\log P(x)$
+- 信息熵：$H(x) = \sum\limits_{x\in X}\log P(x)$
+- 条件熵：$$
 
 ----------
 
