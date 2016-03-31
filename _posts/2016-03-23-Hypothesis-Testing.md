@@ -101,10 +101,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 - **双盲试验：[资料传送](http://songshuhui.net/archives/75388)**
 - 常见分布的期望与方差:
 
-|   分布   |        期望        |         方差         |
-|:--------:|:------------------:|:--------------------:|
-| 二项分布 |         $np$         |          $npq$         |
-| 均匀分布 | $\frac{(a+b)}{2}$ | $\frac{(b-a)^2}{12}$ | 
+![此处输入图片的描述][11]
 
 ----------
 
@@ -115,6 +112,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/Empirical_Rule.PNG
   [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-31_130927jpg_Page1.jpg
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/p_vs_np.png
+  [11]: http://7xjbdi.com1.z0.glb.clouddn.com/dis_mean_var.png
 
   [^1]: [假设检验原理一:t检验](http://www.gotoli.us/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%E4%B8%80t%E6%A3%80%E9%AA%8C)
   [^2]: [参数检验与非参数检验](http://blog.sciencenet.cn/blog-508298-855369.html)
