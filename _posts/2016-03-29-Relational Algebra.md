@@ -21,7 +21,7 @@ categories: 数据挖掘 数据库
 
 ![此处输入图片的描述][2]
 
-我们利用下表数据加以说明：
+我们利用下表数据加以说明[^3]：
 
 ![此处输入图片的描述][3]
 
@@ -144,6 +144,7 @@ select Person.*,Works.* from Person full join Works on Person.person-name =  Wor
 
 [^1]: [数据库的外联和内联知识](http://www.360doc.com/content/11/0923/12/3589172_150598768.shtml)
 [^2]: [深入理解SQL的四种连接-左外连接、右外连接、内连接、全连接](http://f.dataguru.cn/thread-477900-1-1.html)
+[^3]: 数据库原理与应用(常玉慧，钱进，张俐)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_math.png?imageView2/2/w/300
