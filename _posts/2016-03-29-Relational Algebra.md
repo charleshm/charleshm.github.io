@@ -57,13 +57,22 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 ![此处输入图片的描述][6]
 
+----------
+
+- **连接**：连接运算是由一个**笛卡尔积运算**和一个**选取运算**构成的，它是从两个关系的笛卡尔积中选取属性间满足一定条件的元组。
+
+首先用笛卡尔积完成对两个数据集合的乘运算，然后对生成的结果集合进行选取运算，确保只把分别来自两个数据集合并且具有重叠部分的行合并在一起。
+
+> 连接的全部意义在于在水平方向上合并两个数据集合（通常是表），并产生一个新的结果集合，其方法是将一个数据源中的行于另一个数据源中和它匹配的行组合成一个新元组。
+
+
 
 ----------
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_0.png?imageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_0.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.png?imageView2/2/w/400
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/250
-  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/database_5.png?imageView2/2/w/350
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/database_5.png?imageView2/2/w/300
