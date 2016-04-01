@@ -15,16 +15,17 @@ categories: 数据挖掘 数据库
 
 ![此处输入图片的描述][1]
 
+关系代数运算符，
+
 ![此处输入图片的描述][2]
 
-关系代数包含以下8个关系运算符，我们利用下表数据加以说明：
+我们利用下表数据加以说明：
 
 ![此处输入图片的描述][3]
 
-
 ----------
 
-#### 关系运算符
+#### 关系运算符[^1]
 
 - **选择运算**（$\sigma$）:返回满足指定条件的元组（**行**）。
 
@@ -94,6 +95,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 ----------
 
+[^1]: [数据库的外联和内联知识](http://www.360doc.com/content/11/0923/12/3589172_150598768.shtml)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_math.png?imageView2/2/w/300
