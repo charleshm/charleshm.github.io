@@ -5,10 +5,15 @@
     src: url('/media/font/Cuprum-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'WenQuanYi-Micro-Hei';
+    src: url('/media/font/WenQuanYi-Micro-Hei.ttf') format('truetype');
+}
+
 /*页面格式*/
 
 body {
-    font-family: "Cuprum", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    font-family: "Cuprum", "Hiragino Sans GB", "Microsoft Yahei","WenQuanYi Zen Hei", Helvetica, Arial, sans-serif;
     background-color: #fdfdfd;
     color: #333;
     line-height: 22px;
@@ -52,6 +57,8 @@ h3 {
 }
 
 h4 {
+    font-family: "Cuprum","SimHei","Microsoft Yahei";
+    font-weight: 500;
     font-size: 16px;
     padding-left: 1ex;
     border-left-style: solid;
@@ -71,7 +78,7 @@ h5,
 h6 {
     /*color: #222;*/
     font-weight: 500;
-    font-family: "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Cuprum","Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
 
 
@@ -196,6 +203,11 @@ blockquote ul {
 
 .footnotes ol li p {
     margin: 5px;
+}
+
+.footnotes ol li{
+    font-family: "SimHei","Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei";
+    font-weight: 400;
 }
 
 .noborder {
