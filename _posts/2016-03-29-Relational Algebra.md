@@ -21,7 +21,7 @@ categories: 数据挖掘 数据库
 
 - **选择运算**（$\sigma$）:返回满足指定条件的元组（行）。
 
-$$\sigma_{press=\text{‘高等教育出版社’}}(\text{Book}) $$
+$$\sigma_{press=\text{高等教育出版社}}(\text{Book}) $$
 
 ![此处输入图片的描述][3]
 
@@ -32,8 +32,7 @@ $$\pi_{\text{title,price}}(\text{Book})$$
 ![此处输入图片的描述][4]
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/350
-
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.pngimageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.pngimageView2/2/w/400
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.pngimageView2/2/w/400
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/300
