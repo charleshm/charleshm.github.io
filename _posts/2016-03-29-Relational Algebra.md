@@ -79,6 +79,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 - 左外连接：$\text{Person} \leftouterjoin \text{Works}$
 
+$\unicode{27d5}$
 
 ----------
 
