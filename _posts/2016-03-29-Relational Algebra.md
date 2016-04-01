@@ -73,7 +73,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 ![此处输入图片的描述][7]
 
-- **除**：返回两个数据集之间的精确匹配
+- **除**：返回两个数据集之间的**精确匹配**
 
 <div class="inline_list">
 设有关系 $R(X，Y)$ 与关系 $S(Y，Z)$，其中 X，Y，Z 为属性集合，R 中的 Y 与 S 中的 Y 可以有不同的属性名，但对应属性必须出自<strong>相同的域</strong>。<br>
@@ -157,4 +157,4 @@ select Person.*,Works.* from Person full join Works on Person.person-name =  Wor
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_3.png?imageView2/2/w/400
   [11]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_4.png?imageView2/2/w/400
   [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_5.png?imageView2/2/w/400
-  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_8.png
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_8.png?imageView2/2/w/300
