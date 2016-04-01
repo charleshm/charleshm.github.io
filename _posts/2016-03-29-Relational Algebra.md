@@ -83,7 +83,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 ----------
 
 
-- 内连接：
+- **内连接**(JOIN)：
 
 <pre class="prettyprint linenums">
 select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
@@ -96,7 +96,7 @@ select Person.*,Works.* from Person inner join Works on Person.person-name =  Wo
 ----------
 
 
-- 左外连接：
+- **左外连接**(LEFT  JOIN 或 LEFT OUTER JOIN)：
 
 ![此处输入图片的描述][10]
 
@@ -104,7 +104,7 @@ select Person.*,Works.* from Person inner join Works on Person.person-name =  Wo
 ----------
 
 
-- 右外连接：
+- **右外连接**(RIGHT  JOIN 或 RIGHT  OUTER  JOIN)：
 
 ![此处输入图片的描述][11]
 
@@ -112,7 +112,7 @@ select Person.*,Works.* from Person inner join Works on Person.person-name =  Wo
 ----------
 
 
-- 全外连接：
+- **全外连接**(FULL  JOIN 或 FULL OUTER JOIN)：
 
 ![此处输入图片的描述][12]
 
