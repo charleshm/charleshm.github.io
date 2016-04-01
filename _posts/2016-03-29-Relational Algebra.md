@@ -82,6 +82,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 $$R\div S=\{t_r[X] | t_r\in R \wedge \pi_y(S) \subseteq Y_x\}$$
 
+![此处输入图片的描述][12]
 
 ----------
 
@@ -156,3 +157,4 @@ select Person.*,Works.* from Person full join Works on Person.person-name =  Wor
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_3.png?imageView2/2/w/400
   [11]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_4.png?imageView2/2/w/400
   [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_5.png?imageView2/2/w/400
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_8.png
