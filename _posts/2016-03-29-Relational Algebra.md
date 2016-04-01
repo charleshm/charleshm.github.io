@@ -73,6 +73,16 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 ![此处输入图片的描述][7]
 
+- **除**：返回两个数据集之间的精确匹配
+
+<div class="inline_list">
+设有关系 $R(X，Y)$ 与关系 $S(Y，Z)$，其中 X，Y，Z 为属性集合，R 中的 Y 与 S 中的 Y 可以有不同的属性名，但对应属性必须出自<strong>相同的域</strong>。<br>
+关系 $R\div S$ 所得的商是一个新关系 $P(X)$，P 是 R 中满足下列条件的元组在 X 上的<strong>投影</strong> ：元组在 X 上分量值 x 的象集 $Y_x$ 包含 S 在 Y 上投影的集合。
+</div>
+
+$R\div S={t_r[X] | t_r\in R \wedge \pi_y(S)\subseteq Y_x}$
+
+
 ----------
 
 #### 连接操作实战
