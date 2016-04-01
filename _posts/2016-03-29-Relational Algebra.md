@@ -77,7 +77,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 ![此处输入图片的描述][9]
 
-- 左外连接：$\text{Person} \triangleright \text{Works}$
+- 左外连接：$\text{Person} \leftouterjoin \text{Works}$
 
 
 ----------
