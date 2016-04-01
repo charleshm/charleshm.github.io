@@ -32,7 +32,7 @@ $$\pi_{\text{title,price}}(\text{Book})$$
 ![此处输入图片的描述][4]
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.pngimageView2/2/w/400
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.pngimageView2/2/w/400
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.pngimageView2/2/w/400
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.png?imageView2/2/w/400
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/300
