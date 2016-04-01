@@ -103,7 +103,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/database_5.png?imageView2/2/w/300
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/database_7.png
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_1.png?imageView2/2/w/400
-  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_2.png?imageView2/2/w/300
-  [10]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_3.png?imageView2/2/w/300
-  [11]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_4.png?imageView2/2/w/300
-  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_5.png?imageView2/2/w/300
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_2.png?imageView2/2/w/350
+  [10]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_3.png?imageView2/2/w/350
+  [11]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_4.png?imageView2/2/w/350
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_5.png?imageView2/2/w/350
