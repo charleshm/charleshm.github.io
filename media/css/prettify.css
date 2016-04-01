@@ -136,8 +136,8 @@ pre.prettyprint {
 /* Specify class=linenums on a pre to get line numbering */
 
 pre.prettyprint ol li {
-    margin-left: 18px;
-    padding-left: 18px;
+    margin-left: 15px;
+    padding-left: 15px;
     border-left: 3px solid #6CE26C;
 }
 
