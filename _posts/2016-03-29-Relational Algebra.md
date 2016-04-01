@@ -80,7 +80,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 关系 $R\div S$ 所得的商是一个新关系 $P(X)$，P 是 R 中满足下列条件的元组在 X 上的<strong>投影</strong> ：元组在 X 上分量值 x 的象集 $Y_x$ 包含 S 在 Y 上投影的集合。
 </div>
 
-$$R\div S={t_r[X] | t_r\in R \wedge \pi_y(S)\subseteq Y_x}$$
+$$R\div S={t_r[X] | t_r\in R \wedge \pi_y(S) \subseteq Y_x}$$
 
 
 ----------
