@@ -62,7 +62,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_0.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_0.png?imageView2/2/w/400
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/database_1.png?imageView2/2/w/400
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.png?imageView2/2/w/400
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/250
