@@ -229,6 +229,11 @@ ul li{
 
 }
 
+.inline_list{
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+
 /*index 页面*/
 
 .archive-list .archive-date {
