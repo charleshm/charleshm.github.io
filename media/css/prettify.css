@@ -82,6 +82,7 @@ pre.prettyprint {
     font-weight: normal !important;
     font-style: normal !important;
     font-size: 14px !important;
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 pre.prettyprint.linenums {

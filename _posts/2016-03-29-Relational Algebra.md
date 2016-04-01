@@ -85,17 +85,9 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 - 内连接：
 
+<pre class="prettyprint linenums">
     select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
-
-{% highlight ruby %}
-def show
-  @widget = Widget(params[:id])
-  respond_to do |format|
-    format.html # show.html.erb
-    format.json { render json: @widget }
-  end
-end
-{% endhighlight %}
+</pre>
 
 
 ![此处输入图片的描述][9]
