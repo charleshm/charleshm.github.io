@@ -19,4 +19,4 @@ timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown
-pygments: true
+highlighter: true

@@ -27,7 +27,7 @@ categories: 数据挖掘 数据库
 
 ----------
 
-#### 关系运算符[^1]
+#### 关系运算符[^1][^2]
 
 - **选择运算**（$\sigma$）:返回满足指定条件的元组（**行**）。
 
@@ -86,7 +86,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 - 内连接：
 
 <pre class="prettyprint linenums">
-    select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
+select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
 </pre>
 
 
@@ -119,6 +119,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 ----------
 
 [^1]: [数据库的外联和内联知识](http://www.360doc.com/content/11/0923/12/3589172_150598768.shtml)
+[^2]: [深入理解SQL的四种连接-左外连接、右外连接、内连接、全连接](http://f.dataguru.cn/thread-477900-1-1.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/database_2.png?imageView2/2/w/400
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/database_math.png?imageView2/2/w/300
