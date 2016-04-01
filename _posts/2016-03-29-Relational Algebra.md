@@ -85,9 +85,8 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 - 内连接：
 
-<pre class="prettyprint linenums">
-select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
-</pre>
+    select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
+
 
 ![此处输入图片的描述][9]
 
