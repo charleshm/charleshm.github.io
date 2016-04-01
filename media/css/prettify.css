@@ -10,70 +10,113 @@
  */
 
 .pln {
-    color: #48484C;
+  color: #111111;
 }
 
-.str {
-    color: #DD1144;
-}
+@media screen {
+  .str {
+    color: #739200;
+  }
 
-.kwd {
-    color: #1E347B;
-}
+  .kwd {
+    color: #739200;
+  }
 
-.com {
-    color: #93A1A1;
-}
+  .com {
+    color: #999999;
+  }
 
-.typ {
-    color: teal;
-}
+  .typ {
+    color: #ff0055;
+  }
 
-.lit {
-    color: #195F91;
-}
+  .lit {
+    color: #538192;
+  }
 
-.pun {
-    color: #93A1A1;
-}
+  .pun {
+    color: #111111;
+  }
 
-.opn {
-    color: #93A1A1;
-}
+  .opn {
+    color: #111111;
+  }
 
-.clo {
-    color: #93A1A1;
-}
+  .clo {
+    color: #111111;
+  }
 
-.tag {
-    color: #008;
-}
+  .tag {
+    color: #111111;
+  }
 
-.atn {
-    color: teal;
-}
+  .atn {
+    color: #739200;
+  }
 
-.atv {
-    color: #DD1144;
-}
+  .atv {
+    color: #ff0055;
+  }
 
-.dec {
-    color: teal;
-}
+  .dec {
+    color: #111111;
+  }
 
-.var {
-    color: teal;
-}
+  .var {
+    color: #111111;
+  }
 
-.fun {
-    color: #DC322F;
+  .fun {
+    color: #538192;
+  }
+}
+@media print, projection {
+  .str {
+    color: #006600;
+  }
+
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  .lit {
+    color: #004444;
+  }
+
+  .pun, .opn, .clo {
+    color: #444400;
+  }
+
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  .atn {
+    color: #440044;
+  }
+
+  .atv {
+    color: #006600;
+  }
 }
 
 
 /* Put a border around prettyprinted code snippets. */
 
 pre.prettyprint {
-    background-color: #F7F7F9;
+    background-color: rgba(102, 128, 153, 0.05);
     padding: 10px;
     /*border: 1px solid #E1E1E8;*/
     width: 95%;
