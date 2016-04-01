@@ -85,6 +85,10 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 
 - 内连接：
 
+<pre class="prettyprint linenums">
+select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
+</pre>
+
 ![此处输入图片的描述][9]
 
 
@@ -122,7 +126,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/300
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/database_5.png?imageView2/2/w/300
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/database_7.png
-  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_1.png?imageView2/2/w/400
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_1.png?imageView2/2/w/450
   [9]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_2.png?imageView2/2/w/400
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_3.png?imageView2/2/w/400
   [11]: http://7xjbdi.com1.z0.glb.clouddn.com/connection_4.png?imageView2/2/w/400
