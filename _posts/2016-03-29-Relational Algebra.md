@@ -70,6 +70,7 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
 > 连接的全部意义在于在水平方向上合并两个数据集合（通常是表），并产生一个新的结果集合，其方法是将一个数据源中的行于另一个数据源中和它匹配的行组合成一个新元组。
 
 
+![此处输入图片的描述][7]
 
 ----------
 
@@ -80,3 +81,4 @@ $R\times S$: $n+m$ 目关系， $k_1\times k_2$ 个元组；
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/database_3.png?imageView2/2/w/400
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/databse_4.png?imageView2/2/w/250
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/database_5.png?imageView2/2/w/300
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/database_7.png
