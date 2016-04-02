@@ -110,7 +110,7 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 $$P(|X - \mu|\geq \varepsilon|)\leq \frac{\sigma^2}{\varepsilon^2}$$
 
 <div class="inline_list">
-切比雪夫不等式反映的是随机变量 X 的取值落在其数学期望的 $\varepsilon$ 邻域内的概率不小于 $1-\frac{\sigma^2}{\varepsilon^2}$. 它的意义在于当随机变量的数学期望和方差已知时，可以估计随机变量 X 落在以数学期望为中心的某一区间内的概率的一个<strong>下限</strong>。
+切比雪夫不等式反映的是随机变量 X 的取值落在其数学期望的 $\varepsilon$ 邻域内的<strong>概率</strong>不小于 $1-\frac{\sigma^2}{\varepsilon^2}$. 它的意义在于当随机变量的数学期望和方差已知时，可以估计随机变量 X 落在以数学期望为中心的某一区间内的概率的一个<strong>下限</strong>。
 </div> 
 
 
