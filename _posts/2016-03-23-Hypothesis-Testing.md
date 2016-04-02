@@ -103,6 +103,12 @@ P值就是当原假设为真时出现现状或更差的情况的概率。如果P
 
 ![此处输入图片的描述][11]
 
+- **切比雪夫不等式**：
+
+设 $X$ 为随机变量，具有数学期望 $\mu$ 和方差 $\sigma^2$，则对 $\forall \varepsilon>0$，有：
+
+$$P(|X - \mu|\geq \varepsilon|)\leq \frac{\sgima^2}{\varepsilon^2}$$
+
 ----------
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-25_132117.png?imageView2/2/w/400
