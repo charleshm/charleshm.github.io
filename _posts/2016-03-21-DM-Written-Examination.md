@@ -153,7 +153,6 @@ g_R(D,A) & = \frac{g(D,A)}{H(D)}\\
  - [网易2013][1]
  - [2013百度校园招聘数据挖掘工程师][2]
 
-----------
 
 [1]: http://wenku.baidu.com/link?url=yrQtDWOA4kL9-paiEjBY8xm_32yulYtQAQT9ql7gFlwh5ABtH6FkM_qDfxq2m7EsnPixBgv4DznpNTRcxhsuPM3lqD5YBvlt0oY1uY8c3ai
 [2]: http://www.cnblogs.com/elaron/p/3325937.html
