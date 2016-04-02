@@ -23,6 +23,9 @@ categories: 成长
 
 值得不断回味~
 
+#### 日拱一卒
+- [你比同龄人靠谱，就赢在起跑线上][4]
+
 #### 找工作
 
 - [我的2015年校招总结][3]
@@ -30,3 +33,4 @@ categories: 成长
   [1]: http://yanyiwu.com/life/2014/10/11/choices-change-my-life.html
   [2]: http://blog.jobbole.com/78246/
   [3]: http://lixinzhang.github.io/wo-de-2015nian-xiao-zhao-zong-jie.html
+  [4]: http://unee.wang/post/20151216flaky
