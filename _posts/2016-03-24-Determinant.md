@@ -19,6 +19,19 @@ categories: 线性代数
 
 ![此处输入图片的描述][1]
 
+----------
+
+#### 常规求法
+
+
+$$A = \begin{bmatrix} a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn} \end{bmatrix}.$$
+
+利用代数余子式：
+
+$$\det (A)=\sum_{k=1}^{n} a_{k1}(-1)^{k+1}\det (A(k,1))$$
 
 ----------
 
