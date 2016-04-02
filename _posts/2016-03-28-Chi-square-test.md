@@ -68,7 +68,6 @@ $$\chi^2_{0.05,1} = 3.84<\chi^2=34.32 \Rightarrow P<0.05$$
 学意义(统计结论)，认为两组总体阳性率不同，可
 以认为肺癌患者癌胚抗原的阳性率要高于健康人。
 
-----------
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Chi_square_test.png
