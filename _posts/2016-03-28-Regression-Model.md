@@ -92,7 +92,7 @@ $$Var(u_i|X_i)=\sigma^2 \Rightarrow Var(Y_i|X_i)=\sigma^2$$
 
 #### 自相关[^4]
 
-$$Cov(u_i,u_j)=E(u_iU_j)\not= 0$$
+$$Cov(u_i,u_j)=E(u_iu_j)\not= 0$$
 
 自相关的后果,
 
