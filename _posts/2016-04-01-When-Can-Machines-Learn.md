@@ -87,4 +87,4 @@ $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \te
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_202929.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_205722.png
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_211027.png
-  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/lihang_mmodel.png?imageView2/2/w/300
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/lihang_mmodel.png?imageView2/2/w/400
