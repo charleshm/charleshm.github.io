@@ -75,8 +75,31 @@ $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \te
 
 ----------
 
+### 概念辨析
+
+#### Machine Learning vs Data Mining
+**数据挖掘就是试图从海量数据中找出有用的知识**。
+
+大体上看，数据挖掘可以视为**机器学习**和**数据库**的交叉，它主要利用机器学习界提供的技术来分析海量数据，利用数据库界提供的技术来管理海量数据[^2]。
+
+![此处输入图片的描述][10]
+
+
+----------
+
+#### Machine Learning vs Artificial Intelligence
+![此处输入图片的描述][11]
+
+----------
+
+#### Machine Learning vs Statistics
+![此处输入图片的描述][12]
+
+----------
+
 
 [^1]: [机器学习基础（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
+[^2]: [机器学习与数据挖掘](http://wenku.baidu.com/link?url=uGAlJOxGjWmgJ4tD5mJnabjHU1ziMt3OaN8UnMwuPJKfHxpPc93eDnmMdV3fL4SShXstrlcfMFeh-Vgc5JaUlBBdCi21atBUcdz0axRZiO7)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_194735.png
@@ -87,4 +110,7 @@ $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \te
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_202929.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_205722.png
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_211027.png
-  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/lihang_mmodel.png?imageView2/2/w/400
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/lihang_mmodel.png?imageView2/2/w/300
+  [10]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_213147.png
+  [11]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_213601.png
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_213727.png
