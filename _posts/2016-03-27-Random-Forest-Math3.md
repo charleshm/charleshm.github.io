@@ -33,7 +33,7 @@ $$Q(\mathbf{x},j)=\frac{\sum_k I(h(\mathbf{x},\Theta_k)=j;(y,\mathbf{x})\not\in 
 
 其中， $(y,\mathbf{x})\not\in T_{k}$ 表示未被抽中来参与构建第 $k$ 棵决策树的袋外数据. 
 
-$Q(x,j)$ 是概率 $P_{\Theta}(h(x,\Theta)=j)$ 的袋外估计。
+$Q(x,j)$ 是概率 $P_{\Theta}(h(x,\Theta)=j)$ 的袋外估计，我们可以用 $Q(x,y),Q(x,j)$ 来分别表示 $P_{\Theta}(h(\mathbf{x},\Theta)=y),P_{\Theta}(h(\mathbf{x},\Theta)=j)$ 的估计。
 
 则有，
 
