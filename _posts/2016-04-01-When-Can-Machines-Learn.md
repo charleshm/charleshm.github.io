@@ -11,6 +11,8 @@ categories: 机器学习
 
 ----------
 
+### 宏观把控
+
 - **什么是机器学习**？
 
 <div class="inline_list">
@@ -37,10 +39,21 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 
 ![此处输入图片的描述][4]
 
+----------
+
+### 机器学习模型
+
+我们通过一个银行是否应该给用户发信用卡的信用卡例子引出了机器学习模型。
+
+
+#### 基本概念
+![此处输入图片的描述][5]
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_194735.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200749.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200613.png
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200945.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_202929.png
 
 
