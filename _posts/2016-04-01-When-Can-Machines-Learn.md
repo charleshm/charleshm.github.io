@@ -19,6 +19,9 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 
 ![此处输入图片的描述][2]
 
+----------
+
+
 - **为什么需要机器学习**？
 
 <div class="inline_list">
@@ -26,6 +29,9 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 </div>
 
 ![此处输入图片的描述][3]
+
+----------
+
 
 - **什么时候使用机器学习**？
 
