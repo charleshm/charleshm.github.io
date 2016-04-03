@@ -82,6 +82,7 @@ var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y) & = E_{\mathbf{x},y}[rmg(\Theta,\math
 
 $$\overline{\rho} = \frac{\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2}{E_{\Theta}[p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}}} \tag{2.5}$$
 
+----------
 
 #### OOB ERROR
 oob**估计**计算流程[^3]：
