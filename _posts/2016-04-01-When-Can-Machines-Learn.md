@@ -53,7 +53,7 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_194735.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/mc_a.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/mc_a.png?imageView2/2/w/300
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200749.png
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200613.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200945.png
