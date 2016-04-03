@@ -41,7 +41,7 @@ $$\begin{align*}
 mr(\mathbf{x},y) & = P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= Y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)\\
 & = P_{\Theta}(h(\mathbf{x},\Theta)=y) - P_{\Theta}(h(\mathbf{x},\Theta)=\hat{j}(x,y))\\
 & = E_{\Theta}[I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(x,y))]\\
-rmg(\Theta,\mathbf{x},y) & = I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(x,y)) \tag{2}
+rmg(\Theta,\mathbf{x},y) & = I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(\mathbf{x},y)) \tag{2}
 \end{align*}$$
 
 也就是说，
