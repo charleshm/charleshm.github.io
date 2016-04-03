@@ -92,7 +92,9 @@ oob估计计算流程[^3]：
 
 > Put each case left out in the construction of the kth tree down the kth tree to get a classification. In this way, a test set classification is obtained for each case in about one-third of the trees. At the end of the run, take j to be the class that got most of the votes every time case n was oob. The proportion of times that j is not equal to the true class of n averaged over all cases is the oob error estimate. This has proven to be unbiased in many tests[^2].
 
-有一个问题值得注意的是，作者说 OOB 是一种**无偏估计**，是通过实验的方式得出的结论，并没有理论证明。
+![此处输入图片的描述][3]
+
+有一个问题值得注意的是，作者说 OOB 是一种**无偏估计**，是通过实验的方式得出的结论，并没有理论证明。另外有[论文][4]论证了在样本数少于特征数的情况下，这种估计方式是有偏的[^3]。
 
 ----------
 
@@ -105,7 +107,10 @@ oob估计计算流程[^3]：
 [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
 [^2]: [Random Forests(Leo Breiman and Adele Cutler)](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter)
 [^3]: [随机森林（Random Forest）](http://www.cnblogs.com/maybe2030/p/4585705.html)
+[^4]: [How would one formally prove that the OOB error in random forest is unbiased?](http://stats.stackexchange.com/questions/105811/how-would-one-formally-prove-that-the-oob-error-in-random-forest-is-unbiased)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/RF_Math_3.png
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_151911.png
+  [4]: ias of the Random Forest Out-of-Bag (OOB) Error for Certain Input Parameters
