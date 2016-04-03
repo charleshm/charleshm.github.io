@@ -7,7 +7,7 @@ date:   2016-03-27 7:30
 categories: 机器学习
 ---
 
-我们知道，在构建每棵树时，我们对训练集使用了不同的 bootstrap sample：$T_k$（随机且有放回地抽样）。所以对于每棵树而言（假设对于第k棵树），大约有 1/3 ($\frac{1}{\mathbf{e}}$)的训练实例**没有**参与第 k 棵树的生成，它们称为第 k 棵树的 **oob 样本**。
+我们知道，在构建每棵树时，我们对训练集使用了不同的 bootstrap sample：$T_k$（随机且有放回地抽样）。所以对于每棵树而言（假设对于第k棵树），大约有 1/3 ($\frac{1}{\mathbf{e}}$)的训练实例**没有**参与第 k 棵树的生成，它们称为第 k 棵树的 **oob 样本**[^1]。
 
 ![此处输入图片的描述][1]
 
@@ -82,7 +82,28 @@ var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y) & = E_{\mathbf{x},y}[rmg(\Theta,\math
 
 $$\overline{\rho} = \frac{\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2}{E_{\Theta}[p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}}} \tag{2.5}$$
 
+
+#### OOB ERROR
+oob估计计算流程：
+
+- 对每个样本，计算把它作为 oob 样本的树对它的分类情况（约1/3的树）；
+- 然后以简单多数投票作为该样本的分类结果；
+- 最后用误分个数占样本总数的比率作为随机森林的 oob 误分率。
+
+> Put each case left out in the construction of the kth tree down the kth tree to get a classification. In this way, a test set classification is obtained for each case in about one-third of the trees. At the end of the run, take j to be the class that got most of the votes every time case n was oob. The proportion of times that j is not equal to the true class of n averaged over all cases is the oob error estimate. This has proven to be unbiased in many tests[^2].
+
+有一个问题值得注意的是，作者说 OOB 是一种**无偏估计**，是通过实验的方式得出的结论，并没有理论证明。
+
 ----------
+
+资料传送门：
+
+- [Awesome Random Forest](https://github.com/kjw0612/awesome-random-forest)
+----------
+
+
+[^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
+[^2]: [Random Forests(Leo Breiman and Adele Cutler)](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
