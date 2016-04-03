@@ -85,10 +85,10 @@ $$\overline{\rho} = \frac{\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= 
 ----------
 
 #### OOB ERROR
-oob**估计**计算流程[^3]：
+**oob 估计**计算流程[^3]：
 
 - 对每个样本，计算把它作为 oob 样本的树对它的分类情况（约1/3的树）；
-- 然后以简单多数投票作为该样本的分类结果；
+- 然后以简单多数**投票**作为该样本的分类结果；
 - 最后用误分个数占样本总数的比率作为随机森林的 oob 误分率。
 
 > Put each case left out in the construction of the kth tree down the kth tree to get a classification. In this way, a test set classification is obtained for each case in about one-third of the trees. At the end of the run, take j to be the class that got most of the votes every time case n was oob. The proportion of times that j is not equal to the true class of n averaged over all cases is the oob error estimate. This has proven to be unbiased in many tests[^2].
