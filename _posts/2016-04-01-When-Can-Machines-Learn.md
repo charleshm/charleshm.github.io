@@ -14,7 +14,7 @@ categories: 机器学习
 - **什么是机器学习**？
 
 <div class="inline_list">
-Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：**利用经验来改善计算机系统自身的性能**。
+Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<strong>利用经验来改善计算机系统自身的性能</strong>。
 </div>
 
 ![此处输入图片的描述][2]
@@ -22,7 +22,7 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：**利�
 - **为什么需要机器学习**？
 
 <div class="inline_list">
-我们有的时候会遇到一些很难的 case，比如我们希望设计一个程序来辨识树，这个时候我们需要对树**下定义**，听起来似乎很简单，却又无从下手。
+我们有的时候会遇到一些很难的 case，比如我们希望设计一个程序来<strong>辨识树</strong>，这个时候我们需要对树<strong>下定义</strong>，听起来似乎很简单，却又无从下手。
 </div>
 
 ![此处输入图片的描述][3]
