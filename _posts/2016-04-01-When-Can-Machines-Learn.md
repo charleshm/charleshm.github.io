@@ -69,6 +69,8 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 
 $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \text{hypothesis set}(\mathcal{H})$$
 
+----------
+
 [^1]: [机器学习基础（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_194735.png
