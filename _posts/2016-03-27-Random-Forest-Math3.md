@@ -114,4 +114,4 @@ oob**估计**计算流程[^3]：
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/RF_Math_3.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_151911.png
-  [4]: ias of the Random Forest Out-of-Bag (OOB) Error for Certain Input Parameters
+  [4]: http://www.scirp.org/journal/PaperInformation.aspx?paperID=8072#.U7bDnf74o3w
