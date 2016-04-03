@@ -84,7 +84,7 @@ $$\overline{\rho} = \frac{\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= 
 
 
 #### OOB ERROR
-oob估计计算流程：
+oob估计计算流程[^3]：
 
 - 对每个样本，计算把它作为 oob 样本的树对它的分类情况（约1/3的树）；
 - 然后以简单多数投票作为该样本的分类结果；
@@ -104,6 +104,7 @@ oob估计计算流程：
 
 [^1]: [Random Forest](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
 [^2]: [Random Forests(Leo Breiman and Adele Cutler)](http://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm#inter)
+[^3]: [随机森林（Random Forest）](http://www.cnblogs.com/maybe2030/p/4585705.html)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
