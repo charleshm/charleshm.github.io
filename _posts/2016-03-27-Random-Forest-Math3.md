@@ -43,7 +43,6 @@ s & = E_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{
 & = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)) \tag{1.3}
 \end{align*}$$
 
-
 ----------
 
 #### 相关性 $\overline{\rho}$
@@ -53,9 +52,25 @@ $$\overline{\rho} = \frac{var(mr)}{(E_{\Theta}sd(\Theta))^2} \tag{2.1}$$
 
 我们需要分别估计 $var(mr),E_{\Theta}sd(\Theta)$ .
 
+又，
+
 $$\begin{align*}
 var(mr) & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[mr(\mathbf{x},y)])^2 \\
+& = E_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)]^2 - s^2\\
+& = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2
 \end{align*}$$
+
+而， 
+
+$$\begin{align*}
+rmg(\Theta,\mathbf{x},y) & = I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(x,y))\\
+E_{\Theta}sd(\Theta) & = E_{\Theta}[var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)]
+\end{align*}$$
+
+$rmg(\Theta,\mathbf{x},y)$ 的分布律如下，
+
+
+
 
 ----------
 
