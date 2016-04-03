@@ -57,22 +57,29 @@ $$\overline{\rho} = \frac{var(mr)}{(E_{\Theta}sd(\Theta))^2} \tag{2.1}$$
 $$\begin{align*}
 var(mr) & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[mr(\mathbf{x},y)])^2 \\
 & = E_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)]^2 - s^2\\
-& = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2
+& = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2 \tag{2.2}
 \end{align*}$$
 
 而， 
 
 $$\begin{align*}
-rmg(\Theta,\mathbf{x},y) & = I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(x,y))\\
-E_{\Theta}sd(\Theta) & = E_{\Theta}[var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)]
+rmg(\Theta,\mathbf{x},y) & = I(h(\mathbf{x},\Theta)=y)-I(h(\mathbf{x},\Theta)=\hat{j}(\mathbf{x},y))\\
+E_{\Theta}sd(\Theta) & = E_{\Theta}[var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y)] \tag{2.3}
 \end{align*}$$
 
 $rmg(\Theta,\mathbf{x},y)$ 的分布律如下，
 
+![此处输入图片的描述][2]
 
+那么，
 
+$$\begin{align*}
+var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y) & = E_{\mathbf{x},y}[rmg(\Theta,\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[rmg(\Theta,\mathbf{x},y)])^2\\
+& = [p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}}
+\end{align*}$$
 
 ----------
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/RF_Math_3.png
