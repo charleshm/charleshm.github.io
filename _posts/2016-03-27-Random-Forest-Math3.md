@@ -19,17 +19,17 @@ categories: 机器学习
 
 #### 分类强度 $s$
 
-分类强度的定义：
+**分类强度**的定义：
 
 $$\begin{align*}
 s & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]\\
 & = E_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)]
-\end{align*} \tag{1}$$
+\end{align*} \tag{1.1}$$
 
 
 令，
 
-$$Q(\mathbf{x},j)=\frac{\sum_k I(h(\mathbf{x},\Theta_k)=j;(y,\mathbf{x})\not\in T_{k})}{\sum_k I((y,\mathbf{x})\not\in T_{k})}$$
+$$Q(\mathbf{x},j)=\frac{\sum_k I(h(\mathbf{x},\Theta_k)=j;(y,\mathbf{x})\not\in T_{k})}{\sum_k I((y,\mathbf{x})\not\in T_{k})} \tag{1.2}$$
 
 其中， $(y,\mathbf{x})\not\in T_{k}$ 表示未被抽中来参与构建第 $k$ 棵决策树的袋外数据. 
 
@@ -40,8 +40,24 @@ $Q(x,j)$ 是概率 $P_{\Theta}(h(x,\Theta)=j)$ 的袋外估计，我们可以用
 $$\begin{align*}
 s & = E_{\mathbf{x},y}[P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)]\\
 & \rightarrow E_{\mathbf{x},y}[Q(x,y)-\underset{j\not= y}{\max}Q(x,j)]\\
-& = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))
+& = \frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)) \tag{1.3}
 \end{align*}$$
+
+
+----------
+
+#### 相关性 $\overline{\rho}$
+**相关性** $\overline{\rho}$ 的定义：
+
+$$\overline{\rho} = \frac{var(mr)}{(E_{\Theta}sd(\Theta))^2} \tag{2.1}$$
+
+我们需要分别估计 $var(mr),E_{\Theta}sd(\Theta)$ .
+
+$$\begin{align*}
+var(mr) & = E_{\mathbf{x},y}[mr(\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[mr(\mathbf{x},y)])^2 \\
+\end{align*}$$
+
+----------
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_112544.png
