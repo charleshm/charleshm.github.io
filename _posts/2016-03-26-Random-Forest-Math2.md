@@ -16,7 +16,7 @@ Breiman[^1]证明了泛化误差的上界是可以得到的，它主要由两方
 #### 泛化误差上界
 定义单棵决策树的**余量函数**：
 
-$$mr(\mathbf{x},y) = P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= Y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)$$
+$$mr(\mathbf{x},y) = P_{\Theta}(h(\mathbf{x},\Theta)=y) - \underset{j\not= y}{\max}P_{\Theta}(h(\mathbf{x},\Theta)=j)$$
 
 **分类强度**(余量函数在整个 data space 的期望)：
 
