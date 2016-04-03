@@ -75,8 +75,12 @@ $rmg(\Theta,\mathbf{x},y)$ 的分布律如下，
 
 $$\begin{align*}
 var_{\mathbf{x},y}rmg(\Theta,\mathbf{x},y) & = E_{\mathbf{x},y}[rmg(\Theta,\mathbf{x},y)]^2 - (E_{\mathbf{x},y}[rmg(\Theta,\mathbf{x},y)])^2\\
-& = [p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}}
+& = [p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}} \tag{2.4}
 \end{align*}$$
+
+故，
+
+$$\overline{\rho} = \frac{\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j))^2 - (\frac{1}{N}\sum_{i=1}^{N}(Q(x_i,y_i)-\underset{j\not= y_i}{\max}Q(x_i,j)))^2}{E_{\Theta}[p_1+p_2+(p_1-p_2)^2]^{\frac{1}{2}}} \tag{2.5}$$
 
 ----------
 
