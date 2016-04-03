@@ -11,7 +11,7 @@ categories: 机器学习
 
 ----------
 
-### 宏观把控
+### 宏观把控[^1]
 
 ![此处输入图片的描述][2]
 
@@ -52,11 +52,31 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 ![此处输入图片的描述][6]
 
 
+----------
+
+#### 学习流程
+![此处输入图片的描述][7]
+
+
+----------
+
+
+#### 总结
+
+> 机器学习就是从数据出发，通过**算法**找到最符合我们数据的 hypothesis $g$（$g \approx f$）.
+
+![此处输入图片的描述][8]
+
+$$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \text{hypothesis set}(\mathcal{H})$$
+
+[^1]: [机器学习基础（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_194735.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/mc_a.png?imageView2/2/w/300
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200749.png
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200613.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_200945.png
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_202929.png
-
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_205722.png
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-03_211027.png
 
