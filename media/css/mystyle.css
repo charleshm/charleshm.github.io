@@ -14,7 +14,8 @@
 
 body {
     font-family: "Cuprum", "Hiragino Sans GB", "Microsoft Yahei","WenQuanYi Zen Hei", Helvetica, Arial, sans-serif;
-    background-color: #fdfdfd;
+    /*background-color: #fdfdfd;*/
+    background: #FBFCFB;
     color: #333;
     line-height: 22px;
     letter-spacing: 1px;
