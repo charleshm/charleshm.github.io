@@ -66,7 +66,18 @@ categories: 机器学习
 ![此处输入图片的描述][8]
 ![此处输入图片的描述][9]
 
-我们可以记 $h(x)$ 在 sample 中错误率为 $E_{in}$ (in-sample-error)，在总体中错误率为 $E_{out}$ (out-of-sample-error)。
+我们记 $h(x)$ 在 in-sample 中错误率为 $E_{in}$ (in-sample-error)，在 out-sample 中错误率为 $E_{out}$ (out-of-sample-error)。
+
+- $E_{out}(h) = \underset{x\sim P}{\epsilon} [h(x)\neq f(x)]$，$\epsilon$ 表示数学期望
+- $E_{in}(h) = \frac{1}{N}\sum_{n=1} ^ {N}[h(x_n)\neq y_n]$
+
+![此处输入图片的描述][10]
+
+根据**霍夫丁不等式**(Hoeffding’s Inequality)，
+
+$$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
+
+![此处输入图片的描述][11]
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
@@ -78,3 +89,5 @@ categories: 机器学习
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_124751.png
   [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_131533.png
   [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_131809.png
+  [10]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_133439.png
+  [11]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_133950.png
