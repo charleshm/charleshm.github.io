@@ -46,7 +46,6 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 <li>编程很难做到；</li>
 <li>有能够学习到规律的数据；</li>
 </ol>
-
 </div>
 
 
@@ -66,6 +65,8 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 ----------
 
 #### 学习流程
+learning干的事情，就是从 hypothesis set 里面挑一个“长”的最像 $f$ 的方程 $g$.
+
 ![此处输入图片的描述][7]
 
 
