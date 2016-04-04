@@ -40,12 +40,14 @@ Mitchell 的 "Machine Learning" 里面是这样来定义机器学习的：<stron
 - **什么时候使用机器学习**？
 
 <div class="inline_list">
-其实就<strong>三要素</strong>：
-</div>
+其实就<strong>三要素</strong>：<br>
+<ol>
+<li>有规律可以学习；</li>
+<li>编程很难做到；</li>
+<li>有能够学习到规律的数据；</li>
+</ol>
 
-1. 有规律可以学习；
-2. 编程很难做到；
-3. 有能够学习到规律的数据；
+</div>
 
 
 ![此处输入图片的描述][5]
