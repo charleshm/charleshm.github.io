@@ -118,7 +118,7 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
 整体证明机器学习的可行性分了两个层面[^2]，
 
 - 对于单个 hypothesis，根据 Hoeffding 不等式，当 $N$ 很大时，$E_{in}$ 和 $E_{out}$ 相等是 PAC 的；
-- 当 $M$ 有限，N 很大，我们 hypothesis set 中挑 $E_{in}$ 最小的（通过测试集找）假设作为我们的 final hypothesis，选到泛化能力差的假设概率低 .
+- 当 $M$ 有限，$N$ 很大，我们 hypothesis set 中挑 $E_{in}$ 最小的（通过测试集找）假设作为我们的 final hypothesis，选到泛化能力差的假设概率低 .
 
 ----------
 
