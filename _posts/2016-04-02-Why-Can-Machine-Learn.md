@@ -68,8 +68,8 @@ categories: 机器学习
 
 我们记 $h(x)$ 在 in-sample 中错误率为 $E_{in}$ (in-sample-error)，在 out-sample 中错误率为 $E_{out}$ (out-of-sample-error)。
 
-- $E_{out}(h) = \underset{x\sim P}{\epsilon} [h(x)\neq f(x)]$，$\epsilon$ 表示数学期望
-- $E_{in}(h) = \frac{1}{N}\sum_{n=1} ^ {N}[h(x_n)\neq y_n]$
+- $\color{orange}{E_{out}(h)} = \underset{x\sim P}{\epsilon} [h(x)\neq f(x)]$，$\epsilon$ 表示数学期望
+- $\color{orange}{E_{in}(h)} = \frac{1}{N}\sum_{n=1} ^ {N}[h(x_n)\neq y_n]$
 
 ![此处输入图片的描述][10]
 
