@@ -65,7 +65,7 @@ $$\hat{P}_k(h_k(\mathbf{x})=j)=E_k[I(h_k(\mathbf{x})=j)]=\frac{1}{K}\sum_{k=1}^K
 
 **实际上我们需要证明的是**，
 
-$$\frac{1}{K}\sum_{k=1}^K I(h(\mathbf{x},\Theta)=j) \rightarrow P_{\Theta}(h(\mathbf{x},\Theta)=j) \tag{4}$$
+$$\color{red}{\frac{1}{K}\sum_{k=1}^K I(h(\mathbf{x},\Theta)=j) \rightarrow P_{\Theta}(h(\mathbf{x},\Theta)=j)} \tag{4}$$
 
 原因也很明了，令：
 
