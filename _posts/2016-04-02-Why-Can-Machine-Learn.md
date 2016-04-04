@@ -21,14 +21,14 @@ categories: 机器学习
 
 这个时候就会有一个问题，虽然我们可以保证我们的 $g$ 在数据集 $\mathcal{D}$ 上的判断和真实的 $f$ 一致，但我们**如何保证**在 $\mathcal{D}$ 之外也同样如此？
 
+我们来看下面这个例子，
+
 ![此处输入图片的描述][2]
 ![此处输入图片的描述][3]
 
 可能产生这样的 $\mathcal{D}$ 的 $f$ 有8种，而且似乎都可行。实际上，如果**任何未知**的 $f$ （即建立在数据 $\mathcal{D}$ 上的规则）都是有可能的，那么从这里做出有意义的推理是**不可能**的！
 
 也就是说这个时候我们**无法保证** $g \approx f$，在 $\mathcal{D}$ 之外的数据上？
-
-我们来看下面这个例子，
 
 ![此处输入图片的描述][4]
 
@@ -79,6 +79,19 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
 
 ![此处输入图片的描述][11]
 
+#### Real Learning
+那么我们是不是直接挑选出 hypothesis set 中 $E_{in}$ **最小**的 $g$ 作为我们的 final hypothesis 就行了呢？
+
+![此处输入图片的描述][12]
+
+当我们的 hypothesis set 中元素非常多的时候，**全对的概率**实际上也是是非常高的。就像丢硬币一样，150个同学同时丢硬币5次，有一人同时抛出**五次正面**的概率大于99%。
+
+![此处输入图片的描述][13]
+
+> **霍夫丁不等式**说的是 $E_{in}$ 和 $E_{out}$ 相等是 PAC 的，但当我们的 hypothesis set **很大**，如同上面掷硬币的**人很多**的情况下，就很有可能出现 $|E_{in}(h)-E_{out}(h)|\gt \epsilon$，即 $E_{in}$ 很小，而 $E_{out}$ 很大的情况。
+
+![此处输入图片的描述][14]
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
@@ -91,3 +104,6 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
   [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_131809.png
   [10]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_133439.png
   [11]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_133950.png
+  [12]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_142623.png
+  [13]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_144129.png
+  [14]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_145215.png?imageView2/2/w/500
