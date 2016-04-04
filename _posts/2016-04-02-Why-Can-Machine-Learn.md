@@ -33,7 +33,15 @@ categories: 机器学习
 ![此处输入图片的描述][4]
 
 
+----------
+
+
+#### Probability to the Rescue
+我们现在希望的是 hypothesis $g$ 在 **in-sample** 上表现好，同时在 **out-sample** 表现**也要好**。
+
+类似于我们在统计学中常见的问题，通过少量的已知样本推断整个样本集的情况，也就是通过在 **in-sample** 上的表现，推断 **out-sample** 上的表现。
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110301.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_111259.png?imageView2/2/w/400
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_111259.png
