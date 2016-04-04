@@ -75,7 +75,7 @@ learning干的事情，就是从 hypothesis set 里面挑一个“长”的最�
 
 #### 总结
 
-> 机器学习就是从数据出发，通过**算法**找到最符合我们数据集($\mathcal{D}$)的 hypothesis $g$（$g \approx f$）.
+> 机器学习就是从数据出发，通过**算法** ($\mathcal{A}$) 找到最符合我们数据集 ($\mathcal{D}$) 的 hypothesis $g$（$g \approx f$）.
 
 ![此处输入图片的描述][8]
 
