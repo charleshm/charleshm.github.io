@@ -36,4 +36,4 @@ categories: 机器学习
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110301.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_111259.png
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_111259.png?imageView2/2/w/400
