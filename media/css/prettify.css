@@ -121,7 +121,7 @@ pre.prettyprint {
     /*border: 1px solid #E1E1E8;*/
     width: 95%;
     margin: 0px auto 10px;
-    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-family: "Consolas", "SimHei","Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
     font-weight: normal !important;
     font-style: normal !important;
     font-size: 14px !important;
