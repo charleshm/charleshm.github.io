@@ -30,7 +30,7 @@ categories: 机器学习
 
 ![此处输入图片的描述][4]
 
-> 平时测验做的很好，考试的时候我们无法保证一定能考的好 .
+$$平时测试做的好 \not= 考试考得好$$
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
