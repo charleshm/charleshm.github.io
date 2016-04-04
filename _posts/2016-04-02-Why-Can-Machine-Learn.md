@@ -39,9 +39,24 @@ categories: 机器学习
 #### Probability to the Rescue
 我们现在希望的是 hypothesis $g$ 在 **in-sample** 上表现好，同时在 **out-sample** 表现**也要好**。
 
-类似于我们在统计学中常见的问题，通过少量的已知样本推断整个样本集的情况，也就是通过在 **in-sample** 上的表现，推断 **out-sample** 上的表现。
+类似于我们在统计学中常见的问题，通过少量的已知样本推断整个样本集的情况，也就是通过在 **in-sample** 上的表现，推断 **out-sample** 上的表现（Inferring Something Unknown）。
+
+有一个罐子，盛放着橙色和绿色两种颜色的小球，我们如何在不查遍所有球的情况下，得知橙色球所占的比例？
+
+![此处输入图片的描述][5]
+
+常用的方法就是采样，利用样本中橙色球的比例去估计整体中橙色球的比例。
+
+这个时候我们可能会想，有没有可能我们抽出的球**全是绿色**，或者说我们抽出的样本中两种球的比例跟真实情况**差很远**呢，这样的话我们的估计就会出错呀。
+
+但这种事情发生的可能性大吗？不大，当我们的样本足够大时，这种事情发生的可能性会非常小小。在概率论中，可以用 霍夫丁不等式(Hoeffding’s Inequality)  来描述上面这件事情的概率：
+
+![此处输入图片的描述][6]
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110301.png
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_111259.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_122602.png
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_123127.png
