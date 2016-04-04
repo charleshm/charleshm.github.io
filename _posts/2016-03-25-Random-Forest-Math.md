@@ -36,7 +36,7 @@ This result explains why random forests do not overfit as more trees are added, 
 定义**余量函数**(margin function)：
 
 $$\begin{align*}
-mg(\mathbf{x},y) & = av_kI(h_k(\mathbf{x})=y)-\underset{j\not =Y}{\max} av_kI(h_k(\mathbf{x})=j) \tag{1}\\
+\color{orange}{mg(\mathbf{x},y)} & = av_kI(h_k(\mathbf{x})=y)-\underset{j\not =Y}{\max} av_kI(h_k(\mathbf{x})=j) \tag{1}\\
 & = \hat{P}_k(h_k(\mathbf{x})=y) - \underset{j\not =y}{\max} \hat{P}_k(h_k(\mathbf{x})=j)
 \end{align*}$$
 
@@ -48,7 +48,7 @@ mg(\mathbf{x},y) & = av_kI(h_k(\mathbf{x})=y)-\underset{j\not =Y}{\max} av_kI(h_
 定义**泛化误差**( generalization error)：
 
 $$\begin{align*}
-PE^* & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
+\color{orange}{PE^*} & = P_{X,Y}(mg(\mathbf{x},y)<0) \tag{2}
 \end{align*}$$
 
 > **定理**：随着 $K \rightarrow \infty$（决策树数目）， 
