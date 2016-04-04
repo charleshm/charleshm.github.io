@@ -110,7 +110,7 @@ $$\begin{align*}
 
 $$\begin{align*}
 \frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x},\Theta_m)=j) & \rightarrow \sum_k P_{\Theta}(\phi(\Theta_m)=k)I(\mathbf{x}\in S_k)\\
-& = P_{\Theta}(h(\mathbf{x},\Theta)=j）
+& = \color{red}{P_{\Theta}(h(\mathbf{x},\Theta)=j)}
 \end{align*}$$
 
 得证。
