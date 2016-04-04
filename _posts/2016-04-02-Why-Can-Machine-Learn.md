@@ -8,9 +8,6 @@ categories: 机器学习
 ---
 
 ### 机器学习可行性
-- 如何保证我们的 final hypothesis 在 **out-sample** 也表现良好.
-- 从 hypothesis set 中挑选 final hypothesis 的**准则**.
-
 ![此处输入图片的描述][1]
 
 
