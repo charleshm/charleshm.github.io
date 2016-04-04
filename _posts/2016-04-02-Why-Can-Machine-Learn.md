@@ -28,11 +28,10 @@ categories: 机器学习
 
 也就是说这个时候我们**无法保证** $g \approx f$，在 $\mathcal{D}$ 之外的数据上？
 
+我们来看下面这个例子，
+
 ![此处输入图片的描述][4]
 
-通俗的来讲，
-
-$$平时测试做的好 \not= 考试考得好$$
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
