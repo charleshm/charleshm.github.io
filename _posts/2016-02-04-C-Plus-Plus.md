@@ -24,4 +24,4 @@ int a{0};
 另外定义变量的时候，如果没有指定初始值，则变量被**默认初始化**。一种例外的情况是定义在**函数体内部**的内置类型变量将**不被初始化**。
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/400
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/250
