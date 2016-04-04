@@ -36,7 +36,7 @@ categories: 机器学习
 ----------
 
 
-#### Probability to the Rescue
+#### Inferring Something Unknown
 我们现在希望的是 hypothesis $g$ 在 **in-sample** 上表现好，同时在 **out-sample** 表现**也要好**。
 
 类似于我们在统计学中常见的问题，通过少量的已知样本推断整个样本集的情况，也就是通过在 **in-sample** 上的表现，推断 **out-sample** 上的表现（Inferring Something Unknown）。
@@ -58,6 +58,17 @@ categories: 机器学习
 ![此处输入图片的描述][7]
 
 
+----------
+
+#### Connection to Learning
+我们可以利用 sample 中橙球的比例来推断总体中橙球出现的概率，则同样的，我们也可以利用 **sample** 中 $h(x)\not=f(x)$ 的比例来推断**总体**中 $h(x)\not=f(x)$ 的概率。因为两者的错误率是 PAC 的，只要我们保证前者小，后者也就小了。
+
+![此处输入图片的描述][8]
+![此处输入图片的描述][9]
+
+我们可以记 $h(x)$ 在 sample 中错误率为 $E_{in}$ (in-sample-error)，在总体中错误率为 $E_{out}$ (out-of-sample-error)。
+
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110139.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_110301.png
@@ -65,3 +76,5 @@ categories: 机器学习
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_122602.png
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_123127.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_124751.png
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_131533.png
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_131809.png
