@@ -88,7 +88,7 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
 
 ![此处输入图片的描述][13]
 
-> **霍夫丁不等式**说的是 $E_{in}$ 和 $E_{out}$ 相等是 PAC 的，但当我们的 hypothesis set **很大**，如同上面掷硬币的**人很多**的情况下，就很有可能出现 $|E_{in}(h)-E_{out}(h)|\gt \epsilon$，即 $E_{in}$ 很小，而 $E_{out}$ 很大的情况。
+> **霍夫丁不等式**说的是 $E_{in}$ 和 $E_{out}$ 相等是 PAC 的，但当我们的 hypothesis set **很大**，如同上面掷硬币的**人很多**的情况下，就很有可能出现 $\|E_{in}(h)-E_{out}(h)\|\gt \epsilon$，即 $E_{in}$ 很小，而 $E_{out}$ 很大的情况。
 
 ![此处输入图片的描述][14]
 
