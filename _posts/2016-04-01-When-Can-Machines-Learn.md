@@ -100,6 +100,8 @@ $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \te
 ----------
 
 #### Machine Learning vs Artificial Intelligence
+机器学习是实现人工智能的一种方式 .
+
 ![此处输入图片的描述][11]
 
 ----------
