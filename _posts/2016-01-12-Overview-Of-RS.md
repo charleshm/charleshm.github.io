@@ -9,11 +9,11 @@ categories: 推荐系统 机器学习
 
 #### 推荐系统分类
 
-- 协同过滤推荐算法(Collaborative Filtering)
-- 基于内容的推荐算法(Content-based Filtering)
-- 混合推荐算法(Hybrid Approaches)
-- 流行度推荐算法(Popularity)
-- 非传统推荐算法(non-traditional approaches)
+- 协同过滤推荐(Collaborative Filtering)
+- 基于内容的推荐(Content-based Filtering)
+- 混合推荐(Hybrid Approaches)
+- 流行度推荐(Popularity)
+- 非传统推荐(non-traditional approaches)
 
 
 ----------
