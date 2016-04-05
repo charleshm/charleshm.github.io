@@ -142,4 +142,4 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
   [15]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_150233.png
   [16]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_150800.png
   [17]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_151653.png
-  [18]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-05_144615.png?imageView2/2/w/400
+  [18]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-05_144615.png?imageView2/2/w/350
