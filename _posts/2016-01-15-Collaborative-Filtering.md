@@ -156,6 +156,11 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 
 ----------
 
+#### 物品冷启动
+- 利用内容信息，将它们推荐给喜欢过和它们相似的物品的用户。
+
+----------
+
 待整理：
 
   1. [Collaborative Filtering Recommender Systems](http://files.grouplens.org/papers/FnT%20CF%20Recsys%20Survey.pdf)
