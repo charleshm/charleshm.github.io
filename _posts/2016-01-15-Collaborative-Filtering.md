@@ -106,11 +106,15 @@ $$sim(A,B) = \frac{|r_A \bigcap r_B|}{|r_A \bigcup r_B|}$$
 
 ![此处输入图片的描述][12]
 
+----------
+
 **Cosine Similarity**
 
 $$sim(u,v) = \frac{\mathbf{r}_u\cdot \mathbf{r}_v}{\lVert \mathbf{r}_u \rVert_2 \lVert \mathbf{r}_v \rVert_2}$$
 
 ![此处输入图片的描述][13]
+
+----------
 
 **Pearson Correla1on**
 
