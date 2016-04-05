@@ -38,4 +38,4 @@ categories: 推荐系统 机器学习
 - [从算法到案例：推荐系统必读的10篇精选技术文章](http://www.infoq.com/cn/news/2015/12/Algorithm-case-10)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/cfproscons.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/cfproscons.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/cbproscons1.png
