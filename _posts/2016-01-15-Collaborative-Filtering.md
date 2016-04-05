@@ -167,6 +167,13 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 
 ----------
 
+#### 系统冷启动
+如何让在刚发布时就让用户体验到个性化推荐服务？  
+
+要使用“基因”（物品的元属性）来进行推荐。需要人工地对每一件商品进行标记，并且每件商品的基因数量应维持在一个固定的数量上。
+
+----------
+
 待整理：
 
   1. [Collaborative Filtering Recommender Systems](http://files.grouplens.org/papers/FnT%20CF%20Recsys%20Survey.pdf)
