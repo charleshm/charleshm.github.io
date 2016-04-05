@@ -30,8 +30,10 @@ categories: 推荐系统 机器学习
  
 ![此处输入图片的描述][4]
 2. **PROFILE LEARNER**：该模块收集、泛化代表用户偏好的数据，生成用户概要信息（user profile）。通常，是采用机器学习方法从用户之前喜欢和不喜欢的商品信息中推出一个表示用户喜好的模型。
-
 3. **FILTERING COMPONENT**：计算各项 Item Profile 与该 User Profile 的相似度，给出推荐列表。
+
+----------
+
 
 **通俗版：**[^2]
 
