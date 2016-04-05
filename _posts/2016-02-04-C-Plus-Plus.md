@@ -49,6 +49,15 @@ extern double pi = 3.1416;     //定义
 
 <pre class="prettyprint linenums">
 int &refVal;       //报错，引用必须初始化
+
+int ival = 42;
+int *p = &ival;
+int *q = ival;     //错误： 不能把 int 变量直接赋值给指针
+</pre>
+
+在学指针时，我们常常会犯这样的错误，
+<pre class="prettyprint linenums">
+int *p = 10;
 </pre>
 
 
