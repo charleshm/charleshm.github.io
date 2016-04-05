@@ -38,4 +38,16 @@ int j;                         //声明并定义 j
 extern double pi = 3.1416;     //定义
 </pre>
 
+#### 引用
+> 引用并非对象，它只是为一个已经存在的对象去的别名 .
+
+- 指针是一个**实体**，而引用仅是个**别名**；
+- 引用在定义时**必须初始化**（谁的别名），之后**不能改变**(从一而终)；指针可变；
+- 引用**不能为空**，必须与合法的存储单元关联；指针可以为空；
+
+<pre class="prettyprint linenums">
+int &refVal;       //报错，引用必须初始化
+</pre>
+
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/250
