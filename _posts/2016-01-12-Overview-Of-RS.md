@@ -20,6 +20,7 @@ categories: 推荐系统 机器学习
 
 
 #### Collaborative Filtering
+> 具有相同或者相似兴趣偏好的用户信息需求也是相似的.
 
 ![此处输入图片的描述][1]
 
@@ -28,6 +29,8 @@ categories: 推荐系统 机器学习
 
 
 #### Content-based Filtering
+> 用户倾向于喜欢和过去喜欢风格相似的产品.
+
 
 ![此处输入图片的描述][2]
 
