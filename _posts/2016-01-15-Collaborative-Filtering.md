@@ -158,7 +158,7 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 
 - 做**非个性化推荐**，如热门排行榜、人工推荐等。等到用户数据收集到一定的时候，再切换为个性化推荐
 - 利用用户的注册信息做**粗粒度**的个性化推荐
-- 利用社交网站授权，导入好友关系，给用户推荐好友喜欢的物品([今日头条基于微博兴趣图谱做个性化推荐](http://www.pingwest.com/demo/jinritoutiao-reading/))
+- 利用社交网站授权，导入好友关系，给用户推荐好友喜欢的物品 ([**今日头条基于微博兴趣图谱做个性化推荐**](http://www.pingwest.com/demo/jinritoutiao-reading/))
 
 ----------
 
