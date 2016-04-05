@@ -159,6 +159,8 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 #### 物品冷启动
 - 利用内容信息，将它们推荐给喜欢过和它们相似的物品的用户。
 
+![此处输入图片的描述][18]
+
 ----------
 
 待整理：
@@ -192,3 +194,4 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
   [15]: http://7xjbdi.com1.z0.glb.clouddn.com/81b78497jw1efj1yg6uywj20kg0cm778.jpg?imageView2/2/w/400
   [16]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-03-09_122652.png
   [17]: http://7xjbdi.com1.z0.glb.clouddn.com/cold_start.png?imageView2/2/w/400
+  [18]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-05_120609.png
