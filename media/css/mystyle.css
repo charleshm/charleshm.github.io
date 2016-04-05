@@ -45,15 +45,10 @@ h2 {
 }
 
 h3 {
+    font-family: "Cuprum", "SimHei","Microsoft Yahei",  "WenQuanYi Micro Hei";
     margin: 20px 0px;
-    font-size: 17px;
+    font-size: 22px;
     color: #D12299;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 30px;
 }
 
 h4 {
@@ -73,7 +68,6 @@ h6 {
 
 h1,
 h2,
-h3,
 h5,
 h6 {
     /*color: #222;*/
