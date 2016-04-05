@@ -151,6 +151,8 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 
 ![此处输入图片的描述][17]
 
+----------
+
 #### 用户冷启动
 如何给新用户做个性化推荐？ 
 
