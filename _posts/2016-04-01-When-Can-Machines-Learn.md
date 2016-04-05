@@ -112,7 +112,7 @@ $$\text{learning model} \rightarrow \text{learning algorithm}(\mathcal{A}) + \te
 ----------
 
 
-[^1]: [机器学习基础（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
+[^1]: [机器学习基石（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
 [^2]: [机器学习与数据挖掘](http://wenku.baidu.com/link?url=uGAlJOxGjWmgJ4tD5mJnabjHU1ziMt3OaN8UnMwuPJKfHxpPc93eDnmMdV3fL4SShXstrlcfMFeh-Vgc5JaUlBBdCi21atBUcdz0axRZiO7)
 
 

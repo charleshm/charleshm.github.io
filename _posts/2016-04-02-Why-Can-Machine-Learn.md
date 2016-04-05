@@ -120,7 +120,7 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
 ----------
 
 
-[^1]: [机器学习基础（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
+[^1]: [机器学习基石（Machine Learning Foundations）](https://www.coursera.org/course/ntumlone)
 [^2]: [机器学习的可能性](http://www.cnblogs.com/HappyAngel/p/3495804.html)
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_103334.png
