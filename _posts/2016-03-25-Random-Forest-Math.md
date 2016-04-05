@@ -61,7 +61,7 @@ $$PE^* \underset{K \rightarrow \infty}{\rightarrow} P_{\mathbf{x},y}[P_{\Theta}(
 
 又有，
 
-$$\hat{P}_k(h_k(\mathbf{x})=j)=E_k[I(h_k(\mathbf{x})=j)]=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j)$$
+$$\color{orange}{\hat{P}_k(h_k(\mathbf{x})=j)}=E_k[I(h_k(\mathbf{x})=j)]=\frac{1}{K}\sum_{k=1}^K I(h_k(\mathbf{x})=j)$$
 
 **实际上我们需要证明的是**，
 
@@ -109,7 +109,7 @@ $$\begin{align*}
 更进一步，
 
 $$\begin{align*}
-\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x},\Theta_m)=j) & \rightarrow \sum_k P_{\Theta}(\phi(\Theta_m)=k)I(\mathbf{x}\in S_k)\\
+\color{blue}{\frac{1}{M}\sum_{m=1}^{M}I(h(\mathbf{x},\Theta_m)=j)} & \rightarrow \sum_k P_{\Theta}(\phi(\Theta_m)=k)I(\mathbf{x}\in S_k)\\
 & = \color{red}{P_{\Theta}(h(\mathbf{x},\Theta)=j)}
 \end{align*}$$
 
