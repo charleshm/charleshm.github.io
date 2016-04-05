@@ -143,6 +143,8 @@ $$ \rho_{X,Y}= \frac{\operatorname{cov}(X,Y)}{\sigma_X \sigma_Y} =\frac{\sum ^n 
 
 ![此处输入图片的描述][16]
 
+----------
+
 待整理：
 
   1. [Collaborative Filtering Recommender Systems](http://files.grouplens.org/papers/FnT%20CF%20Recsys%20Survey.pdf)
