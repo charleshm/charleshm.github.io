@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Why Can Machines Learn?-(1)"
+title:  "Why Can Machines Learn?(1)"
 date:   2016-04-02 7:30
 categories: 机器学习 
 ---
@@ -117,6 +117,8 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
 - 对于单个 hypothesis，根据 Hoeffding 不等式，当 $\color{red}{N}$ 很大时，$\color{blue}{E_{in}}$ 和 $\color{blue}{E_{out}}$ 相等是 PAC 的 (**泛化能力**)；
 - 当 $\color{red}{M}$ 有限，$\color{red}{N}$ 很大时，我们可以从 hypothesis set 中挑选 $\color{blue}{E_{in}}$ 最小的假设作为我们的 final hypothesis，选到泛化能力差的假设概率低 .
 
+![此处输入图片的描述][18]
+
 ----------
 
 
@@ -140,3 +142,4 @@ $$\mathbb{P}[|E_{in}(h)-E_{out}(h)|\gt \epsilon]\leq 2 exp(-2\epsilon ^2N)$$
   [15]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_150233.png
   [16]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_150800.png
   [17]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-04_151653.png
+  [18]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-05_144615.png
