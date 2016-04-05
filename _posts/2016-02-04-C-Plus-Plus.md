@@ -87,6 +87,15 @@ int *p = (int *)10;    //编译通过，但会引发访问权限异常
 int *p1 = nullptr;    //等价于 int *p1 = 0;
 </pre>
 
+另外，涉及到指针或引用的声明，一般会有两种写法：
 
+<pre class="prettyprint linenums">
+int *p; &r    //把修饰符(* 或 &)与变量名写在一起
+
+int* p;
+int& r;      //把修饰符和类型名写在一起
+</pre>
+
+这两种写法并**没有孰对孰错**之分，关键在于从一而终。
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/250
