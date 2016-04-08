@@ -36,6 +36,8 @@ of numbers which are more concise to represent and specify, easier to use and co
 ### 常用方法
 ![此处输入图片的描述][1]
 
+----------
+
 #### 分类[^2]
 - **分裂式的和合并式的**
 - 
