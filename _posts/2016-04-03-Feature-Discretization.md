@@ -75,6 +75,10 @@ of numbers which are more concise to represent and specify, easier to use and co
 
 ----------
 
+#### 目前比较火的方法
+
+----------
+
 资料传送门：
 
 - [特征离散化 R package](https://cran.r-project.org/web/packages/discretization/discretization.pdf)
