@@ -67,6 +67,11 @@ of numbers which are more concise to represent and specify, easier to use and co
 **监督离散化**，
 ![此处输入图片的描述][4]
 
+----------
+
+资料传送门：
+
+- [Package ‘discretization’](https://cran.r-project.org/web/packages/discretization/discretization.pdf)
 
 ----------
 
