@@ -76,5 +76,5 @@ of numbers which are more concise to represent and specify, easier to use and co
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Feature%20Discretization1.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-08_194451.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/binning.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/entropy.png
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/binning.png?imageView2/2/w/500
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/entropy.png?imageView2/2/w/500
