@@ -20,11 +20,11 @@ categories: 机器学习
 
 #### 为什么要做特征离散化
 
- - 很多机器学习算法只能处理离散值
+ - 很多机器学习算法只能处理**离散值**
+ - 离散特征相对于连续特征来说更接近于**知识层面**的表示
  - 存储方便，同时减少计算量
- - 离散特征相对于连续特征来说更接近**于知识层面**的表示
  - **可理解性强**
- - 提高**计算精度**
+ - 提高**计算精度** 
  
 > Discrete values have important roles in data mining and knowledge discovery. They are about intervals
 of numbers which are more concise to represent and specify, easier to use and comprehend as they are closer to a **knowledge-level representation** than continuous values. Many studies show induction tasks can benefit from discretization: rules with discrete values are normally shorter and more **understandable** and discretization can lead to **improved predictive accuracy**. Furthermore, many induction algorithms found in the literature **require discrete features**[^1].
