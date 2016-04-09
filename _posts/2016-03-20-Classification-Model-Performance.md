@@ -50,7 +50,7 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 > In signal detection theory, a receiver operating characteristic (ROC), or simply ROC curve, is a graphical plot which illustrates the performance of a binary classifier system **as its discrimination threshold is varied**.
 
-比如在逻辑回归里面，我们会设一个阈值，大于这个值的为正类，小于这个值为负类。如果我们减小阀值，更多的样本会被识别为正类。这一方面提高了正类的识别率，同时也会使得更多的负类被错误识别为正类。为了形象化这一变化，在此引入 ROC ，ROC 曲线可以用于评价一个分类器好坏。
+比如在逻辑回归里面，我们会设一个阈值，大于这个值的为正类，小于这个值为负类。如果我们减小这个阀值，那么更多的样本会被识别为正类。这会提高正类的识别率，但同时也会使得更多的负类被错误识别为正类。为了形象化这一变化，在此引入 ROC ，ROC 曲线可以用于评价一个分类器好坏。
 
 ROC 关注两个指标 true positive rate ($TPR = \frac{TP}{TP+FN}$) 和  false positive rate ($TPR = \frac{FPR}{FP + TN}$)，直观上，TPR代表能将正例分对的概率，FPR代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
 
