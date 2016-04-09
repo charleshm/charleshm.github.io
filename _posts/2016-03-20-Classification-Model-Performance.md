@@ -62,10 +62,10 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 ROC 关注两个指标，
 
-true positive rate： ($TPR = \frac{TP}{TP+FN}$)      
-false positive rate： ($TPR = \frac{FPR}{FP + TN}$)      
+**true positive rate**： ($TPR = \cfrac{TP}{TP+FN}$)      
+**false positive rate**： ($TPR = \cfrac{FPR}{FP + TN}$)      
 
-直观上，TPR代表能将正例分对的概率，FPR代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
+直观上，TPR 代表能将正例分对的概率，FPR 代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
 
 ![此处输入图片的描述][3]
 
