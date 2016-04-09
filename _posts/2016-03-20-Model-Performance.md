@@ -102,7 +102,7 @@ AUC（Area Under Curve）被定义为ROC曲线下的面积，显然这个面积�
 
 ----------
 
-### 回归
+### 回归[^4]
 
 #### 平均绝对误差
 平均绝对误差MAE（Mean Absolute Error）又被称为 $l_1$ 范数损失（l1-norm loss）：
@@ -126,3 +126,4 @@ $${\rm MSE}(y, \hat{y})=\frac{1}{n_{\rm samples}}\sum\limits_{i=1}^{n_{\rm sampl
 [^1]: 统计学习方法
 [^2]: [AUC与ROC - 衡量分类器的好坏](http://beader.me/2013/12/15/auc-roc/)
 [^3]: [ROC和AUC介绍以及如何计算AUC](http://alexkong.net/2013/06/introduction-to-auc-and-roc/)
+[^4]: [机器学习评价指标大汇总](http://www.zhaokv.com/2016/03/ml-metric.html)
