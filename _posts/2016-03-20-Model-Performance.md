@@ -7,6 +7,8 @@ date:   2016-03-20 9:30
 categories: 机器学习
 ---
 
+![此处输入图片的描述][5]
+
 ### 分类
 
 #### 混淆矩阵[^1]
@@ -120,6 +122,7 @@ $${\rm MSE}(y, \hat{y})=\frac{1}{n_{\rm samples}}\sum\limits_{i=1}^{n_{\rm sampl
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
 [3]: http://7xjbdi.com1.z0.glb.clouddn.com/ROC.png
 [4]: http://7xjbdi.com1.z0.glb.clouddn.com/f03add592a75ef5b5e7346a5209b0cb8.png
+[5]: http://7xjbdi.com1.z0.glb.clouddn.com/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0.png
 
 ----------
 
