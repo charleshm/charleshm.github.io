@@ -73,7 +73,7 @@ ROC 关注两个指标，
 
 $$\begin{align*}
 \text{true positive rate}: \qquad &TPR = \cfrac{TP}{TP+FN}\\      
-\text{false positive rate}: \qquad &TPR = \cfrac{FPR}{FP + TN}
+\text{false positive rate}: \qquad &FPR = \cfrac{FP}{FP + TN}
 \end{align*}$$
 
 直观上，TPR 代表能将正例分对的概率，FPR 代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
