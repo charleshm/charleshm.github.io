@@ -23,6 +23,8 @@ permalink: /about/
 - [Learning from Imbalanced Data](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5128907)
 - [Discretization: An Enabling Technique](http://sci2s.ugr.es/keel/pdf/algorithm/articulo/liu1-2.pdf)
 
+----------
+
 #### 网站推荐
 - [InfoQ](http://www.infoq.com/cn/news/2015/12/Algorithm-case-10)
 - [好东西论坛](http://forum.memect.com/)
@@ -30,7 +32,6 @@ permalink: /about/
 - [世纪佳缘总监-吴金龙博客](http://breezedeus.github.io/)
 - [腾讯广点通团队（rickjin）](http://www.flickering.cn/)
 
-----------
 
 <div class="sign">
     <img src="http://www.dut.pub/static/img/sig1.gif">
