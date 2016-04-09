@@ -83,13 +83,25 @@ $$\begin{align*}
 ----------
 
 #### AUC
+AUC（Area Under Curve）被定义为ROC曲线下的面积，显然这个面积的数值不会大于1。
 
+> The AUC value is equivalent to the probability that a randomly chosen positive example is ranked higher than a randomly chosen negative example.      
 
+翻译过来就是，随机挑选一个正样本以及一个负样本，分类器判定正样本的值高于负样本的概率就是 AUC 值。
 
+简单说：AUC值越大的分类器，正确率越高。
+
+- AUC = 1，**完美分类器**，采用这个预测模型时，不管设定什么阈值都能得出完美预测。绝大多数预测的场合，不存在完美分类器。
+- 0.5 < AUC < 1，优于**随机猜测**。这个分类器（模型）妥善设定阈值的话，能有预测价值。
+- AUC = 0.5，跟**随机猜测一样**（例：丢铜板），模型没有预测价值。
+- AUC < 0.5，比**随机猜测**还差；但只要总是反预测而行，就优于随机猜测，因此不存在AUC < 0.5的情况。
+
+![此处输入图片的描述][4]
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
 [3]: http://7xjbdi.com1.z0.glb.clouddn.com/ROC.png
+[4]: http://7xjbdi.com1.z0.glb.clouddn.com/f03add592a75ef5b5e7346a5209b0cb8.png
 
 ----------
 
