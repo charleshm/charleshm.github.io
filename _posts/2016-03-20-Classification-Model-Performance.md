@@ -20,6 +20,12 @@ categories: 机器学习
 
 $$P = \frac{TP}{TP+FP} \tag{1}$$
 
+需要注意的是精确率(precision)和准确率(accuracy)是不一样的，
+
+$$ACC = \frac{TP + TN}{TP+TN+FP+FN}$$
+
+在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc 也有 99% 以上，没有意义。
+
 召回率(recall,sensitivity,true positive rate)定义为：
 
 $$R = \frac{TP}{TP+FN} \tag{2}$$
@@ -64,7 +70,7 @@ false positive rate： ($TPR = \frac{FPR}{FP + TN}$)
 #### AUC
 为啥要用AUC呢？传统的ACC（准确度）为啥不用呢？
 
-在互联网广告里面，点击的数量是很少的，一般千分之几，如果用acc，全部预测成负类（不点击）acc也有99%以上，根本无法评价。
+
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
