@@ -61,6 +61,4 @@ categories: 数据结构与算法分析
     }
 
 
-----------
-
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Sorting_quicksort_anim.gif
