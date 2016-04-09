@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "机器性能评估指标"
+title:  "机器学习性能评估指标"
 date:   2016-03-20 9:30
 categories: 机器学习
 ---
