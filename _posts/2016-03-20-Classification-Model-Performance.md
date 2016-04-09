@@ -54,10 +54,11 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 ROC 关注两个指标 true positive rate ($TPR = \frac{TP}{TP+FN}$) 和  false positive rate ($TPR = \frac{FPR}{FP + TN}$)，直观上，TPR代表能将正例分对的概率，FPR代表将负例错分为正例的概率。在ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正的正例）和 FP（错误的正例）间的 trade-off。
 
-
+![此处输入图片的描述][3]
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
+[3]: http://7xjbdi.com1.z0.glb.clouddn.com/ROC.png
 
 ----------
 
