@@ -14,7 +14,7 @@ dl, dd, ol, ul, figure {
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
+p, blockquote, 
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }

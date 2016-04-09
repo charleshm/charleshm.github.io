@@ -18,48 +18,49 @@ categories: 数据结构与算法分析
 
 ![此处输入图片的描述][1]
 
-<pre class="prettyprint linenums">
-#include<iostream>
-#include<vector>
+    #include<iostream>
+    #include<vector>
 
-using namespace std;
+    using namespace std;
 
-int partition(vector<int> &vi, int low, int up) {
-    int pivot = vi[up];  // 直接选最右边的元素为基准元素
-    int i = low - 1;
-    for (int j = low; j < up; j++) {
-        if (vi[j] <= pivot) {
-            i++;
-            swap(vi[i], vi[j]);
+    int partition(vector<int> &vi, int low, int up) {
+        int pivot = vi[up];  // 直接选最右边的元素为基准元素
+        int i = low - 1;
+        for (int j = low; j < up; j++) {
+            if (vi[j] <= pivot) {
+                i++;
+                swap(vi[i], vi[j]);
+            }
+        }
+
+        swap(vi[i + 1], vi[up]); // 将基准元素放到正确位置上
+        return i + 1;
+    }
+
+    void quicksort(vector<int> &vi, int low, int up) {
+        if (low < up) {
+            int mid = partition(vi,low,up);
+            quicksort(vi, low, mid - 1);
+            quicksort(vi, mid + 1, up);
         }
     }
 
-    swap(vi[i + 1], vi[up]); // 将基准元素放到正确位置上
-    return i + 1;
-}
+    int main() {
+        vector<int> a{ 3,7,8,4,2,1,9,5,5 };
+        for (auto i : a)
+            cout << i << " ";
+        cout << endl;
 
-void quicksort(vector<int> &vi, int low, int up) {
-    if (low < up) {
-        int mid = partition(vi,low,up);
-        quicksort(vi, low, mid - 1);
-        quicksort(vi, mid + 1, up);
+        quicksort(a, 0, a.size() - 1);
+        for (auto i : a)
+            cout << i << " ";
+        cout << endl;
+
+        system("pause");
+
     }
-}
 
-int main() {
-    vector<int> a{ 3,7,8,4,2,1,9,5,5 };
-    for (auto i : a)
-        cout << i << " ";
-    cout << endl;
 
-    quicksort(a, 0, a.size() - 1);
-    for (auto i : a)
-        cout << i << " ";
-    cout << endl;
-
-    system("pause");
-
-}
-</pre>
+----------
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Sorting_quicksort_anim.gif
