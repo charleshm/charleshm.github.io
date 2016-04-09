@@ -32,6 +32,11 @@ categories: 机器学习
 
 ----------
 
+#### 模型评估
+参加： [**分类器性能评估指标**](http://charlesx.top/2016/03/Classification-Model-Performance/)
+
+----------
+
 
 [^1]: [CRISP-DM 1.0](https://the-modeling-agency.com/crisp-dm.pdf)
 [^2]: [机器学习中的数据清洗与特征处理综述](http://tech.meituan.com/machinelearning-data-feature-process.html)
