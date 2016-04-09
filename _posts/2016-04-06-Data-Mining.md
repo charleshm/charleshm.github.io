@@ -33,7 +33,7 @@ categories: 机器学习
 ----------
 
 #### 模型评估
-参加： [**机器学习性能评估指标**](http://charlesx.top/2016/03/Classification-Model-Performance/)
+参见： [**机器学习性能评估指标**](http://charlesx.top/2016/03/Classification-Model-Performance/)
 
 ----------
 
