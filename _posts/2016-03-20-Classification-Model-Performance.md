@@ -50,7 +50,9 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 ![此处输入图片的描述][2]
 
-在信息检索领域，精确率和召回率又被称为查全率和查准率，
+----------
+
+在信息检索领域，精确率和召回率又被称为**查准率和**查全率**，
 
 $$\begin{align*}
 \text{查全率}&＝\frac{\text{检索出的相关信息量}}{\text{系统中的相关信息总量}}\\
@@ -69,8 +71,10 @@ $$\begin{align*}
 
 ROC 关注两个指标，
 
-**true positive rate**： ($TPR = \cfrac{TP}{TP+FN}$)      
-**false positive rate**： ($TPR = \cfrac{FPR}{FP + TN}$)      
+$$\begin{align*}
+\text{true positive rate}: &TPR = \cfrac{TP}{TP+FN}\\      
+\text{false positive rate}: &TPR = \cfrac{FPR}{FP + TN}
+\end{align*}$$
 
 直观上，TPR 代表能将正例分对的概率，FPR 代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
 
