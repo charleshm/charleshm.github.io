@@ -16,26 +16,28 @@ categories: 机器学习
 
 ![此处输入图片的描述][1]
 
-精确率(precision)定义为：
+**精确率**(precision)定义为：
 
 $$P = \frac{TP}{TP+FP} \tag{1}$$
 
-需要注意的是精确率(precision)和准确率(accuracy)是不一样的，
+需要注意的是**精确率**(precision)和**准确率**(accuracy)是不一样的，
 
 $$ACC = \frac{TP + TN}{TP+TN+FP+FN}$$
 
-在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc 也有 99% 以上，没有意义。
+> 在正负样本不平衡的情况下，准确率这个评价指标有很大的缺陷。比如在互联网广告里面，点击的数量是很少的，一般只有千分之几，如果用acc，即使全部预测成负类（不点击）acc 也有 99% 以上，没有意义。
 
-召回率(recall,sensitivity,true positive rate)定义为：
+**召回率**(recall,sensitivity,true positive rate)定义为：
 
 $$R = \frac{TP}{TP+FN} \tag{2}$$
 
-此外，还有 $F_1$ 值，是精确率和召回率的调和均值，
+此外，还有 $F_1$ 值，是精确率和召回率的**调和均值**，
 
 $$\begin{align*}
 \frac{2}{F_1} & = \frac{1}{P} + \frac{1}{R}\\
 F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 \end{align*}$$
+
+> 精确率和准确率都高的情况下，$F_1$ 值也会高。
 
 ----------
 
