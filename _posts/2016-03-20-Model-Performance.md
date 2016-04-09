@@ -2,10 +2,12 @@
 published: true
 author: Charles
 layout: post
-title:  "分类器性能评估指标"
+title:  "机器性能评估指标"
 date:   2016-03-20 9:30
 categories: 机器学习
 ---
+
+### 分类
 
 #### 混淆矩阵[^1]
 - True Positive(真正, TP)：将正类预测为正类数.
@@ -76,7 +78,7 @@ $$\begin{align*}
 \text{false positive rate}: \qquad &FPR = \cfrac{FP}{FP + TN}
 \end{align*}$$
 
-直观上，TPR 代表能将正例分对的概率，FPR 代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off[^3]。
+直观上，TPR 代表能将正例分对的概率，FPR 代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（**真正率**）和 FP（**假正率**）间的 trade-off[^3]。
 
 ![此处输入图片的描述][3]
 
@@ -97,6 +99,22 @@ AUC（Area Under Curve）被定义为ROC曲线下的面积，显然这个面积�
 - $AUC < 0.5$，比**随机猜测**还差；但只要总是反预测而行，就优于随机猜测，因此不存在 $AUC < 0.5$ 的情况。
 
 ![此处输入图片的描述][4]
+
+----------
+
+### 回归
+
+#### 平均绝对误差
+平均绝对误差MAE（Mean Absolute Error）又被称为 $l_1$ 范数损失（l1-norm loss）：
+
+$${\rm MAE}(y, \hat{y})=\frac{1}{n_{\rm samples}}\sum\limits_{i=1}^{n_{\rm samples}}|y_i-\hat{y}_i|$$
+
+----------
+
+#### 平均平方误差
+平均平方误差 MSE（Mean Squared Error）又被称为 $l_2$ 范数损失（l2-norm loss）：
+
+$${\rm MSE}(y, \hat{y})=\frac{1}{n_{\rm samples}}\sum\limits_{i=1}^{n_{\rm samples}}(y_i-\hat{y}_i)^2$$
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
