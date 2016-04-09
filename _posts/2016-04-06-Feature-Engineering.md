@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Feature Engineering"
+title:  "数据挖掘流程规范"
 date:   2016-04-06 15:30
 categories: 机器学习
 ---
