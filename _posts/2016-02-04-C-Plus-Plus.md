@@ -132,4 +132,23 @@ r = &i;
 
 > 面对比较复杂的指针或引用的声明语句时，最简单的办法就是从右往左读，**离变量名最近**的符号对变量名的类型有**最直接的影响**。
 
+----------
+
+#### const 限定符
+
+因为 const 对象一旦创建后就不容许改变，所以必须初始化。
+
+<pre class="prettyprint linenums">
+const int j = 42;
+const int k;         //错误: k是一个未经初始化的常量
+</pre>
+
+>  指向常量的引用（指针），没有规定其所指向的对象必须是一个常量，所谓指向常量的引用（指针），它们觉得自己指向了常量，所以自觉地不去更改所指对象的值，而并不是说所指对象的值不能通过其它方式改变。
+
+<pre class="prettyprint linenums">
+int i = 42;
+const int &r = i;  //指向常量的引用
+const *ptr = &i;   //指向常量的指针
+</pre>
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/250
