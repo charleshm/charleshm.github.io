@@ -52,9 +52,19 @@ F_1 & = \frac{2TP}{2TP + FP + FN} \tag{3}
 
 比如在逻辑回归里面，我们会设一个阈值，大于这个值的为正类，小于这个值为负类。如果我们减小这个阀值，那么更多的样本会被识别为正类。这会提高正类的识别率，但同时也会使得更多的负类被错误识别为正类。为了形象化这一变化，在此引入 ROC ，ROC 曲线可以用于评价一个分类器好坏。
 
-ROC 关注两个指标 true positive rate ($TPR = \frac{TP}{TP+FN}$) 和  false positive rate ($TPR = \frac{FPR}{FP + TN}$)，直观上，TPR代表能将正例分对的概率，FPR代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
+ROC 关注两个指标，
+
+true positive rate： ($TPR = \frac{TP}{TP+FN}$)      
+false positive rate： ($TPR = \frac{FPR}{FP + TN}$)      
+
+直观上，TPR代表能将正例分对的概率，FPR代表将负例错分为正例的概率。在 ROC 空间中，每个点的横坐标是 FPR，纵坐标是 TPR，这也就描绘了分类器在 TP（真正率）和 FP（假正率）间的 trade-off。
 
 ![此处输入图片的描述][3]
+
+#### AUC
+为啥要用AUC呢？传统的ACC（准确度）为啥不用呢？
+
+在互联网广告里面，点击的数量是很少的，一般千分之几，如果用acc，全部预测成负类（不点击）acc也有99%以上，根本无法评价。
 
 [1]: http://7xjbdi.com1.z0.glb.clouddn.com/confusion_matrix%20(1).png
 [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Precision_Recall.png?imageView2/2/w/400
