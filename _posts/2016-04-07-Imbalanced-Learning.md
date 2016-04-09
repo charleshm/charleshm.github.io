@@ -14,10 +14,10 @@ EasyEnsemble 类似于 Bagging 方法，它把数据划分为两部分，分别�
 
 ![此处输入图片的描述][1]
 
-BalanceCascade 类似于 Boosting 方法，先从多数类样本中采样得到 $E$，使得 $|E| = |S_{min}|$，利用训练集 $N = E \cup S_{min}$，训练出第一个模型，找出 $E$ 中分类正确的样本 $N^*_{maj}$，我们将它从 $S_{maj}$中去除，再进行采样，重复上面的步骤，依次迭代直到满足某一停止条件，最终的模型是多次迭代模型的组合。
+BalanceCascade 类似于 Boosting 方法，先从多数类样本中采样得到 $E$，使得 $\|E\| = \|S_{min}\|$，利用训练集 $N = E \cup S_{min}$，训练出第一个模型，找出 $E$ 中分类正确的样本 $N^*_{maj}$，我们将它从 $S_{maj}$中去除，再进行采样，重复上面的步骤，依次迭代直到满足某一停止条件，最终的模型是多次迭代模型的组合。
 
 ![此处输入图片的描述][2]
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/optimized-mahg.png
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-09_191514.png
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/optimized-mahg.png?imageView2/2/w/400
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/2016-04-09_191514.png?imageView2/2/w/400
