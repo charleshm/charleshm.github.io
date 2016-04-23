@@ -16,15 +16,6 @@ categories: 数据结构与算法
 
 ### 字符串
 
-<pre class="prettyprint linenums">
-#include <string>
-using std:string
-</pre>
-
-
-----------
-
-
 #### 初始化的几种方式
 - 直接初始化：不使用等号
 - 拷贝初始化：使用等号
