@@ -60,7 +60,7 @@ http://www.aboutyun.com/thread-8927-1-1.html
 
 > 对于map输出的每一个键值对，系统都会给定一个partition，partition值默认是通过计算key的hash值后对Reduce task的数量取模获得。如果一个键值对的partition值为1，意味着这个键值对会交给第一个Reducer处理[^3]。
 
-{% highlight c++ %}
+{% highlight java %}
 reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 {% endhighlight %}
 
@@ -72,7 +72,7 @@ reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_MapReduceWordCountOverview1.png
   
  ----------
-  
+
   [^1]: [MapReduce shuffle过程详解](http://blog.csdn.net/u014374284/article/details/49205885)
   [^2]: [MapReduce:详解Shuffle过程](http://langyu.iteye.com/blog/992916)
   [^3]: [Hadoop Map/Reduce 执行流程详解](http://zheming.wang/hadoop-mapreduce-zhi-xing-liu-cheng-xiang-jie.html)
