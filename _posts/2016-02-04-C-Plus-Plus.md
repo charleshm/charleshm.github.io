@@ -32,11 +32,11 @@ int a{0};
 - 变量声明规定了变量的**类型和名字**，这一点上定义与之相同，但定义同时还申请了**存储空间**。
 - 变量能且只能被**定义一次**，但是却可以被**多次声明**。
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 extern int i;                  //声明 i 而非定义 i
 int j;                         //声明并定义 j
 extern double pi = 3.1416;     //定义
-</pre>
+{% endhighlight %}
 
 
 ----------
@@ -48,12 +48,12 @@ extern double pi = 3.1416;     //定义
 
 涉及到指针或引用的声明，一般会有**两种写法**：
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int *p; &r    //把修饰符(* 或 &)与变量名写在一起
 
 int* p;
 int& r;      //把修饰符和类型名写在一起
-</pre>
+{% endhighlight %}
 
 这两种写法并**没有孰对孰错**之分，关键在于从一而终。
 
@@ -70,13 +70,13 @@ int& r;      //把修饰符和类型名写在一起
 - 引用在定义时**必须初始化**（谁的别名），之后**不能改变**(从一而终)；指针可变；
 - 引用**不能为空**，必须与合法的存储单元关联；指针可以为空；
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int &refVal;       //报错，引用必须初始化
 
 int ival = 42;
 int *p = &ival;
 int *q = ival;     //错误： 不能把 int 变量直接赋值给指针
-</pre>
+{% endhighlight %}
 
 ----------
 
@@ -84,17 +84,17 @@ int *q = ival;     //错误： 不能把 int 变量直接赋值给指针
 
 在学指针时，我们常常会犯这样的错误，
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int *p = 10;
-</pre>
+{% endhighlight %}
 
 因为经常听到的一句话就是，**指针就是地址**，那么为什么不能用常量或 int 变量给指针赋值？
 
 这样的理解是不准确的，指针是一种**变量**，存放着某个对象的地址，它有自己的**类型**，比如上面的 int *。我们要给其赋值，那也得是赋 int * 的，
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int *p = (int *)10;    //编译通过，但会引发访问权限异常
-</pre>
+{% endhighlight %}
 
 
 ----------
@@ -103,9 +103,9 @@ int *p = (int *)10;    //编译通过，但会引发访问权限异常
 
 **空指针**，
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int *p1 = nullptr;    //等价于 int *p1 = 0;
-</pre>
+{% endhighlight %}
 
 ----------
 
@@ -113,22 +113,22 @@ int *p1 = nullptr;    //等价于 int *p1 = 0;
 
 - **指向指针的指针**
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int ival =1024;
 int *pi = &ival;     // pi 指向一个 int 型的数
 int **ppi = &pi;     // ppi 指向一个 int 型的指针
-</pre>
+{% endhighlight %}
 
 - **指向指针的引用**
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int i= 42；
 int *p;
 int *&r = p;    //r 是对指针 p 的引用
 
 r = &i;
 *r = 0;        //解引用 r 得到 i，也就是 p 指向的对象
-</pre>
+{% endhighlight %}
 
 > 面对比较复杂的指针或引用的声明语句时，最简单的办法就是从右往左读，**离变量名最近**的符号对变量名的类型有**最直接的影响**。
 
@@ -138,17 +138,17 @@ r = &i;
 
 因为 const 对象一旦创建后就不容许改变，所以必须初始化。
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 const int j = 42;
 const int k;         //错误: k是一个未经初始化的常量
-</pre>
+{% endhighlight %}
 
 >  指向常量的引用（指针），没有规定其所指向的对象必须是一个常量，所谓指向常量的引用（指针），它们觉得自己指向了常量，所以自觉地不去更改所指对象的值，而并不是说所指对象的值不能通过其它方式改变。
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 int i = 42;
 const int &r = i;  //指向常量的引用
 const *ptr = &i;   //指向常量的指针
-</pre>
+{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c++_ini.png?imageView/2/w/250
