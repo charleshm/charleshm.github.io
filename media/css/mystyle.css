@@ -235,4 +235,21 @@ ul li{
     display: inline-block
 }
 
-/*公式宽度*/
+/*代码*/
+pre ol li {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 3px solid #6CE26C;
+}
+
+
+ol.linenums {
+    color: #1E347B;
+    margin: 0 0 0 20px;
+}
+
+ol.linenums li {
+    color: #BEBEC5;
+    line-height: 20px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
