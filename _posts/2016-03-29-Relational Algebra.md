@@ -98,9 +98,9 @@ $$R\div S=\{t_r[X] | t_r\in R \wedge \pi_y(S) \subseteq Y_x\}$$
 
 - **内连接**(INNER JOIN)：
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 select Person.*,Works.* from Person inner join Works on Person.person-name =  Works.person-name
-</pre>
+{% endhighlight %}
 
 
 ![此处输入图片的描述][9]
@@ -111,9 +111,9 @@ select Person.*,Works.* from Person inner join Works on Person.person-name =  Wo
 
 - **左外连接**(LEFT  JOIN 或 LEFT OUTER JOIN)：
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 select Person.*,Works.* from Person left join Works on Person.person-name =  Works.person-name
-</pre>
+{% endhighlight %}
 
 ![此处输入图片的描述][10]
 
@@ -123,9 +123,9 @@ select Person.*,Works.* from Person left join Works on Person.person-name =  Wor
 
 - **右外连接**(RIGHT  JOIN 或 RIGHT  OUTER  JOIN)：
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 select Person.*,Works.* from Person right join Works on Person.person-name =  Works.person-name
-</pre>
+{% endhighlight %}
 
 
 ![此处输入图片的描述][11]
@@ -136,9 +136,9 @@ select Person.*,Works.* from Person right join Works on Person.person-name =  Wo
 
 - **全外连接**(FULL  JOIN 或 FULL OUTER JOIN)：
 
-<pre class="prettyprint linenums">
+{% highlight c++ %}
 select Person.*,Works.* from Person full join Works on Person.person-name =  Works.person-name
-</pre>
+{% endhighlight %}
 
 ![此处输入图片的描述][12]
 
