@@ -41,7 +41,6 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 
 
 ### Shuffle
-http://www.aboutyun.com/thread-8927-1-1.html
 
 #### 为什么要Shuffle[^2]
 在Hadoop这样的集群环境中，大部分map task 与 reduce task 的执行是在不同的节点上。很多情况下 Reduce 执行时需要跨节点去拉取其它节点上的 map task 的输出结果。如果集群正在运行的job有很多，那么 task 对集群内部的网络资源消耗会很严重，我们希望能最大化地减少不必要的消耗。
@@ -64,15 +63,20 @@ http://www.aboutyun.com/thread-8927-1-1.html
 reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 {% endhighlight %}
 
+![此处输入图片的描述][5]
+
+
+----------
+
+
+  
+  [^1]: [MapReduce shuffle过程详解](http://blog.csdn.net/u014374284/article/details/49205885)
+  [^2]: [MapReduce:详解Shuffle过程](http://langyu.iteye.com/blog/992916)
+  [^3]: [Hadoop Map/Reduce 执行流程详解](http://zheming.wang/hadoop-mapreduce-zhi-xing-liu-cheng-xiang-jie.html)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_job.png?imageView2/2/w/450
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/map_shuffle_reduce.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/mapreduce_spilt.png
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_MapReduceWordCountOverview1.png
-  
- ----------
-
-  [^1]: [MapReduce shuffle过程详解](http://blog.csdn.net/u014374284/article/details/49205885)
-  [^2]: [MapReduce:详解Shuffle过程](http://langyu.iteye.com/blog/992916)
-  [^3]: [Hadoop Map/Reduce 执行流程详解](http://zheming.wang/hadoop-mapreduce-zhi-xing-liu-cheng-xiang-jie.html)
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_map_unused.png
