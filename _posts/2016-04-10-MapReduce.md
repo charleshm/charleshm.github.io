@@ -75,6 +75,8 @@ reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 
 ![此处输入图片的描述][5]
 
+----------
+
 Combiner 将有相同key的 key/value 对加起来，减少溢写spill到磁盘的数据量。
 
 Combiner的适用场景：由于Combiner的输出是Reducer的输入，Combiner绝不能改变最终的计算结果。故大多数情况下，combiner适用于输入输出的key/value类型完全一致，且不影响最终结果的场景（比如累加、最大值等……）。Combiner的使用一定得慎重，如果用好，它对job执行效率有帮助，反之会影响reduce的最终结果。 
