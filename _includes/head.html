@@ -8,21 +8,6 @@
     <link rel="stylesheet" href="{{ " /media/css/mystyle.css " | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
-    <style type='text/css'>
-        pre, code {
-            white-space: pre;
-            overflow-x: scroll;
-        }
-        .hljs {
-            display: inline-block;
-            overflow-x: scroll;
-            padding: 0.5em;
-            padding-right: 100%;
-            background: #002b36;
-            color: #839496;
-            -webkit-text-size-adjust: none;
-        }
-    </style>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$', '$'], ['\\(', '\\)'] ], displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ], processEscapes: true }, "HTML-CSS": { linebreaks: { automatic: true }, availableFonts: ["TeX"], scale: 100 }});
     </script>
