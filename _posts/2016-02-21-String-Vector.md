@@ -183,7 +183,7 @@ char a[6] = "Daniel";  //错误，没有空间可以存放空字符
 {% highlight c++ %}
 int *ptr[10]                //ptr为含有 10 整型指针的数组
 int (*Parray)[10] = &arr;   //Parray 指向一个含有10个整数的数组
-int (&arrRef)[10] = arr;　　//arrRef 引用一个含有是个整数的数组
+int (&arrRef)[10] = arr;　　  //arrRef 引用一个含有是个整数的数组
 int *(&array)[10] = ptrs;   //arry 是数组的引用，该数组含有 10 个指针
 {% endhighlight %}
 
