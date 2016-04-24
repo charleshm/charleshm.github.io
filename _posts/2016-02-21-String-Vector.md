@@ -91,6 +91,15 @@ vector 是模板而非类型，容纳着其它对象，所以常常被称作容�
 
 #### 初始化
 
+{% highlight c++ %}
+vector<T> v1             //默认初始化
+vector<T> v2(v1)         //v2中包含v1所有元素的副本
+vector<T> v2 = v1        //等价与v2(v1)
+vector<T> v3(n,val)      //v3中包含n个重复元素，每个元素的值都是val
+vector<T> v4(n)          //v4中包含n个重复执行值初始化的对象
+vector<T> v5{a,b,c...}   //列表初始化
+vector<T> v6 = {a,b,c...}
+{% endhighlight %}
 
 ----------
 
