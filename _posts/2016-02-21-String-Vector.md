@@ -159,3 +159,32 @@ string::iterator it2;
 vector<int>::const_iterator it3;
 string::const_iterator it4;
 {% endhighlight %}
+
+----------
+
+### 数组
+与 vector 不同的是数组的大小确定不变，不能随意像数组中增加元素。
+
+#### 字符数组
+字符串字面值是一串常量字符，字符串字面值常量用双引号括起来的零个或多个字符表示，为兼容C语言，C++中所有的字符串字面值都由编译器自动在末尾添加一个空字符。
+
+![此处输入图片的描述][1]
+
+{% highlight c++ %}
+char a[6] = "Daniel";  //错误，没有空间可以存放空字符
+{% endhighlight %}
+
+
+----------
+
+#### 复杂数组声明
+> 理解数组声明最好的方式就是从数组的名字开始由内向外的顺序阅读。
+
+{% highlight c++ %}
+int *ptr[10]                //ptr为含有 10 整型指针的数组
+int (*Parray)[10] = &arr;   //Parray 指向一个含有10个整数的数组
+int (&arrRef)[10] = arr;　　//arrRef 引用一个含有是个整数的数组
+int *(&array)[10] = ptrs;   //arry 是数组的引用，该数组含有 10 个指针
+{% endhighlight %}
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/c_string.png?imageView2/2/w/300
