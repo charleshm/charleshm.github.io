@@ -15,6 +15,7 @@ categories: 成长
 
  - [影响我一生的两个选择][1]
  - [许式伟：影响我一生的五个重要选择][2]
+ - [A brief autobiography of Mingxing LAI][5]
 
 > 用曹操的一句话总结蛮好：不得慕虚名而处实祸。
 
@@ -34,3 +35,4 @@ categories: 成长
   [2]: http://blog.jobbole.com/78246/
   [3]: http://lixinzhang.github.io/wo-de-2015nian-xiao-zhao-zong-jie.html
   [4]: http://unee.wang/post/20151216flaky
+  [5]: http://mingxinglai.com/cn/2014/03/autobiography/
