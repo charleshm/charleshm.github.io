@@ -236,20 +236,22 @@ ul li{
 }
 
 /*代码*/
-pre ol li {
-    margin-left: 15px;
-    padding-left: 15px;
-    border-left: 3px solid #6CE26C;
+pre {
+  counter-reset: lines;
 }
-
-
-ol.linenums {
-    color: #1E347B;
-    margin: 0 0 0 20px;
+pre .line {
+  counter-increment: lines;
 }
+pre .line::before {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 
-ol.linenums li {
-    color: #BEBEC5;
-    line-height: 20px;
-    text-shadow: 0 1px 0 #FFFFFF;
+  -o-user-select: none;
+  user-select: none;
+
+  content: counter(lines); text-align: right;
+  display: inline-block; width: 2em;
+  padding-right: 0.5em; margin-right: 0.5em;
+  color: #BBB; border-right: solid 1px;
 }
