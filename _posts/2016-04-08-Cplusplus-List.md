@@ -104,5 +104,43 @@ ListNode *deleteDuplicates(ListNode *head) {
 }
 {% endhighlight %}
 
+----------
+
+#### Remove Duplicates from Sorted List II
+
+{% highlight c++ %}
+ListNode* deleteDuplicates(ListNode* head) {
+    if (head == nullptr) return head;
+    // 因为头指针可能变化，所以我们定义头结点来记录其位置
+    ListNode dummy(INT_MIN);
+    ListNode *prev = &dummy, *cur = head;
+    while (cur != nullptr) {
+        // 记录当前变量是否重复
+        bool duplicated = false;
+        while (cur->next != nullptr && cur->val == cur->next->val) {
+            duplicated = true;
+            ListNode *temp = cur;
+            cur = cur->next;
+            delete(temp);
+        }
+        // 删除重复的最后一个元素
+        if (duplicated) {
+            ListNode *temp = cur;
+            cur = cur->next;
+            delete(temp);
+            continue;
+        }
+        prev->next = cur;
+        prev = cur;
+        cur = cur->next;
+    }
+    prev->next = cur;
+    return dummy.next;
+}
+{% endhighlight %}
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
+
+
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
