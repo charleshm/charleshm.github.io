@@ -34,6 +34,10 @@ class ListNode {
 
 #### 链表反转
 
+> 将当前节点的 next 字段值改成 prev（上一个节点的指针）的值
+
+- 非递归解法
+
 {% highlight c++ %}
 ListNode *reverse(ListNode *head) {
     ListNode *prev = NULL;
@@ -44,5 +48,20 @@ ListNode *reverse(ListNode *head) {
         head = temp;
     }
     return prev;
+}
+{% endhighlight %}
+
+- 递归解法
+
+{% highlight c++ %}
+/* 使用递归的方法 */
+ListNode *reverse(struct node* head) {
+    //最后一个节点会返回 作为头部
+    if (　head == NULL || head->next == NULL) return head;
+    //先反转后面的链表
+    struct node * newHead = reverse(head->next);
+    head->next->next = head; //让下一个节点指向当前节点
+    head->next = NULL;
+    return newHead;
 }
 {% endhighlight %}
