@@ -21,7 +21,7 @@ vector<string> words(articles);     //错误：容器类型不匹配
 ----------
 
 
-**固定大小数组　array**，
+#### 固定大小数组array，
 
 {% highlight c++ %}
 array<int,42>
@@ -61,11 +61,11 @@ array<int,10> copy = digits;
 {% highlight c++ %}
 c.shrink_to_fit()            //将capacity()减小为size()相同大小
 c.capacity()                 //不重新分配内存空间的话，c 可以保存多少空间
-c.reserve(n)                  //分配至少能容纳n个元素的内存空间
+c.reserve(n)                 //分配至少能容纳n个元素的内存空间
 {% endhighlight %}
 
-reserve 并不改变容器中元素的数量，它仅影响　vector **预先分配**多大的内存空间。
+reserve 并不改变容器中元素的数量，它仅影响vector **预先分配**多大的内存空间。
 
-> 只有当需求的内存空间超过当前容量时，reserve 调用才会改变 vector 的容量。当需求大小小于或等于当前容量时，reserve 什么也不做。
+> 只有当需求的内存空间超过当前容量时，reserve 调用才会改变 vector 的容量。当需求大小小于或等于当前容量时，reserve 什么也不做。在调用 reserve 之后， capacity 将会大于或等于传递给　reserve　的参数。
 
 也就是说　reserve 永远不会减小容器占用的内存空间。类似的， resize 成员函数只改变容器中元素的数目，而不是容器的容量。
