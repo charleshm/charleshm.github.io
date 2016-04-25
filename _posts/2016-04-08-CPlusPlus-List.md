@@ -27,21 +27,3 @@ class ListNode {
 };
 {% endhighlight %}
 
-
-----------
-
-
-#### 链表反转
-
-{% highlight c++ %}
-ListNode *reverse(ListNode *head) {
-    ListNode *prev = NULL;
-    while (head != NULL) {
-        ListNode *temp = head->next;
-        head->next = prev;
-        prev = head;
-        head = temp;
-    }
-    return prev;
-}
-{% endhighlight %}
