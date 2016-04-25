@@ -7,6 +7,19 @@ date:   2016-04-08 14:28
 categories: 数据结构与算法
 ---
 
+#### 头节点和头指针
+- 头结点是为了操作的统一与方便而设立的，放在第一个元素结点之前，其数据域一般无意义（当然有些情况下也可存放链表的长度、用做监视哨等等）。
+- 有了头结点后，对在第一个元素结点前插入结点和删除第一个结点，其操作与对其它结点的操作统一了。
+
+![此处输入图片的描述][1]
+
+- 前驱：　prev
+- 后继：　next
+- 当前结点：　cur
+
+----------
+
+
 #### 链表定义
 
 {% highlight c++ %}
@@ -60,7 +73,7 @@ ListNode *reverse(struct node* head) {
     if (　head == NULL || head->next == NULL) return head;
     //先反转后面的链表
     struct node * newHead = reverse(head->next);
-    head->next->next = head; //让下一个节点指向当前节点
+    head->next->next = head; //让下一个结点指向当前节点
     head->next = NULL;
     return newHead;
 }
@@ -88,3 +101,6 @@ ListNode *deleteDuplicates(ListNode *head) {
     return head;
 }
 {% endhighlight %}
+
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
