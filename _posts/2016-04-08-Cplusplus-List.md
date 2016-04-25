@@ -65,3 +65,26 @@ ListNode *reverse(struct node* head) {
     return newHead;
 }
 {% endhighlight %}
+
+
+----------
+
+#### 删除链表中的重复元素
+
+{% highlight c++ %}
+ListNode *deleteDuplicates(ListNode *head) {
+    if (head == NULL) return head;
+    ListNode *fast = head->next;
+    ListNode *slow = head;
+
+    while (fast != NULL) {
+        if (fast->val != slow->val) {
+            slow->next = fast;
+            slow = fast;
+        }
+        fast = fast->next;
+    }
+    slow->next = NULL;
+    return head;
+}
+{% endhighlight %}
