@@ -2,12 +2,13 @@
 published: true
 author: Charles
 layout: post
-title:  "链表"
+title:  "lianbiao"
 date:   2016-04-08 14:28
 categories: 数据结构与算法
 ---
 
 #### 链表定义
+
 {% highlight c++ %}
 // Definition for singly-linked list.
 struct ListNode {
