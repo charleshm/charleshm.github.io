@@ -54,6 +54,7 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 ----------
 
 #### Shuffle过程
+http://blog.csdn.net/DianaCody/article/details/39502917
 
 **Partition**:
 
@@ -63,23 +64,37 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 {% endhighlight %}
 
-然后将数据写入内存缓冲区中，缓冲区的作用是批量收集map结果，减少磁盘IO的影响。key/value对以及 Partition 的结果都会被写入缓冲区。写入之前，key 与value 值会被序列化成字节数组。
+**Collector**：
+
+然后将数据写入内存环形缓冲区中，缓冲区的作用是批量收集map结果，减少磁盘IO的影响。key/value对以及 Partition 的结果都会被写入**缓冲区**。写入之前，key 与value 值会被序列化成字节数组(Kvbuffer)。
 
 ----------
 
-**sort & combine过程**:
+**spill触发**:
 
-由于内存缓冲区的大小限制（默认100MB），当map task输出结果很多时就可能发生内存溢出，所以需要在一定条件下将缓冲区的数据临时写入磁盘，然后重新利用这块缓冲区。这个从内存往磁盘写数据的过程被称为Spill，中文可译为溢写。这个溢写是由另外单独线程来完成，不影响往缓冲区写map结果的线程。
+由于内存缓冲区的大小限制（默认100MB），当map task输出结果很多时就可能发生内存溢出，所以需要在一定条件下将缓冲区的数据临时写入磁盘，然后重新利用这块缓冲区。这个从内存往磁盘写数据的过程被称为Spill，中文可译为溢写。这个溢写是由另外单独线程来完成，不影响往缓冲区写map结果的collector线程。
 
 整个缓冲区有个溢写的比例spill.percent。这个比例默认是0.8，也就是当缓冲区的数据已经达到阈值（buffersize * spill percent = 100MB * 0.8 = 80MB），溢写线程启动，锁定这80MB的内存，执行溢写过程。Maptask的输出结果还可以往剩下的20MB内存中写，互不影响。 
 
 ![此处输入图片的描述][5]
 
+
 ----------
+
+**Sort**：
+
+当Spill触发后，Sort And Spill先把Kvbuffer中的数据按照partition值和key两个关键字升序排序，移动的只是索引数据，排序结果是Kvmeta中数据按照partition为单位聚集在一起，同一partition内的按照key有序排列。
+
+
+----------
+
+#### Combine And Spill
 
 Combiner 将有相同key的 key/value 对加起来，减少溢写spill到磁盘的数据量。
 
-Combiner的适用场景：由于Combiner的输出是Reducer的输入，Combiner绝不能改变最终的计算结果。故大多数情况下，combiner适用于输入输出的key/value类型完全一致，且不影响最终结果的场景（比如累加、最大值等……）。Combiner的使用一定得慎重，如果用好，它对job执行效率有帮助，反之会影响reduce的最终结果。 
+Spill线程为这次Spill过程创建一个磁盘文件：从所有的本地目录中轮训查找能存储这么大空间的目录，找到之后在其中创建一个类似于“spill12.out”的文件。Spill线程根据排过序的Kvmeta挨个partition的把数据吐到这个文件中。
+
+在这个过程中如果用户配置了combiner类，那么在写之前会先调用combineAndSpill()，对结果进行进一步合并后再写出。Combiner会优化MapReduce的中间结果，所以它在整个模型中会多次使用。
 
 ![此处输入图片的描述][6]
 
