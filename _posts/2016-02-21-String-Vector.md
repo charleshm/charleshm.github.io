@@ -101,6 +101,12 @@ vector<T> v5{a,b,c...}   //列表初始化
 vector<T> v6 = {a,b,c...}
 {% endhighlight %}
 
+#### 二维数组
+
+{% highlight c++ %}
+vector<vector<int>>  myvec(rowsize,vector<int>(colsize));
+{% endhighlight %}
+
 ----------
 
 
