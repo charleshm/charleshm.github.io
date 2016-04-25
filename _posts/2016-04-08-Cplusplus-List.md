@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "lianbiao"
+title:  "链表"
 date:   2016-04-08 14:28
 categories: 数据结构与算法
 ---
