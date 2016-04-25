@@ -54,7 +54,6 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 ----------
 
 #### Shuffle过程
-http://blog.csdn.net/DianaCody/article/details/39502917
 
 **Partition**:
 
