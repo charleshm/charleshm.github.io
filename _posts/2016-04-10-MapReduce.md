@@ -107,6 +107,6 @@ Spill线程为这次Spill过程创建一个磁盘文件：从所有的本地目�
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_job.png?imageView2/2/w/450
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/map_shuffle_reduce.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/mapreduce_spilt.png
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_MapReduceWordCountOverview1.png
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/word-count-as-mapreduce.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_map_unused.png
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/hadoop_002.png
