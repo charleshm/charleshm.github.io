@@ -24,9 +24,43 @@ MapReduce是一种高度抽象的模型，它屏蔽了并行计算、容错、�
 
 ![此处输入图片的描述][2]
 
+
 ----------
 
-源码：
+#### 主方法Main分析
+首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。    
+对Job进行合理的命名有助于快速地找到Job，方便在JobTracker和Tasktracker页面中对其进行监视。
+
+{% highlight java %}
+JobConf conf = new JobConf(WordCount.class);
+conf.setJobName("wordcount");
+{% endhighlight %}
+
+
+----------
+
+
+接着设置Job输出结果<key,value>的中key和value数据类型，因为结果是<单词,个数>，所以key设置为"Text"类型，相当于Java中String类型。Value设置为"IntWritable"，相当于Java中的int类型。
+
+{% highlight java %}
+conf.setOutputKeyClass(Text.class );
+conf.setOutputValueClass(IntWritable.class );
+{% endhighlight %}
+
+
+----------
+
+然后设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。
+
+{% highlight java %}
+conf.setMapperClass(Map.class );
+conf.setCombinerClass(Reduce.class );
+conf.setReducerClass(Reduce.class );
+{% endhighlight %}
+
+----------
+
+#### 源码
 
 {% highlight java %}
 import java.io.IOException;
@@ -103,40 +137,6 @@ public class WordCount {
     }
 }
 {% endhighlight %}
-
-----------
-
-#### 主方法Main分析
-首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。    
-对Job进行合理的命名有助于快速地找到Job，方便在JobTracker和Tasktracker页面中对其进行监视。
-
-{% highlight java %}
-JobConf conf = new JobConf(WordCount.class);
-conf.setJobName("wordcount");
-{% endhighlight %}
-
-
-----------
-
-
-接着设置Job输出结果<key,value>的中key和value数据类型，因为结果是<单词,个数>，所以key设置为"Text"类型，相当于Java中String类型。Value设置为"IntWritable"，相当于Java中的int类型。
-
-{% highlight java %}
-conf.setOutputKeyClass(Text.class );
-conf.setOutputValueClass(IntWritable.class );
-{% endhighlight %}
-
-
-----------
-
-然后设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。
-
-{% highlight java %}
-conf.setMapperClass(Map.class );
-conf.setCombinerClass(Reduce.class );
-conf.setReducerClass(Reduce.class );
-{% endhighlight %}
-
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/optimized-ec2d.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/word-count-as-mapreduce.png
