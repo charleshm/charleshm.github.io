@@ -43,7 +43,7 @@ Job job = Job.getInstance(conf, "word count");
 
 ----------
 
-<p class="first">2 设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。</p>
+<p class="first">2 设置Job处理的Map(拆分)、Combiner(中间结果合并)以及Reduce(合并)的相关处理类。</p>
 
 {% highlight java %}
 job.setMapperClass(TokenizerMapper.class);
