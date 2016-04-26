@@ -28,7 +28,7 @@ MapReduce是一种高度抽象的模型，它屏蔽了并行计算、容错、�
 ----------
 
 #### 主方法Main分析
-<p class="first">Job的初始化过程</p>
+<p class="first">1 Job的初始化过程</p>
 main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。    
 对Job进行合理的命名有助于快速地找到Job，方便在JobTracker和Tasktracker页面中对其进行监视。
 
@@ -40,7 +40,7 @@ conf.setJobName("wordcount");
 
 ----------
 
-<p class="first">设置Job输出结果中key和value数据类型</p>
+<p class="first">2 设置Job输出结果中key和value数据类型</p>
 因为结果是<单词,个数>，所以key设置为"Text"类型，相当于Java中String类型。Value设置为"IntWritable"，相当于Java中的int类型。
 
 {% highlight java %}
@@ -51,7 +51,7 @@ conf.setOutputValueClass(IntWritable.class );
 
 ----------
 
-<p class="first">设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。</p>
+<p class="first">3 设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。</p>
 
 {% highlight java %}
 conf.setMapperClass(Map.class );
@@ -62,7 +62,7 @@ conf.setReducerClass(Reduce.class );
 
 ----------
 
-<p class="first">调用setInputPath()和setOutputPath()设置输入输出路径</p>
+<p class="first">4 调用setInputPath()和setOutputPath()设置输入输出路径</p>
 
 {% highlight java %}
 FileInputFormat.setInputPaths(conf, new Path(args[0]));
