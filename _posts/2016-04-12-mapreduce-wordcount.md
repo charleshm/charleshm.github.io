@@ -90,7 +90,7 @@ InputSplit是Hadoop定义的用来传送给每个单独的map的数据，InputSp
 
 ----------
 
-**OutputFormat**：
+<p class="first">OutputFormat</p>
 
 每一种输入格式都有一种输出格式与其对应。默认的输出格式是TextOutputFormat，这种输出方式与输入类似，会将每条记录以一行的形式存入文本文件。不过，它的键和值可以是任意形式的，因为程序内容会调用toString()方法将键和值转换为String类型再输出。
 
