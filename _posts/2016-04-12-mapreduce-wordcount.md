@@ -73,7 +73,7 @@ FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 ----------
 
-#### InputFormat 和　OutputFormat
+#### InputFormat和OutputFormat
 
 <p class="first">InputFormat 和 InputSplit</p>
 
