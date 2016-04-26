@@ -79,7 +79,7 @@ conf.setInputFormat(TextInputFormat.class );
 conf.setOutputFormat(TextOutputFormat.class );
 {% endhighlight %}
 
-> InputSplit是Hadoop定义的用来传送给每个单独的map的数据，InputSplit存储的并非数据本身，而是一个分片长度和一个记录数据位置的数组。生成InputSplit的方法可以通过InputFormat()来设置。
+> InputSplit是Hadoop定义的用来传送给每个单独的map的数据，InputSplit存储的并非数据本身，而是一个分片长度和一个记录数据位置的数组。生成InputSplit的方法可以通过InputFormat( )来设置。
 
 当数据传送给map时，map会将输入分片传送到InputFormat，InputFormat则调用方法getRecordReader()生成RecordReader，RecordReader再通过creatKey()、creatValue()方法创建可供map处理的<key,value>对。简而言之，InputFormat()方法是用来生成可供map处理的<key,value>对的。
 
