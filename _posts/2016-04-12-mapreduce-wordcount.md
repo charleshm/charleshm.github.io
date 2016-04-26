@@ -19,7 +19,7 @@ MapReduce是一种高度抽象的模型，它屏蔽了并行计算、容错、�
 
 ----------
 
-#### wordcount 分析
+#### wordcount 分析[^1]
 处理流程，
 
 ![此处输入图片的描述][2]
@@ -177,3 +177,7 @@ public class WordCount {
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/optimized-ec2d.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/word-count-as-mapreduce.png
+
+----------
+
+  [^1]: [Hadoop集群（第6期）_WordCount运行详解](http://www.cnblogs.com/xia520pi/archive/2012/05/16/2504205.html)
