@@ -107,7 +107,9 @@ public class WordCount {
 ----------
 
 #### 主方法Main分析
-首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。对Job进行合理的命名有助于更快地找到Job，以便在JobTracker和Tasktracker的页面中对其进行监视。
+首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。
+
+对Job进行合理的命名有助于更快地找到Job，以便在JobTracker和Tasktracker的页面中对其进行监视。
 
 {% highlight c++ %}
 JobConf conf = new JobConf(WordCount.class);
