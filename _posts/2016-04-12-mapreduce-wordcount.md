@@ -102,6 +102,17 @@ Map类继承自MapReduceBase，并且它实现了Mapper接口，此接口是一�
 
 在本例中，因为使用的是TextInputFormat，它的输出key值是LongWritable类型，输出value值是Text类型，所以map的输入类型为<LongWritable,Text>。在本例中需要输出<word,1>这样的形式，因此输出的key值类型是Text，输出的value值类型是IntWritable。
 
+{% highlight java %}
+public void map(Object key, Text value, Context context
+               ) throws IOException, InterruptedException {
+    StringTokenizer itr = new StringTokenizer(value.toString());
+    while (itr.hasMoreTokens()) {
+        word.set(itr.nextToken());
+        context.write(word, one);
+    }
+}
+{% endhighlight %}
+
 Map过程需要继承org.apache.hadoop.mapreduce包中Mapper类，并重写其map方法。StringTokenizer类将每一行拆分成为一个个的单词，并将<word,1>作为map方法的结果输出。
 
 ----------
@@ -110,6 +121,18 @@ Map过程需要继承org.apache.hadoop.mapreduce包中Mapper类，并重写其ma
 
 Reduce过程需要继承org.apache.hadoop.mapreduce包中Reducer类，并重写其reduce方法。Map过程输出<key,values>中key为单个单词，而values是对应单词的计数值所组成的列表，reduce方法只要遍历values并求和，即可得到某个单词的总次数。
 
+{% highlight java %}
+public void reduce(Text key, Iterable<IntWritable> values,
+                   Context context
+                  ) throws IOException, InterruptedException {
+    int sum = 0;
+    for (IntWritable val : values) {
+        sum += val.get();
+    }
+    result.set(sum);
+    context.write(key, result);
+}
+{% endhighlight %}
 
 ----------
 
