@@ -74,7 +74,7 @@ ListNode *reverse(struct node* head) {
     //最后一个节点会返回 作为头部
     if (　head == NULL || head->next == NULL) return head;
     //先反转后面的链表
-    struct node * newHead = reverse(head->next);
+    ListNode  *newHead = reverse(head->next);
     head->next->next = head; //让下一个结点指向当前节点
     head->next = NULL;
     return newHead;
