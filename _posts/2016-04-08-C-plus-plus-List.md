@@ -88,18 +88,18 @@ ListNode *reverse(struct node* head) {
 
 {% highlight c++ %}
 ListNode *deleteDuplicates(ListNode *head) {
-    if (head == NULL) return head;
-    ListNode *fast = head->next;
-    ListNode *slow = head;
-
-    while (fast != NULL) {
-        if (fast->val != slow->val) {
-            slow->next = fast;
-            slow = fast;
+    if(head == nullptr) return head;
+    ListNode *prev = head;
+    ListNode *cur = head->next;
+    while(cur != nullptr){
+        if(cur->val != prev->val){
+            prev->next = cur;
+            prev = cur;
         }
-        fast = fast->next;
+        cur = cur->next;
     }
-    slow->next = NULL;
+    prev->next = cur;
+    //返回链表的头指针与原链表的头指针是一样的
     return head;
 }
 {% endhighlight %}
