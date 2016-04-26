@@ -76,7 +76,7 @@ conf.setInputFormat(TextInputFormat.class );
 conf.setOutputFormat(TextOutputFormat.class );
 {% endhighlight %}
 
-<h5 class="first">InputFormat 和 InputSplit</h5>
+<p class="first">InputFormat 和 InputSplit</p>
 
 InputSplit是Hadoop定义的用来传送给每个单独的map的数据，InputSplit存储的并非数据本身，而是一个分片长度和一个记录数据位置的数组。生成InputSplit的方法可以通过InputFormat()来设置。
 
