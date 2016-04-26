@@ -115,5 +115,16 @@ JobConf conf = new JobConf(WordCount.class);
 conf.setJobName("wordcount");
 {% endhighlight %}
 
+
+----------
+
+
+接着设置Job输出结果<key,value>的中key和value数据类型，因为结果是<单词,个数>，所以key设置为"Text"类型，相当于Java中String类型。Value设置为"IntWritable"，相当于Java中的int类型。
+
+{% highlight c++ %}
+conf.setOutputKeyClass(Text.class );
+conf.setOutputValueClass(IntWritable.class );
+{% endhighlight %}
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/optimized-ec2d.png
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/word-count-as-mapreduce.png
