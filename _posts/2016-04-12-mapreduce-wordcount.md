@@ -58,6 +58,42 @@ conf.setCombinerClass(Reduce.class );
 conf.setReducerClass(Reduce.class );
 {% endhighlight %}
 
+
+----------
+
+接着就是调用setInputPath()和setOutputPath()设置输入输出路径。
+
+{% highlight java %}
+FileInputFormat.setInputPaths(conf, new Path(args[0]));
+FileOutputFormat.setOutputPath(conf, new Path(args[1]));
+{% endhighlight %}
+
+
+----------
+
+{% highlight java %}
+conf.setInputFormat(TextInputFormat.class );
+conf.setOutputFormat(TextOutputFormat.class );
+{% endhighlight %}
+
+**InputFormat 和 InputSplit**：
+
+InputSplit是Hadoop定义的用来传送给每个单独的map的数据，InputSplit存储的并非数据本身，而是一个分片长度和一个记录数据位置的数组。生成InputSplit的方法可以通过InputFormat()来设置。
+
+当数据传送给map时，map会将输入分片传送到InputFormat，InputFormat则调用方法getRecordReader()生成RecordReader，RecordReader再通过creatKey()、creatValue()方法创建可供map处理的<key,value>对。简而言之，InputFormat()方法是用来生成可供map处理的<key,value>对的。
+
+其中TextInputFormat是Hadoop默认的输入方法，在TextInputFormat中，每个文件（或其一部分）都会单独地作为map的输入，而这个是继承自FileInputFormat的。之后，每行数据都会生成一条记录，每条记录则表示成<key,value>形式：
+
+- key值是每个数据的记录在数据分片中字节偏移量，数据类型是LongWritable；　　
+- value值是每行的内容，数据类型是Text。
+
+
+----------
+
+**OutputFormat**：
+
+每一种输入格式都有一种输出格式与其对应。默认的输出格式是TextOutputFormat，这种输出方式与输入类似，会将每条记录以一行的形式存入文本文件。不过，它的键和值可以是任意形式的，因为程序内容会调用toString()方法将键和值转换为String类型再输出。
+
 ----------
 
 #### 源码
