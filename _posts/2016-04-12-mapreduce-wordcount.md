@@ -48,7 +48,7 @@ import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
 
 public class WordCount {
-
+    //Map
     public static class Map extends MapReduceBase implements
         Mapper<LongWritable, Text, Text, IntWritable> {
         private final static IntWritable one = new IntWritable(1);
@@ -66,6 +66,7 @@ public class WordCount {
         }
     }
 
+    //Reduce
     public static class Reduce extends MapReduceBase implements
         Reducer<Text, IntWritable, Text, IntWritable> {
         public void reduce(Text key, Iterator<IntWritable> values,
