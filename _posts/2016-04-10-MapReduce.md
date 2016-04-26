@@ -35,6 +35,8 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 
 #### Map
 
+Mapper将输入键值对(key/value pair)映射到一组中间格式的键值对集合。
+
 ![此处输入图片的描述][4]
 
 ----------
