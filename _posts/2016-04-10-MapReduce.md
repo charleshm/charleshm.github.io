@@ -55,7 +55,7 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 
 #### Shuffle过程
 
-**Partition**:
+<p class="first">Partition</p>
 
 > 对于map输出的每一个键值对，系统都会给定一个partition，partition值默认是通过计算key的hash值后对Reduce task的数量取模获得。如果一个键值对的partition值为1，意味着这个键值对会交给第一个Reducer处理[^3]。
 
@@ -63,13 +63,13 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 {% endhighlight %}
 
-**Collector**：
+<p class="first">Collector</p>
 
 然后将数据写入内存环形缓冲区中，缓冲区的作用是批量收集map结果，减少磁盘IO的影响。key/value对以及 Partition 的结果都会被写入**缓冲区**。写入之前，key 与value 值会被序列化成字节数组(Kvbuffer)。
 
 ----------
 
-**spill触发**:
+<p class="first">spill触发</p>
 
 由于内存缓冲区的大小限制（默认100MB），当map task输出结果很多时就可能发生内存溢出，所以需要在一定条件下将缓冲区的数据临时写入磁盘，然后重新利用这块缓冲区。这个从内存往磁盘写数据的过程被称为Spill，中文可译为溢写。这个溢写是由另外单独线程来完成，不影响往缓冲区写map结果的collector线程。
 
@@ -80,14 +80,14 @@ reducer=(key.hashCode() & Integer.MAX_VALUE) % numReduceTasks
 
 ----------
 
-**Sort**：
+<p class="first">Sort And Spill</p>
 
 当Spill触发后，Sort And Spill先把Kvbuffer中的数据按照partition值和key两个关键字升序排序，移动的只是索引数据，排序结果是Kvmeta中数据按照partition为单位聚集在一起，同一partition内的按照key有序排列。
 
 
 ----------
 
-#### Combine And Spill
+<p class="first">Combine And Spill</p>
 
 Combiner 将有相同key的 key/value 对加起来，减少溢写spill到磁盘的数据量。
 
