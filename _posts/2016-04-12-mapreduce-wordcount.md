@@ -12,7 +12,10 @@ MapReduce是一种高度抽象的模型，它屏蔽了并行计算、容错、�
 
 > "分而治之"：我们会首先把任务划分为多个小任务，map 对各个小任务进行处理，reduce 负责把 map 的输出的中间结果汇总起来。
 
-在Hadoop中，用于执行MapReduce任务的机器角色有两个：一个是JobTracker；另一个是TaskTracker，JobTracker是用于调度工作的，TaskTracker是用于执行工作的。一个Hadoop集群中只有一台JobTracker。
+在Hadoop中，用于执行MapReduce任务的机器角色有两个：
+- 一个是JobTracker；    
+- 另一个是TaskTracker，      
+JobTracker是用于调度工作的，TaskTracker是用于执行工作的。一个Hadoop集群中只有一台JobTracker。
 
 ![此处输入图片的描述][1]
 
@@ -107,9 +110,8 @@ public class WordCount {
 ----------
 
 #### 主方法Main分析
-首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。
-
-对Job进行合理的命名有助于更快地找到Job，以便在JobTracker和Tasktracker的页面中对其进行监视。
+首先是Job的初始化过程。main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJobName()方法命名这个Job。    
+对Job进行合理的命名有助于快速地找到Job，方便在JobTracker和Tasktracker页面中对其进行监视。
 
 {% highlight c++ %}
 JobConf conf = new JobConf(WordCount.class);
