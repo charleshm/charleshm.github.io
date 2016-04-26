@@ -139,8 +139,33 @@ ListNode* deleteDuplicates(ListNode* head) {
 }
 {% endhighlight %}
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
+----------
 
+#### Add Two Numbers 
 
+{% highlight c++ %}
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    if (l1 == nullptr) return  l1;
+    ListNode dummy(INT_MIN);
+    ListNode *prev = &dummy;
+    int carry = 0;
+    while (l1 != nullptr || l2 != nullptr) {
+        int ia = (l1 == nullptr) ? 0 : l1->val;
+        int ib = (l2 == nullptr) ? 0 : l2->val;
+        int sum = ia + ib + carry;
+        carry = sum / 10;
+        prev->next = new ListNode(sum % 10);
+        prev = prev->next;
+        l1 = (l1 == nullptr) ? nullptr : l1->next;
+        l2 = (l2 == nullptr) ? nullptr : l2->next;
+    }
+    if (carry) {
+        prev->next = new ListNode(carry);
+        prev = prev->next;
+    }
+    prev->next = nullptr;
+    return dummy.next;
+}
+{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
