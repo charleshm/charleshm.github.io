@@ -8,7 +8,7 @@ categories: 大数据
 ---
 
 ### MapReduce的体系结构
-Map/Reduce计算集群由一个单独的 JobTracker（master） 和每个集群节点一个 TaskTracker（slave）共同组成。JobTracker负责调度构成一个作业的所有任务，这些任务会被分派到不同的 TaskTracker 上去执行，JobTracker 会监控它们的执行情况。而 TaskTracker 仅负责执行由 JobTracker 指派的任务。
+Map/Reduce计算集群由一个单独的 JobTracker（master，NameNode） 和每个集群节点一个 TaskTracker（slave，DataNode）共同组成。JobTracker负责调度构成一个作业的所有任务，这些任务会被分派到不同的 TaskTracker 上去执行，JobTracker 会监控它们的执行情况。而 TaskTracker 仅负责执行由 JobTracker 指派的任务。
 
 ![此处输入图片的描述][1]
 
