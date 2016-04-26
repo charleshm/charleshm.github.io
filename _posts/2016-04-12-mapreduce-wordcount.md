@@ -37,40 +37,37 @@ main函数调用Jobconf类来对MapReduce Job进行初始化，然后调用setJo
 对Job进行合理的命名有助于快速地找到Job，方便在JobTracker和Tasktracker页面中对其进行监视。
 
 {% highlight java %}
-JobConf conf = new JobConf(WordCount.class);
-conf.setJobName("wordcount");
+Configuration conf = new Configuration();
+Job job = Job.getInstance(conf, "word count");
 {% endhighlight %}
-
 
 ----------
 
-<p class="first">2 设置Job输出结果中key和value数据类型</p>
+<p class="first">2 设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。</p>
+
+{% highlight java %}
+job.setMapperClass(TokenizerMapper.class);
+job.setCombinerClass(IntSumReducer.class);
+job.setReducerClass(IntSumReducer.class);
+{% endhighlight %}
+
+----------
+
+<p class="first">3 设置Job输出结果中key和value数据类型</p>
 因为结果是<单词,个数>，所以key设置为"Text"类型，相当于Java中String类型。Value设置为"IntWritable"，相当于Java中的int类型。
 
 {% highlight java %}
-conf.setOutputKeyClass(Text.class );
-conf.setOutputValueClass(IntWritable.class );
+job.setOutputKeyClass(Text.class);
+job.setOutputValueClass(IntWritable.class); 
 {% endhighlight %}
-
-
-----------
-
-<p class="first">3 设置Job处理的Map（拆分）、Combiner（中间结果合并）以及Reduce（合并）的相关处理类。</p>
-
-{% highlight java %}
-conf.setMapperClass(Map.class );
-conf.setCombinerClass(Reduce.class );
-conf.setReducerClass(Reduce.class );
-{% endhighlight %}
-
 
 ----------
 
 <p class="first">4 调用setInputPath()和setOutputPath()设置输入输出路径</p>
 
 {% highlight java %}
-FileInputFormat.setInputPaths(conf, new Path(args[0]));
-FileOutputFormat.setOutputPath(conf, new Path(args[1]));
+FileInputFormat.addInputPath(job, new Path(args[0]));
+FileOutputFormat.setOutputPath(job, new Path(args[1]));
 {% endhighlight %}
 
 
