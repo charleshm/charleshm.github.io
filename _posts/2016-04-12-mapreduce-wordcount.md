@@ -12,9 +12,7 @@ MapReduce是一种高度抽象的模型，它屏蔽了并行计算、容错、�
 
 > "分而治之"：我们会首先把任务划分为多个小任务，map 对各个小任务进行处理，reduce 负责把 map 的输出的中间结果汇总起来。
 
-在Hadoop中，用于执行MapReduce任务的机器角色有两个：
-- 一个是JobTracker；    
-- 另一个是TaskTracker，      
+在Hadoop中，用于执行MapReduce任务的机器角色有两个：一个是JobTracker；另一个是TaskTracker。     
 JobTracker是用于调度工作的，TaskTracker是用于执行工作的。一个Hadoop集群中只有一台JobTracker。
 
 ![此处输入图片的描述][1]
