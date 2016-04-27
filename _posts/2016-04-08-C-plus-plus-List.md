@@ -83,6 +83,32 @@ ListNode *reverse(struct node* head) {
 
 
 ----------
+#### 链表反转局部
+
+![此处输入图片的描述][2]
+
+{% highlight c++ %}
+ListNode* reverseBetween(ListNode* head, int m, int n) {
+    ListNode dummy(INT_MIN);
+    dummpy.next = head;
+    ListNode *prev = &dummpy;
+
+    for (int i = 0; i < m - 1; ++i) prev = prev->next;
+    ListNode *head2 = prev;
+    prev = prev->next;
+    ListNode *cur = prev->next;
+    for (int i = m; i < n; ++i) {
+        prev->next = cur->next;
+        cur->next = head2->next;
+        head2->next = cur;
+        cur = prev->next;
+    }
+    return dummy.next;
+
+}
+{% endhighlight %}
+
+----------
 
 #### 删除链表中的重复元素
 
