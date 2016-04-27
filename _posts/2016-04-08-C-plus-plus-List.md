@@ -81,8 +81,8 @@ ListNode *reverse(struct node* head) {
 }
 {% endhighlight %}
 
-
 ----------
+
 #### 链表反转局部
 
 ![此处输入图片的描述][2]
@@ -110,29 +110,30 @@ ListNode* reverseBetween(ListNode* head, int m, int n) {
 
 ----------
 
-#### 删除链表中的重复元素
+#### [删除链表中的重复元素][3]
 
 {% highlight c++ %}
 ListNode *deleteDuplicates(ListNode *head) {
-    if(head == nullptr) return head;
-    ListNode *prev = head;
-    ListNode *cur = head->next;
-    while(cur != nullptr){
-        if(cur->val != prev->val){
-            prev->next = cur;
-            prev = cur;
+    if (head == NULL) return head;
+    ListNode *fast = head->next;
+    ListNode *slow = head;
+
+    while (fast != NULL) {
+        if (fast->val != slow->val) {
+            slow->next = fast;
+            slow = fast;
         }
-        cur = cur->next;
+        fast = fast->next;
     }
-    prev->next = cur;
-    //返回链表的头指针与原链表的头指针是一样的
+    slow->next = NULL;
     return head;
 }
 {% endhighlight %}
 
+
 ----------
 
-#### Remove Duplicates from Sorted List II
+#### [Remove Duplicates from Sorted List II][4]
 
 {% highlight c++ %}
 ListNode* deleteDuplicates(ListNode* head) {
@@ -165,33 +166,8 @@ ListNode* deleteDuplicates(ListNode* head) {
 }
 {% endhighlight %}
 
-----------
-
-#### Add Two Numbers 
-
-{% highlight c++ %}
-ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    if (l1 == nullptr) return  l1;
-    ListNode dummy(INT_MIN);
-    ListNode *prev = &dummy;
-    int carry = 0;
-    while (l1 != nullptr || l2 != nullptr) {
-        int ia = (l1 == nullptr) ? 0 : l1->val;
-        int ib = (l2 == nullptr) ? 0 : l2->val;
-        int sum = ia + ib + carry;
-        carry = sum / 10;
-        prev->next = new ListNode(sum % 10);
-        prev = prev->next;
-        l1 = (l1 == nullptr) ? nullptr : l1->next;
-        l2 = (l2 == nullptr) ? nullptr : l2->next;
-    }
-    if (carry) {
-        prev->next = new ListNode(carry);
-        prev = prev->next;
-    }
-    prev->next = nullptr;
-    return dummy.next;
-}
-{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
+  [3]: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+  [4]: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
