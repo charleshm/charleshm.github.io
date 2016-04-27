@@ -10,6 +10,7 @@ categories: 数据结构与算法
 #### 头节点和头指针
 - 头结点是为了操作的统一与方便而设立的，放在第一个元素结点之前，其数据域一般无意义（当然有些情况下也可存放链表的长度、用做监视哨等等）。
 - 有了头结点后，对在第一个元素结点前插入结点和删除第一个结点，其操作与对其它结点的操作统一了。
+- 凡是链表的头结点可能发生变化的问题里面，我们都可以设立一个头指针来记录新的头结点的位置。
 
 ![此处输入图片的描述][1]
 
@@ -221,6 +222,13 @@ ListNode* rotateRight(ListNode* head, int k) {
     return head;
 }
 {% endhighlight %}
+
+----------
+
+#### Remove Nth Node From End of List
+这道题的核心就是如何走出　$len-n$ 的长度，最直接的方式是先遍历一遍，求得链表长度，然后从头开始走　$len-n-1$步。
+
+我们也可以设两个指针p,q，让p先走n步，然后p,q一起走，当p走到尾结点时，删除q->next即可。
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
