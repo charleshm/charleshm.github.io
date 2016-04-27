@@ -81,7 +81,6 @@ ListNode *reverse(struct node* head) {
 }
 {% endhighlight %}
 
-#### Partition List
 
 ----------
 
