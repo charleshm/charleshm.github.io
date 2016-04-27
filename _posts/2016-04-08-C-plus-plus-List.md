@@ -171,6 +171,7 @@ ListNode* deleteDuplicates(ListNode* head) {
 ----------
 
 #### Partition List
+拆分成两段链表来做，再合起来
 
 {% highlight c++ %}
 ListNode* partition(ListNode* head, int x) {
@@ -192,6 +193,32 @@ ListNode* partition(ListNode* head, int x) {
     return left_dummy.next;
 }
 
+{% endhighlight %}
+
+----------
+
+#### Rotate List
+将链表连接成环，然后在指定位置断开即可
+
+{% highlight c++ %}
+ListNode* rotateRight(ListNode* head, int k) {
+    if (head == nullptr || k == 0) return head;
+    int len = 1;
+    ListNode *ptr = head;
+    while (ptr->next) {
+        ++len;
+        ptr = ptr->next;
+    }
+    ptr->next = head;
+    int steps = len - k % len;
+    while (steps) {
+        --steps;
+        ptr = ptr->next;
+    }
+    head = ptr->next;
+    ptr->next = nullptr;
+    return head;
+}
 {% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
