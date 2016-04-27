@@ -3,7 +3,7 @@ published: true
 author: Charles
 layout: post
 title:  "Hadoop学习之HDFS"
-date:   2016-04-15 14:28
+date:   2016-04-09 14:28
 categories: 大数据
 ---
 
