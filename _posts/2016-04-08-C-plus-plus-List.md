@@ -226,9 +226,26 @@ ListNode* rotateRight(ListNode* head, int k) {
 ----------
 
 #### Remove Nth Node From End of List
-这道题的核心就是如何走出　$len-n$ 的长度，最直接的方式是先遍历一遍，求得链表长度，然后从头开始走　$len-n-1$步。
+这道题的核心就是如何走出　$len-n$ 的长度，最直接的方式是先遍历一遍，求得链表长度，然后从头开始走　$len-n$步。
 
 我们也可以设两个指针p,q，让p先走n步，然后p,q一起走，当p走到尾结点时，删除q->next即可。
+
+{% highlight c++ %}
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+    ListNode dummy(-1, head);
+    ListNode *p = &dummy, *q = &dummy;
+    int steps = n;
+    while (steps) p = p->next;
+    while (p->next) {
+        p = p->next;
+        q = q->next;
+    }
+    ListNode *tmp = q->next;
+    q->next = q->next->next;
+    delete(tmp);
+    return dummy.next;
+}
+{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
