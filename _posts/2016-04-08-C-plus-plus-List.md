@@ -200,6 +200,8 @@ ListNode* partition(ListNode* head, int x) {
 #### Rotate List
 将链表连接成环，然后在指定位置断开即可
 
+![此处输入图片的描述][5]
+
 {% highlight c++ %}
 ListNode* rotateRight(ListNode* head, int k) {
     if (head == nullptr || k == 0) return head;
@@ -225,3 +227,4 @@ ListNode* rotateRight(ListNode* head, int k) {
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
   [3]: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
   [4]: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/circle.png
