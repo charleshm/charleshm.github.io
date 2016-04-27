@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "MapReduce详解"
+title:  "Hadoop学习之MapReduce"
 date:   2016-04-10 14:28
 categories: 大数据
 ---
