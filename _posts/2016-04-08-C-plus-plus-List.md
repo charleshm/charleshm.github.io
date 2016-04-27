@@ -81,6 +81,8 @@ ListNode *reverse(struct node* head) {
 }
 {% endhighlight %}
 
+#### Partition List
+
 ----------
 
 #### 链表反转局部
@@ -166,6 +168,31 @@ ListNode* deleteDuplicates(ListNode* head) {
 }
 {% endhighlight %}
 
+----------
+
+#### Partition List
+
+{% highlight c++ %}
+ListNode* partition(ListNode* head, int x) {
+    ListNode left_dummy(-1), right_dummy(-1);
+    ListNode *left_prev = &left_dummy, *right_prev = &right_dummy;
+    ListNode *cur = head;
+    while (cur) {
+        if (cur->val < x) {
+            left_prev->next = cur;
+            left_prev = cur;
+        } else {
+            right_prev->next = cur;
+            right_prev = cur;
+        }
+        cur = cur->next;
+    }
+    left_prev->next = right_dummy.next;
+    right_prev->next = nullptr;
+    return left_dummy.next;
+}
+
+{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
