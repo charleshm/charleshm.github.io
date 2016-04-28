@@ -7,13 +7,15 @@ date:   2016-04-09 14:28
 categories: 大数据
 ---
 
+![此处输入图片的描述][1]
+
 #### 分布式文件系统
 
 当数据集的大小超过一台独立物理计算机的存储能力时，就有必要对它进行分区(partition)并存储到若干台单独的计算机上。
 
 管理网络中跨多台计算机存储的文件系统称为分布式文件系统(distributed file system)。该系统架构于网络之上，势必会引入网络编程的复杂性，因此分布式文件系统比普通磁盘文件系统更为复杂。例如，使文件系统能够容忍节点故障且不丢失任何数据，就是一个极大的挑战。
 
-![此处输入图片的描述][1]
+![此处输入图片的描述][2]
 
 ----------
 
@@ -80,7 +82,7 @@ HDFS特殊的设计，在实现上述优良特性的同时，也使得自身具�
 
 分布式文件系统在物理结构上是由计算机集群中的多个节点构成的，这些节点分为两类，一类叫“主节点”(Master Node)或者也被称为“名称结点”(NameNode)，另一类叫“从节点”（Slave Node）或者也被称为“数据节点”(DataNode).
 
-![此处输入图片的描述][2]
+![此处输入图片的描述][3]
 
 
 ----------
@@ -118,7 +120,7 @@ ${dfs.name.dir}/current/VERSION
 
 名称节点记录了每个文件中各个块所在的数据节点的位置信息
 
-![此处输入图片的描述][3]
+![此处输入图片的描述][4]
 
 ----------
 
@@ -169,7 +171,7 @@ ${fs.checkpoint.dir}/current/VERSION
  4. Secondary NameNode执行完（3）操作之后，会通过post方式将新的FsImage文件发送到NameNode节点上
  5. NameNode将从Secondary NameNode接收到的新的FsImage替换旧的FsImage文件，同时将edit.new替换EditLog文件，通过这个过程EditLog就变小了
 
-![此处输入图片的描述][4]
+![此处输入图片的描述][5]
 
 ----------
 
@@ -177,7 +179,7 @@ ${fs.checkpoint.dir}/current/VERSION
 
 数据节点是分布式文件系统HDFS的工作节点，负责数据的**存储**和**读取**，会根据客户端或者是名称节点的调度来进行数据的存储和检索，并且向名称节点定期发送自己所存储的块的列表。
 
-![此处输入图片的描述][5]
+![此处输入图片的描述][6]
 
 和NameNode不同，DataNode的存储目录是启动时自动创建的，不需要额外格式化，DataNode的关键文件和目录如下：
 
@@ -216,15 +218,13 @@ ${dfs.data.dir}/current/VERSION
 
 <p class="first">冗余数据保存</p>
 
-为了保证系统的容错性和可用性，HDFS采用了多副本方式对数据进行冗余存储，通常一个数据块的多个副本会被分布到不同的数据节点上。
-
-这种多副本方式具有以下几个优点：
+为了保证系统的容错性和可用性，HDFS采用了多副本方式对数据进行冗余存储，通常一个数据块的多个副本会被分布到不同的数据节点上，这种多副本方式具有以下几个优点：
 
 - 加快数据传输速度
 - 容易检查数据错误
 - 保证数据可靠性
 
-![此处输入图片的描述][6]
+![此处输入图片的描述][7]
 
 ----------
 
@@ -267,11 +267,11 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
 
 ----------
 
-#### HDFS数据读写过程
+#### HDFS数据读写过程[^3]
 
 <p class="first">读取数据</p>
 
-![此处输入图片的描述][7]
+![此处输入图片的描述][8]
 
 
 ----------
@@ -293,10 +293,9 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
 
 ----------
 
-
 <p class="first">写数据</p>
 
-![此处输入图片的描述][8]
+![此处输入图片的描述][9]
 
 
 ----------
@@ -316,11 +315,12 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
   [^3]: [HDFS读写数据流](http://blog.csdn.net/luyee2010/article/details/8643799)
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_structure.png
-  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/%E5%86%97%E4%BD%99%E6%95%B0%E6%8D%AE.png
-  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_read.png
-  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_write.png
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
+  [6]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_structure.png
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/%E5%86%97%E4%BD%99%E6%95%B0%E6%8D%AE.png
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_read.png
+  [9]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_write.png
