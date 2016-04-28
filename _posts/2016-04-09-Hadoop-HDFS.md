@@ -294,8 +294,26 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
 ----------
 
 
+<p class="first">写数据</p>
+
+![此处输入图片的描述][8]
+
+
+----------
+
+1. 客户端调用 FileSystem 的 get( ) 方法得到一个实例 fs (即分布式文件系统 Distributed FileSystem ),然后 fs 调用 create( ) 创建文件。
+2. DistributedFileSystem( fs ) 通过 RPC 调用 NameNode 在命名空间中创建一个新文件，此时该文件还没有相应的数据块。namenode 会检查此文件是否已存在及client是否有权限新建文件，如果检查不通过，则创建失败并向 client 抛出 IOException 异常，否则 namenode 就会创建一条记录。
+3. 然后 DistributedFileSystem( fs ) 向 client 返回一个 FSDataOutputStream (封装了 DFSOutputStream )对象来写数据。在 client 写数据时，DFSOutputStream 将它分成一个个的数据包并写入内部队列，称作数据队列(data queue).
+4. DFSOutputStream 会请求 namenode 在合适的 datanodes (默认3个)上分配 blocks 来存储数据队列。3个 datanodes 形成一个管线 DataStreamer 将数据包流式的传输到管线中第一个 datanode，第一个datanode存储数据包并发送的第二个datanode, 第二个datanode存储数据包并发送的第三个datanode.
+5. DFSOutputStream 也维护了一个确认队列(ack queue),当收到管道中所有 datanodes 的确认信息后对应数据包才会从确认队列中删除。
+6. Client 完成数据的写入后便对 FSDataOutputStream 调用 close( ) 方法。
+7. 该操作将所有剩余的数据包写入管线，并等待确认，最后向 namenode 报告写完成。
+
+
+
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
   [^2]: [Hadoop：The Definitive Guide 总结](http://www.cnblogs.com/biyeymyhjob/archive/2012/08/13/2636452.html)
+  [^3]: [HDFS读写数据流](http://blog.csdn.net/luyee2010/article/details/8643799)
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
@@ -305,3 +323,4 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_structure.png
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/%E5%86%97%E4%BD%99%E6%95%B0%E6%8D%AE.png
   [7]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_read.png
+  [8]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_write.png
