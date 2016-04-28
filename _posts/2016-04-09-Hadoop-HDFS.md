@@ -127,6 +127,24 @@ FsImage文件包含文件系统中所有目录和文件inode的序列化形式�
 > FsImage文件**没有记录块存储在哪个数据节点**。而是由名称节点把这些映射保留在内存中，当数据节点加入HDFS集群时，数据节点会把自己所包含的块列表告知给名称节点，此后会定期执行这种告知操作，以确保名称节点的块映射是最新的。
 
 
+----------
+
+
+<p class="first">EditLog</p>
+
+在名称节点启动的时候，它会将FsImage文件中的内容加载到内存中，之后再执行EditLog文件中的各项操作，使得内存中的元数据和实际的同步。一旦在内存中成功建立文件系统元数据的映射，则创建一个新的FsImage文件和一个空的EditLog文件
+
+名称节点运行起来之后，HDFS中的更新操作会重新写到EditLog文件中，因为FsImage文件一般都很大（GB级别的很常见），如果所有的更新操作都往FsImage文件中添加，这样会导致系统运行的十分缓慢，但是，如果往EditLog文件里面写就不会这样，因为EditLog 要小很多。
+
+由于HDFS的所有更新操作都是直接写到EditLog中，久而久之， EditLog文件将会变得很大。
+
+虽然这对名称节点运行时候是没有什么明显影响的，但是，当名称节点重启的时候，名称节点需要先将FsImage里面的所有内容映像到内存中，然后再一条一条地执行EditLog中的记录，当EditLog文件非常大的时候，会导致名称节点启动操作非常慢，而在这段时间内HDFS系统处于安全模式，一直无法对外提供写操作，影响了用户的使用。
+
+
+----------
+
+
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
