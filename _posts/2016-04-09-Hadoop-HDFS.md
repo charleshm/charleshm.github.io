@@ -114,4 +114,4 @@ HDFS采用抽象的块概念可以带来以下几个明显的好处：
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/400
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/450
