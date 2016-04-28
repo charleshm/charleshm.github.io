@@ -180,10 +180,8 @@ ${fs.checkpoint.dir}/current/VERSION
 - **冷备份**：b是a的冷备份，如果a坏掉。那么b不能马上代替a工作。但是b上存储a的一些信息，减少a坏掉之后的损失。
 - **Fsimage**:元数据镜像文件(文件系统的目录树。)
 - **edits**：元数据的操作日志(针对文件系统做的修改操作记录)
-
-namenode内存中存储的是 fsimage + edits。
-
-Secondary NameNode负责定时默认1小时，从namenode上，获取fsimage和edits来进行合并，然后再发送给namenode。减少namenode的工作量。
+- namenode内存中存储的是 fsimage + edits。
+- Secondary NameNode负责定时默认1小时，从namenode上，获取fsimage和edits来进行合并，然后再发送给namenode。减少namenode的工作量。
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
