@@ -107,6 +107,13 @@ HDFS采用抽象的块概念可以带来以下几个明显的好处：
 - FsImage用于维护文件系统树以及文件树中所有的文件和文件夹的元数据
 - 操作日志文件EditLog中记录了所有针对文件的创建、删除、重命名等操作
 
+{% highlight Makefile %}
+${dfs.name.dir}/current/VERSION
+                /edits
+                /fsimage
+                /fstime
+{% endhighlight %}
+
 名称节点记录了每个文件中各个块所在的数据节点的位置信息
 
 ![此处输入图片的描述][3]
