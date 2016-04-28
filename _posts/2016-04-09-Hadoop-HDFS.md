@@ -143,28 +143,17 @@ FsImage文件包含文件系统中所有目录和文件inode的序列化形式�
 
 ----------
 
-<p class="first">SecondaryNameNode</p>
+<p class="first">Secondary NameNode</p>
 
 第二名称节点（冷备分）HDFS架构中的一个组成部分，它是用来保存名称节点中对HDFS 元数据信息的备份，并减少名称节点重启的时间。SecondaryNameNode一般是单独运行在一台机器上。
 
-{% highlight Bash %}
-${fs.checkpoint.dir}/current/VERSION
-         /edits
-         /fsimage
-         /fstime
-         /previouts.checkpoint/VERSION
-                /edits
-                /fsimage
-                /fstime
-{% endhighlight %}
+**Secondary NameNode的工作情况**：
 
-**SecondaryNameNode的工作情况**：
-
- 1. SecondaryNameNode会定期和NameNode通信，请求其停止使用EditLog文件，暂时将新的写操作写到一个新的文件edit.new上来，这个操作是瞬间完成，上层写日志的函数完全感觉不到差别；
- 2. SecondaryNameNode通过HTTP GET方式从NameNode上获取到FsImage和EditLog文件，并下载到本地的相应目录下；
- 3. SecondaryNameNode将下载下来的FsImage载入到内存，然后一条一条地执行EditLog文件中的各项更新操作，使得内存中的FsImage保持最新；这个过程就是EditLog和FsImage文件合并；
- 4. SecondaryNameNode执行完（3）操作之后，会通过post方式将新的FsImage文件发送到NameNode节点上
- 5. NameNode将从SecondaryNameNode接收到的新的FsImage替换旧的FsImage文件，同时将edit.new替换EditLog文件，通过这个过程EditLog就变小了
+ 1. Secondary NameNode会定期和NameNode通信，请求其停止使用EditLog文件，暂时将新的写操作写到一个新的文件edit.new上来，这个操作是瞬间完成，上层写日志的函数完全感觉不到差别；
+ 2. Secondary NameNode通过HTTP GET方式从NameNode上获取到FsImage和EditLog文件，并下载到本地的相应目录下；
+ 3. Secondary NameNode将下载下来的FsImage载入到内存，然后一条一条地执行EditLog文件中的各项更新操作，使得内存中的FsImage保持最新；这个过程就是EditLog和FsImage文件合并；
+ 4. Secondary NameNode执行完（3）操作之后，会通过post方式将新的FsImage文件发送到NameNode节点上
+ 5. NameNode将从Secondary NameNode接收到的新的FsImage替换旧的FsImage文件，同时将edit.new替换EditLog文件，通过这个过程EditLog就变小了
 
 ![此处输入图片的描述][4]
 
@@ -183,3 +172,4 @@ ${fs.checkpoint.dir}/current/VERSION
 ----------
 
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
+  [^2]: [Hadoop：The Definitive Guide 总结](http://www.cnblogs.com/biyeymyhjob/archive/2012/08/13/2636452.html)
