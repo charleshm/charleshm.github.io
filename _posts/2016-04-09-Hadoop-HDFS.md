@@ -269,6 +269,10 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
 
 #### HDFS数据读写过程
 
+<p class="first">读取数据</p>
+
+![此处输入图片的描述][7]
+
 
 
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
@@ -281,3 +285,4 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
   [5]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_structure.png
   [6]: http://7xjbdi.com1.z0.glb.clouddn.com/%E5%86%97%E4%BD%99%E6%95%B0%E6%8D%AE.png
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_read.png
