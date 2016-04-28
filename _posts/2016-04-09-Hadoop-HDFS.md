@@ -143,8 +143,22 @@ FsImage文件包含文件系统中所有目录和文件inode的序列化形式�
 
 ----------
 
+<p class="first">SecondaryNameNode</p>
+
+第二名称节点（冷备分）HDFS架构中的一个组成部分，它是用来保存名称节点中对HDFS 元数据信息的备份，并减少名称节点重启的时间。SecondaryNameNode一般是单独运行在一台机器上。
+
+**SecondaryNameNode的工作情况**：
+
+ 1. SecondaryNameNode会定期和NameNode通信，请求其停止使用EditLog文件，暂时将新的写操作写到一个新的文件edit.new上来，这个操作是瞬间完成，上层写日志的函数完全感觉不到差别；
+ 2. SecondaryNameNode通过HTTP GET方式从NameNode上获取到FsImage和EditLog文件，并下载到本地的相应目录下；
+ 3. SecondaryNameNode将下载下来的FsImage载入到内存，然后一条一条地执行EditLog文件中的各项更新操作，使得内存中的FsImage保持最新；这个过程就是EditLog和FsImage文件合并；
+ 4. SecondaryNameNode执行完（3）操作之后，会通过post方式将新的FsImage文件发送到NameNode节点上
+ 5. NameNode将从SecondaryNameNode接收到的新的FsImage替换旧的FsImage文件，同时将edit.new替换EditLog文件，通过这个过程EditLog就变小了
+
+![此处输入图片的描述][4]
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
