@@ -107,7 +107,7 @@ HDFS采用抽象的块概念可以带来以下几个明显的好处：
 - FsImage用于维护文件系统树以及文件树中所有的文件和文件夹的元数据
 - 操作日志文件EditLog中记录了所有针对文件的创建、删除、重命名等操作
 
-{% highlight c++ %}
+{% highlight Bash %}
 ${dfs.name.dir}/current/VERSION
                 /edits
                 /fsimage
@@ -147,6 +147,7 @@ FsImage文件包含文件系统中所有目录和文件inode的序列化形式�
 
 第二名称节点（冷备分）HDFS架构中的一个组成部分，它是用来保存名称节点中对HDFS 元数据信息的备份，并减少名称节点重启的时间。SecondaryNameNode一般是单独运行在一台机器上。
 
+{% highlight Bash %}
 ${fs.checkpoint.dir}/current/VERSION
          /edits
          /fsimage
@@ -155,6 +156,7 @@ ${fs.checkpoint.dir}/current/VERSION
                 /edits
                 /fsimage
                 /fstime
+{% endhighlight %}
 
 **SecondaryNameNode的工作情况**：
 
