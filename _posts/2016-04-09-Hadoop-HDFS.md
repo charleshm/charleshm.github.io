@@ -11,7 +11,7 @@ categories: 大数据
 
 当数据集的大小超过一台独立物理计算机的存储能力时，就有必要对它进行分区(partition)并存储到若干台单独的计算机上。
 
-管理网络中跨多台计算机存储的文件系统称为分布式文件系统(distributed filesystem)。该系统架构于网络之上，势必会引入网络编程的复杂性，因此分布式文件系统比普通磁盘文件系统更为复杂。例如，使文件系统能够容忍节点故障且不丢失任何数据，就是一个极大的挑战。
+管理网络中跨多台计算机存储的文件系统称为分布式文件系统(distributed file system)。该系统架构于网络之上，势必会引入网络编程的复杂性，因此分布式文件系统比普通磁盘文件系统更为复杂。例如，使文件系统能够容忍节点故障且不丢失任何数据，就是一个极大的挑战。
 
 ![此处输入图片的描述][1]
 
@@ -107,6 +107,8 @@ HDFS采用抽象的块概念可以带来以下几个明显的好处：
 - FsImage用于维护文件系统树以及文件树中所有的文件和文件夹的元数据
 - 操作日志文件EditLog中记录了所有针对文件的创建、删除、重命名等操作
 
+NameNode被格式化之后，将产生所示的目录结构：
+
 {% highlight Bash %}
 ${dfs.name.dir}/current/VERSION
                 /edits
@@ -119,6 +121,7 @@ ${dfs.name.dir}/current/VERSION
 ![此处输入图片的描述][3]
 
 ----------
+
 
 <p class="first">FsImage</p>
 
@@ -168,6 +171,30 @@ ${fs.checkpoint.dir}/current/VERSION
 
 ![此处输入图片的描述][4]
 
+----------
+
+<p class="first">DataNode</p>
+
+数据节点是分布式文件系统HDFS的工作节点，负责数据的**存储**和**读取**，会根据客户端或者是名称节点的调度来进行数据的存储和检索，并且向名称节点定期发送自己所存储的块的列表。
+
+![此处输入图片的描述][5]
+
+和NameNode不同，DataNode的存储目录是启动时自动创建的，不需要额外格式化，DataNode的关键文件和目录如下：
+
+{% highlight Bash %}
+${dfs.data.dir}/current/VERSION
+           /blk_<id_1>
+           /blk_<id_1>.meta
+           /blk_<id_2>
+           /blk_<id_2>.meta
+           /......
+           /blk_<id_64>
+           /blk_<id_64>.meta
+           /subdir0/
+           /subdir1/
+           /......
+           /subdir63/
+{% endhighlight %}
 
 ----------
 
@@ -184,12 +211,15 @@ ${fs.checkpoint.dir}/current/VERSION
 - Secondary NameNode负责定时默认1小时，从namenode上获取fsimage和edits来进行合并，然后再发送给namenode，减少namenode的工作量。
 
 
-  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
-  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
-  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
 
 ----------
 
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
   [^2]: [Hadoop：The Definitive Guide 总结](http://www.cnblogs.com/biyeymyhjob/archive/2012/08/13/2636452.html)
+
+
+  [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
+  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/HDFS_structure.png
