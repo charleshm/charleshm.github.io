@@ -211,8 +211,17 @@ ${dfs.data.dir}/current/VERSION
 - Secondary NameNode负责定时默认1小时，从namenode上获取fsimage和edits来进行合并，然后再发送给namenode，减少namenode的工作量。
 
 
-
 ----------
+
+#### HDFS存储原理
+<p class="first">冗余数据保存</p>
+为了保证系统的容错性和可用性，HDFS采用了多副本方式对数据进行冗余存储，通常一个数据块的多个副本会被分布到不同的数据节点上，这种多副本方式具有以下几个优点：
+
+- 加快数据传输速度
+- 容易检查数据错误
+- 保证数据可靠性
+
+
 
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
   [^2]: [Hadoop：The Definitive Guide 总结](http://www.cnblogs.com/biyeymyhjob/archive/2012/08/13/2636452.html)
