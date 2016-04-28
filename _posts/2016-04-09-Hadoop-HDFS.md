@@ -173,9 +173,9 @@ ${fs.checkpoint.dir}/current/VERSION
 
 <p class="first">通俗理解</p>
 
-- **NameNode**：是Master节点，是大领导。管理数据块映射;处理客户端的读写请求;配置副本策略;管理HDFS的名称空间;
-- **Secondary NameNode**：是一个小弟，分担大哥Namenode的工作量;是NameNode的冷备份;合并Fsimage和edits然后再发给namenode。
-- **DataNode**：Slave节点，奴隶，干活的。负责存储client发来的数据块block;执行数据块的读写操作。
+- **NameNode**：是Master节点，是大领导。管理数据块映射;处理客户端的读写请求，配置副本策略，管理HDFS的名称空间;
+- **Secondary NameNode**：是一个小弟，分担大哥Namenode的工作量;是NameNode的冷备份，合并Fsimage和edits然后再发给namenode。
+- **DataNode**：Slave节点，奴隶，干活的。负责存储client发来的数据块block，执行数据块的读写操作。
 - **热备份**：b是a的热备份，如果a坏掉。那么b马上运行代替a的工作。
 - **冷备份**：b是a的冷备份，如果a坏掉。那么b不能马上代替a工作。但是b上存储a的一些信息，减少a坏掉之后的损失。
 - **Fsimage**:元数据镜像文件(文件系统的目录树。)
