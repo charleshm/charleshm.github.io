@@ -273,6 +273,17 @@ HDFS具有较高的容错性，可以兼容廉价的硬件，它把硬件出错�
 
 ![此处输入图片的描述][7]
 
+1. 客户端调用FileSystem的get()方法得到一个实例fs(即分布式文件系统DistributedFileSystem),然后fs调用open()打开希望读取的文件。
+2. DistributedFileSystem(fs)通过使用RPC调用NameNode以确定文件起始block的位置。（Block位置信息存储在namenode的内存中）。对于每一个bolck，NameNode返回block所有复本的DataNode地址（并根据与client的距离排序）。
+3. DistributedFileSystem(fs).open()返回一个FSDataInputStream对象给client用来读数据。FSDataInputStream封装了分布式文件输入流(DFSInputStream)用于管理NameNode和DataNode的I/O.client调用对这个输入流调用read()方法。
+4. 此输入流DFSInputStream存储了block所在的datanode的位置，然后连接第一个block所在的最近的datanode.通过对数据流反复的调用read()可以将数据从datanode传输到client.
+5. 对一个block读完时DFSInputStream会关闭与datanode的连接，然后寻找下一个block的最佳datanode.当一批blocks读完时，DFSInputStream会询问namenode下一批所需blocks的datanode地址。读取blocks的切换对于client是透明的。
+6. 当client完成读取，调用FSDataInputStream的close()方法。
+
+在读的过程中，如果DFSInputStream和datanode通信时出错，它会尝试连接下一个最近的datanode。DFSInputStream也会通过校验和确认从datanode读取的数据是否完整，如果发现某个block有损坏,就回报告给namenode，然后从其它复本读取此block。
+
+
+----------
 
 
   [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
