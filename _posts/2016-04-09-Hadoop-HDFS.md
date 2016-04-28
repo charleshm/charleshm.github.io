@@ -181,7 +181,7 @@ ${fs.checkpoint.dir}/current/VERSION
 - **Fsimage**:元数据镜像文件(文件系统的目录树。)
 - **edits**：元数据的操作日志(针对文件系统做的修改操作记录)
 - namenode内存中存储的是 fsimage + edits。
-- Secondary NameNode负责定时默认1小时，从namenode上，获取fsimage和edits来进行合并，然后再发送给namenode。减少namenode的工作量。
+- Secondary NameNode负责定时默认1小时，从namenode上获取fsimage和edits来进行合并，然后再发送给namenode,减少namenode的工作量。
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
