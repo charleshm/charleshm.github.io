@@ -173,18 +173,17 @@ ${fs.checkpoint.dir}/current/VERSION
 
 <p class="first">通俗理解</p>
 
-- NameNode：是Master节点，是大领导。管理数据块映射;处理客户端的读写请求;配置副本策略;管理HDFS的名称空间;
-- Secondary NameNode：是一个小弟，分担大哥Namenode的工作量;是NameNode的冷备份;合并fsimage和fsedits然后再发给namenode。
-- DataNode：Slave节点，奴隶，干活的。负责存储client发来的数据块block;执行数据块的读写操作。
-- 热备份：b是a的热备份，如果a坏掉。那么b马上运行代替a的工作。
-- 冷备份：b是a的冷备份，如果a坏掉。那么b不能马上代替a工作。但是b上存储a的一些信息，减少a坏掉之后的损失。
-- fsimage:元数据镜像文件(文件系统的目录树。)
-- edits：元数据的操作日志(针对文件系统做的修改操作记录)
+- **NameNode**：是Master节点，是大领导。管理数据块映射;处理客户端的读写请求;配置副本策略;管理HDFS的名称空间;
+- **Secondary NameNode**：是一个小弟，分担大哥Namenode的工作量;是NameNode的冷备份;合并Fsimage和edits然后再发给namenode。
+- **DataNode**：Slave节点，奴隶，干活的。负责存储client发来的数据块block;执行数据块的读写操作。
+- **热备份**：b是a的热备份，如果a坏掉。那么b马上运行代替a的工作。
+- **冷备份**：b是a的冷备份，如果a坏掉。那么b不能马上代替a工作。但是b上存储a的一些信息，减少a坏掉之后的损失。
+- **Fsimage**:元数据镜像文件(文件系统的目录树。)
+- **edits**：元数据的操作日志(针对文件系统做的修改操作记录)
 
 namenode内存中存储的是 fsimage + edits。
 
 Secondary NameNode负责定时默认1小时，从namenode上，获取fsimage和edits来进行合并，然后再发送给namenode。减少namenode的工作量。
-
 
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
