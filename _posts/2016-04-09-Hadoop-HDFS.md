@@ -100,7 +100,7 @@ HDFS采用抽象的块概念可以带来以下几个明显的好处：
 
 ----------
 
-<p class="first">namenode和datanode</p>
+<p class="first">namenode</p>
 
 在HDFS中，名称节点（NameNode）负责管理分布式文件系统的命名空间（Namespace），保存了两个核心的数据结构，即 FsImage 和 EditLog：
 
