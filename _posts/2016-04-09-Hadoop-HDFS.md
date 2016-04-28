@@ -158,7 +158,17 @@ FsImage文件包含文件系统中所有目录和文件inode的序列化形式�
 ![此处输入图片的描述][4]
 
 
+----------
+
+<p class="first">DataNode</p>
+
+
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/dfs.jpg?imageView2/2/w/300
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/name_data_node.png
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/namenode.png?imageView2/2/w/500
   [4]: http://7xjbdi.com1.z0.glb.clouddn.com/secondaryNameNode.png
+
+----------
+
+  [^1]: [hadoop分布式文件系统HDFS详解](http://www.36dsj.com/archives/42648)
