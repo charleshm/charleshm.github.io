@@ -253,6 +253,32 @@ ListNode* rotateRight(ListNode* head, int k) {
 }
 {% endhighlight %}
 
+----------
+
+#### Reverse Nodes in k-Group
+
+头指针会发生变化，所以这道题用上了三指针
+
+{% highlight c++ %}
+ListNode* swapPairs(ListNode* head) {
+    if (head == nullptr || head->next == nullptr) return head;
+    ListNode dummy(-1);
+    dummy.next = head;
+    ListNode *prev = &dummy, *cur = prev->next, *next = cur->next;
+    while (next) {
+        // swap
+        prev->next = next;
+        cur->next = next->next;
+        next->next = cur;
+
+        //update
+        prev = cur;
+        cur = cur->next;
+        next = cur ? cur->next : nullptr;
+    }
+    return dummy.next;
+}
+{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/1-140F9152T3201.jpg
