@@ -280,6 +280,45 @@ ListNode* swapPairs(ListNode* head) {
 }
 {% endhighlight %}
 
+----------
+
+#### Reverse Nodes in k-Group
+
+{% highlight c++ %}
+//本题关键在于合理转化问题，设计到链表反转，链表连接中的一些细节问题
+ListNode* reverseKGroup(ListNode* head, int k) {
+    if (head == nullptr || head->next == nullptr || k < 2) return head;
+    ListNode dummy(-1);
+    dummy.next = head;
+
+    ListNode *prev = &dummy, *end = head;
+    while (end) {
+        int steps = k;
+        while (--steps && end) end = end->next;
+        if (end == nullptr) break;//长度不足K
+        prev = reverse(prev, end);//链表反转
+        end = prev->next; //end更新为下一组的头指针
+    }
+
+    return dummy.next;
+}
+
+//常规链表反转
+ListNode* reverse(ListNode *prev, ListNode *end) {
+    ListNode *begin = prev->next;
+    ListNode *cur = prev->next, *next = cur->next;
+    while (cur != end) {
+        ListNode *tmp = next->next;
+        next->next = cur;
+        cur = next;
+        next = tmp;
+    }
+    prev->next = cur;
+    begin->next = next;
+    return begin;
+}
+{% endhighlight %}
+
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
   [2]: http://7xjbdi.com1.z0.glb.clouddn.com/1-140F9152T3201.jpg
   [3]: http://7xjbdi.com1.z0.glb.clouddn.com/tail_insert.jpg
