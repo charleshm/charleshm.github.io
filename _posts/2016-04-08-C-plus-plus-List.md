@@ -19,13 +19,15 @@ categories: 数据结构与算法
 - 后继：next
 - 当前结点：cur
 
+----------
+
 #### 头插法
 
 ![此处输入图片的描述][2]
 
 {% highlight c++ %}
 s->next = head->next;　　//第一步
-head->next = s;　　　　　//第二步
+head->next = s;　　　　　   //第二步
 {% endhighlight %}
 
 
