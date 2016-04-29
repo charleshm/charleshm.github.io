@@ -10,7 +10,6 @@ categories: 数据结构与算法
 #### 头节点和头指针
 - 头结点是为了操作的统一与方便而设立的，放在第一个元素结点之前，其数据域一般无意义（当然有些情况下也可存放链表的长度、用做监视哨等等）。
 - 有了头结点后，对在第一个元素结点前插入结点和删除第一个结点，其操作与对其它结点的操作统一了。
-- 凡是链表的头结点可能发生变化的问题里面，我们都可以设立一个头指针来记录新的头结点的位置。
 
 ![此处输入图片的描述][1]
 
@@ -19,6 +18,27 @@ categories: 数据结构与算法
 - 前驱：prev
 - 后继：next
 - 当前结点：cur
+
+#### 头插法
+
+![此处输入图片的描述][2]
+
+{% highlight c++ %}
+s->next = head->next;　　//第一步
+head->next = s;　　　　　//第二步
+{% endhighlight %}
+
+
+----------
+
+#### 尾插法
+
+![此处输入图片的描述][3]
+
+{% highlight c++ %}
+prev->next = s;
+s->next = nullptr;
+{% endhighlight %}
 
 ----------
 
@@ -82,12 +102,13 @@ ListNode *reverse(struct node* head) {
 }
 {% endhighlight %}
 
+#### Partition List
 
 ----------
 
 #### 链表反转局部
 
-![此处输入图片的描述][2]
+![此处输入图片的描述][4]
 
 {% highlight c++ %}
 ListNode* reverseBetween(ListNode* head, int m, int n) {
@@ -112,7 +133,7 @@ ListNode* reverseBetween(ListNode* head, int m, int n) {
 
 ----------
 
-#### [删除链表中的重复元素][3]
+#### [删除链表中的重复元素][5]
 
 {% highlight c++ %}
 ListNode *deleteDuplicates(ListNode *head) {
@@ -135,7 +156,7 @@ ListNode *deleteDuplicates(ListNode *head) {
 
 ----------
 
-#### [Remove Duplicates from Sorted List II][4]
+#### [Remove Duplicates from Sorted List II][6]
 
 {% highlight c++ %}
 ListNode* deleteDuplicates(ListNode* head) {
@@ -200,7 +221,7 @@ ListNode* partition(ListNode* head, int x) {
 #### Rotate List
 将链表连接成环，然后在指定位置断开即可
 
-![此处输入图片的描述][5]
+![此处输入图片的描述][7]
 
 {% highlight c++ %}
 ListNode* rotateRight(ListNode* head, int k) {
@@ -223,32 +244,11 @@ ListNode* rotateRight(ListNode* head, int k) {
 }
 {% endhighlight %}
 
-----------
-
-#### Remove Nth Node From End of List
-这道题的核心就是如何走出　$len-n$ 的长度，最直接的方式是先遍历一遍，求得链表长度，然后从头开始走　$len-n$步。
-
-我们也可以设两个指针p,q，让p先走n步，然后p,q一起走，当p走到尾结点时，删除q->next即可。
-
-{% highlight c++ %}
-ListNode* removeNthFromEnd(ListNode* head, int n) {
-    ListNode dummy(-1, head);
-    ListNode *p = &dummy, *q = &dummy;
-    int steps = n;
-    while (steps) p = p->next;
-    while (p->next) {
-        p = p->next;
-        q = q->next;
-    }
-    ListNode *tmp = q->next;
-    q->next = q->next->next;
-    delete(tmp);
-    return dummy.next;
-}
-{% endhighlight %}
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/headnode.jpg
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
-  [3]: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-  [4]: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
-  [5]: http://7xjbdi.com1.z0.glb.clouddn.com/circle.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/1-140F9152T3201.jpg
+  [3]: http://7xjbdi.com1.z0.glb.clouddn.com/tail_insert.jpg
+  [4]: http://7xjbdi.com1.z0.glb.clouddn.com/reverse_link.png
+  [5]: https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+  [6]: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+  [7]: http://7xjbdi.com1.z0.glb.clouddn.com/circle.png
