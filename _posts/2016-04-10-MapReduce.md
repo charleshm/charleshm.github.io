@@ -30,6 +30,7 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 
 > Hadoop会为每个 split 创建一个Map任务，split 的多少决定了 Map 任务的数目。大多数情况下，理想的分片大小是一个 HDFS 块。最优的 Reduce 任务个数取决于集群中可用的 reduce 任务槽(**slot**)的数目。
 
+注：map/reduce 任务槽(slot) 就是集群能够同时运行的map/reduce任务的最大数量。
 
 ----------
 
@@ -38,6 +39,8 @@ HDFS 以固定大小的block 为基本单位存储数据，而对于MapReduce �
 Mapper将输入键值对(key/value pair)映射到一组中间格式的键值对集合。
 
 ![此处输入图片的描述][4]
+
+> 注意，map的输出结果最后是写入本地的磁盘中，并不是写到HDFS，因为map的输出在job完成后即可删除，没必要写到HDFS上。
 
 ----------
 
@@ -98,6 +101,11 @@ Spill线程为这次Spill过程创建一个磁盘文件：从所有的本地目�
 在这个过程中如果用户配置了combiner类，那么在写之前会先调用combineAndSpill()，对结果进行进一步合并后再写出。Combiner会优化MapReduce的中间结果，所以它在整个模型中会多次使用。
 
 ![此处输入图片的描述][6]
+
+----------
+
+#### MapReduce任务的优化
+
 
 ----------
   
