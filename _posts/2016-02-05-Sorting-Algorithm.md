@@ -71,5 +71,44 @@ categories: 数据结构与算法分析
 
     }
 
+----------
+
+#### 归并排序
+
+- **分解**（divide）：将$$n$$个元素分成各含$$\frac{n}{2}$$个元素的子序列
+- **解决**（conquer）：用合并排序法对两个子序列递归地排序
+- **合并**（combine）：合并两个已排序的子序列以得到排序结果
+
+![Merge Sort][2]
+
+```c++
+int merge(vector<int> &vi, int b, int m, int e) {
+    vector<int> tmp(e - b + 1);
+    int s1 = b, s2 = m + 1;
+    int k = 0;
+    //合并两有序数组
+    while (s1 <= m && s2 <= e) {
+        if (vi[s1] <= vi[s2])
+            tmp[k++] = vi[s1++];
+        else
+            tmp[k++] = vi[s2++];
+    }
+    //剩余部分
+    while (s1 <= m) tmp[k++] = vi[s1++];
+    while (s2 <= e) tmp[k++] = vi[s2++];
+
+    for (int i = 0; i < k; ++i) vi[b + i] = tmp[i];
+}
+
+int mergesort(vector<int> &vi, int p, int r) {
+    if (p < r) {
+        int q = (p + r) / 2;
+        mergesort(vi, p, q);
+        mergesort(vi, q + 1, r);
+        merge(vi, p, q, r);
+    }
+}
+```
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Sorting_quicksort_anim.gif
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Merge_sort_algorithm_diagram.svg.png
