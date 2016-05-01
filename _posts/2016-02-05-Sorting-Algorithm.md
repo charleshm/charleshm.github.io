@@ -81,6 +81,8 @@ categories: 数据结构与算法分析
 
 ![Merge Sort][2]
 
+----------
+
 ```c++
 int merge(vector<int> &vi, int b, int m, int e) {
     vector<int> tmp(e - b + 1);
