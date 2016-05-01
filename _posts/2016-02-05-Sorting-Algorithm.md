@@ -111,4 +111,4 @@ int mergesort(vector<int> &vi, int p, int r) {
 ```
 
   [1]: http://7xjbdi.com1.z0.glb.clouddn.com/Sorting_quicksort_anim.gif
-  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Merge_sort_algorithm_diagram.svg.png
+  [2]: http://7xjbdi.com1.z0.glb.clouddn.com/Merge_sort_algorithm_diagram.svg.png?imageView2/2/w/500
