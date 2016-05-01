@@ -39,7 +39,7 @@ categories: 数据结构与算法分析
         int i = low - 1;
         for (int j = low; j < up; j++) {
             if (vi[j] <= pivot) {
-                i++;
+                ++i;
                 swap(vi[i], vi[j]);
             }
         }
