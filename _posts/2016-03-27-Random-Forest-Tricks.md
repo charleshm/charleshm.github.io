@@ -19,7 +19,7 @@ RandomForest包里有两种补全缺失值的方法：
 
 ---
 
-> Proximity 是用来衡量两个样本之间的相似性，当一棵树生成后，让数据集通过这棵树，落在同一个叶子节点的样本对 proximity 值加1. 所有的树生成之后，利用树的棵树归一化 proximity matrix。
+> Proximity 用来衡量两个样本之间的相似性，当一棵树生成后，让数据集通过这棵树，落在同一个叶子节点的"样本对" proximity 值加 1 。所有的树生成之后，利用树的棵树归一化 proximity matrix。
 
 ![Proximity matrix][1]
 
@@ -27,4 +27,4 @@ RandomForest包里有两种补全缺失值的方法：
 
 
 
-[1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/350
+[1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/300
