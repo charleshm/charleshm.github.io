@@ -7,9 +7,9 @@ date:   2016-03-27 8:30
 categories: 机器学习
 ---
 
-> - It gives estimates of what variables are important in the classification.   
-- It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing     
-- It computes proximities between pairs of cases that can be used in clustering, locating outliers, or (by scaling) give interesting views of the data.
+> It gives estimates of what variables are important in the classification.   
+It has an effective method for estimating missing data and maintains accuracy when a large proportion of the data are missing     
+It computes proximities between pairs of cases that can be used in clustering, locating outliers, or (by scaling) give interesting views of the data.
 
 ####  缺失值处理
 
