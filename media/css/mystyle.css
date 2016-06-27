@@ -13,7 +13,8 @@
 /*页面格式*/
 
 body {
-    font-family: "Cuprum", "Microsoft Yahei","WenQuanYi Zen Hei", Helvetica, Arial, sans-serif;
+    /*font-family: "Cuprum", "Microsoft Yahei","WenQuanYi Zen Hei", Helvetica, Arial, sans-serif;*/
+    font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
     background-color: #fdfdfd;
     color: #333;
     line-height: 22px;
