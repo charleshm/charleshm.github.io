@@ -41,9 +41,15 @@ $$
 
 ---
 
+#### Random Forest vs Bagging
+
+![Proximity matrix][3]
+
+---
+
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/300
 [2]:http://7xjbdi.com1.z0.glb.clouddn.com/building-random-forest-at-scale-26-638.jpg?imageView2/2/w/500
-
+[3]:http://7xjbdi.com1.z0.glb.clouddn.com/rf_vs_bagging.png
 
 [^1]:[Random Forests(Leo Breiman and Adele Cutler)](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm)
 [^2]:[随机森林算法](http://www.cnblogs.com/litao1105/p/5021747.html)
