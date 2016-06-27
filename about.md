@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-华科渣硕一枚，目前为找工作奋战ing...
+华科渣硕一枚，目前鹅厂实习ing...
 
 ----------
 
