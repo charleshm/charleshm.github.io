@@ -58,3 +58,4 @@ $$
 [^1]:[Random Forests(Leo Breiman and Adele Cutler)](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm)
 [^2]:[随机森林算法](http://www.cnblogs.com/litao1105/p/5021747.html)
 [^3]:[统计学习精要(The Elements of Statistical Learning)课堂笔记（十六）](http://www.loyhome.com/%E2%89%AA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%B2%BE%E8%A6%81the-elements-of-statistical-learning%E2%89%AB%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/)
+[^4]:[随机森林入门攻略（内含R、Python代码）](http://datartisan.com/article/detail/42.html)
