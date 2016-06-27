@@ -27,6 +27,15 @@ RandomForest包里有两种补全缺失值的方法：
 
 #### Variable importance
 
+衡量变量重要性的方法有两种，Decrease GINI 和 Decrease Accuracy：
+
+- **Decrease GINI**： 对于回归问题，直接使用$\arg \max(Var-VarLeft-VarRight)$作为评判标准，即当前节点训练集的方差$Var$减去减去左子节点的方差$VarLeft$和右子节点的方差$VarRight$值最大。
+
+- **Decrease Accuracy**：对于一棵树$T_{b}(x)$，我们用OOB样本可以得到测试误差1；然后随机改变OOB样本的第$j$列：保持其他列不变，对第$j$列进行随机的上下置换，得到误差2。至此，我们可以用误差1-误差2来刻画变量$j$的重要性。基本思想就是，如果一个变量$j$足够重要，那么改变它会极大的增加测试误差；反之，如果改变它测试误差没有增大，则说明该变量不是那么的重要。
+
+$$
+OOB=\left[\begin{array}{ccccc}x_{11} & \cdots & x{}_{1j} & \cdots & x_{1p}\\ \vdots & \vdots & \vdots & \vdots & \vdots\\ x_{k1} & \cdots & x{}_{kj} & \cdots & x_{kp}\end{array}\right]
+$$
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/300
 
