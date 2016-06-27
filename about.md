@@ -31,6 +31,7 @@ permalink: /about/
 - [美团机器学习团队](http://tech.meituan.com/deep-understanding-of-ffm-principles-and-practices.html)
 - [世纪佳缘总监-吴金龙博客](http://breezedeus.github.io/)
 - [腾讯广点通团队（rickjin）](http://www.flickering.cn/)
+- [计算广告语机器学习](http://www.52caml.com/head_first_ml/ml-chapter6-boosting-family/)
 
 
 <div class="sign">
