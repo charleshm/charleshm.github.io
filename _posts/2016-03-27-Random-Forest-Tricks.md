@@ -31,7 +31,7 @@ RandomForest包里有两种补全缺失值的方法：
 
 - **Decrease GINI**： 对于回归问题，直接使用$\arg \max(Var-VarLeft-VarRight)$作为评判标准，即当前节点训练集的方差$Var$减去左节点的方差$VarLeft$和右节点的方差$VarRight$。
 
-- **Decrease Accuracy**：对于一棵树$T_{b}(x)$，我们用OOB样本可以得到测试误差1；然后随机改变OOB样本的第$j$列：保持其他列不变，对第$j$列进行随机的上下置换，得到误差2。至此，我们可以用误差1-误差2来刻画变量$j$的重要性。基本思想就是，如果一个变量$j$足够重要，那么改变它会极大的增加测试误差；反之，如果改变它测试误差没有增大，则说明该变量不是那么的重要。
+- **Decrease Accuracy**：对于一棵树$T_{b}(x)$，我们用OOB样本可以得到测试误差1；然后随机改变OOB样本的第$j$列：保持其他列不变，对第$j$列进行随机的上下置换，得到误差2。至此，我们可以用误差1-误差2来刻画变量$j$的重要性。基本思想就是，如果一个变量$j$足够重要，那么改变它会极大的增加测试误差；反之，如果改变它测试误差没有增大，则说明该变量不是那么的重要[^3]。
 
 $$
 OOB=\left[\begin{array}{ccccc}x_{11} & \cdots & x{}_{1j} & \cdots & x_{1p}\\ \vdots & \vdots & \vdots & \vdots & \vdots\\ x_{k1} & \cdots & x{}_{kj} & \cdots & x_{kp}\end{array}\right]
@@ -39,9 +39,12 @@ $$
 
 ![Proximity matrix][2]
 
+---
+
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/300
-[2]:http://7xjbdi.com1.z0.glb.clouddn.com/building-random-forest-at-scale-26-638.jpg?imageView2/2/w/400
+[2]:http://7xjbdi.com1.z0.glb.clouddn.com/building-random-forest-at-scale-26-638.jpg?imageView2/2/w/500
 
 
 [^1]:[Random Forests(Leo Breiman and Adele Cutler)](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm)
 [^2]:[随机森林算法](http://www.cnblogs.com/litao1105/p/5021747.html)
+[^3]:[统计学习精要(The Elements of Statistical Learning)课堂笔记（十六）](http://www.loyhome.com/%E2%89%AA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%B2%BE%E8%A6%81the-elements-of-statistical-learning%E2%89%AB%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%EF%BC%88%E5%8D%81%E5%85%AD%EF%BC%89/)
