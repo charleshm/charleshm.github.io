@@ -37,7 +37,10 @@ $$
 OOB=\left[\begin{array}{ccccc}x_{11} & \cdots & x{}_{1j} & \cdots & x_{1p}\\ \vdots & \vdots & \vdots & \vdots & \vdots\\ x_{k1} & \cdots & x{}_{kj} & \cdots & x_{kp}\end{array}\right]
 $$
 
+![Proximity matrix][2]
+
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/proximity_matrix.png?imageView2/2/w/300
+[2]:http://7xjbdi.com1.z0.glb.clouddn.com/building-random-forest-at-scale-26-638.jpg?imageView2/2/w/400
 
 
 [^1]:[Random Forests(Leo Breiman and Adele Cutler)](https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm)
