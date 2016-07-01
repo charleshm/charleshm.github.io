@@ -145,7 +145,7 @@ $$T^{'} = W^HT \tag{HS.4}$$
 
 我们可以混合这两种模型，同时兼顾精确性和多样性：
 
-$$w_{jl}^{H+P}=\frac{1}{k(O_{j})^{1-\lambda}k(O_l)^{\lambda}}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}}$$
+$$w_{jl}^{H+P}=\frac{1}{k(O_{j})^{1-\lambda}k(O_l)^{\lambda}}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}$$
 
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/heat_spreading.png
