@@ -71,7 +71,7 @@ $$b_{\alpha} = \sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)}) \tag{MD.1}$$
 
 $$c_{j}^{'} = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})}) \tag{MD.2}$$
 
-将$\tag{MD.1}$带入$\tag{MD.2}$
+将$\color{red}{(MD.1)}$带入$\color{red}{(MD.2)}$
 
 ---
 
