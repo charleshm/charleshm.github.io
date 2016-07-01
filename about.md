@@ -16,6 +16,7 @@ permalink: /about/
 #### 资料推荐
 - [机器学习那些事](http://www.valleytalk.org/wp-content/uploads/2012/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%82%A3%E4%BA%9B%E4%BA%8B.pdf)
 - [逻辑回归-从入门到精通](http://www.tianyancha.com/research/LR_intro.pdf)
+- [个性化推荐十大挑战](http://blog.sciencenet.cn/blog-3075-588779.html#adtag=share)
 
 ----------
 
