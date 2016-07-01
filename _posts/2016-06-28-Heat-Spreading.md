@@ -78,13 +78,13 @@ $$
 c_{j}^{'} & = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})})\\
 & = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{\sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)})}{k(U_{\alpha})})\\
 & = \sum_{l=1}^{n} c_l \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}\\
-& = \sum_{l=1}^{n} w_{\alpha l}^Pc_l
+& = \sum_{l=1}^{n} w_{jl}^Pc_l
 \end{align*}
 $$
 
 其中，
 
-$$\color{red}{w_{\alpha l}^P = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})} \tag{MD.3}}$$
+$$\color{red}{w_{jl}^P = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})} \tag{MD.3}}$$
 
 ---
 
@@ -92,7 +92,7 @@ $$\color{red}{w_{\alpha l}^P = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alp
 
 $$C^{'} = W^PC \tag{MD.4}$$
 
-其中，$W^P = (w_{\alpha l}^P), C = (c_1,\cdots,c_n)^T,$
+其中，$W^P = (w_{jl}^P), C = (c_1,\cdots,c_n)^T,$
 
 ---
 
@@ -113,13 +113,13 @@ $$
 t_{j}^{'} & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})}\\
 & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}\sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}}{k(O_{j})}\\
 & = \sum_{l=1}^{n}c_l \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}\\
-& = \sum_{l=1}^{n}w_{\alpha l}^Hc_l
+& = \sum_{l=1}^{n}w_{jl}^Hc_l
 \end{align*}
 $$
 
 其中，
 
-$$\color{red}{w_{\alpha l}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}} \tag{HS.3}$$
+$$\color{red}{w_{jl}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}} \tag{HS.3}$$
 
 ---
 
@@ -127,17 +127,23 @@ $$\color{red}{w_{\alpha l}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\a
 
 $$T^{'} = W^HT \tag{HS.4}$$
 
-其中，$W^H = (w_{\alpha l}^H), T = (t_1,\cdots,t_n)^T,$
+其中，$W^H = (w_{jl}^H), T = (t_1,\cdots,t_n)^T,$
 
 ---
 
 #### 物质扩散 vs 热传导
 
-基于物质扩散和基于热传导的推荐算法的区别在于： 基于物质扩散的方法在进行个性化推荐时，系统的总能量是保持不变即守恒的；而热传导在推荐过程中，目标用户（即被推荐用户）的收藏品将被视作恒温热源，源源不断的给系统提供能量，所以系统的总能量随着传递步骤的增加是在不断增加的。换而言之，对于物质扩散，相当于有固定的初始能量在系统中传递，最后的系统稳态结果是和**节点度**（即物品被收藏数目）成正比的，所以它倾向于推荐那些度较大（较流行）的物品，相当于一个**凸透镜**，将用户的视野汇聚在那些较流行的节点上，从而也就不难理解这种方法会对提高推荐的精确性有很大帮助。
+基于物质扩散和基于热传导的推荐算法的区别在于： 基于物质扩散的方法在进行个性化推荐时，系统的总能量是保持不变即守恒的；而热传导在推荐过程中，目标用户（即被推荐用户）的收藏品将被视作恒温热源，源源不断的给系统提供能量，所以系统的总能量随着传递步骤的增加是在不断增加的。换而言之，对于物质扩散，相当于有固定的初始能量在系统中传递，最后的系统稳态结果是和**节点度**（即物品被收藏数目）成正比的，所以它倾向于推荐那些度较大（较流行）的物品，相当于一个**凸透镜**，将用户的视野汇聚在那些较流行的节点上，从而也就不难理解这种方法会对提高推荐的**精确性**有很大帮助。
 
 而对于热传导，因为热源存在的缘故，从而保证系统中有足够的能量可以传递到那些“冷点”上。也正是这个热源的存在，导致系统的最终稳态结果是所有节点温度相同，所以相对于物质扩散来说，热传导倾向于推荐那些度较小（较不流行）的节点，相当于一个**凹透镜**，把用户的视野发散到了那些较不流行的物品上，从而提高了推荐的**多样性**。
 
 ![][3]
+
+---
+
+#### Hybrid Method
+
+
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/heat_spreading.png
 [2]:http://7xjbdi.com1.z0.glb.clouddn.com/user_item.png?imageView2/2/w/300
