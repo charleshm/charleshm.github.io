@@ -131,7 +131,7 @@ $$T^{'} = W^HT \tag{HS.4}$$
 
 ---
 
-#### 物质扩散 vs 热传导
+#### 物质扩散 vs 热传导[^3]
 
 基于物质扩散和基于热传导的推荐算法的区别在于： 基于物质扩散的方法在进行个性化推荐时，系统的总能量是保持不变即守恒的；而热传导在推荐过程中，目标用户（即被推荐用户）的收藏品将被视作恒温热源，源源不断的给系统提供能量，所以系统的总能量随着传递步骤的增加是在不断增加的。换而言之，对于物质扩散，相当于有固定的初始能量在系统中传递，最后的系统稳态结果是和**节点度**（即物品被收藏数目）成正比的，所以它倾向于推荐那些度较大（较流行）的物品，相当于一个**凸透镜**，将用户的视野汇聚在那些较流行的节点上，从而也就不难理解这种方法会对提高推荐的**精确性**有很大帮助。
 
@@ -143,6 +143,9 @@ $$T^{'} = W^HT \tag{HS.4}$$
 
 #### Hybrid Method
 
+我们可以混合这两种模型，同时兼顾精确性和多样性：
+
+$$w_{jl}^{H+P}=\frac{1}{k(O_{j})^{1-\lambda}k(O_l)^{\lambda}}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}}$$
 
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/heat_spreading.png
@@ -153,3 +156,4 @@ $$T^{'} = W^HT \tag{HS.4}$$
 
 [^1]:[Solving the apparent diversity‐accuracy dilemma of recommender systems](http://www.ccast.ac.cn/workshop/network-2010/wenzhang/zt.pdf)
 [^2]:[物质扩散（Probabilistic Spreading）数学模型](https://zr9558.com/2015/09/27/probabilisticandheat/)
+[^3]:[浅谈物理学方法在推荐系统中应用价值和意义](http://blog.sciencenet.cn/blog-210641-318997.html)
