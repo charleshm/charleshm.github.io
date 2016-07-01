@@ -90,14 +90,17 @@ $$w_{\alpha l} = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha
 
 采用向量化的表示方法：
 
-$$C^{'} = WC \tag{MD.4}$$
+$$C^{'} = W^PC \tag{MD.4}$$
 
-其中，$W = (w_{\alpha l}), C = (c_1,\cdots,c_n)^T,$
+其中，$W^P = (w_{\alpha l}), C = (c_1,\cdots,c_n)^T,$
 
 ---
 
 #### 热传导
 
+- 第一步，用户的温度等于所有他购买过的商品的温度的**平均值**，用户$\alpha$的温度我们用$b_{\alpha}$表示：
+
+$$b_{\alpha} = \sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}$$
 
 ---
 
