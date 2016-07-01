@@ -106,6 +106,15 @@ $$b_{\alpha} = \sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})} \tag{HS.1}$$
 
 $$t_{j}^{'} = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})} \tag{HS.2}$$
 
+将$\color{red}{(HS.1)}$带入$\color{red}{(HS.2)}$：
+
+$$
+\begin{align*}
+t_{j}^{'} & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})}\\
+& = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}\sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}}{k(O_{j})}
+\end{align*}
+$$
+
 ---
 
 #### 总结
