@@ -112,9 +112,22 @@ $$
 \begin{align*}
 t_{j}^{'} & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})}\\
 & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}\sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}}{k(O_{j})}\\
-& = \sum_{l=1}^{n}c_l \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}
+& = \sum_{l=1}^{n}c_l \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}\\
+& = \sum_{l=1}^{n}w_{\alpha l}^Hc_l
 \end{align*}
 $$
+
+其中，
+
+$$\color{red}{w_{\alpha l}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}}$$
+
+---
+
+采用向量化的表示方法：
+
+$$T^{'} = W^HT \tag{MD.4}$$
+
+其中，$W^H = (w_{\alpha l}^H), T = (t_1,\cdots,t_n)^T,$
 
 ---
 
