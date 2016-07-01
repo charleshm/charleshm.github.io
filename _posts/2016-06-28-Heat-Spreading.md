@@ -119,13 +119,13 @@ $$
 
 其中，
 
-$$\color{red}{w_{\alpha l}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}}$$
+$$\color{red}{w_{\alpha l}^H = \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}} \tag{HS.3}$$
 
 ---
 
 采用向量化的表示方法：
 
-$$T^{'} = W^HT \tag{MD.4}$$
+$$T^{'} = W^HT \tag{HS.4}$$
 
 其中，$W^H = (w_{\alpha l}^H), T = (t_1,\cdots,t_n)^T,$
 
