@@ -7,7 +7,7 @@ date:   2016-06-28 8:30
 categories: 机器学习 推荐系统
 ---
 
-在推荐系统中，常常用二部图来表示用户和物品之间的关系：把用户（Users）看成一类，把物品（Objects）看作另一类。当某个用户购买过某个商品时，他们之间会存在一条连边。而同一类点之间不存在连边，即用户与用户之间，商品与商品之间不存在连边，类似于这样组成的网络就称为二部图。电子商务中的商品推荐，可以看做是二部图上的链路挖掘问题，而扩散过程可以用来寻找网络中两个节点之间的关联强度。
+在推荐系统中，常常用二部图来表示用户和物品之间的关系：把用户（Users）看成一类，把物品（Objects）看作另一类。当某个用户购买过某个商品时，他们之间会存在一条连边。而同一类点之间不存在连边，即用户与用户之间，商品与商品之间不存在连边，类似于这样组成的网络就称为二部图。电子商务中的商品推荐，可以看做是二部图上的链路挖掘问题，而扩散过程可以用来寻找网络中两个节点之间的关联强度[^4]。
 
 ![][2]
 
@@ -157,3 +157,4 @@ $$w_{jl}^{H+P}=\frac{1}{k(O_{j})^{1-\lambda}k(O_l)^{\lambda}}\sum_{\alpha=1}^{m}
 [^1]:[Solving the apparent diversity‐accuracy dilemma of recommender systems](http://www.ccast.ac.cn/workshop/network-2010/wenzhang/zt.pdf)
 [^2]:[物质扩散（Probabilistic Spreading）数学模型](https://zr9558.com/2015/09/27/probabilisticandheat/)
 [^3]:[浅谈物理学方法在推荐系统中应用价值和意义](http://blog.sciencenet.cn/blog-210641-318997.html)
+[^4]:[推荐算法整理 -- 扩散算法](https://www.zybuluo.com/chanvee/note/21053)
