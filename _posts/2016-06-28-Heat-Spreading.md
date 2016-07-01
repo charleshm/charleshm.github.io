@@ -69,7 +69,7 @@ $$b_{\alpha} = \sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)}) \tag{MD.1}$$
 
 - 第二步，用户将能量传递给物品，物品$j$更新后的能量我们用$c_{j}^{'}$表示：
 
-$$c_{j}^{'} = \sum_{i=1}^{m}a_{ij}(\frac{b_i}{k(U_i)}) \tag{MD.2}$$
+$$c_{j}^{'} = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})}) \tag{MD.2}$$
 
 ---
 
