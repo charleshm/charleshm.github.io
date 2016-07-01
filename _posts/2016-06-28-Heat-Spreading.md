@@ -65,11 +65,11 @@ $$
 
 - 第一步，用户从物品那里获得能量，用户$\alpha$获得的能量我们用$b_{\alpha}$表示：
 
-$$b_{\alpha} = \sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)})$$
+$$b_{\alpha} = \sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)}) \tag{MD.1}$$
 
 - 第二步，用户将能量传递给物品，物品$j$更新后的能量我们用$c_{j}^{'}$表示：
 
-$$c_{j}^{'} = \sum_{i=1}^{m}a_{ij}(\frac{b_i}{k(U_i)})$$
+$$c_{j}^{'} = \sum_{i=1}^{m}a_{ij}(\frac{b_i}{k(U_i)}) \tag{MD.2}$$
 
 ---
 
