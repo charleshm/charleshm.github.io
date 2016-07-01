@@ -76,7 +76,8 @@ $$c_{j}^{'} = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})}) 
 $$
 \begin{align*}
 c_{j}^{'} & = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})})\\
-& = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{\sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)})}{k(U_{\alpha})})
+& = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{\sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)})}{k(U_{\alpha})})\\
+& = \sum_{l=1}^{n} c_l \frac{1}{k(O_l)} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}
 \end{align*}
 $$
 
