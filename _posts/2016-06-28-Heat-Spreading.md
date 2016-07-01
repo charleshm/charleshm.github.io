@@ -78,13 +78,13 @@ $$
 c_{j}^{'} & = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{b_{\alpha}}{k(U_{\alpha})})\\
 & = \sum_{\alpha=1}^{m}a_{\alpha j}(\frac{\sum_{l=1}^{n}a_{\alpha l}(\frac{c_l}{k(O_l)})}{k(U_{\alpha})})\\
 & = \sum_{l=1}^{n} c_l \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}\\
-& = \sum_{l=1}^{n} w_{\alpha l}c_l
+& = \sum_{l=1}^{n} w_{\alpha l}^Pc_l
 \end{align*}
 $$
 
 其中，
 
-$$w_{\alpha l} = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})} \tag{MD.3}$$
+$$\color{red}{w_{\alpha l}^P = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})} \tag{MD.3}}$$
 
 ---
 
@@ -92,7 +92,7 @@ $$w_{\alpha l} = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha
 
 $$C^{'} = W^PC \tag{MD.4}$$
 
-其中，$W^P = (w_{\alpha l}), C = (c_1,\cdots,c_n)^T,$
+其中，$W^P = (w_{\alpha l}^P), C = (c_1,\cdots,c_n)^T,$
 
 ---
 
