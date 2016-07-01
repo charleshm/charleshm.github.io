@@ -111,7 +111,8 @@ $$t_{j}^{'} = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})} \tag{H
 $$
 \begin{align*}
 t_{j}^{'} & = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}b_{\alpha}}{k(O_{j})}\\
-& = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}\sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}}{k(O_{j})}
+& = \sum_{\alpha=1}^{m} \frac{a_{\alpha j}\sum_{l=1}^{n} \frac{a_{\alpha l}c_l}{k(U_{\alpha})}}{k(O_{j})}\\
+& = \sum_{l=1}^{n}c_l \frac{1}{k(O_{j})}\sum_{\alpha=1}^{m} \frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}
 \end{align*}
 $$
 
