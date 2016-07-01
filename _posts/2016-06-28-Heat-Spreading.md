@@ -84,13 +84,13 @@ $$
 
 其中，
 
-$$w_{\alpha l} = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})}$$
+$$w_{\alpha l} = \frac{1}{k(O_l)} \sum_{\alpha=1}^{m}\frac{a_{\alpha j}a_{\alpha l}}{k(U_{\alpha})} \tag{MD.3}$$
 
 ---
 
 采用向量化的表示方法：
 
-$$C^{'} = WC$$
+$$C^{'} = WC \tag{MD.4}$$
 
 其中，$W = (w_{\alpha l}), C = (c_1,\cdots,c_n)^T,$
 
