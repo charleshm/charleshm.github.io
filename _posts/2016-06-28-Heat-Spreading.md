@@ -45,7 +45,7 @@ $$(1 + 1/2 + 1/2)/3 = 2/3$$
 
 ---
 
-#### 数学模型
+### 数学模型
 
 假设我们有$m$个用户(User)和$n$个物品(Object)，可以构造矩阵$A_{m\times n}$，其中：
 
@@ -57,6 +57,13 @@ $$
  \end{cases}
 $$
 
+用$k(U_{\alpha})=\sum_{j=1}^{n}a_{\alpha j}$表示用户$\alpha$的度，即该用户购买物品数量。
+
+$k(O_{j})=\sum_{i=1}^{m}a_{ij}$表示用户$j$的度，即该商品被多少个用户购买。
+
+---
+
+#### 物质扩散
 
 ---
 
@@ -75,3 +82,4 @@ $$
 ---
 
 [^1]:[Solving the apparent diversity‐accuracy dilemma of recommender systems](http://www.ccast.ac.cn/workshop/network-2010/wenzhang/zt.pdf)
+[^2]:[物质扩散（Probabilistic Spreading）数学模型](https://zr9558.com/2015/09/27/probabilisticandheat/)
