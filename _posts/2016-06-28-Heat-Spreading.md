@@ -57,7 +57,7 @@ $$
  \end{cases}
 $$
 
-用$(c_1,\cdots,c_n)$表示物品的初始能量；$k(U_{\alpha})=\sum_{j=1}^{n}a_{\alpha j}$表示用户$\alpha$的度，即该用户购买物品数量；$k(O_{j})=\sum_{i=1}^{m}a_{ij}$表示物品$j$的度，即该商品被多少个用户购买。
+用$(c_1,\cdots,c_n)$表示物品的初始能量；$k(U_{j})=\sum_{\alpha=1}^{n}a_{j\alpha}$表示用户$j$的度，即该用户购买物品数量；$k(O_{\alpha})=\sum_{j=1}^{m}a_{\alphaj}$表示物品$\alpha$的度，即该商品被多少个用户购买。
 
 ---
 
