@@ -40,7 +40,7 @@ Distributed representation 用来表示词，通常被称为“Word Representati
 
 我们在实际应用中经常会对类别特征做one hot encoding，这样生成的特征维度往往非常大，最近比较流行的一种趋势是将这些类别特征连接到embedding层，映射到低维的连续空间，可以看做一种特征提取的方法。
 
-最近google的一篇深度学习做推荐的论文：[Wide & Deep Learning for Recommender Systems](https://arxiv.org/pdf/1606.07792v1.pdf)使用了类似的技巧，
+最近google的一篇深度学习做推荐的论文：[Wide & Deep Learning for Recommender Systems](https://arxiv.org/pdf/1606.07792v1.pdf)，使用了类似的技巧，
 
 ![][1]
 
