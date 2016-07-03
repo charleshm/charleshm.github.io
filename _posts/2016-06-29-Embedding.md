@@ -22,7 +22,9 @@ NLP 中最直观，也是到目前为止最常用的词表示方法是 One-hot R
 
 这种表示方法存在一个重要的问题就是“词汇鸿沟”现象：任意两个词之间都是孤立的。光从这两个向量中看不出两个词是否有关系，哪怕是话筒和麦克这样的同义词也不能幸免于难。
 
-#### Distributed representation
+---
+
+#### Distributed representation[^3]
 
 Distributed representation 用来表示词，通常被称为“Word Representation”或“Word Embedding”，比如像word2vec生成的词向量就属于这种。
 
@@ -34,5 +36,24 @@ Distributed representation 用来表示词，通常被称为“Word Representati
 
 ---
 
+#### 特征工程
+
+我们在实际应用中经常会对类别特征做one hot encoding，这样生成的特征维度往往非常大，最近比较流行的一种趋势是将这些类别特征连接到embedding层，映射到低维的连续空间，可以看做一种特征提取的方法。
+
+最近google的一篇深度学习做推荐的论文：[Wide & Deep Learning for Recommender Systems](https://arxiv.org/pdf/1606.07792v1.pdf)使用了类似的技巧，
+
+![][1]
+
+效果还是非常不错的，
+
+![][2]
+
+
+[1]:http://7xjbdi.com1.z0.glb.clouddn.com/wdms.png
+[2]:http://7xjbdi.com1.z0.glb.clouddn.com/wdfs_results.png
+
+---
+
 [^1]:[Word embedding](https://en.wikipedia.org/wiki/Word_embedding)
 [^2]:[Deep Learning in NLP （一）词向量和语言模型](http://licstar.net/archives/328)
+[^3]:[深度学习、自然语言处理和表征方法](http://blog.jobbole.com/77709/)
