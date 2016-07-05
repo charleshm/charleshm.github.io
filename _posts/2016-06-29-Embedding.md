@@ -52,11 +52,12 @@ Distributed representation 用来表示词，通常被称为“Word Representati
 
 #### 具体流程
 
-老实说刚开始我只是简单的认为应该和word2vec生成词向量差不多吧，后来一细想不对呀，word2vec训练词向量利用的是上下文信息，我们现在要做的实际上是多one hot之后的特征做降维，解释不通啊。
-
-然后搜索了下文献，其实非常简洁，只是做了一层映射，one hot之后的特征乘上embedding matrix($W_E \in \mathcal{R}^{V \times D}$)，得到的就是embedding之后的特征[^4]。
+老实说刚开始我只是简单的认为应该和word2vec生成词向量差不多吧，后来一细想不对呀，word2vec 训练词向量利用的是上下文信息，我们现在要做的实际上是多one hot之后的特征做降维，解释不通啊。
 
 ![][3]
+
+然后搜索了下文献，其实非常简洁，只是做了一层映射，one hot 之后的特征乘上 embedding matrix ($W_E \in \mathcal{R}^{V \times D}$)，得到的就是embedding之后的特征[^4]。
+
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/wdms.png
 [2]:http://7xjbdi.com1.z0.glb.clouddn.com/wdfs_results.png
