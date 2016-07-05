@@ -48,12 +48,23 @@ Distributed representation 用来表示词，通常被称为“Word Representati
 
 ![][2]
 
+---
+
+#### 具体流程
+
+老实说刚开始我只是简单的认为应该和word2vec生成词向量差不多吧，后来一细想不对呀，word2vec训练词向量利用的是上下文信息，我们现在要做的实际上是多one hot之后的特征做降维，解释不通啊。
+
+然后搜索了下文献，其实非常简洁，只是做了一层映射，one hot之后的特征乘上embedding matrix($W_E \in \mathcal{R}^{V \times D}$)，得到的就是embedding之后的特征[^4]。
+
+![][3]
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/wdms.png
 [2]:http://7xjbdi.com1.z0.glb.clouddn.com/wdfs_results.png
+[3]:http://7xjbdi.com1.z0.glb.clouddn.com/simple_embedding.png
 
 ---
 
 [^1]:[Word embedding](https://en.wikipedia.org/wiki/Word_embedding)
 [^2]:[Deep Learning in NLP （一）词向量和语言模型](http://licstar.net/archives/328)
 [^3]:[深度学习、自然语言处理和表征方法](http://blog.jobbole.com/77709/)
+[^4]:[A Theoretically Grounded Application of Dropout in Recurrent Neural Networks](http://arxiv.org/pdf/1512.05287v3.pdf)
