@@ -24,6 +24,10 @@ categories: 机器学习
 
 在机器学习的二分类问题中，WOE(Weight of Evidence)和 Information Value 通常用来对输入变量进行编码及预测能力评估。
 
+> - WOE describes the relationship between a predictive variable and a binary target variable.  
+- IV measures the strength of that relationship.
+
+
 $$\underbrace{\log \frac{P(Y=1 | X_j)}{P(Y=0 | X_j)}}_{X_j\ log-odds} = \underbrace{\log \frac{P(Y=1)}{P(Y=0)}}_{\text{sample log-odds}} + \underbrace{\log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}}_{\text{WOE}}, \nonumber$$
 
 我们来细致分析下，讨论离散取值的情况[^2]：
@@ -35,7 +39,7 @@ $$
 \end{align*}
 $$
 
-> woe 反映的是在自变量每个分组下违约用户对正常用户占比和总体中违约用户对正常用户占比之间的差异；从而可以直观的认为 woe 蕴含了自变量取值对于目标变量（违约概率）的影响。
+> woe 反映的是在自变量每个分组下违约用户对正常用户占比和总体中违约用户对正常用户占比之间的差异，从而可以直观的认为 woe 蕴含了自变量取值对于目标变量（违约概率）的影响。
 
 ---
 
