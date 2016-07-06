@@ -44,9 +44,9 @@ $$
 
 ---
 
-上面我们考虑的都是单变量对结果的影响，那么多变量呢？
+$$\text{IV}_j = \int \log \frac{f(X_j | Y=1)}{f(X_j | Y=0)} \, (f(X_j | Y=1) - f(X_j | Y=0)) \, dx. \nonumber$$
 
-$$\log \frac{P(Y=1| x_1, \ldots, x_p)}{P(Y=0 | x_1, \ldots, x_p)} = \log \frac{P(Y=1)}{P(Y=0)} + \sum_{j=1}^p \log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}. \nonumber.$$
+> IV 衡量的是某一个变量的预测能力，从公式来看的话，相当于是自变量 woe 值的一个加权求和，其值的大小决定了自变量对于目标变量的影响程度。一般来说，\text{IV} < 0.05，说明变量的预测能力非常低。
 
 ---
 
