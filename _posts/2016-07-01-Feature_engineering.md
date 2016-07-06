@@ -16,8 +16,8 @@ categories: 机器学习
 - 把特征转换为数值变量，例如把不同城市的编码变成对应的经纬度，或是城市人口值，或是Y值，类似于银行信用评级中的**WOE**等。   
 - 词向量的思路，做embedding
 
-推荐下肖凯老师的博客：[数据科学中的R和Python](http://xccds1977.blogspot.com/)
+推荐下肖凯老师的博客：[**数据科学中的R和Python**](http://xccds1977.blogspot.com/)
 
 ---
 
-[^1]:https://www.zhihu.com/question/38438477/answer/76744552
+[^1]:[机器学习模型中的分类变量最多可以有多少个值？](https://www.zhihu.com/question/38438477/answer/76744552)
