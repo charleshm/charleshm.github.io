@@ -35,3 +35,8 @@ permalink: /about/
 - [计算广告语机器学习](http://www.52caml.com/head_first_ml/ml-chapter6-boosting-family/)
 - [数据科学中的R和Python](http://xccds1977.blogspot.com/p/blog-page.html)
 
+----------
+
+#### Python VS R
+
+- [python 和 R](http://pan.baidu.com/s/1qXYhQuK)
