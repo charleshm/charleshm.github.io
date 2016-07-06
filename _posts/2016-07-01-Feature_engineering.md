@@ -22,7 +22,7 @@ categories: 机器学习
 
 #### WOE and IV
 
-$$\underbrace{\log \frac{P(Y=1 | X_j)}{P(Y=0 | X_j)}}_{X_j log-odds} = \underbrace{\log \frac{P(Y=1)}{P(Y=0)}}_{\text{sample log-odds}} + \underbrace{\log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}}_{\text{WOE}}, \nonumber$$
+$$\underbrace{\log \frac{P(Y=1 | X_j)}{P(Y=0 | X_j)}}_{X_j\ log-odds \tag{1}} = \underbrace{\log \frac{P(Y=1)}{P(Y=0)}}_{\text{sample log-odds}} + \underbrace{\log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}}_{\text{WOE} \tag{2}}, \nonumber$$
 
 ---
 
