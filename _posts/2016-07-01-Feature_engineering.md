@@ -27,6 +27,7 @@ categories: 机器学习
 > - WOE describes the relationship between a predictive variable and a binary target variable.  
 - IV measures the strength of that relationship.
 
+---
 
 $$\underbrace{\log \frac{P(Y=1 | X_j)}{P(Y=0 | X_j)}}_{X_j\ log-odds} = \underbrace{\log \frac{P(Y=1)}{P(Y=0)}}_{\text{sample log-odds}} + \underbrace{\log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}}_{\text{WOE}}, \nonumber$$
 
@@ -40,6 +41,12 @@ $$
 $$
 
 > woe 反映的是在自变量每个分组下违约用户对正常用户占比和总体中违约用户对正常用户占比之间的差异，从而可以直观的认为 woe 蕴含了自变量取值对于目标变量（违约概率）的影响。
+
+---
+
+上面我们考虑的都是单变量对结果的影响，那么多变量呢？
+
+$$\log \frac{P(Y=1| x_1, \ldots, x_p)}{P(Y=0 | x_1, \ldots, x_p)} = \log \frac{P(Y=1)}{P(Y=0)} + \sum_{j=1}^p \log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}. \nonumber.$$
 
 ---
 
