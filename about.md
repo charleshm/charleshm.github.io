@@ -33,8 +33,5 @@ permalink: /about/
 - [世纪佳缘总监-吴金龙博客](http://breezedeus.github.io/)
 - [腾讯广点通团队（rickjin）](http://www.flickering.cn/)
 - [计算广告语机器学习](http://www.52caml.com/head_first_ml/ml-chapter6-boosting-family/)
+- [数据科学中的R和Python](http://xccds1977.blogspot.com/p/blog-page.html)
 
-
-<div class="sign">
-    <img src="http://www.dut.pub/static/img/sig1.gif">
-</div>
