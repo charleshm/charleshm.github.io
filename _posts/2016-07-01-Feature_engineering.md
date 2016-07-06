@@ -22,7 +22,19 @@ categories: 机器学习
 
 #### WOE and IV
 
+在机器学习的二分类问题中，WOE(Weight of Evidence)和 Information Value 通常用来对输入变量进行编码及预测能力评估。
+
 $$\underbrace{\log \frac{P(Y=1 | X_j)}{P(Y=0 | X_j)}}_{X_j\ log-odds} = \underbrace{\log \frac{P(Y=1)}{P(Y=0)}}_{\text{sample log-odds}} + \underbrace{\log \frac{f(X_j | Y=1)}{f(X_j | Y=0)}}_{\text{WOE}}, \nonumber$$
+
+我们来细致分析下，讨论离散取值的情况：
+
+$$
+\begin{align*}
+\text{WOE} & = \log \frac{P(X_j | Y=1)}{P(X_j | Y=0)}\\
+& = \log \cfrac{\cfrac{P(X_j,Y=1)}{P(Y=1)}}{\cfrac{P(X_j,Y=0)}{P(Y=0)}}\\
+& = \log \cfrac{P(X_j,Y=1)}{P(X_j,Y=0)} \cfrac{P(Y=1)}{P(Y=0)}
+\end{align*}
+$$
 
 ---
 
