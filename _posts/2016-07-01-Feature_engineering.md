@@ -50,7 +50,12 @@ $$\text{IV}_j = \int \log \frac{f(X_j | Y=1)}{f(X_j | Y=0)} \, (f(X_j | Y=1) - f
 
 $$\text{IV}_j =  \sum_{i=1}^k (P(X_j \in B_i | Y=1) - P(X_j \in B_i | Y=0)) \times \text{WOE}_{ij}. \nonumber$$
 
+![][1]
+
 ---
+
+[1]:http://7xjbdi.com1.z0.glb.clouddn.com/woeOverviewExample.gif
+
 
 [^1]:[机器学习模型中的分类变量最多可以有多少个值？](https://www.zhihu.com/question/38438477/answer/76744552)
 [^2]:[Data Exploration with Weight of Evidence and Information Value in R](http://multithreaded.stitchfix.com/blog/2015/08/13/weight-of-evidence/)
