@@ -22,7 +22,7 @@ categories: 机器学习
 
 #### WOE and IV
 
-在机器学习的二分类问题中，WOE(Weight of Evidence)和 Information Value 通常用来对输入变量进行编码及预测能力评估。
+在机器学习的二分类问题中，WOE(Weight of Evidence)和 Information Value 通常用来对输入变量进行编码及预测能力评估[^3]。
 
 > - WOE describes the relationship between a predictive variable and a binary target variable.  
 - IV measures the strength of that relationship.
@@ -59,3 +59,4 @@ $$\text{IV}_j =  \sum_{i=1}^k (P(X_j \in B_i | Y=1) - P(X_j \in B_i | Y=0)) \tim
 
 [^1]:[机器学习模型中的分类变量最多可以有多少个值？](https://www.zhihu.com/question/38438477/answer/76744552)
 [^2]:[Data Exploration with Weight of Evidence and Information Value in R](http://multithreaded.stitchfix.com/blog/2015/08/13/weight-of-evidence/)
+[^3]:[评分卡模型剖析之一（woe、IV、ROC、信息熵）](http://blog.sina.com.cn/s/blog_8813a3ae0102uyo3.html)
