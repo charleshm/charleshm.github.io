@@ -16,6 +16,8 @@ categories: 机器学习
 - 把特征转换为数值变量，例如把不同城市的编码变成对应的经纬度，或是城市人口值，或是Y值，类似于银行信用评级中的$WOE(weight\ of\ Evidence)$等。   
 - 词向量的思路，做 $embedding$
 
+![][2]
+
 推荐下肖凯老师的博客：[**数据科学中的R和Python**](http://xccds1977.blogspot.com/)
 
 > Learning with counts can be summarized as aggregating sufficient statistics for conditional probability distributions for various attributes and combinations – or, concretely, utilizing tables of per-class counts for each unique value or combination. 
@@ -57,6 +59,7 @@ $$\text{IV}_j =  \sum_{i=1}^k (P(X_j \in B_i | Y=1) - P(X_j \in B_i | Y=0)) \tim
 ---
 
 [1]:http://7xjbdi.com1.z0.glb.clouddn.com/woeOverviewExample.gif
+[2]: http://7xjbdi.com1.z0.glb.clouddn.com/tf_embedding.png
 
 
 [^1]:[机器学习模型中的分类变量最多可以有多少个值？](https://www.zhihu.com/question/38438477/answer/76744552)
@@ -64,5 +67,4 @@ $$\text{IV}_j =  \sum_{i=1}^k (P(X_j \in B_i | Y=1) - P(X_j \in B_i | Y=0)) \tim
 [^3]:[评分卡模型剖析之一（woe、IV、ROC、信息熵）](http://blog.sina.com.cn/s/blog_8813a3ae0102uyo3.html)
 
 
-- 方法一（na.roughfix）简单粗暴，对于训练集,同一个class下的数据，如果是分类变量缺失，用众数补上，如果是连续型变量缺失，用中位数补。
-- 方法二（rfImpute）这个方法计算量大，先用na.roughfix补上缺失值，然后构建随机森林并计算proximity matrix，再回头看缺失值，如果是分类变量，则用没有缺失的观测实例的proximity中的权重进行投票。如果是连续型变量，则用proximity矩阵进行加权平均的方法补缺失值。然后迭代4-6次，这个补缺失值的思想和KNN有些类似。
+
