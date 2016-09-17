@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "Aggregation 模型学习笔记"
+title:  "Aggregation 模型笔记"
 date:   2016-07-05 7:30
 categories: 机器学习 
 ---
