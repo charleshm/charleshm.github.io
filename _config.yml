@@ -11,7 +11,7 @@ email: charlesxiao2030@outlook.com
 description: > # this means to ignore newlines until "baseurl:"
   日拱一卒
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://charlesx.top" # the base hostname & protocol for your site
 twitter_username: charles
 github_username:  charleshm
 permalink: /:year/:month/:title/
